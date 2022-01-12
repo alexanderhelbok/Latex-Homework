@@ -1,0 +1,105 @@
+\documentclass{alex_hü}
+
+\name{Alexander Helbok}
+\course{PS Physik}
+\hwnumber{8}
+
+\begin{document}
+\renewcommand{\labelenumi}{\alph{enumi})}
+
+
+\section*{87. Ein sehr elastischer Ball}
+\begin{enumerate}
+	\item \( h = 0.5 \si{\m};\quad m_1 \ll m_2 \)
+	\begin{flalign*}
+		z(t) &= 0.5 - \tfrac{g}{2} t^2 \quad\Rightarrow\quad t_1 = 0.32 \si{\s} &&\\
+		v(t_1) &= 3.13 \si{\m\per\s} &&
+	\end{flalign*}
+		Nach dem Stoß:
+	\begin{flalign*}
+		v_1 &= \dl{9.4 \si{\m\per\s}} &&\\
+		v_2 &= \dl{3.13 \si{\m\per\s}} &&
+	\end{flalign*}
+	\item 
+	\begin{flalign*}
+		z_1(t) &= 9.4t - \tfrac{g}{2}t^2 &&\\
+		v_1(t) &= 9.4 - gt &&\\
+		0 &= 9.4 - gt \quad\Rightarrow\quad t_1 = 0.96 \si{\s} &&\\
+		z_1(t_1) &= \dl{4.5 \si{\m}} &&
+	\end{flalign*}
+	
+\end{enumerate}
+
+\section*{96. Zwei Himmelskörper}
+	\begin{multicols}{3}
+	\begin{flalign*}
+		\vec{v}_1 &= \vector{v_1 \\ 0} &&\\
+		\abs{v_1} &= v_1 &&
+	\end{flalign*}
+	\columnbreak
+	\begin{flalign*}
+		\\ \vec{v}_2 &= \vector{0 \\ v_2} &&\\
+		\abs{v_2} &= v_2 &&
+	\end{flalign*}
+	\columnbreak 
+	\begin{flalign*}
+		\\ \vec{v}_E &= \tfrac{1}{m_1+m_2}\vector{m_1v_1 \\ m_2v_2} &&\\
+		\abs{v_E} &= \tfrac{\sqrt{(m_1v_1)^2+(m_2v_2)^2}}{m_1+m_2} &&
+	\end{flalign*}
+	\end{multicols}
+
+\begin{enumerate}
+	\item \dl{\( \alpha = \arctan(\tfrac{m_2v_2}{m_1v_1}) \)} \\
+	\item \( K_1 := E_{kin}\) vor dem Stoß \(;\quad K_2 := E_{kin} \) nach dem Stoß 
+	\begin{flalign*}
+		K_1 &= K_2 + \Delta E &&\\
+		\tfrac{m_1 v_1\!^2}{2} + \tfrac{m_2 v_2\!^2}{2} &= \tfrac{1}{2} \left(m_1+m_2\right) \left( \tfrac{\sqrt{(m_1v_1)^2+(m_2v_2)^2}}{m_1+m_2}\right)^2 + \Delta E &&\\
+		\Delta E &= \tfrac{(m_1v_1)^2 + (m_2v_2)^2 + m_1m_2 v_1\!^2 + m_1m_2 v_2\!^2 - (m_1v_1)^2 - (m_2v_2)^2}{2(m_1+m_2)} &&\\
+		\Delta E &= \dl{\tfrac{m_1 m_2 \left(v_1\!^2+v_2\!^2\right)}{2 \left(m_1+m_2\right)}} &&\\
+	\end{flalign*}
+	\item 
+	\begin{multicols}{2}
+		Für \( m_1 = m_2 = m \) \\[1ex]
+		\( \dl{\Delta E = \tfrac{1}{4} m \left(v_1\!^2 + v_2\!^2\right)} \)
+		\columnbreak
+		\\Für \( m_1 \gg m_2 \) \\[1ex]
+		\( \dl{\Delta E = \tfrac{1}{2} m_2 \left(v_1\!^2+v_2\!^2\right)} \)
+	\end{multicols}
+\end{enumerate}
+
+\section*{102. Trägheitsmoment eines Hohlzylinders}
+\begin{enumerate}
+	\item \( V = (r_1\!^2 - r_0\!^2)\pi z \)
+	\begin{flalign*}
+		I &= \int r^2 \,dm = \rho \int_{V} r^2 \,dV = \rho \int\limits_{0}^{z} \int\limits_{0}^{2\pi} \int\limits_{r_0}^{r_1} r^3 dr\,d\varphi\,dz = \tfrac{r_1\!^4 - r_0\!^4}{2}\pi z \rho = &&\\
+		&= \dl{\tfrac{1}{2} M (r_1\!^2 + r_0\!^2)} &&
+	\end{flalign*}
+\end{enumerate}
+
+\section*{113. Getränkedosen auf schiefer Ebene}
+\( r = 0.03 \si{\m};\quad \alpha = \ang{25};\quad l = 1.5 \si{\m};\quad h = l\sin(\alpha) \) \\
+\begin{enumerate}
+	\item \( m = 0.06 \si{\kg} \)
+	\begin{flalign*}
+		mgh &= \tfrac{I\omega^2 + mv_s\!^2}{2} &&\\
+		mgh &= \tfrac{mv_s\!^2 + mv_s\!^2}{2} &&\\
+		v_s &= \sqrt{gh} &&\\
+		&= \dl{2.49 \si{\m\per\s}}&&
+	\end{flalign*}
+	\item \( m_w = 0.33 \si{\kg};\quad M = m + m_w = 0.39 \si{\kg} \)
+	\begin{flalign*}
+		Mgh &= \tfrac{I\omega^2 + Mv_s\!^2}{2} &&\\
+		Mgh &= \tfrac{mv_s\!^2 + Mv_s\!^2}{2} &&\\
+		v_s &= \sqrt{\tfrac{2ghM}{2m + m_w}} &&\\
+		&= \dl{3.28 \si{\m\per\s}}&&
+	\end{flalign*}
+	\item
+	\begin{flalign*}
+		Mgh &= \tfrac{I_w\omega^2 + I\omega^2 + Mv_s\!^2}{2} &&\\
+		Mgh &= \tfrac{0.5m_wv_s\!^2 + mv_s\!^2 + Mv_s\!^2}{2} &&\\
+		v_s &= \sqrt{\tfrac{4Mgh}{3M+m}} &&\\
+		&= \dl{2.81 \si{\m\per\s}}&&
+	\end{flalign*}
+\end{enumerate}
+
+\end{document}

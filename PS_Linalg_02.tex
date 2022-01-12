@@ -1,0 +1,52 @@
+\documentclass{alex_hü}
+
+\name{Alexander Helbok}
+\course{PS Lineare Algebra}
+\hwnumber{2}
+
+\begin{document}
+	\renewcommand{\labelenumi}{\Alph{enumi})}
+	
+	
+	\section*{Aufgabe 6}
+	\begin{enumerate}
+		\item  Sei V die Menge aller Vögel. Untersuchen Sie die folgenden Relationen auf V
+		in Hinblick auf Symmetrie, Reflexivität und Transitivität:
+			\begin{enumerate}
+				\item $R_{1} = \{(A, B) \mid A$ balzt vor $B\}$ \\
+				\begin{itemize}[leftmargin=2.5cm,labelsep=0.25cm]
+					\item[\textit{Reflexivität}:] $R_{1}$ ist nicht reflexiv, weil A zu einem gewissen Zeitpunkt balzt und nicht auch noch davor balzen kann\\
+					\item[\textit{Symmetrie}:] $R_{1}$ ist nicht symmetrisch, weil wenn A zeitlich vor B balzt kann B nicht bevor A balzen\\
+					\item[\textit{Transitivität}:] $R_{1}$ ist transitiv, weil wenn A vor B und B vor C balzt dann balzt A zeitlich auch vor C\\
+				\end{itemize}
+				\item $R_{2} = \{(A, B) \mid A$ baut ein Nest mit $B\}$ \\
+				\begin{itemize}[leftmargin=2.5cm,labelsep=0.25cm]
+					\item[\textit{Reflexivität}:] $R_{2}$ ist nicht reflexiv, weil A sich nicht aufteilen kann, um mit einer Kopie von sich selbst das Nest zu bauen \\
+					\item[\textit{Symmetrie}:] $R_{2}$ ist symmetrisch, weil A und B gemeinsam das Nest bauen, also sowohl A mit B, als auch B mit A das Nest baut\\
+					\item[\textit{Transitivität}:] wenn B nur an einem Nest baut, dann ist $R_{2}$ transitiv, weil A, B und C alle gemeinsam am gleichen Nest bauen\\
+				\end{itemize}
+				\item $R_{3} = \{(A, B) \mid B$ ist aus einem Ei geschlüpft, das $A$ gelegt hat$\}$ \\
+				\begin{itemize}[leftmargin=2.5cm,labelsep=0.25cm]
+					\item[\textit{Reflexivität}:] $R_{3}$ ist nicht reflexiv, weil ein Vogel nicht aus einem Ei schlüpfen kann, das er selbst gelegt hat\\
+					\item[\textit{Symmetrie}:] $R_{3}$ ist nicht symmetrisch, weil A nur dann vom Ei von B schlüpfen kann, wenn dieser schon existiert hat und aus dem Ei eines anderen Vogels geschlüpft ist \\
+					\item[\textit{Transitivität}:] $R_{3}$ ist nicht transitiv, weil A aus dem Ei von B geschlüpft ist und nicht dem von C\\
+				\end{itemize}
+				\item $R_{4} = \{(A, B) \mid \exists C \in V \colon (C,A) \in R_{3} \land (C,B) \in R_{3}\}$ \\
+				\begin{itemize}[leftmargin=2.5cm,labelsep=0.25cm]
+					\item[\textit{Reflexivität}:] $R_{4}$ ist nicht reflexiv, weil C nicht zwei Eier legen kann aus dem der gleiche Vogel A schlüpft\\
+					\item[\textit{Symmetrie}:] $R_{4}$ ist symmetrisch, weil der Vogel C sowohl die Vögel A und B, als auch B und A auf die Welt bringt\\
+					\item[\textit{Transitivität}:] $R_{4}$ ist transitiv, weil wenn A,B und B,C vom gleichen Vogel gelegt wurden teilen alle 3 die gleichen Eltern und A und C sind auch vom gleichen Vogel gelegt worden \\
+				\end{itemize}
+			\end{enumerate}
+		\item Geben Sie für jede der drei Eigenschaften reflexiv, symmetrisch, transitiv eine
+		Relation auf einer selbst gewählten Menge an, die diese Eigenschaft hat, die anderen
+		beiden jedoch nicht \\
+		\begin{enumerate}
+			\item nur reflexiv: $M$ sei die Menge aller Menschen:\\
+			$R = \{(A, B) \in M \times M \mid A$ füttert $B\}$\\
+			\item nur symmetrisch: $R = \{(x, y) \in \mathbb{R}^{2} \times \mathbb{R}^{2} \mid x_1 + y_1 = x_2 + y_2\}$ \\
+			\item nur transitiv:  $R = \{(x, y) \in \mathbb{R} \times \mathbb{R} \mid x < y\}$ \\
+		\end{enumerate}
+	\end{enumerate}
+	
+\end{document}

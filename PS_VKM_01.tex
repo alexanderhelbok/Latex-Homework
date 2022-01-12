@@ -1,0 +1,156 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fullpage}
+\usepackage[top=2cm, bottom=4.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,siunitx}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning, calc}
+
+
+\hypersetup{%
+	colorlinks=true,
+	linkcolor=blue,
+	linkbordercolor={0 0 1}
+}
+
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+
+% Edit these as appropriate
+\newcommand\course{PS Vorbereitungskurs Mathematik}
+\newcommand\hwnumber{1}                  % <-- homework number
+\newcommand\NetIDa{Alexander Helbok}           % <-- NetID of person #1
+
+\pagestyle{fancyplain}
+\headheight 35pt
+\lhead{\NetIDa}
+\lhead{\NetIDa}                 % <-- Comment this line out for problem sets (make sure you are person #1)
+\chead{\textbf{\Large Blatt \hwnumber}}
+\rhead{\course \\ \today}
+\lfoot{}
+\cfoot{}
+\rfoot{\small\thepage}
+\headsep 1.5em
+
+\begin{document}
+	\renewcommand{\labelenumi}{\alph{enumi})}
+	\def\dl#1{\underline{\underline{#1}}}
+	
+	\section*{2)}
+	$A = (0, 0);\ B = (4, 0);\ C = (4, 1)$
+	\begin{enumerate}
+		\item  Zeichnen Sie die Koordinatenpfeile in ein Diagramm mit x- und y- Koordinatenachsen
+		und geeigneten Koordinateneinteilungen \\
+		\begin{center}
+			\begin{tikzpicture}
+				
+				\begin{axis}[
+					width=207pt,
+					height=143pt,
+					axis lines=center,
+					axis line style={Stealth-Stealth},
+					xmin=-1,xmax=5.5,ymin=-1,ymax=3.5,
+					xtick distance=1,
+					ytick distance=1,
+					xlabel=$x$,
+					ylabel=$y$,
+					grid=major,
+					grid style={thin,densely dotted,black!20}]
+					\node[label={45:{A}},circle,fill,inner sep=2pt] at (axis cs:0,0) {};
+					\node[label={90:{B}},circle,fill,inner sep=2pt] at (axis cs:4,0) {};
+					\node[label={90:{C}},circle,fill,inner sep=2pt] at (axis cs:4,1) {};
+					\addplot [->, thick,  black]
+					coordinates { (0,0) (4,1)} node[above,pos=0.5,rotate=14.04,anchor=south] {\small$AC$};
+					\addplot [->, thick,  black]
+					coordinates { (0,0) (4,0)} node[above,pos=0.75] {\small$AB$};	
+	    			\begin{scope}[shift={(0.95cm,0.76cm)}]
+						\draw (0,0) -- (0:2.2cm) arc (0:29:1cm);
+						\draw (1.75cm,0.185cm) node {\small$\varphi$};
+					\end{scope}
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
+
+		\item Berechnen Sie die Länge der Strecke $AC$ \\
+			\begin{flalign*}
+				AC &= C-A = \begin{pmatrix}4\\1\end{pmatrix}&& \\
+				\vert AC \vert &= \sqrt{17} \approx \dl{4.12}&&
+			\end{flalign*}
+		\item Berechnen Sie den Winkel an A zwischen $AB$ und $AC$ \\
+			\begin{flalign*}
+				\varphi &= \arccos\left(\frac{AB * AC}{\vert AB \vert * \vert AC \vert}\right)&& \\
+				\varphi &= \arccos\left(\frac{16}{4 * \sqrt{17}}\right)&& \\
+				\varphi &\approx \dl{\ang{14.04}}
+			\end{flalign*}
+		\item Der Punkt $C$ wird nun um $(-1, +1)$ verschoben. Skizzieren Sie auch die neue Lage C’ von C in das Diagramm \\
+		\begin{center}
+			\begin{tikzpicture}
+				
+				\begin{axis}[
+					width=207pt,
+					height=143pt,
+					axis lines=center,
+					axis line style={Stealth-Stealth},
+					xmin=-1,xmax=5.5,ymin=-1,ymax=3.5,
+					xtick distance=1,
+					ytick distance=1,
+					xlabel=$x$,
+					ylabel=$y$,
+					grid=major,
+					grid style={thin,densely dotted,black!20}]
+					\node[label={135:{A}},circle,fill,inner sep=2pt] at (axis cs:0,0) {};
+					\node[label={90:{B}},circle,fill,inner sep=2pt] at (axis cs:4,0) {};
+					\node[label={90:{C'}},circle,fill,inner sep=2pt] at (axis cs:3,2) {};
+					\addplot [->, thick,  black]
+					coordinates { (0,0) (3,2)} node[above,pos=0.5,rotate=33.69,anchor=south] {\small$AC'$};
+					\addplot [->, thick,  black]
+					coordinates { (0,0) (4,0)} node[above,pos=0.5] {\small$AB$};					
+	    			\begin{scope}[shift={(0.95cm,0.76cm)}]
+					    \draw (0,0) -- (0:1.25cm) arc (0:39:1cm);
+						\draw (0.8cm,0.2cm) node {$\varphi$};
+	    			\end{scope}
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\item Berechnen Sie wiederum die Länge der Strecke $AC'$
+			\begin{flalign*}
+				AC' &= C'-A = \begin{pmatrix}3\\2\end{pmatrix}&& \\
+				\vert AC' \vert &= \sqrt{13} \approx \dl{3.61}&&
+			\end{flalign*}
+		\item Berechnen Sie wiederum den Winkel an A\\
+			\begin{flalign*}
+				\varphi &= \arccos\left(\frac{AB * AC'}{\vert AB \vert * \vert AC' \vert}\right)&& \\
+				\varphi &= \arccos\left(\frac{12}{4 * \sqrt{13}}\right)&& \\
+				\varphi &\approx \dl{\ang{33.69}}
+			\end{flalign*}
+		\item Strecken (“skalieren”) Sie die Strecke AC’ um den skalaren Faktor $s = 4:$ das heißt
+		die Länge $\vert AC'' \vert = s \vert AC' \vert$ ändert sich auf das Dreifache während der Winkel an A gleich
+		bleibt. Auf welchem Koordinatentupel liegt der so erhaltenen Punkt C” ? \\
+		\begin{align*}
+			\vert AC'' \vert &= 4*\sqrt{13}, \qquad	C'' = (x,y), \qquad \varphi \approx \ang{33.69}&& \\[2.5ex]
+			x &= \cos\left(\varphi\right)*\vert AC'' \vert  
+			&y &= \sin\left(\varphi\right)*\vert AC'' \vert  \\
+			x &= \cos\left(33.69\right) * 4*\sqrt{13} 
+			&y &\approx \sin\left(33.69\right) * 4*\sqrt{13} \\
+			x &= 12 
+			&y &= 8 
+		\end{align*}
+		$\Rightarrow C'' = \dl{(12,8)}$
+	\end{enumerate}
+
+
+
+\end{document}

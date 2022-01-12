@@ -1,0 +1,136 @@
+\documentclass{alex_hü}
+
+\name{Alexander Helbok}
+\course{PS Analysis}
+\hwnumber{1}
+
+\begin{document}
+\renewcommand{\labelenumi}{\roman{enumi})}
+	
+	
+	\section*{1)}
+	
+	\begin{align*}
+		M &= \{1,2,3,4,5,6,7,8,9\} \\
+		G &= \{(1,3),(2,1),(3,3),(4,7),(5,1),(6,9),(7,2),(8,1),(9,1)\} \\
+		N &= \{1,2,8,9\} \supset M \\[4ex]
+		Bild\ \ G &=\{3,1,3,7,1,9,2,1,1\} = \{1,2,3,7,9\}\\
+		Bild\ \ N &= \{3,1,1,1\} = \{1,3\}\\
+		Urbild\ \ N &= \{1,2,3,5,8,9\}
+	\end{align*}
+
+	
+	\section*{2)} 
+	$A = \{a,b,c\}\quad B = \{1,2\}$
+	
+	\begin{enumerate}
+		\item $A \to A$
+		\begin{align*}
+			G_{1} &= \{(a,a),(b,a),(c,a)\} 
+			&G_{2} &= \{(a,a),(b,a),(c,b)\}
+			&G_{3} &= \{(a,a),(b,a),(c,c)\} \\
+			G_{4} &= \{(a,a),(b,b),(c,a)\}
+			&G_{5} &= \{(a,a),(b,b),(c,b)\}
+			&G_{6} &= \{(a,a),(b,b),(c,c)\} \\
+			G_{7} &= \{(a,a),(b,c),(c,a)\}
+			&G_{8} &= \{(a,a),(b,c),(c,b)\} 
+			&G_{9} &= \{(a,a),(b,c),(c,c)\} \\
+			G_{10} &= \{(a,b),(b,a),(c,a)\} 
+			&G_{11} &= \{(a,b),(b,a),(c,b)\}
+			&G_{12} &= \{(a,b),(b,a),(c,c)\} \\
+			G_{13} &= \{(a,b),(b,b),(c,a)\}
+			&G_{14} &= \{(a,b),(b,b),(c,b)\} 
+			&G_{15} &= \{(a,b),(b,b),(c,c)\} \\
+			G_{16} &= \{(a,b),(b,c),(c,a)\} 
+			&G_{17} &= \{(a,b),(b,c),(c,b)\}
+			&G_{18} &= \{(a,b),(b,c),(c,c)\} \\
+			G_{19} &= \{(a,c),(b,a),(c,a)\}
+			&G_{20} &= \{(a,c),(b,a),(c,b)\} 
+			&G_{21} &= \{(a,c),(b,a),(c,c)\} \\
+			G_{22} &= \{(a,c),(b,b),(c,a)\} 
+			&G_{23} &= \{(a,c),(b,b),(c,b)\}
+			&G_{24} &= \{(a,c),(b,b),(c,c)\} \\
+			G_{25} &= \{(a,c),(b,c),(c,a)\}
+			&G_{26} &= \{(a,c),(b,c),(c,b)\} 
+			&G_{27} &= \{(a,c),(b,c),(c,c)\}
+		\end{align*}
+		
+		\item $A \to B$
+			\begin{align*}
+				G_{1} &= \{(a,1),(b,1),(c,1)\}
+				&G_{2} &= \{(a,1),(b,1),(c,2)\} \\
+				G_{3} &= \{(a,1),(b,2),(c,1)\}
+				&G_{4} &= \{(a,1),(b,2),(c,2)\} \\
+				G_{5} &= \{(a,2),(b,1),(c,1)\}
+				&G_{6} &= \{(a,2),(b,1),(c,2)\} \\
+				G_{7} &= \{(a,2),(b,2),(c,1)\}
+				&G_{8} &= \{(a,2),(b,2),(c,2)\} \\
+			\end{align*}	
+		
+		\item $B \to A$
+			\begin{align*}
+				G_{1} &= \{(1,a),(2,a)\}
+				&G_{2} &= \{(1,a),(2,b)\}
+				&G_{3} &= \{(1,a),(2,c)\} \\
+				G_{4} &= \{(1,b),(2,a)\}
+				&G_{5} &= \{(1,b),(2,b)\}
+				&G_{6} &= \{(1,b),(2,c)\} \\
+				G_{7} &= \{(1,c),(2,a)\}
+				&G_{8} &= \{(1,c),(2,b)\}
+				&G_{9} &= \{(1,c),(2,c)\} \\
+			\end{align*}
+		
+		\item $B \to B$
+			\begin{align*}
+				G_{1} &= \{(1,1),(2,1)\}
+				&G_{2} &= \{(1,1),(2,2)\} \\
+				G_{3} &= \{(1,2),(2,1)\}
+				&G_{4} &= \{(1,2),(2,2)\} \\
+			\end{align*}
+		
+	\end{enumerate}
+
+	\section*{3)}
+		$A = \{a,b,c\}\quad B = \{1,2\}$
+	
+	\begin{enumerate}
+		\item $A \to A$, wobei die Abbildung $G$ injektiv ist
+			\begin{align*}
+				G_{1} &= \{(a,a),(b,b),(c,c)\}
+				&G_{2} &= \{(a,b),(b,a),(c,c)\}
+				&G_{3} &= \{(a,c),(b,a),(c,b)\} \\
+				G_{4} &= \{(a,a),(b,c),(c,b)\}
+				&G_{5} &= \{(a,b),(b,c),(c,a)\}
+				&G_{6} &= \{(a,c),(b,b),(c,a)\} \\
+			\end{align*}
+		\item $A \to B$, wobei die Abbildung $G$ injektiv ist \\[3ex]
+			Es existieren keine injektive Abbildungen, da A mehr Elemente als B enthält und somit doppelte Zuordnungen nicht vermieden werden können. \\
+		\item $B \to A$, wobei die Abbildung $G$ injektiv ist
+			\begin{align*}
+				G_{1} &= \{(1,a),(2,b)\}
+				&G_{2} &= \{(1,a),(2,c)\}
+				&G_{3} &= \{(1,b),(2,a)\} \\
+				G_{4} &= \{(1,b),(2,c)\}
+				&G_{5} &= \{(1,c),(2,a)\}
+				&G_{6} &= \{(1,c),(2,b)\} \\
+			\end{align*}
+		\item $B \to B$, wobei die Abbildung $G$ injektiv ist
+			\begin{align*}
+				G_{1} &= \{(1,1),(2,2)\}
+				&G_{2} &= \{(1,2),(2,1)\} \\
+			\end{align*}		
+		
+	\end{enumerate}
+
+	\section*{4)}
+	$f:A \to B; \quad g:B \to A; \quad f\circ g; \quad g\circ f; \quad f\circ g \neq g\circ f $\\[1ex]
+	$f(x) = x+1; \quad g(x) = \frac{1}{x} $\\[1ex]
+	$(f \circ g)(x) = f(g(x)) = \frac{1}{x}+1$\\
+	$(g \circ f)(x) = g(f(x)) = \frac{1}{x+1}$\\[2ex]
+	Für x = 1\\
+	$(f \circ g)(1) = \frac{1}{1}+1$\\
+	$(g \circ f)(1) = \frac{1}{1+1}$\\[2ex]
+	$2 \neq \frac{1}{2} \Rightarrow (f \circ g)(x) \neq (g \circ f)(x)$
+	
+
+\end{document}

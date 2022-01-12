@@ -1,0 +1,115 @@
+\documentclass{alex_hü}
+
+\name{Alexander Helbok}
+\course{PS Physik}
+\hwnumber{2}
+
+\begin{document}
+	\renewcommand{\labelenumi}{\arabic{enumi}.}
+
+	
+	\section*{A. Einheiten und Einheiten umwandeln}
+	\begin{enumerate}
+		\item Die Wellenlänge von Wasserstoff (H$\alpha$) liegt bei 6562 Angström ($\si{\angstrom};\; 10 \si{\angstrom} = 1 \si{\nano\m}$). Wie lautet der Wert in m? 
+		\begin{flalign*}
+			6562\; \si{\angstrom} &= 656.2 * 10^{-9} \si{ \m} = \dl{6.562 * 10^{-7} \si{ \m}} &&
+		\end{flalign*}
+		\item Die Entfernung zur Sonne beträgt circa 150 000 000 km. Wie lange braucht das Licht für diese Strecke?\\[1ex]
+		$ c = 299 792 458 \si{\m\per\s}; \quad d \approx 15*10^{7} \si{\km} = 1.5 * 10^{11} \si{\m}$
+		\begin{flalign*}
+			\frac{1.5 * 10^{11} \si{\m}}{299 792 458 \si{\m\per\s}} &= \dl{500 \si{\s}}&&
+		\end{flalign*}
+		\item  Eine alte Einheit zur Messung des Gewichts ist das Pfund. Ein Pfund entspricht 459 g. Ein Sack Getreide hat ein Gewicht von 12 Pfund. Wieviel ist das in kg? 
+		\begin{flalign*}
+			1 \text{ lb} &= 0.459 \si{\kilogram}&& \\
+			12 \text{ lb} &= 12 * 0.459 \si{\kilogram}&& \\
+			12 \text{ lb} &= \dl{5.5 \si{\kilogram}}&&
+		\end{flalign*}
+		
+		
+	\end{enumerate}
+	
+	\section*{B. Geradlinige Bewegung}
+	\begin{enumerate}
+		\item $ x_1 = -4 \si{\m}; \quad x_2 = +7 \si{\m} $\\[1.5ex]
+		$ x_2 - x_1 = 7 \si{\m} - (-4) \si{\m} = \dl{11 \si{\m}}\quad \Rightarrow$ positive Bewegung\\ 
+		\item $ x_1 = -3 \si{\m}; \quad x_2 = -8 \si{\m} $\\[1.5ex]
+		$ x_2 - x_1 = -8 \si{\m} - (-3) \si{\m} = \dl{-5 \si{\m}}\quad \Rightarrow$ negative Bewegung\\
+		\item $ x_1 = +5 \si{\m}; \quad x_2 = +9 \si{\m} $\\[1.5ex]
+		$ x_2 -x_1 = 9 \si{\m} - 5 \si{\m} = \dl{4 \si{\m}}\quad \Rightarrow$ positive Bewegung\\
+		\item $ x_1 = +2 \si{\m}; \quad x_2 = -1 \si{\m}$\\[1.5ex]
+		$ x_2 - x_1 = -1 \si{\m} - 2 \si{\m} = \dl{-3 \si{\m}}\quad \Rightarrow$ negative Bewegung
+	\end{enumerate}
+ 	\section*{C. Geradlinige Bewegung }
+ 	\begin{align*}
+ 		s_1 &= 10.4 \si{\km} = 10400 \si{\m}
+ 		&s_2 &= 2.5 \si{km} = 2500 \si{\m}\\
+ 		\Delta t_1 &= \frac{s_1}{v_1} = 468 \si{\s}
+ 		&\Delta t_2 &= 1800 \si{\s} \\
+ 		v_1 &= 80 \si{\km\per\hour} = 22.\dot{2} \si{\m\per\s}
+ 		&v_2 &= \frac{s_2}{\Delta t_2} = \frac{25}{18} \si{\m\per\s} \\
+ 	\end{align*}
+ 	\setlength{\columnsep}{-3cm}
+	\begin{multicols}{2}
+ 			\begin{tikzpicture}
+ 				\begin{axis}[
+ 					width=207pt,
+ 					height=207pt,
+ 					axis lines=center,
+ 					axis line style={Stealth-Stealth},
+ 					xmin=-180,xmax=2500,ymin=-1080,ymax=15500,
+ 					xlabel style={below},
+ 					xtick={500, 1000, 1500, 2000},
+ 					y tick label style={/pgf/number format/.cd,%
+ 						scaled y ticks = false,
+ 						fixed},
+ 					xlabel=$t$ in s,
+ 					ylabel=$s$ in m,
+ 					grid=major,
+ 					grid style={thin,densely dotted,black!20}]
+ 					\addplot [-, thick,  black]
+ 					coordinates { (0,0) (468, 10400)};
+ 					\addplot [-, thick,  black]
+ 					coordinates { (468, 10400) (2268, 12900)} node[right,pos=1] {$f$};
+					\addplot [-, thick, dotted,  black]	
+ 					coordinates { (2268,0) (2268, 12900)} node[left,pos=0.5] {$ \Delta s $};	
+					\addplot [-, thick, dotted,  black]	
+ 					coordinates { (0,12900) (2268, 12900)} node[above,pos=0.5] {$ \Delta t $};
+ 					\addplot [-, thick,  dotted,  black]
+ 					coordinates { (0, 0) (2268, 12900)} node[left,pos=0.5,rotate=45,anchor=south] {$\bar{v} = \frac{\Delta s}{\Delta t}$};	
+ 				\end{axis}
+ 			\end{tikzpicture}\\
+ 		\columnbreak
+ 		\begin{equation*}
+ 			f(t) = \begin{cases}
+ 				22.\dot{2}t & \quad \text{für }\ 0 \le t \le 468, \\
+ 				\frac{25}{18}t & \quad $für $\ 468 < t \le 2268.
+ 			\end{cases}
+ 		\end{equation*}\\
+	 	\begin{enumerate}
+	 		\item Wie groß ist Ihre Bewegung insgesamt, gemessen vom Anfang der Fahrt bis zur Ankunft an der Tankstelle? 
+	 		\begin{flalign*}
+	 		\Delta s &= 10.4 \si{\km} + 2.5 \si{\km} = 12.9 \si{km}&& \\
+			\Delta s &= \dl{12900 \si{\m}}&&%\\[2ex]
+%			\Delta s &= f(2268) - f(0) = 12.9 \si{\km} - 0 \si{\km}&& \\
+%			\Delta s &= \dl{12900 \si{\m}}&&
+	 		\end{flalign*}
+ 		\end{enumerate}
+	\end{multicols}
+	\begin{enumerate}
+		\setcounter{enumi}{1}
+		\item  Wie groß ist das Zeitintervall $\Delta$t zwischen dem Anfang der Fahrt und der Ankunft an der Tankstelle? 
+		\begin{flalign*}
+			\Delta t &= 468 \si{\s} + 1800 \si{\s} = \dl{2268 \si{\s}}&& \\
+%			t_{Ende} &= (f(t) = 12900); \quad t_{Start} = (f(t) = 0)&& \\
+%			t_{Ende} &= 2268 \si{\s}; \quad t_{Start} = 0 \si{\s}&& \\
+%			\Delta t &= t_{Ende} - t_{Start} = 2268 \si{\s} - 0 \si{\s} = \dl{2268 \si{\s}}
+		\end{flalign*}
+		\item Wie groß ist Ihre Durchschnittsgeschwindigkeit? 
+		\begin{flalign*}
+			\bar{v} &= \frac{\Delta s}{\Delta t} = \frac{12900}{2268} \si{\m\per\s} = \dl{5.69 \si{\m\per\s}}&&\\
+%			\bar{v} &= \frac{f(2268)-f(0)}{2268 - 0} = \frac{12900}{2268} \si{\m\per\s} = \dl{5.69 \si{\m\per\s}}&&\\
+		\end{flalign*}
+	\end{enumerate}
+ 	
+\end{document}
