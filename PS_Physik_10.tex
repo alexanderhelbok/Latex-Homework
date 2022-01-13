@@ -1,0 +1,104 @@
+\documentclass{alex_hü}
+
+\name{Alexander Helbok}
+\course{PS Physik}
+\hwnumber{10}
+
+\begin{document}
+\renewcommand{\labelenumi}{\alph{enumi})}
+
+
+\section*{177. Stabpendel mit Kugeln}
+	\begin{align*}
+		L &= 0.3 \unit{m};\ &r_1 &= 0.02 \unit{m};\ &r_2 &= 0.03 \unit{m} &&\\
+		m_0 &= 0.1 \unit{kg};\ &m_1 &= 0.1 \unit{kg};\ &m_2 &= 0.3 \unit{kg} &&
+	\end{align*}
+	\begin{enumerate}
+	\item \( I_{ges} = I_{Stab} + I_{Kugel_{1}} + I_{Kugel_{2}} \)	
+		\begin{flalign*}
+			I_{Stab} &= \tfrac{1}{12}m_0L^2 = 7.5 * 10^{-4} \unit{kg.m^2} &&\\
+			I_{Kugel_{1}} &= \tfrac{2}{5}m_1r_1\!^2 + m_1(\tfrac{L}{2}+r_1) = 2.9*10^{-3} \unit{kg.m^2} &&\\
+			I_{Kugel_{2}} &= \tfrac{2}{5}m_2r_2\!^2 + m_2(\tfrac{L}{2}+r_2) = 9.8*10^{-3} \unit{kg.m^2} &&\\[2ex]
+			\Rightarrow I_{ges} &= \dl{1.3 * 10^{-2} \unit{kg.m^2}} &&
+		\end{flalign*}
+	\item 
+		\begin{flalign*}
+			x_{Stab_{sp}} &=  0 \unit{m} &&\\
+			x_{Kugeln_{sp}} &= \tfrac{m_1(-\tfrac{2r_1 + L}{2}) + m_2(\tfrac{2r_2 + L}{2})}{m_1+m_2} &&
+		\end{flalign*} 
+	\end{enumerate}
+
+%\section*{B. Geradlinige Bewegung}
+%\begin{enumerate}
+%	\item $ x_1 = -4 \si{\m}; \quad x_2 = +7 \si{\m} $\\[1.5ex]
+%	$ x_2 - x_1 = 7 \si{\m} - (-4) \si{\m} = \dl{11 \si{\m}}\quad \Rightarrow$ positive Bewegung\\ 
+%	\item $ x_1 = -3 \si{\m}; \quad x_2 = -8 \si{\m} $\\[1.5ex]
+%	$ x_2 - x_1 = -8 \si{\m} - (-3) \si{\m} = \dl{-5 \si{\m}}\quad \Rightarrow$ negative Bewegung\\
+%	\item $ x_1 = +5 \si{\m}; \quad x_2 = +9 \si{\m} $\\[1.5ex]
+%	$ x_2 -x_1 = 9 \si{\m} - 5 \si{\m} = \dl{4 \si{\m}}\quad \Rightarrow$ positive Bewegung\\
+%	\item $ x_1 = +2 \si{\m}; \quad x_2 = -1 \si{\m}$\\[1.5ex]
+%	$ x_2 - x_1 = -1 \si{\m} - 2 \si{\m} = \dl{-3 \si{\m}}\quad \Rightarrow$ negative Bewegung
+%\end{enumerate}
+%\section*{C. Geradlinige Bewegung }
+%\begin{align*}
+%	s_1 &= 10.4 \si{\km} = 10400 \si{\m}
+%	&s_2 &= 2.5 \si{km} = 2500 \si{\m}\\
+%	\Delta t_1 &= \frac{s_1}{v_1} = 468 \si{\s}
+%	&\Delta t_2 &= 1800 \si{\s} \\
+%	v_1 &= 80 \si{\km\per\hour} = 22.\dot{2} \si{\m\per\s}
+%	&v_2 &= \frac{s_2}{\Delta t_2} = \frac{25}{18} \si{\m\per\s} \\
+%\end{align*}
+%\setlength{\columnsep}{-3cm}
+%\begin{multicols}{2}
+%	\begin{tikzpicture}
+%		\begin{axis}[
+%			width=207pt,
+%			height=207pt,
+%			axis lines=center,
+%			axis line style={Stealth-Stealth},
+%			xmin=-5,xmax=5,ymin=-5,ymax=5,
+%			xlabel style={below},
+%			xtick distance=1 ,
+%			ytick distance=1,
+%			xlabel=$x$,
+%			ylabel=$y$,
+%			grid=major,
+%			grid style={thin,densely dotted,black!20}]
+%			\draw[color=blue] plot[samples=200] (\x,{tan(1/3*\x^3 r)}) node[right] {$y=\tan x$};
+%		\end{axis}
+%	\end{tikzpicture}\\
+%	\columnbreak
+%	\begin{equation*}
+%		f(t) = \begin{cases}
+%			22.\dot{2}t & \quad \text{für }\ 0 \le t \le 468, \\
+%			\frac{25}{18}t & \quad $für $\ 468 < t \le 2268.
+%		\end{cases}
+%	\end{equation*}\\
+%	\begin{enumerate}
+%		\item Wie groß ist Ihre Bewegung insgesamt, gemessen vom Anfang der Fahrt bis zur Ankunft an der Tankstelle? 
+%		\begin{flalign*}
+%			\Delta s &= 10.4 \si{\km} + 2.5 \si{\km} = 12.9 \si{km}&& \\
+%			\Delta s &= \dl{12900 \si{\m}}&&%\\[2ex]
+%			%			\Delta s &= f(2268) - f(0) = 12.9 \si{\km} - 0 \si{\km}&& \\
+%			%			\Delta s &= \dl{12900 \si{\m}}&&
+%		\end{flalign*}
+%	\end{enumerate}
+%\end{multicols}
+%\begin{enumerate}
+%	\setcounter{enumi}{1}
+%	\item  Wie groß ist das Zeitintervall $\Delta$t zwischen dem Anfang der Fahrt und der Ankunft an der Tankstelle? 
+%	\begin{flalign*}
+%		\Delta t &= 468 \si{\s} + 1800 \si{\s} = \dl{2268 \si{\s}}&& \\
+%		%			t_{Ende} &= (f(t) = 12900); \quad t_{Start} = (f(t) = 0)&& \\
+%		%			t_{Ende} &= 2268 \si{\s}; \quad t_{Start} = 0 \si{\s}&& \\
+%		%			\Delta t &= t_{Ende} - t_{Start} = 2268 \si{\s} - 0 \si{\s} = \dl{2268 \si{\s}}
+%	\end{flalign*}
+%	\item Wie groß ist Ihre Durchschnittsgeschwindigkeit? 
+%	\begin{flalign*}
+%		\bar{v} &= \frac{\Delta s}{\Delta t} = \frac{12900}{2268} \si{\m\per\s} = \dl{5.69 \si{\m\per\s}}&&\\
+%		%			\bar{v} &= \frac{f(2268)-f(0)}{2268 - 0} = \frac{12900}{2268} \si{\m\per\s} = \dl{5.69 \si{\m\per\s}}&&\\
+%	\end{flalign*}
+%\end{enumerate}
+
+
+\end{document}
