@@ -1364,6 +1364,10 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 12
 (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
 
 AED: lastpage setting LastPage
 [1
