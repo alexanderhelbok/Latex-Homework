@@ -71,18 +71,20 @@
 \section*{185. Resonante Anregung eines Federpendels}
 	\( m = 0.1 \unit{kg};\quad k = 40 \unit{N/m} \)
 	\begin{enumerate}
-		\item \( \omega = \sqrt{\tfrac{k}{m}} = 20 \unit{rad/s};\quad \omega_0 = \sqrt{\tfrac{k}{m} - \tfrac{\beta^2}{4m^2}} \)\\
+		\item \( \omega_0 = \sqrt{\tfrac{k}{m}} = 20 \unit{rad/s};\quad \omega_0 = \sqrt{\tfrac{k}{m} - \tfrac{\beta^2}{4m^2}} \)\\
 		\begin{flalign*}
 			\tfrac{x_m}{2} &= x_m*e^{-\beta t/2} &&\\
 		    \beta &= -\tfrac{\ln(0.5)2}{t} = \dl{0.14 \unit{kg/s}} &&\\[2ex]
-		    \omega_0 &= \sqrt{\tfrac{k}{m} - \tfrac{\beta^2}{4}} = \dl{19.99988 \unit{rad/s}} &&
+		    \omega_1 &= \sqrt{\tfrac{k}{m} - \tfrac{\beta^2}{4}} = \dl{19.99988 \unit{rad/s}} &&
 		\end{flalign*}
 		\item \(  \)
 		\begin{flalign*}
-			Q &=  \omega_0 \tfrac{m}{\beta} = \dl{144.269} && 
+			Q &=  \omega_1 \tfrac{m}{\beta} = \dl{144.269} && 
 		\end{flalign*} 
-		\item \(  \)
+		\item \( x_m(\omega) = \tfrac{\omega_0}{\sqrt{(\omega - \omega_0)^2 + \beta^2}} \)
 		\begin{flalign*}
+			x_m(\omega_0) &= \tfrac{\omega_0}{\sqrt{(\omega_0 - \omega_0)^2 + \beta^2}}
+			x_m(\omega_1) &= \tfrac{\omega_0}{\sqrt{(\omega_0 - \omega_0)^2 + \beta^2}}
 		\end{flalign*}
 	\end{enumerate}
 
