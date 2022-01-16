@@ -8,31 +8,31 @@
 \renewcommand{\labelenumi}{\alph{enumi})}
 
 
-%\section*{177. Stabpendel mit Kugeln}
-%	\begin{align*}
-%		L &= 0.3 \unit{m};\ &r_1 &= 0.02 \unit{m};\ &r_2 &= 0.03 \unit{m} &&\\
-%		m_0 &= 0.1 \unit{kg};\ &m_1 &= 0.1 \unit{kg};\ &m_2 &= 0.3 \unit{kg} &&
-%	\end{align*}
-%	\begin{enumerate}
-%	\item \( I_{ges} = I_{Stab} + I_{Kugel_{1}} + I_{Kugel_{2}} \)	
-%		\begin{flalign*}
-%			I_{Stab} &= \tfrac{1}{12}m_0L^2 = 7.5 * 10^{-4} \unit{kg.m^2} &&\\
-%			I_{Kugel_{1}} &= \tfrac{2}{5}m_1r_1\!^2 + m_1(\tfrac{L}{2}+r_1)^2 = 2.9*10^{-3} \unit{kg.m^2} &&\\
-%			I_{Kugel_{2}} &= \tfrac{2}{5}m_2r_2\!^2 + m_2(\tfrac{L}{2}+r_2)^2 = 9.8*10^{-3} \unit{kg.m^2} &&\\[2ex]
-%			\Rightarrow I_{ges} &= \dl{1.3 * 10^{-2} \unit{kg.m^2}} &&
-%		\end{flalign*}
-%	\item 
-%		\begin{flalign*}
-%			x_{Stab_{sp}} &=  0 \unit{m} &&\\
-%			x_{Kugeln_{sp}} &= \tfrac{m_1 \left(-\tfrac{2r_1 + L}{2} \right) + m_2 \left(\tfrac{2r_2 + L}{2} \right)}{m_1+m_2} = 0.0925 \unit{m} &&\\[2ex]
-%			x_{sp} &= \tfrac{x_{Stab_{sp}}*m_0 + x_{Kugeln_{sp}}*(m_1+m_2)}{m_0+m_1+m_2} = \dl{0.074} \unit{m} &&
-%		\end{flalign*} 
-%	\item \( T = 2\pi\sqrt{\tfrac{I}{Mgl}} \)
-%		\begin{flalign*}
-%			T &= 2\pi\sqrt{\tfrac{I}{(m_0+m_1+m_2)\: g\: \left(\tfrac{2r_2+L}{2}\right)}} &&\\
-%			&= \dl{1.2 \unit{s}} &&
-%		\end{flalign*}
-%	\end{enumerate}
+\section*{177. Stabpendel mit Kugeln}
+	\begin{align*}
+		L &= 0.3 \unit{m};\ &r_1 &= 0.02 \unit{m};\ &r_2 &= 0.03 \unit{m} &&\\
+		m_0 &= 0.1 \unit{kg};\ &m_1 &= 0.1 \unit{kg};\ &m_2 &= 0.3 \unit{kg} &&
+	\end{align*}
+	\begin{enumerate}
+	\item \( I_{ges} = I_{Stab} + I_{Kugel_{1}} + I_{Kugel_{2}} \)	
+		\begin{flalign*}
+			I_{Stab} &= \tfrac{1}{12}m_0L^2 = 7.5 * 10^{-4} \unit{kg.m^2} &&\\
+			I_{Kugel_{1}} &= \tfrac{2}{5}m_1r_1\!^2 + m_1(\tfrac{L}{2}+r_1)^2 = 2.9*10^{-3} \unit{kg.m^2} &&\\
+			I_{Kugel_{2}} &= \tfrac{2}{5}m_2r_2\!^2 + m_2(\tfrac{L}{2}+r_2)^2 = 9.8*10^{-3} \unit{kg.m^2} &&\\[2ex]
+			\Rightarrow I_{ges} &= \dl{1.3 * 10^{-2} \unit{kg.m^2}} &&
+		\end{flalign*}
+	\item 
+		\begin{flalign*}
+			x_{Stab_{sp}} &=  0 \unit{m} &&\\
+			x_{Kugeln_{sp}} &= \tfrac{m_1 \left(-\tfrac{2r_1 + L}{2} \right) + m_2 \left(\tfrac{2r_2 + L}{2} \right)}{m_1+m_2} = 0.0925 \unit{m} &&\\[2ex]
+			x_{sp} &= \tfrac{x_{Stab_{sp}}*m_0 + x_{Kugeln_{sp}}*(m_1+m_2)}{m_0+m_1+m_2} = \dl{0.074} \unit{m} &&
+		\end{flalign*} 
+	\item \( T = 2\pi\sqrt{\tfrac{I}{Mgl}} \)
+		\begin{flalign*}
+			T &= 2\pi\sqrt{\tfrac{I}{(m_0+m_1+m_2)\: g\: \left(\tfrac{2r_2+L}{2}\right)}} &&\\
+			&= \dl{1.2 \unit{s}} &&
+		\end{flalign*}
+	\end{enumerate}
 
 \section*{184. Resonanzverhalten einer Stimmgabel}
 	\( f_0 = 440 \unit{Hz};\quad \omega_0 = 2\pi f_0;\quad x(\tau) = x_m\mathrm{e}^{-\beta \tau/2};\quad x(5) = \tfrac{1}{10}x(0) \)\\
@@ -68,21 +68,21 @@
 		\end{flalign*}
 	\end{enumerate}
  
-%\section*{185. Resonante Anregung eines Federpendels}
-%	\( m = 0.1 \unit{kg};\quad k = 40 \unit{N/m} \)
-%	\begin{enumerate}
-%		\item \( \omega = \sqrt{\tfrac{k}{m}} = 20 \unit{rad/s};\quad \omega_0 = \sqrt{\tfrac{k}{m} - \tfrac{\beta^2}{4m^2}} \)\\
-%		\begin{flalign*}
-%			\tfrac{x_m}{2} &= x_m*e^{-\beta t/2} &&\\
-%		    \beta &= -\tfrac{\ln(0.5)2}{t} = \dl{0.14 \unit{kg/s}} &&\\[2ex]
-%		    \omega_0 &= \sqrt{\tfrac{k}{m} - \tfrac{\beta^2}{4}} = \dl{19.99988 \unit{rad/s}} &&
-%		\end{flalign*}
-%		\item \(  \)
-%		\begin{flalign*}
-%			Q &=  \omega_0 \tfrac{m}{\beta} = \dl{144.269} && 
-%		\end{flalign*} 
-%	
-%	\end{enumerate}
+\section*{185. Resonante Anregung eines Federpendels}
+	\( m = 0.1 \unit{kg};\quad k = 40 \unit{N/m} \)
+	\begin{enumerate}
+		\item \( \omega = \sqrt{\tfrac{k}{m}} = 20 \unit{rad/s};\quad \omega_0 = \sqrt{\tfrac{k}{m} - \tfrac{\beta^2}{4m^2}} \)\\
+		\begin{flalign*}
+			\tfrac{x_m}{2} &= x_m*e^{-\beta t/2} &&\\
+		    \beta &= -\tfrac{\ln(0.5)2}{t} = \dl{0.14 \unit{kg/s}} &&\\[2ex]
+		    \omega_0 &= \sqrt{\tfrac{k}{m} - \tfrac{\beta^2}{4}} = \dl{19.99988 \unit{rad/s}} &&
+		\end{flalign*}
+		\item \(  \)
+		\begin{flalign*}
+			Q &=  \omega_0 \tfrac{m}{\beta} = \dl{144.269} && 
+		\end{flalign*} 
+	
+	\end{enumerate}
 
 
 \end{document}
