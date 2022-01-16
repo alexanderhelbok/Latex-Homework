@@ -1389,7 +1389,7 @@ Package rerunfilecheck Info: File `PS_Physik_10.out' has not changed.
 Here is how much of TeX's memory you used:
  47685 strings out of 476257
  1185022 string characters out of 5816920
- 1799628 words of memory out of 5000000
+ 1798628 words of memory out of 5000000
  67618 multiletter control sequences out of 15000+600000
  412088 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
