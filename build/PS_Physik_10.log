@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.1.2)  16 JAN 2022 19:47
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.1.2)  16 JAN 2022 19:52
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1380,9 +1380,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
-
+[2] 
 AED: lastpage setting LastPage
-[2] (build/PS_Physik_10.aux)
+[3] (build/PS_Physik_10.aux)
 Package rerunfilecheck Info: File `PS_Physik_10.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
@@ -1393,6 +1393,6 @@ Here is how much of TeX's memory you used:
  67618 multiletter control sequences out of 15000+600000
  412088 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 122i,20n,120p,10633b,891s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 122i,20n,120p,10633b,892s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on build/PS_Physik_10.pdf (2 pages).
+Output written on build/PS_Physik_10.pdf (3 pages).
