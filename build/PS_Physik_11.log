@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.1.2)  19 JAN 2022 11:11
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.1.2)  19 JAN 2022 21:29
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1347,37 +1347,38 @@ File: bkm-dvipdfm.def 2020-11-06 v1.29 bookmark driver for dvipdfm (HO)
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-
-AED: lastpage setting LastPage
-LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 16
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 14
 .
 
 (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [1
+)
+
+AED: lastpage setting LastPage
+[1
 
 ] (build/PS_Physik_11.aux)
 Package rerunfilecheck Info: File `PS_Physik_11.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 47683 strings out of 476257
- 1184976 string characters out of 5816920
- 1770628 words of memory out of 5000000
- 67616 multiletter control sequences out of 15000+600000
+ 47685 strings out of 476257
+ 1185022 string characters out of 5816920
+ 1780628 words of memory out of 5000000
+ 67618 multiletter control sequences out of 15000+600000
  412088 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 122i,20n,120p,10633b,764s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 122i,19n,120p,10633b,770s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on build/PS_Physik_11.pdf (1 page).
