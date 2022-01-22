@@ -23,7 +23,7 @@
 \RequirePackage{custom}
 \RequirePackage{pgfplots}
 \RequirePackage{tikz}
-\usetikzlibrary{arrows.meta,positioning, calc, shapes, math, external}
+\usetikzlibrary{arrows.meta,positioning, calc, shapes, math, decorations.pathreplacing, decorations.markings}
 \usepgfplotslibrary{fillbetween}
 \pgfplotsset{
 	compat=newest,
@@ -37,7 +37,9 @@
 	}
 }
 
-\tikzexternalize[prefix=figures/]
+%\def\tikzmark#1{\tikz[overlay, remember picture] \node (#1) {};}
+
+%\tikzexternalize[prefix=figures/]
 
 \graphicspath{ {./Graphics/} }
 

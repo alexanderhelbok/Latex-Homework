@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.1.2)  22 JAN 2022 09:43
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.1.2)  22 JAN 2022 10:58
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1438,48 +1438,41 @@ Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 Package hyperref Info: Option `colorlinks' set `true' on input line 64.
-) (/usr/share/texmf-dist/tex/latex/accents/accents.sty
-Package: accents 2006/05/12 v1.4 Math Accent Tools
-\cc@skew=\dimen326
-\cc@wd=\dimen327
-\cc@code=\count380
-\cc@group=\count381
-\cc@skewchar=\count382
-)
-(build/PS_Physik_10.aux)
+) (build/PS_Physik_10.aux)
 \openout1 = `PS_Physik_10.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
-1.
- (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 7
+.
+
+(/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for LMP1/mtt/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for LMP2/mtt/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for LMP3/mtt/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for LMP1/mtt/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for LMP2/mtt/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for LMP3/mtt/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1530,12 +1523,12 @@ File: translations-basic-dictionary-german.trsl (german translation file `trans
 lations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `german'. on input line 21.
+or `german'. on input line 7.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 21.
-\c@lstlisting=\count383
-Package hyperref Info: Link coloring ON on input line 21.
+(lastpage)             ! on input line 7.
+\c@lstlisting=\count380
+Package hyperref Info: Link coloring ON on input line 7.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1545,19 +1538,15 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count384
+\c@section@level=\count381
 )
-LaTeX Info: Redefining \ref on input line 21.
-LaTeX Info: Redefining \pageref on input line 21.
-LaTeX Info: Redefining \nameref on input line 21.
+LaTeX Info: Redefining \ref on input line 7.
+LaTeX Info: Redefining \pageref on input line 7.
+LaTeX Info: Redefining \nameref on input line 7.
 
 (build/PS_Physik_10.out) (build/PS_Physik_10.out)
 \@outlinefile=\write4
 \openout4 = `PS_Physik_10.out'.
-
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           Using `bookmark' together with `hyperref' is recommended,
@@ -1566,209 +1555,64 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 21.
+(scrartcl)           before \begin{document} on input line 7.
+
 (/usr/share/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
 (/usr/share/texmf-dist/tex/latex/bookmark/bkm-dvipdfm.def
 File: bkm-dvipdfm.def 2020-11-06 v1.29 bookmark driver for dvipdfm (HO)
-\BKM@id=\count385
+\BKM@id=\count382
 ))
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 26
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 12
 .
 
 (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 52--54
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
-[2]
-\openout3 = `figures/PS_Physik_10-figure0.md5'.
+[2] 
+AED: lastpage setting LastPage
+[3] (build/PS_Physik_10.aux)
+Package rerunfilecheck Info: File `PS_Physik_10.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
+Here is how much of TeX's memory you used:
+ 49282 strings out of 476257
+ 1209810 string characters out of 5816920
+ 1835825 words of memory out of 5000000
+ 69176 multiletter control sequences out of 15000+600000
+ 436724 words of font info for 72 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 122i,20n,120p,10633b,901s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-\openout3 = `PS_Physik_10.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'xelatex -shell-escape -halt-on
--error -interaction=batchmode -jobname "figures/PS_Physik_10-figure0" "\def\tik
-zexternalrealjob{PS_Physik_10}\input{PS_Physik_10}"' ========
-runsystem(xelatex -shell-escape -halt-on-error -interaction=batchmode -jobname 
-"figures/PS_Physik_10-figure0" "\def\tikzexternalrealjob{PS_Physik_10}\input{PS
-_Physik_10}")...executed.
-
-\openout3 = `PS_Physik_10.auxlock'.
-
-File: figures/PS_Physik_10-figure0.pdf Graphic file (type pdf)
-<use figures/PS_Physik_10-figure0.pdf>
-! Undefined control sequence.
-\tikzmark #1->[overlay, remember picture] \node 
-                                                (#1) {};
-l.109 ...\{{\hspace{0.2ex} \tikzmark{StartBracePs}
-                                                   {{E} \operatorname{cos} \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\tikzmark #1->[overlay, remember picture] \node 
-                                                (#1) {};
-l.109 ... \vartheta}\right)} \tikzmark{EndBracePs}
-                                                   \hspace{0.2ex} + \hspace{...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\tikzmark #1->[overlay, remember picture] \node 
-                                                (#1) {};
-l.110 ^^I^^I\tikzmark{StartBracePa}
-                                    {{k} \hspace{-0.24ex}\times\hspace{-0.4e...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\tikzmark #1->[overlay, remember picture] \node 
-                                                (#1) {};
-l.110 ...eta \hspace{0.2ex}} \tikzmark{EndBracePa}
-                                                   {} \hspace{0.1ex}}\}^{\hs...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\openout3 = `figures/PS_Physik_10-figure1.md5'.
-
-\openout3 = `PS_Physik_10.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'xelatex -shell-escape -halt-on
--error -interaction=batchmode -jobname "figures/PS_Physik_10-figure1" "\def\tik
-zexternalrealjob{PS_Physik_10}\input{PS_Physik_10}"' ========
-runsystem(xelatex -shell-escape -halt-on-error -interaction=batchmode -jobname 
-"figures/PS_Physik_10-figure1" "\def\tikzexternalrealjob{PS_Physik_10}\input{PS
-_Physik_10}")...executed.
-
-\openout3 = `PS_Physik_10.auxlock'.
-
-
-! Package tikz Error: Sorry, the system call 'xelatex -shell-escape -halt-on-er
-ror -interaction=batchmode -jobname "figures/PS_Physik_10-figure1" "\def\tikzex
-ternalrealjob{PS_Physik_10}\input{PS_Physik_10}"' did NOT result in a usable ou
-tput file 'figures/PS_Physik_10-figure1' (expected one of .pdf:.jpg:.jpeg:.png:
-.bmp:). Please verify that you have enabled system calls. For pdflatex, this is
- 'pdflatex -shell-escape'. Sometimes it is also named 'write 18' or something l
-ike that. Or maybe the command simply failed? Error messages can be found in 'f
-igures/PS_Physik_10-figure1.log'. If you continue now, I'll try to typeset the 
-picture.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.110 ...w[black,fill=black] (0,0) circle (.32ex);
-                                                  } \hspace{0.1em} = \\[0.4em]
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
-
-! Undefined control sequence.
-\tikzmark #1->[overlay, remember picture] \node 
-                                                (#1) {};
-l.112 ...\hspace{0.2em} \tikzmark{StartBraceDotPs}
-                                                   {\left( \hspace{0.1ex} {k...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\tikzmark #1->[overlay, remember picture] \node 
-                                                (#1) {};
-l.112 ...artheta}\right)} \tikzmark{EndBraceDotPs}
-                                                   \hspace{0.64ex} + \\[0.64em]
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\tikzmark #1->[overlay, remember picture] \node 
-                                                (#1) {};
-l.113 ...hspace{0.72ex} \tikzmark{StartBraceDotPa}
-                                                   {\hspace{0.12ex} {k} \hsp...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\tikzmark #1->[overlay, remember picture] \node 
-                                                (#1) {};
-l.113 ...{sin} \vartheta} \tikzmark{EndBraceDotPa}
-                                                   \hspace{0.1em}.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (855.51662pt too wide) detected at line 114
-[]
- []
-
-\openout3 = `figures/PS_Physik_10-figure2.md5'.
-
-\openout3 = `PS_Physik_10.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'xelatex -shell-escape -halt-on
--error -interaction=batchmode -jobname "figures/PS_Physik_10-figure2" "\def\tik
-zexternalrealjob{PS_Physik_10}\input{PS_Physik_10}"' ========
-runsystem(xelatex -shell-escape -halt-on-error -interaction=batchmode -jobname 
-"figures/PS_Physik_10-figure2" "\def\tikzexternalrealjob{PS_Physik_10}\input{PS
-_Physik_10}")...executed.
-
-\openout3 = `PS_Physik_10.auxlock'.
-
-
-! Package tikz Error: Sorry, the system call 'xelatex -shell-escape -halt-on-er
-ror -interaction=batchmode -jobname "figures/PS_Physik_10-figure2" "\def\tikzex
-ternalrealjob{PS_Physik_10}
+Output written on build/PS_Physik_10.pdf (3 pages).

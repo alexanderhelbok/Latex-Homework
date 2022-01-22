@@ -21,9 +21,10 @@
 			m\ddot{x_1} &= -m\omega_a\!^2x_1 - k(x_1 - x_2) &&\\
 			m\ddot{x_2} &= -m\omega_a\!^2x_2 - k(x_2 - x_1) &&\\
 			\Rightarrow\ m(a_1& - a_2) = -m\omega_a\!^2(x_1 - x_2) - 2k(x_1 - x_2) = -(m\omega_a\!^2 + 2k)(x_1 - x_2) &&\\
-			\Delta \ddot{x} &= -\undercbrace{(\omega_a\!^2 + \tfrac{2k}{m})}_{= \omega_b}\Delta x &&\\[2ex]
+			\Delta \ddot{x} &= -\tikzmark{Startw} (\omega_a\!^2 + \tfrac{2k}{m}) \tikzmark{Endw} \Delta x &&\\[3.5ex]
 			\omega_b &= \sqrt{\omega_a^2 + \tfrac{2k}{m}} = \dl{6.43 \unit{rad/s}} &&
 		\end{flalign*}
+			\AddUnderBrace[line width=0.75pt]{Startw}{Endw}{$= \omega_b$}
 		\item \(  \)
 		\begin{flalign*}
 		\end{flalign*}
