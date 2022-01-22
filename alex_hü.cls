@@ -8,7 +8,8 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage{fontspec}
 \RequirePackage[ngerman]{babel}
-\RequirePackage{amsmath,amsthm,amsfonts,amssymb,amscd,siunitx,physics}
+\RequirePackage{mtpro2}
+\RequirePackage{mathtools,amsthm,amsfonts,amscd,siunitx,physics}
 \RequirePackage{lastpage}
 \RequirePackage{enumerate}
 \RequirePackage[headsepline]{scrlayer-scrpage}
@@ -19,6 +20,7 @@
 \RequirePackage{hyperref}
 \RequirePackage{enumitem}
 \RequirePackage{multicol}
+\RequirePackage{custom}
 \RequirePackage{pgfplots}
 \RequirePackage{tikz}
 \usetikzlibrary{arrows.meta,positioning, calc, shapes, math, external}

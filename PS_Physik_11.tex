@@ -16,7 +16,17 @@
 			I &= \tfrac{1}{12}m(a^2 + h^2) + ml^2 = 0.12 \unit{kg.m^2} &&\\
 			\omega_a &= \sqrt{\tfrac{mgl}{I}} = \dl{6.37 \unit{rad/s}} &&
 		\end{flalign*}
-		\item 
+		\item \( F = -m\omega^2 x;\quad \Delta x = x_1 - x_2 \)
+		\begin{flalign*}
+			m\ddot{x_1} &= -m\omega_a\!^2x_1 - k(x_1 - x_2) &&\\
+			m\ddot{x_2} &= -m\omega_a\!^2x_2 - k(x_2 - x_1) &&\\
+			\Rightarrow\ m(a_1& - a_2) = -m\omega_a\!^2(x_1 - x_2) - 2k(x_1 - x_2) = -(m\omega_a\!^2 + 2k)(x_1 - x_2) &&\\
+			\Delta \ddot{x} &= -\undercbrace{(\omega_a\!^2 + \tfrac{2k}{m})}_{= \omega_b}\Delta x &&\\[2ex]
+			\omega_b &= \sqrt{\omega_a^2 + \tfrac{2k}{m}} = \dl{6.43 \unit{rad/s}} &&
+		\end{flalign*}
+		\item \(  \)
+		\begin{flalign*}
+		\end{flalign*}
 	\end{enumerate}
 
 
@@ -39,7 +49,18 @@
 	\end{enumerate}
 
 \section*{199. Kompensation der Wärmeausdehnung}
-
-
+\centering \( a = h = 0.1 \unit{m};\quad \Delta T = 1 \unit{K};\quad E = 2.1 * 10^{11} \unit{N/m^2} \)\\[1.5ex]
+\centering \( \mu = 0.29;\quad \rho = 7870 \unit{kg/m^3};\quad \alpha = 1.2 * 10^{-5} \unit{K^{-1}} \)\\[5ex]
+	\begin{enumerate}
+		\item \( \tfrac{\Delta h}{h} = \alpha \Delta T;\quad \tfrac{F}{A} = E \tfrac{\Delta h}{h} \)
+		\begin{flalign*}
+			\tfrac{mg}{h^2} &= E\alpha \Delta T &&\\
+			m &= \tfrac{E\alpha\Delta T h^2}{g} = \dl{2568.8 \unit{kg}} &&
+		\end{flalign*}
+		\item \( \Delta a_1 = \mu\Delta h;\quad \Delta a_2 = \alpha\Delta T \)
+		\begin{flalign*}
+			\Delta a_{\text{ges}} &= \Delta a_1 + \Delta a_2 = \dl{1.5 * 10^{-6} \unit{m}} &&
+		\end{flalign*} 
+	\end{enumerate}
 
 \end{document}
