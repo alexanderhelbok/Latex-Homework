@@ -7,63 +7,73 @@
 \begin{document}
 \renewcommand{\labelenumi}{\alph{enumi})}
 
-
-\section*{193. Gekoppelte physikalische Pendel}
-\centering \( m = 5 \unit{kg};\quad k = 2 \unit{N/m};\quad a = 0.1 \unit{m};\quad h = 0.4 \unit{m};\quad l = 0.1 \unit{m} \)\\[4ex]
+\begin{mybox}{193. Gekoppelte physikalische Pendel}
+	\centering \( m = 5 \unit{kg};\quad k = 2 \unit{N/m};\quad a = 0.1 \unit{m};\quad h = 0.4 \unit{m};\quad l = 0.1 \unit{m} \)
+	\tcblower
 	\begin{enumerate}
 		\item \( \omega = \sqrt{\tfrac{mgl}{I}} \)
 		\begin{flalign*}
 			I &= \tfrac{1}{12}m(a^2 + h^2) + ml^2 = 0.12 \unit{kg.m^2} &&\\
 			\omega_a &= \sqrt{\tfrac{mgl}{I}} = \dl{6.37 \unit{rad/s}} &&
 		\end{flalign*}
+		\Sepline
 		\item \( F = -m\omega^2 x;\quad \Delta x = x_1 - x_2 \)
 		\begin{flalign*}
 			m\ddot{x_1} &= -m\omega_a\!^2x_1 - k(x_1 - x_2) &&\\
 			m\ddot{x_2} &= -m\omega_a\!^2x_2 - k(x_2 - x_1) &&\\
-			\Rightarrow\ m(a_1& - a_2) = -m\omega_a\!^2(x_1 - x_2) - 2k(x_1 - x_2) = -(m\omega_a\!^2 + 2k)(x_1 - x_2) &&\\
+			\Rightarrow\ m(\ddot{x_1}& - \ddot{x_2}) = -m\omega_a\!^2(x_1 - x_2) - 2k(x_1 - x_2) = -(m\omega_a\!^2 + 2k)(x_1 - x_2) &&\\
 			\Delta \ddot{x} &= -\tikzmark{Startw} (\omega_a\!^2 + \tfrac{2k}{m}) \tikzmark{Endw} \Delta x &&\\[3.5ex]
 			\omega_b &= \sqrt{\omega_a^2 + \tfrac{2k}{m}} = \dl{6.43 \unit{rad/s}} &&
 		\end{flalign*}
-			\AddUnderBrace[line width=0.75pt]{Startw}{Endw}{$= \omega_b$}
+		\AddUnderBrace[line width=0.75pt]{Startw}{Endw}{$= \omega_b$}
+		\Sepline
 		\item \( \delta\omega = \omega_b - \omega_a \)
 		\begin{flalign*}
 			0 &= \cos(\tfrac{1}{2}\delta\omega t) &&\\
 			t &= \tfrac{2\arccos(0)}{\delta\omega} = \dl{50.29 \unit{s}} &&
 		\end{flalign*}
 	\end{enumerate}
+\end{mybox}
+\newpage
 
-
-\section*{196. Schallgeschwindigkeit und Elastizitätseigenschaften}
-\centering \( \rho = 4500 \unit{kg/m^3};\quad v_{\parallel} = 5050 \unit{\v};\quad v_{\perp} = 3100 \unit{\v}\)\\[4ex]
+\begin{mybox}{196. Schallgeschwindigkeit und Elastizität}
+	\centering \( \rho = 4500 \unit{kg/m^3};\quad v_{\parallel} = 5050 \unit{\v};\quad v_{\perp} = 3100 \unit{\v}\)
+	\tcblower
 	\begin{enumerate}
 		\item \( v_{\parallel} =\sqrt{\tfrac{E}{\rho}};\quad v_{\perp} =\sqrt{\tfrac{G}{\rho}} \)
 		\begin{flalign*}
 			E &= {v_{\parallel}}^{2}\, \rho = \dl{1.15 * 10^{11}\unit{Pa}} &&\\
-			G &= v_{\perp}\!^2\, \rho = \dl{4.32 * 10^{10} \unit{Pa}} &&\\
+			G &= v_{\perp}\!^2\, \rho = \dl{4.32 * 10^{10} \unit{Pa}} &&
 		\end{flalign*}
+		\Sepline
 		\item \( \mu = \tfrac{E}{2G} - 1 \)
 		\begin{flalign*}
 			\mu &= \tfrac{{v_{\parallel}}^{2}}{2v_{\perp}\!^2} - 1 = \dl{0.33} &&
 		\end{flalign*}
+		\Sepline
 		\item \(  \)
 		\begin{flalign*}
 			\mu &= \dl{\tfrac{{v_{\parallel}}^{2}}{2v_{\perp}\!^2} - 1}\qquad \text{oder}\qquad \tfrac{v_{\parallel}}{v_{\perp}} = \dl{\sqrt{2\mu + 2}} &&
 		\end{flalign*}
 	\end{enumerate}
+\end{mybox}
 
-\section*{199. Kompensation der Wärmeausdehnung}
-\centering \( a = h = 0.1 \unit{m};\quad \Delta T = 1 \unit{K};\quad E = 2.1 * 10^{11} \unit{N/m^2} \)\\[1.5ex]
-\centering \( \mu = 0.29;\quad \rho = 7870 \unit{kg/m^3};\quad \alpha = 1.2 * 10^{-5} \unit{K^{-1}} \)\\[5ex]
+\begin{mybox}{199. Kompensation der Wärmeausdehnung}
+	\centering \( a = h = 0.1 \unit{m};\quad \Delta T = 1 \unit{K};\quad E = 2.1 * 10^{11} \unit{N/m^2} \)\\[1.5ex]
+	\centering \( \mu = 0.29;\quad \rho = 7870 \unit{kg/m^3};\quad \alpha = 1.2 * 10^{-5} \unit{K^{-1}} \)
+	\tcblower
 	\begin{enumerate}
 		\item \( \tfrac{\Delta h}{h} = \alpha \Delta T;\quad \tfrac{F}{A} = E \tfrac{\Delta h}{h} \)
 		\begin{flalign*}
 			\tfrac{mg}{h^2} &= E\alpha \Delta T &&\\
 			m &= \tfrac{E\alpha\Delta T h^2}{g} = \dl{2568.8 \unit{kg}} &&
 		\end{flalign*}
+		\Sepline
 		\item \( \Delta a_1 = \mu\Delta h;\quad \Delta a_2 = \alpha\Delta T \)
 		\begin{flalign*}
 			\Delta a_{\text{ges}} &= \Delta a_1 + \Delta a_2 = \dl{1.5 * 10^{-6} \unit{m}} &&
 		\end{flalign*} 
 	\end{enumerate}
+\end{mybox}
 
 \end{document}
