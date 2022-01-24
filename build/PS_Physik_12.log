@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.1.2)  23 JAN 2022 22:18
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.1.2)  24 JAN 2022 10:53
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1710,10 +1710,10 @@ Package rerunfilecheck Info: File `PS_Physik_12.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 51755 strings out of 476257
- 1268077 string characters out of 5816920
- 1887955 words of memory out of 5000000
- 71638 multiletter control sequences out of 15000+600000
+ 51752 strings out of 476257
+ 1268006 string characters out of 5816920
+ 1893955 words of memory out of 5000000
+ 71635 multiletter control sequences out of 15000+600000
  436214 words of font info for 67 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  124i,19n,120p,10643b,928s stack positions out of 5000i,500n,10000p,200000b,80000s

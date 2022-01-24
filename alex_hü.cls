@@ -70,8 +70,10 @@
 		(\textwidth+\the\mdflength{innerleftmargin}+\the\mdflength{innerrightmargin}+0.3cm,0);
 	}\par\nobreak}
 
+\definecolor{Mycolor2}{HTML}{BFBF00}
+
 % define tcolorbox env 
-\newtcolorbox{mybox}[1]{breakable,pad at break*=1mm, colback=yellow!5!white,colframe=yellow!50!black, fonttitle=\LARGE, colbacktitle=yellow!75!black, bottomtitle=0.2cm, top=0.35cm, bottom=0.35cm, toptitle=0.2cm, adjusted title={#1}}
+\newtcolorbox{mybox}[1]{breakable,pad at break*=1mm, colback=yellow!5!white,colframe=yellow!50!black, fonttitle=\LARGE, colbacktitle=Mycolor2, bottomtitle=0.2cm, top=0.35cm, bottom=0.35cm, toptitle=0.2cm, adjusted title={#1}}
 
 \setlength{\parindent}{0.0in}
 \setlength{\parskip}{0.05in}
