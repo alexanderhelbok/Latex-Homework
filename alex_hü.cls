@@ -13,7 +13,7 @@
 \RequirePackage{mathtools,amsthm,amsfonts,siunitx,physics}
 \RequirePackage{enumitem, multicol, tcolorbox}
 \RequirePackage[framemethod=tikz]{mdframed} %for \Sepline cmd in tcolorbox
-\tcbuselibrary{breakable}
+\tcbuselibrary{breakable,skins}
 \RequirePackage[headsepline]{scrlayer-scrpage}
 \RequirePackage{graphicx}
 \RequirePackage{listings} %env ignores LATEX commands, keeping all the line breaks (for printing code)
@@ -62,18 +62,13 @@
 	linkbordercolor={0 0 1}
 }
 
-% define \Sepline cmd for use in tcolorbox
-\gdef\Sepline{%
-	\par\noindent\makebox[\linewidth][l]{%
-		\hspace*{-\mdflength{innerleftmargin}-1.24cm}%
-		\tikz\draw[thick,dashed,darkgray!60] (0,0) --%
-		(\textwidth+\the\mdflength{innerleftmargin}+\the\mdflength{innerrightmargin}+0.3cm,0);
-	}\par\nobreak}
-
-\definecolor{Mycolor2}{HTML}{BFBF00}
+% define tcolorbox colors (Latex format very inconsistent)
+\definecolor{Title}{HTML}{BFBF00}
+\definecolor{Frame}{HTML}{808000}
+\definecolor{Background}{HTML}{FFFFF2}
 
 % define tcolorbox env 
-\newtcolorbox{mybox}[1]{breakable,pad at break*=1mm, colback=yellow!5!white,colframe=yellow!50!black, fonttitle=\LARGE, colbacktitle=Mycolor2, bottomtitle=0.2cm, top=0.35cm, bottom=0.35cm, toptitle=0.2cm, adjusted title={#1}}
+\newtcolorbox{mybox}[1]{breakable,pad at break*=1mm, colback=Background,colframe=Frame, fonttitle=\LARGE, colbacktitle=Title, bottomtitle=0.2cm, top=0.35cm, bottom=0.35cm, toptitle=0.2cm, segmentation style={thick, darkgray!60}, adjusted title={#1}}
 
 \setlength{\parindent}{0.0in}
 \setlength{\parskip}{0.05in}
