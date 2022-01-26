@@ -9,7 +9,7 @@
 \renewcommand{\labelenumi}{\alph{enumi})}
 
 \begin{mybox}{207. Kupferblock in Styropor}
-	\centering \( a = 0.1 \unit{m};\quad l = \tfrac{1}{10}a;\quad T_0 = 293.15;\quad T_1 = 333.15 \unit{K} \)\\
+	\centering \( a = 0.1 \unit{m};\quad m = a^3\rho;\quad l = \tfrac{1}{10}a;\quad T_0 = 293.15;\quad T_1 = 333.15 \unit{K} \)\\
 	\( \quad \rho = 8930 \unit{kg/m^3};\quad c = 385 \unit{J/kg.K};\quad \lambda = 0.027 \unit{W/m.K};\quad \)
 	\tcblower
 	\begin{enumerate}
@@ -31,7 +31,7 @@
 			t_1 &= \tfrac{Q_1}{\dot{Q}} = \dl{530.6 \unit{s}} &&
 		\end{flalign*}
 	\tcbline*
-		\item \( \dv{T}{t} = r(T(t) - T_0) \hskip2cm (=\text{Newton's law of cooling}) \)
+		\item \( \dv{T}{t} = r(T(t) - T_0);\quad r = -\tfrac{G}{cm};\quad T(0) = 333.15 \unit{K} \)
 		\begin{flalign*}
 			\dv{T}{t} &=  r(T(t) - T_0) &&\\
 			\int{\tfrac{1}{T(t) - T_0} \dd{T}} &= \int{r \dd{t}} &&\\
@@ -82,7 +82,17 @@
 			\rho &= \tfrac{n}{V} = \tfrac{p}{kT} = \dl{2.45 * 10^{19} \unit{/cm^3}} &&
 		\end{flalign*}
 	\tcbline
-		\item \(  \)	
+		\item \( u = 1.66 * 10^{-27} \unit{kg};\quad A_{\ch{O2}} = 32;\quad A_{\ch{N2}} = 28\)	
+		\begin{flalign*}
+			m_{\ch{O2}} &= 0.2n*32u &&\\
+			m_{\ch{N2}} &= 0.8n*28u &&\\
+			m &= m_{\ch{O2}} + m_{\ch{N2}} = 28.8nu = \dl{70.19 \unit{kg}} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+%			
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
