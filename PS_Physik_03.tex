@@ -150,9 +150,7 @@
 					coordinates { (1, 15) (4, 0)} node[above,pos=1] {$v$};
 					\addplot [-, thick, blue, forget plot]	
 					coordinates { (0,0) (1, 15)};
-					\addplot [-, thick,  blue, domain = 0:4] 
-					{-2.5*x^2 + 20*x - 2.5} node[right,pos=1] {$x$};
-					\addplot [-, thick,  blue, domain = 0:4] 
+					\addplot [-, thick,  blue, domain = 1:4] 
 					{-2.5*x^2 + 20*x - 2.5} node[right,pos=1] {$x$};	
 					\legend{$ v\left(t\right)$~~~,$ x\left(t\right) $}
 				\end{axis}
@@ -171,7 +169,6 @@
 				x(t) &= \begin{cases}
 					15t& \quad $für $\ 0 \le t < 1, \\
 					-2.5t^2 + 20t - 2.5& \quad $für $\ 1 \le t \le 4, \\
-					$ oder $ 0 +
 				\end{cases}
 			\end{align*}
 			\item $ t_2 = \dl{4 \si{\s}}; \quad x_2 = \dl{37.5 \si{\m}}$

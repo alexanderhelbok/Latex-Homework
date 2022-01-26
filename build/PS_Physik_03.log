@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.1.2)  26 JAN 2022 23:28
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.1.2)  26 JAN 2022 23:32
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1813,22 +1813,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--92
  []
 
 
-Overfull \hbox (41.07906pt too wide) detected at line 176
+Overfull \hbox (38.60704pt too wide) detected at line 173
 []
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--187
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
@@ -1841,7 +1841,7 @@ Package rerunfilecheck Info: File `PS_Physik_03.out' has not changed.
 Here is how much of TeX's memory you used:
  54630 strings out of 476257
  1351691 string characters out of 5816920
- 2033096 words of memory out of 5000000
+ 2027506 words of memory out of 5000000
  74480 multiletter control sequences out of 15000+600000
  436246 words of font info for 71 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
