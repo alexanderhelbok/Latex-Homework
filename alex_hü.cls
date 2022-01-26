@@ -69,6 +69,7 @@
 
 % define tcolorbox env 
 \newtcolorbox{mybox}[1]{breakable,pad at break*=1mm, colback=Background,colframe=Frame, fonttitle=\LARGE, colbacktitle=Title, bottomtitle=0.2cm, top=0.35cm, bottom=0.35cm, toptitle=0.2cm, segmentation style={thick, darkgray!60}, adjusted title={#1}}
+%\newtcolorbox{frame}{breakable,pad at break*=1mm, colback=Background,colframe=black, top=0.35cm, bottom=0.35cm}
 
 \setlength{\parindent}{0.0in}
 \setlength{\parskip}{0.05in}
