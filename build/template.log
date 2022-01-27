@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.1.2)  26 JAN 2022 17:47
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.1.2)  27 JAN 2022 10:03
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1807,10 +1807,10 @@ Package rerunfilecheck Info: File `template.out' has not changed.
 Here is how much of TeX's memory you used:
  54090 strings out of 476257
  1336931 string characters out of 5816920
- 2004466 words of memory out of 5000000
+ 2004555 words of memory out of 5000000
  73946 multiletter control sequences out of 15000+600000
  436214 words of font info for 67 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 140i,19n,134p,10639b,1006s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 140i,19n,134p,10639b,1008s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on build/template.pdf (1 page).
