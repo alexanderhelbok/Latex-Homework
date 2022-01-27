@@ -150,10 +150,14 @@
 		\end{flalign*}
 		\item
 		\begin{flalign*}
-			\vec{a}(t) &= \dl{\overbrace{2R\gamma\ \vector{-\sin\gamma t^2\\ \cos\gamma t^2}}^\text{Tangentialbeschleunigung} + \overbrace{4R\gamma^2t^2 \vector{-\cos\gamma t^2\\ -\sin\gamma t^2}}^\text{Zentripetalbeschleunigung}} &&\\[1em]
+			\vec{a}(t) &= \dl{\tikzmark{Start1} 2R\gamma\ \vector{-\sin\gamma t^2\\ \cos\gamma t^2} \tikzmark{End1} + \tikzmark{Start2} 4R\gamma^2t^2 \vector{-\cos\gamma t^2\\ -\sin\gamma t^2} \tikzmark{End2}} &&\\[1em]
 			\left|a(t)\right| &= \sqrt{(-2R\gamma\sin\gamma t^2 - 4R\gamma^2t^2\cos\gamma t^2)^2 + (2R\gamma\cos\gamma t^2 - 4R\gamma^2t^2\sin\gamma t^2)^2} = &&\\
-			\left|a(t)\right| &= \sqrt{\underbrace{4R^2\gamma^2}_\text{Tangentialbeschl.} + \underbrace{16R^2\gamma^4 t^4}_\text{Zentripetalbeschl.}} &&\\
+			\left|a(t)\right| &= \tikzmark{Start3}\sqrt{ 4R^2\gamma^2 \tikzmark{End3} + \tikzmark{Start4} 16R^2\gamma^4 t^4}\tikzmark{End4} &&\\
 		\end{flalign*}
+		\AddOverBrace[2.2ex]{Start1}{End1}{\scriptsize Tangentialbeschleunigung}
+		\AddOverBrace[2.2ex]{Start2}{End2}{\scriptsize Zentripetalbeschleunigung}
+		\AddUnderBrace{Start3}{End3}{\scriptsize Tangentialbeschl.}
+		\AddUnderBrace{Start4}{End4}{\scriptsize Zentripetalbeschl.}
 		\item 
 		\begin{multicols}{2}
 			\begin{align*}

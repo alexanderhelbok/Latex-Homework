@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.1.2)  26 JAN 2022 23:29
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.1.2)  27 JAN 2022 09:17
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1798,7 +1798,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ] [2] [3]
-Overfull \hbox (31.06715pt too wide) detected at line 244
+Overfull \hbox (31.06715pt too wide) detected at line 248
 []
  []
 
@@ -1809,12 +1809,12 @@ Package rerunfilecheck Info: File `PS_Physik_04.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 54649 strings out of 476257
- 1352600 string characters out of 5816920
- 2036625 words of memory out of 5000000
- 74496 multiletter control sequences out of 15000+600000
+ 54736 strings out of 476257
+ 1354347 string characters out of 5816920
+ 2037245 words of memory out of 5000000
+ 74583 multiletter control sequences out of 15000+600000
  445620 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 140i,23n,134p,10643b,2394s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 140i,20n,134p,10643b,2394s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on build/PS_Physik_04.pdf (5 pages).
