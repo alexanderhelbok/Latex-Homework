@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.1.2)  27 JAN 2022 12:58
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2022.1.2)  29 JAN 2022 17:54
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1013,11 +1013,6 @@ Package: chemformula 2020/12/22 v4.16 typeset chemical compounds and reactions
 \l__chemformula_subscript_box=\box93
 \l__chemformula_plus_space_skip=\skip83
 \l__chemformula_minus_space_skip=\skip84
-
-
-LaTeX hooks Warning: Generic hook 'package/after/hyperref' is deprecated.
-(hooks)              Use hook 'package/hyperref/after' instead.
-
 ) (/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip85
@@ -1805,10 +1800,10 @@ Package rerunfilecheck Info: File `PS_Physik_12.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 54110 strings out of 476257
- 1337214 string characters out of 5816920
- 2010572 words of memory out of 5000000
- 73959 multiletter control sequences out of 15000+600000
+ 54109 strings out of 476257
+ 1337185 string characters out of 5816920
+ 2010579 words of memory out of 5000000
+ 73958 multiletter control sequences out of 15000+600000
  445615 words of font info for 76 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  140i,19n,134p,10643b,1123s stack positions out of 5000i,500n,10000p,200000b,80000s
