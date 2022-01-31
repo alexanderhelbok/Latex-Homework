@@ -12,7 +12,6 @@
 \RequirePackage{mtpro2}
 \RequirePackage{mathtools,amsthm,amsfonts,siunitx,physics,chemformula,empheq}
 \RequirePackage{enumitem, multicol, tcolorbox}
-\RequirePackage[framemethod=tikz]{mdframed} %for \Sepline cmd in tcolorbox
 \tcbuselibrary{breakable,skins}
 \RequirePackage[headsepline]{scrlayer-scrpage}
 \RequirePackage{graphicx}

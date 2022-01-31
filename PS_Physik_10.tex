@@ -8,11 +8,12 @@
 \renewcommand{\labelenumi}{\alph{enumi})}
 
 
-\section*{177. Stabpendel mit Kugeln}
+\begin{mybox}{177. Stabpendel mit Kugeln}
 	\begin{align*}
 		L &= 0.3 \unit{m};\ &r_1 &= 0.02 \unit{m};\ &r_2 &= 0.03 \unit{m} &&\\
 		m_0 &= 0.1 \unit{kg};\ &m_1 &= 0.1 \unit{kg};\ &m_2 &= 0.3 \unit{kg} &&
 	\end{align*}
+	\tcblower
 	\begin{enumerate}
 	\item \( I_{ges} = I_{Stab} + I_{Kugel_{1}} + I_{Kugel_{2}} \)	
 		\begin{flalign*}
@@ -21,55 +22,65 @@
 			I_{Kugel_{2}} &= \tfrac{2}{5}m_2r_2\!^2 + m_2(\tfrac{L}{2}+r_2)^2 = 9.8*10^{-3} \unit{kg.m^2} &&\\[2ex]
 			\Rightarrow I_{ges} &= \dl{1.3 * 10^{-2} \unit{kg.m^2}} &&
 		\end{flalign*}
+	\tcbline
 	\item 
 		\begin{flalign*}
 			x_{Stab_{sp}} &=  0 \unit{m} &&\\
 			x_{Kugeln_{sp}} &= \tfrac{m_1 \left(-\tfrac{2r_1 + L}{2} \right) + m_2 \left(\tfrac{2r_2 + L}{2} \right)}{m_1+m_2} = 0.0925 \unit{m} &&\\[2ex]
 			x_{sp} &= \tfrac{x_{Stab_{sp}}*m_0 + x_{Kugeln_{sp}}*(m_1+m_2)}{m_0+m_1+m_2} = \dl{0.074} \unit{m} &&
 		\end{flalign*} 
+	\tcbline
 	\item \( T = 2\pi\sqrt{\tfrac{I}{Mgl}} \)
 		\begin{flalign*}
 			T &= 2\pi\sqrt{\tfrac{I}{(m_0+m_1+m_2)\: g\: x_{sp}}} &&\\
 			&= \dl{1.2 \unit{s}} &&
 		\end{flalign*}
 	\end{enumerate}
+\end{mybox}
 
-\section*{184. Resonanzverhalten einer Stimmgabel}
-	\( f_0 = 440 \unit{Hz};\quad \omega_0 = 2\pi f_0;\quad x(\tau) = x_m\mathrm{e}^{-\beta \tau/2};\quad x(5) = \tfrac{1}{10}x(0) \)\\
+\begin{mybox}{184. Resonanzverhalten einer Stimmgabel}
+	\centering \( f_0 = 440 \unit{Hz};\quad \omega_0 = 2\pi f_0;\quad x(\tau) = x_m\mathrm{e}^{-\beta \tau/2};\quad x(5) = \tfrac{1}{10}x(0) \)
+	\tcblower
 	\begin{enumerate}
 		\item \(  \)
-		\begin{flalign*}
-			\tfrac{x_m}{10} &= x_m\mathrm{e}^{-\beta 5/2}&&\\
-			\beta &= -\tfrac{2}{5}\ln(0.1) &&\\[2ex]
-			\tau &= \tfrac{1}{\beta} = \dl{1.09 \unit{s}} &&
-		\end{flalign*}
-		\item \( \omega' = \sqrt{\omega_0^2 - \tfrac{\beta^2}{4}} \)\\
-		\begin{flalign*}
-			\omega' &= 2764.6 \unit{Hz}  &(\omega_0 \approx \omega') &&\\
-			f' &= \tfrac{\omega'}{2\pi} = 440 \unit{Hz}  &(f_0 \approx f') &&\\
-			f'*\tau &= \dl{477.7} &&
-		\end{flalign*}
+			\begin{flalign*}
+				\tfrac{x_m}{10} &= x_m\mathrm{e}^{-\beta 5/2}&&\\
+				\beta &= -\tfrac{2}{5}\ln(0.1) &&\\[2ex]
+				\tau &= \tfrac{1}{\beta} = \dl{1.09 \unit{s}} &&
+			\end{flalign*}
+		\tcbline
+		\item \( \omega' = \sqrt{\omega_0^2 - \tfrac{\beta^2}{4}} \)
+			\begin{flalign*}
+				\omega' &= 2764.6 \unit{Hz}  &(\omega_0 \approx \omega') &&\\
+				f' &= \tfrac{\omega'}{2\pi} = 440 \unit{Hz}  &(f_0 \approx f') &&\\
+				f'*\tau &= \dl{477.7} &&
+			\end{flalign*}
+		\tcbline
 		\item \( Q = \tfrac{\omega_0}{\beta} \)
-		\begin{flalign*}
-			Q &= \dl{3002} &&
-		\end{flalign*}
+			\begin{flalign*}
+				Q &= \dl{3002} &&
+			\end{flalign*}
+		\tcbline
 		\item \( \delta f = \tfrac{f'}{Q} \)
-		\begin{flalign*}
-			\delta f =&\; \dl{0.15 \unit{Hz}} &&
-		\end{flalign*}
+			\begin{flalign*}
+				\delta f =&\; \dl{0.15 \unit{Hz}} &&
+			\end{flalign*}
+		\tcbline
 		\item \( x_m(f) = \tfrac{2\pi f_0}{\sqrt{16\pi^2(f - f_0)^2 + \beta^2}};\quad E(f) = \tfrac{(\pi f_0)^2}{4\pi^2(f-f_0)^2 + (\beta/2)^2};\quad f_1 = 439.5 \unit{Hz} \)
-		\begin{flalign*}
-			x_m(f_0) &= \tfrac{2\pi f_0}{\sqrt{16\pi^2(f_0 - f_0)^2 + \beta^2}} = 3001.63 &&\\
-			x_m(f_1) &= \tfrac{2\pi f_0}{\sqrt{16\pi^2(f_1 - f_0)^2 + \beta^2}} = 435.348 &&\\
-			x_{rel} &= \tfrac{x_m(f_1)}{x_m(f_0)} = \dl{0.15} &&\\[2ex]
-			E(f_0)  &= \tfrac{(\pi f_0)^2}{4\pi^2(f_0-f_0)^2 + (\beta/2)^2} = 9.0 * 10^6 &&\\
-			E(f_1)  &= \tfrac{(\pi f_0)^2}{4\pi^2(f_1-f_0)^2 + (\beta/2)^2} = 1.9 * 10^5 &&\\
-			E_{rel} &= \tfrac{E(f_1)}{E(f_0)} = \dl{0.021} &&\\
-		\end{flalign*}
+			\begin{flalign*}
+				x_m(f_0) &= \tfrac{2\pi f_0}{\sqrt{16\pi^2(f_0 - f_0)^2 + \beta^2}} = 3001.63 &&\\
+				x_m(f_1) &= \tfrac{2\pi f_0}{\sqrt{16\pi^2(f_1 - f_0)^2 + \beta^2}} = 435.348 &&\\
+				x_{rel} &= \tfrac{x_m(f_1)}{x_m(f_0)} = \dl{0.15} &&\\[2ex]
+				E(f_0)  &= \tfrac{(\pi f_0)^2}{4\pi^2(f_0-f_0)^2 + (\beta/2)^2} = 9.0 * 10^6 &&\\
+				E(f_1)  &= \tfrac{(\pi f_0)^2}{4\pi^2(f_1-f_0)^2 + (\beta/2)^2} = 1.9 * 10^5 &&\\
+				E_{rel} &= \tfrac{E(f_1)}{E(f_0)} = \dl{0.021} &&\\
+			\end{flalign*}
 	\end{enumerate}
+\end{mybox}
  
-\section*{185. Resonante Anregung eines Federpendels}
-	\( m = 0.1 \unit{kg};\quad k = 40 \unit{N/m} \)
+\begin{mybox}{185. Resonante Anregung eines Federpendels}
+	\centering \( m = 0.1 \unit{kg};\quad k = 40 \unit{N/m} \)
+	\tcblower
 	\begin{enumerate}
 		\item \( \omega_0 = \sqrt{\tfrac{k}{m}} = 20 \unit{rad/s} \)\\
 		\begin{flalign*}
@@ -77,18 +88,22 @@
 		    \beta &= -\tfrac{\ln(0.5)2}{t} = \dl{0.14 \unit{s^{-1}}} &&\\[2ex]
 		    \omega' &= \sqrt{\omega_0\!^2 - \tfrac{\beta^2}{4}} = \dl{19.99988 \unit{rad/s}} &&
 		\end{flalign*}
+		\tcbline
 		\item \(  \)	
-		\begin{flalign*}
-			Q &= \tfrac{\omega_0}{\beta} = \dl{144.3} &&\\
-		\end{flalign*} 
+			\begin{flalign*}
+				Q &= \tfrac{\omega_0}{\beta} = \dl{144.3} &&\\
+			\end{flalign*} 
+		\tcbline
 		\item \( \hat{y}_{res} = \tfrac{\omega_0}{\beta}\ y_0;\quad \hat{y}_{res} = 0.012 \unit{m} \)
-		\begin{flalign*}
-			y_0 &= \hat{y}_{res}\ \tfrac{\beta}{\omega_0} = \dl{8.32 * 10^{-5} \unit{m}} &&\\
-		\end{flalign*}
+			\begin{flalign*}
+				y_0 &= \hat{y}_{res}\ \tfrac{\beta}{\omega_0} = \dl{8.32 * 10^{-5} \unit{m}} &&\\
+			\end{flalign*}
+		\tcbline
 		\item \( y_2 = y_0\ \tfrac{\omega_0}{\sqrt{4(\omega_1 - \omega_0)^2 + \beta^2}};\quad \omega_1 = \omega_0 \pm 0.2\pi \)
-		\begin{flalign*}
-			y_2 &= \dl{0.0013 \unit{m}} &&
-		\end{flalign*}
-	\end{enumerate}			
+			\begin{flalign*}
+				y_2 &= \dl{0.0013 \unit{m}} &&
+			\end{flalign*}
+	\end{enumerate}	
+\end{mybox}		
 
 \end{document}
