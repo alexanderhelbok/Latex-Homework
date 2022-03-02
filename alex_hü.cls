@@ -10,6 +10,7 @@
 \RequirePackage[ngerman]{babel}
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{mtpro2}
+\pdfmapfile{=mtpro2.map}
 \RequirePackage{mathtools,amsthm,amsfonts,siunitx,physics,chemformula,empheq}
 \RequirePackage{enumitem, multicol, tcolorbox}
 \tcbuselibrary{breakable,skins}
