@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 22.1) (preloaded format=xelatex 2022.3.2)  2 MAR 2022 10:44
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 22.1) (preloaded format=xelatex 2022.3.2)  2 MAR 2022 11:05
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -262,7 +262,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 (C:\Users\Alex\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
-(C:/Users/Alex/Documents/mytexmf\tex/latex\mtpro2\mtpro2.sty
+(C:/Users/Alex/Documents/Latex HÜ/mytexmf\tex/latex\mtpro2\mtpro2.sty
 Package: mtpro2 2009/4/27 v2.3 MathTimePro II - added arc accents MathTimePro I
 I - fixed rbrace problem with straightbraces and morphedbraces options MathTime
 Pro II - fix bug with z = \backslash widetilde{\backslash sum_{x }}MathTimePro 
@@ -1403,7 +1403,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
 \Hy@SectionHShift=\skip88
-) (C:/Users/Alex/Documents/mytexmf\tex/latex\Custom\custom.sty
+)
+(C:/Users/Alex/Documents/Latex HÜ/mytexmf\tex/latex\Custom\custom.sty
 Package: custom 2022/01/22 Custom Braces
 
 (C:\Users\Alex\AppData\Local\Programs\MiKTeX\tex/latex/xargs\xargs.sty
@@ -1684,7 +1685,7 @@ ext;"
 (fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-
 text;"
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 62.
+Package hyperref Info: Option `colorlinks' set `true' on input line 63.
 )
 (C:\Users\Alex\Documents\Latex HÜ\build\PS_Physik_10.aux)
 \openout1 = `PS_Physik_10.aux'.
@@ -1837,8 +1838,8 @@ Package rerunfilecheck Info: File `PS_Physik_10.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  53481 strings out of 410969
- 1316702 string characters out of 2824014
- 1994783 words of memory out of 3000000
+ 1316720 string characters out of 2824014
+ 1994807 words of memory out of 3000000
  73494 multiletter control sequences out of 15000+600000
  502043 words of font info for 68 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
