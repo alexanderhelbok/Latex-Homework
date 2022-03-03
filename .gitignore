@@ -2,3 +2,5 @@
 **/figures
 *.synctex.gz
 *.log
+.directory
+.stfolder
