@@ -1,0 +1,76 @@
+\documentclass{alex_hü}
+
+\name{Alexander Helbok}
+\course{PS Physik}
+\hwnumber{1}
+
+
+\begin{document}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+
+
+\begin{mybox}{1. Superpositionsprinzip}
+	\centering \( q = -1.0 * 10^{-9}\unit{C};\quad Q = 8.0 * 10^{-6}\unit{C};\quad k = \tfrac{1}{4\pi \epsilon_0};\quad \vec{F} = k \tfrac{q_1 q_2}{r^2}\ \vec{r} \)
+	\tcblower
+	\begin{enumerate}
+		\item \( d = 0.01 \unit{m};\quad r = \tfrac{d}{2};\quad Q_1 = Q;\quad Q_2 = -Q \)
+		\begin{flalign*}
+			\vec{F_1} &= k \tfrac{q Q_1}{r^2} \vector{-1 \\ 0} &&\\
+			\vec{F_2} &= k \tfrac{q Q_2}{r^2} \vector{1 \\ 0} &&\\
+			\vec{F}_{ges} &= \vec{F_1} + \vec{F_2} = \dl{\vector{-5.75 \\ 0} \unit{N}} &&
+		\end{flalign*}
+	\tcbline
+		\item \( d = 0.07 \unit{m};\quad r = \tfrac{d}{2};\quad h = \sqrt{3} r;\quad Q_1 = Q_3 = Q;\quad Q_2 = -Q \)
+		\begin{flalign*}
+			\vec{F_1} &= k \tfrac{q Q_1}{r^2} \vector{-1 \\ 0} &&\\
+			\vec{F_2} &= k \tfrac{q Q_2}{r^2} \vector{1 \\ 0} &&\\
+			\vec{F_3} &= k \tfrac{q Q_3}{h^2} \vector{0 \\ -1} &&\\
+			\vec{F}_{ges} &= \vec{F_1} + \vec{F_2} + \vec{F_3} = \dl{\vector{-0.12 \\ 0.020} \unit{N}} &&
+		\end{flalign*}
+	\tcbline
+		\item \( d = 0.03 \unit{m};\quad r = \tfrac{d}{2};\quad s = \sqrt{5} r;\quad Q_1 = Q_3 = Q;\quad Q_2 = Q_4 = -Q \)
+		\begin{flalign*}
+			\vec{F_1} &= k \tfrac{q Q_1}{s^2} \vector{d \\ r} \frac{1}{s} &&\\
+			\vec{F_2} &= k \tfrac{q Q_2}{r^2} \vector{0 \\ 1} &&\\
+			\vec{F_3} &= k \tfrac{q Q_3}{r^2} \vector{0 \\ -1} &&\\
+			\vec{F_4} &= k \tfrac{q Q_4}{s^2} \vector{d \\ -r} \frac{1}{s} &&\\
+			\vec{F}_{ges} &= \vec{F_1} + \vec{F_2} + \vec{F_3} = \dl{\vector{0 \\ 0.58} \unit{N}} &&
+		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+
+\begin{mybox}{2. Sonnenwind und Ladungsneutralität}
+	\centering \( q = -1.0 * 10^{-9}\unit{C};\quad Q = 8.0 * 10^{-6}\unit{C};\quad k = \tfrac{1}{4\pi \epsilon_0};\quad \vec{F} = k \tfrac{q_1 q_2}{r^2}\ \vec{r} \)
+	\tcblower
+	\begin{enumerate}
+		\item \( d = 0.01 \unit{m};\quad r = \tfrac{d}{2};\quad Q_1 = Q;\quad Q_2 = -Q \)
+		\begin{flalign*}
+			\vec{F_1} &= k \tfrac{q Q_1}{r^2} \vector{-1 \\ 0} &&\\
+			\vec{F_2} &= k \tfrac{q Q_2}{r^2} \vector{1 \\ 0} &&\\
+			\vec{F}_{ges} &= \vec{F_1} + \vec{F_2} = \dl{\vector{-5.75 \\ 0} \unit{N}} &&
+		\end{flalign*}
+		\tcbline
+		\item \( d = 0.07 \unit{m};\quad r = \tfrac{d}{2};\quad h = \sqrt{3} r;\quad Q_1 = Q_3 = Q;\quad Q_2 = -Q \)
+		\begin{flalign*}
+			\vec{F_1} &= k \tfrac{q Q_1}{r^2} \vector{-1 \\ 0} &&\\
+			\vec{F_2} &= k \tfrac{q Q_2}{r^2} \vector{1 \\ 0} &&\\
+			\vec{F_3} &= k \tfrac{q Q_3}{h^2} \vector{0 \\ -1} &&\\
+			\vec{F}_{ges} &= \vec{F_1} + \vec{F_2} + \vec{F_3} = \dl{\vector{-0.12 \\ 0.020} \unit{N}} &&
+		\end{flalign*}
+		\tcbline
+		\item \( d = 0.03 \unit{m};\quad r = \tfrac{d}{2};\quad s = \sqrt{5} r;\quad Q_1 = Q_3 = Q;\quad Q_2 = Q_4 = -Q \)
+		\begin{flalign*}
+			\vec{F_1} &= k \tfrac{q Q_1}{s^2} \vector{d \\ r} \frac{1}{s} &&\\
+			\vec{F_2} &= k \tfrac{q Q_2}{r^2} \vector{0 \\ 1} &&\\
+			\vec{F_3} &= k \tfrac{q Q_3}{r^2} \vector{0 \\ -1} &&\\
+			\vec{F_4} &= k \tfrac{q Q_4}{s^2} \vector{d \\ -r} \frac{1}{s} &&\\
+			\vec{F}_{ges} &= \vec{F_1} + \vec{F_2} + \vec{F_3} = \dl{\vector{0 \\ 0.58} \unit{N}} &&
+		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+
+
+
+\end{document}
