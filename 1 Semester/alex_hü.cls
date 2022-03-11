@@ -85,7 +85,7 @@
 \ihead{\@name}
 \chead{\textbf{\Large Blatt \@hwnumber}}
 \ohead{\@course \\ \today}
-\ofoot{\pagemark}
+\cfoot{\pagemark}
 \headheight 35pt
 \headsep 2.5em
 \footheight 45pt
