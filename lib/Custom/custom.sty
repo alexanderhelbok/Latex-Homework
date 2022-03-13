@@ -1,0 +1,95 @@
+%
+%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{custom}[2022/01/22 Custom Braces]
+
+\RequirePackage{xargs}
+\RequirePackage{xparse}
+\RequirePackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathreplacing,decorations.markings}
+
+\pgfdeclaredecoration{plain brace}{brace}
+{%
+	\state{brace}[width=+\pgfdecoratedremainingdistance, next state=final]
+	{%
+		\pgfpathmoveto{\pgfpointorigin}%
+		{%
+			\pgfpathcurveto%
+			{\pgfqpoint{.15\pgfdecorationsegmentamplitude}{.3\pgfdecorationsegmentamplitude}}%
+			{\pgfqpoint{.5\pgfdecorationsegmentamplitude}{.5\pgfdecorationsegmentamplitude}}%
+			{\pgfqpoint{\pgfdecorationsegmentamplitude}{.5\pgfdecorationsegmentamplitude}}%
+		}%
+		\pgftransformxshift{+\pgfdecoratedremainingdistance}%
+		\pgfpathlineto{\pgfqpoint{-\pgfdecorationsegmentamplitude}{.5\pgfdecorationsegmentamplitude}}%
+		{%
+			\pgfpathcurveto%
+			{\pgfqpoint{-.5\pgfdecorationsegmentamplitude}{.5\pgfdecorationsegmentamplitude}}%
+			{\pgfqpoint{-.15\pgfdecorationsegmentamplitude}{.3\pgfdecorationsegmentamplitude}}%
+			{\pgfqpoint{0\pgfdecorationsegmentamplitude}{0\pgfdecorationsegmentamplitude}}%
+		}%
+	}%
+	\state{final}{}%
+}
+%
+\newcommand{\tikzmark}[1]{\tikz[overlay, remember picture] \node (#1) {};}
+%
+%% tweak these if you wish
+\newcommand*{\BraceAmplitude}{0.5em}%
+\newcommand*{\VerticalOffset}{0.85ex}%
+\newcommand*{\HorizontalOffset}{0em}%
+\newcommand*{\TextOffset}{0.5ex}%
+
+\DeclareDocumentCommand{\AddUnderBrace}{%
+	O{\VerticalOffset} % #1 = distance
+	O{} % #2 = draw options
+	O{} % #3 = optional brace options
+	m   % #4 = left tikzmark
+	m   % #5 = right tikzmark
+	m   % #6 = text to place underbrace
+}{%
+	\begin{tikzpicture}[overlay, remember picture]
+		\draw [decoration={plain brace, amplitude=\BraceAmplitude, #3}, decorate, thick, draw=black!80, text=black, line width=0.75pt #2]
+		($ (#5.base) + (\HorizontalOffset,-#1) $) -- 
+		($ (#4.base) + (-\HorizontalOffset,-#1) $)
+		node [below=\TextOffset, midway] {#6};
+	\end{tikzpicture}%
+}
+
+\DeclareDocumentCommand{\AddOverBrace}{%
+	O{\VerticalOffset} % #1 = distance
+	O{} % #2 = draw options
+	O{} % #3 = optional brace options
+	m   % #4 = left tikzmark
+	m   % #5 = right tikzmark
+	m   % #6 = text to place underbrace
+}{%
+	\begin{tikzpicture}[overlay, remember picture]
+		\draw [decoration={plain brace, amplitude=\BraceAmplitude, mirror, #3}, decorate, thick, draw=black!80, text=black, #2]
+		($ (#5.north) + (\HorizontalOffset,#1+0.25em) $) -- 
+		($ (#4.north) + (-\HorizontalOffset,#1+0.25em) $)
+		node [above=\TextOffset, midway] {#6};
+	\end{tikzpicture}%
+}
+
+\newcommandx*{\tikzcancel}[2][1=black]{%
+	\tikz[baseline=(tocancel.base)]{%
+		\node[inner sep=-1pt,outer sep=0pt] (tocancel) {#2};
+		\draw[line width=0.25mm,#1] (tocancel.south west) -- (tocancel.north east);
+	}%
+}
+
+\newcommandx*{\tikzbackcancel}[2][1=black]{%
+	\tikz[baseline=(tocancel.base)]{%
+		\node[inner sep=-1pt,outer sep=0pt] (tocancel) {#2};
+		\draw[line width=0.25mm,#1] (tocancel.south east) -- (tocancel.north west);
+	}%
+}
+
+\newcommandx*{\tikzcrosscancel}[2][1=black]{%
+	\tikz[baseline=(tocancel.base)]{%
+		\node[inner sep=-1pt,outer sep=0pt] (tocancel) {#2};
+		\draw[line width=0.25mm,#1] (tocancel.south west) -- (tocancel.north east);
+		\draw[line width=0.25mm,#1] (tocancel.south east) -- (tocancel.north west);
+	}%
+}
