@@ -72,10 +72,12 @@
 		Due to the symmetric nature of this problem we can neglect vertical components of forces
 		\end{center}	
 		\begin{flalign*}
-			\mathrm{d}E_1 &= k \tfrac{\mathrm{d}Q}{h^2} \cos(\theta) = k \tfrac{\lambda \mathrm{d}r}{r^2 + z^2} \tfrac{z}{\sqrt{r^2 + z^2}} = k \tfrac{\lambda rz}{(r^2 + z^2)^{3/2}} \mathrm{d}\varphi &&\\
-			E_1 &= \int\ \mathrm{d}E_1 = k \tfrac{\lambda rz}{(r^2 + z^2)^{3/2}} \int\limits_{0}^{2\pi}\ \mathrm{d}\varphi = k \tfrac{\lambda2\pi rz}{(r^2 + z^2)^{3/2}}
+			\mathrm{d}E_1(z) &= k \tfrac{\mathrm{d}Q}{h^2} \cos(\theta) = k \tfrac{\lambda \mathrm{d}r}{r^2 + z^2} \tfrac{z}{\sqrt{r^2 + z^2}} = k \tfrac{\lambda rz}{(r^2 + z^2)^{3/2}} \mathrm{d}\varphi &&\\
+			E_1(z) &= \int\ \mathrm{d}E_1 = k \tfrac{\lambda rz}{(r^2 + z^2)^{3/2}} \int\limits_{0}^{2\pi}\ \mathrm{d}\varphi = k \tfrac{\lambda2\pi rz}{(r^2 + z^2)^{3/2}}
 			= k \tfrac{Qz}{(r^2 + z^2)^{3/2}} &&\\
-%	
+			E_2(z) &= -E_1(z-d) = -k \tfrac{Q(z-d)}{(r^2 + (z-d)^2)^{3/2}} &&\\
+			E_{ges}(z) &=  E_1 + E_2 = k \tfrac{Qz}{(r^2 + z^2)^{3/2}} -k \tfrac{Q(z-d)}{(r^2 + (z-d)^2)^{3/2}} &&\\
+			&= \dl{kQ\left( \tfrac{z+\tfrac{d}{2}}{\left(r^2 + \left(z+\tfrac{d}{2}\right)^2\right)^{3/2}} + \tfrac{\tfrac{d}{2}-z}{\left(r^2 + \left(z-\tfrac{d}{2}\right)^2\right)^{3/2}}\right)} &&
 		\end{flalign*}	
 		\tcbline
 		\item \( F = -m\omega^2 x;\quad \Delta x = x_1 - x_2 \)
