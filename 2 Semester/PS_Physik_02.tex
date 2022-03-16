@@ -84,13 +84,8 @@
 		\tcbline
 		\item \( F = -m\omega^2 x;\quad \Delta x = x_1 - x_2 \)
 		\begin{flalign*}
-			m\ddot{x_1} &= -m\omega_a\!^2x_1 - k(x_1 - x_2) &&\\
-			m\ddot{x_2} &= -m\omega_a\!^2x_2 - k(x_2 - x_1) &&\\
-			\Rightarrow\ m(\ddot{x_1}& - \ddot{x_2}) = -m\omega_a\!^2(x_1 - x_2) - 2k(x_1 - x_2) = -(m\omega_a\!^2 + 2k)(x_1 - x_2) &&\\
-			\Delta \ddot{x} &= -\tikzmark{Startw} (\omega_a\!^2 + \tfrac{2k}{m}) \tikzmark{Endw} \Delta x &&\\[3.5ex]
-			\omega_b &= \sqrt{\omega_a^2 + \tfrac{2k}{m}} = \dl{6.43 \unit{rad/s}} &&
+			\int\limits_{-d/2}^{d/2}\ qE(z)\ \mathrm{d}z &= kQq\left( \int\limits_{-d/2}^{d/2}\ \tfrac{z+\tfrac{d}{2}}{\left(r^2 + \left(z+\tfrac{d}{2}\right)^2\right)^{3/2}}\ \mathrm{d}z + \int\limits_{-d/2}^{d/2}\ \tfrac{\tfrac{d}{2}-z}{\left(r^2 + \left(z-\tfrac{d}{2}\right)^2\right)^{3/2}}\ \mathrm{d}z\right) &&
 		\end{flalign*}
-		\AddUnderBrace{Startw}{Endw}{$= \omega_b$}
 		\tcbline
 		\item \( \delta\omega = \omega_b - \omega_a \)
 		\begin{flalign*}
