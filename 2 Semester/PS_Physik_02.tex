@@ -6,35 +6,37 @@
 
 
 \begin{document}
-\renewcommand{\labelenumi}{\alph{enumi})}
+\renewcommand{\labelenumi}{\alph{enumi}.}
+
+
+\begin{mybox}{1. Influenz in einer Metallplatte}
+	\centering \( k = \tfrac{1}{4\pi \epsilon_0};\quad r^2 = x^2+y^2;\quad  \sigma = \epsilon_0 E \)
+	\tcblower
+		\begin{flalign*}
+			E_1(x,y,z) &= k\tfrac{Q}{x^2+y^2+(z+R)^2} &&\\
+			E_2(x,y,z) &= E_1(x,y,z-2R) = k\tfrac{Q}{x^2+y^2+(z-R)^2} &&\\
+			E_{ges}(x,y,z) &= E_1 + E_2 = kQ\left( \tfrac{1}{x^2+y^2+(z+R)^2} + \tfrac{1}{x^2+y^2+(z-R)^2} \right) &&\\[2ex]
+			\sigma(r) &= \epsilon_0 E_{ges}(x,y,z) = \epsilon_0kQ\left( \tfrac{1}{x^2+y^2+(z+R)^2} + \tfrac{1}{x^2+y^2+(z-R)^2} \right) &&\\
+			&=\dl{\tfrac{Q}{2\pi}\tfrac{1}{r^2+R^2}} &&
+		\end{flalign*}
+\end{mybox}
 
 
 \begin{mybox}{2. Feld einer Hohlkugel}
-	\centering \( m = 5 \unit{kg};\quad k = 2 \unit{N/m};\quad a = 0.1 \unit{m};\quad h = 0.4 \unit{m};\quad l = 0.1 \unit{m} \)
+	\centering \( k = \tfrac{1}{4\pi \epsilon_0} \)
 	\tcblower
 	\begin{enumerate}
 		\item \( \rho = \tfrac{Q}{V} \)
 		\begin{flalign*}
 			V &= \int_V dV = \int\limits_{0}^{\pi}\int\limits_{0}^{2\pi}\int\limits_{R_i}^{R_a} r^2\sin(\theta)\ \mathrm{d}r\mathrm{d}\varphi\mathrm{d}\theta &&\\
 			&= \tfrac{4}{3}\pi(R_a^3-R_i^3) &&\\
-			\rho &= \dl{\tfrac{3Q}{4\pi} (R_a^3-R_i^3)} &&
+			\rho &= \dl{\tfrac{3Q}{4\pi} \tfrac{1}{R_a^3-R_i^3}} &&
 		\end{flalign*}
 	\tcbline
-		\item \( F = -m\omega^2 x;\quad \Delta x = x_1 - x_2 \)
-		\begin{flalign*}
-			m\ddot{x_1} &= -m\omega_a\!^2x_1 - k(x_1 - x_2) &&\\
-			m\ddot{x_2} &= -m\omega_a\!^2x_2 - k(x_2 - x_1) &&\\
-			\Rightarrow\ m(\ddot{x_1}& - \ddot{x_2}) = -m\omega_a\!^2(x_1 - x_2) - 2k(x_1 - x_2) = -(m\omega_a\!^2 + 2k)(x_1 - x_2) &&\\
-			\Delta \ddot{x} &= -\tikzmark{Startw} (\omega_a\!^2 + \tfrac{2k}{m}) \tikzmark{Endw} \Delta x &&\\[3.5ex]
-			\omega_b &= \sqrt{\omega_a^2 + \tfrac{2k}{m}} = \dl{6.43 \unit{rad/s}} &&
-		\end{flalign*}
-		\AddUnderBrace{Startw}{Endw}{$= \omega_b$}
-	\tcbline
-		\item \( \delta\omega = \omega_b - \omega_a \)
-		\begin{flalign*}
-			0 &= \cos(\tfrac{1}{2}\delta\omega t) &&\\
-			t &= \tfrac{2\arccos(0)}{\delta\omega} = \dl{50.29 \unit{s}} &&
-		\end{flalign*}
+%		\item \( F = -m\omega^2 x;\quad \Delta x = x_1 - x_2 \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 \newpage
