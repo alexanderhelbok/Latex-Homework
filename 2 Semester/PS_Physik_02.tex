@@ -9,90 +9,91 @@
 \renewcommand{\labelenumi}{\alph{enumi}.}
 
 
-%\begin{mybox}{1. Influenz in einer Metallplatte}
-%	\centering \( k = \tfrac{1}{4\pi \epsilon_0};\quad r^2 = x^2+y^2;\quad  \sigma = \epsilon_0 E \)
-%	\tcblower
-%		\begin{flalign*}
-%			E_1(x,y,z) &= k\tfrac{Q}{x^2+y^2+(z+R)^2} &&\\
-%			E_2(x,y,z) &= E_1(x,y,z-2R) = k\tfrac{Q}{x^2+y^2+(z-R)^2} &&\\
-%			E_{ges}(x,y,z) &= E_1 + E_2 = kQ\left( \tfrac{1}{x^2+y^2+(z+R)^2} + \tfrac{1}{x^2+y^2+(z-R)^2} \right) &&\\[2ex]
-%			\sigma(r) &= \epsilon_0 E_{ges}(x,y,z) = \epsilon_0kQ\left( \tfrac{1}{x^2+y^2+(z+R)^2} + \tfrac{1}{x^2+y^2+(z-R)^2} \right) &&\\
-%			&=\dl{\tfrac{Q}{2\pi}\tfrac{1}{r^2+R^2}} &&
-%		\end{flalign*}
-%\end{mybox}
+\begin{mybox}{1. Influenz in einer Metallplatte}
+	\centering \( k = \tfrac{1}{4\pi \epsilon_0};\quad r^2 = x^2+y^2;\quad  \sigma = \epsilon_0 E \)
+	\tcblower
+		\begin{flalign*}
+			E_1(x,y,z) &= k\tfrac{Q}{x^2+y^2+(z+R)^2} &&\\
+			E_2(x,y,z) &= E_1(x,y,z-2R) = k\tfrac{Q}{x^2+y^2+(z-R)^2} &&\\
+			E_{ges}(x,y,z) &= E_1 + E_2 = kQ\left( \tfrac{1}{x^2+y^2+(z+R)^2} + \tfrac{1}{x^2+y^2+(z-R)^2} \right) &&\\[2ex]
+			\sigma(r) &= \epsilon_0 E_{ges}(x,y,z) = \epsilon_0kQ\left( \tfrac{1}{x^2+y^2+(z+R)^2} + \tfrac{1}{x^2+y^2+(z-R)^2} \right) &&\\
+			&=\dl{\tfrac{Q}{2\pi}\tfrac{1}{r^2+R^2}} &&
+		\end{flalign*}
+\end{mybox}
 
 
-%\begin{mybox}{2. Feld einer Hohlkugel}
-%	\centering \( k = \tfrac{1}{4\pi \epsilon_0} \)
-%	\tcblower
-%	\begin{enumerate}
-%		\item \( \rho = \tfrac{Q}{V} \)
-%		\begin{flalign*}
-%			V &= \int_V dV = \int\limits_{0}^{\pi}\int\limits_{0}^{2\pi}\int\limits_{R_i}^{R_a} r^2\sin(\theta)\ \mathrm{d}r\mathrm{d}\varphi\mathrm{d}\theta &&\\
-%			&= \tfrac{4}{3}\pi(R_a^3-R_i^3) &&\\
-%			\rho &= \dl{\tfrac{3Q}{4\pi} \tfrac{1}{R_a^3-R_i^3}} &&\\
-%		\end{flalign*}
-%		For  \(r \geq R_a\):
-%		\begin{flalign*}
-%			\hspace{3cm} q_{in} &= Q &&\\
-%			\frac{q_{in}}{\epsilon_0} &= \oint \vec{E}(\vec{r})\ \mathrm{d}\vec{A} = E(r) \oint \mathrm{d}A = E(r)4\pi r^2 &&\\
-%			E(r) &= kQ \tfrac{1}{r^2} &&
-%		\end{flalign*}
-%		For \(R_i < r < R_a\):
-%		\begin{flalign*}
-%			\hspace{3cm} q_{in} &= \rho V_{in} = Q \tfrac{r^3-R_i^3}{R_a^3-R_i^3} &&\\
-%			\tfrac{q_{in}}{\epsilon_0} &= \oint \vec{E}(\vec{r})\ \mathrm{d}\vec{A} = E(r) \oint \mathrm{d}A = E(r)4\pi r^2 &&\\
-%			E(r) &= kQ \tfrac{r^3-R_i^3}{R_a^3-R_i^3}\tfrac{1}{r^2} &&
-%		\end{flalign*}
-%		For \( r \leq R_i\):
-%		\begin{flalign*}
-%			\hspace{3cm} q_{in} &= 0 &&\\
-%			E(r) &= 0 &&
-%		\end{flalign*}
-%		\boxed{
-%		\begin{aligned}
-%			E(r) = \begin{cases}
-%				0& \quad $for $\ 0 < r \le R_i, \\
-%				\tfrac{kQ}{R_a^3-R_i^3} \left(r - \tfrac{R_i^3}{r^2}\right)& \quad $for $\ R_i < r < R_a, \\
-%				kQ \tfrac{1}{r^2}& \quad $for $\ R_a \le r. 
-%			\end{cases} 
-%		\end{aligned}
-%		}
-%	\tcbline
-%		\begin{minipage}{\textwidth}
-%			\hspace{1cm}\includegraphics[width=0.5\textwidth]{1.pdf}
-%			\includegraphics[scale=0.7]{2.pdf}
-%		\end{minipage}\vspace{0.5cm}
-%		\begin{tikzpicture}
-%			\begin{axis}[
-%				width=250pt,
-%				height=150pt,
-%				axis lines=center,
-%				%y axis line style={thick},
-%				tick align=outside,
-%				xmin=0,xmax=10,ymin=0,ymax=0.35,
-%				xlabel style={below},
-%				xtick = {2,4}, ytick = {0.25},
-%				xticklabels={\( R_i \), \( R_a \)},
-%				yticklabels={\( E_{max} \)},
-%				xlabel=$r$,
-%				ylabel=$E$,
-%				grid=major,
-%				grid style={thin,densely dotted,black!20},
-%				%legend columns=2,
-%				legend style={at={(axis description cs:1,0.35)},anchor=east}]
-%				\addplot [-, thick,  blue, domain = 4:10, smooth] {1/(x-2)^2};
-%				\addplot [-, thick,  blue, domain = 2:4, smooth] {(x-2)/(4-2)^3};
-%				\draw[blue, thick] (0,0) -- (2,0);
-%			\end{axis}
-%		\end{tikzpicture}\\
-%		\begin{minipage}{\textwidth}
-%			\vspace{-1cm}\hspace{0.4cm}\includegraphics[width=0.65\textwidth]{3.pdf}
-%			\hspace{-0.6cm}\includegraphics[scale=0.77]{2.pdf}
-%		\end{minipage}
-%	\end{enumerate}
-%\end{mybox}
-%\newpage
+\begin{mybox}{2. Feld einer Hohlkugel}
+	\centering \( k = \tfrac{1}{4\pi \epsilon_0} \)
+	\tcblower
+	\begin{enumerate}
+		\item \( \rho = \tfrac{Q}{V} \)
+		\begin{flalign*}
+			V &= \int_V dV = \int\limits_{0}^{\pi}\int\limits_{0}^{2\pi}\int\limits_{R_i}^{R_a} r^2\sin(\theta)\ \mathrm{d}r\mathrm{d}\varphi\mathrm{d}\theta &&\\
+			&= \tfrac{4}{3}\pi(R_a^3-R_i^3) &&\\
+			\rho &= \dl{\tfrac{3Q}{4\pi} \tfrac{1}{R_a^3-R_i^3}} &&\\
+		\end{flalign*}
+		For  \(r \geq R_a\):
+		\begin{flalign*}
+			\hspace{3cm} q_{in} &= Q &&\\
+			\frac{q_{in}}{\epsilon_0} &= \oint \vec{E}(\vec{r})\ \mathrm{d}\vec{A} = E(r) \oint \mathrm{d}A = E(r)4\pi r^2 &&\\
+			E(r) &= kQ \tfrac{1}{r^2} &&
+		\end{flalign*}
+		For \(R_i < r < R_a\):
+		\begin{flalign*}
+			\hspace{3cm} q_{in} &= \rho V_{in} = Q \tfrac{r^3-R_i^3}{R_a^3-R_i^3} &&\\
+			\tfrac{q_{in}}{\epsilon_0} &= \oint \vec{E}(\vec{r})\ \mathrm{d}\vec{A} = E(r) \oint \mathrm{d}A = E(r)4\pi r^2 &&\\
+			E(r) &= kQ \tfrac{r^3-R_i^3}{R_a^3-R_i^3}\tfrac{1}{r^2} &&
+		\end{flalign*}
+		For \( r \leq R_i\):
+		\begin{flalign*}
+			\hspace{3cm} q_{in} &= 0 &&\\
+			E(r) &= 0 &&
+		\end{flalign*}
+		\boxed{
+		\begin{aligned}
+			E(r) = \begin{cases}
+				0& \quad $for $\ 0 < r \le R_i, \\
+				\tfrac{kQ}{R_a^3-R_i^3} \left(r - \tfrac{R_i^3}{r^2}\right)& \quad $for $\ R_i < r < R_a, \\
+				kQ \tfrac{1}{r^2}& \quad $for $\ R_a \le r. 
+			\end{cases} 
+		\end{aligned}
+		}
+	\tcbline
+		\begin{minipage}{\textwidth}
+			\hspace{1cm}\includegraphics[width=0.5\textwidth]{1.pdf}
+			\includegraphics[scale=0.7]{2.pdf}
+		\end{minipage}\vspace{0.5cm}
+		\begin{tikzpicture}
+			\begin{axis}[
+				width=250pt,
+				height=150pt,
+				axis lines=center,
+				%y axis line style={thick},
+				tick align=outside,
+				xmin=0,xmax=10,ymin=0,ymax=0.35,
+				xlabel style={below},
+				xtick = {2,4}, ytick = {0.25},
+				xticklabels={\( R_i \), \( R_a \)},
+				yticklabels={\( E_{max} \)},
+				xlabel=$r$,
+				ylabel=$E$,
+				grid=major,
+				grid style={thin,densely dotted,black!20},
+				%legend columns=2,
+				legend style={at={(axis description cs:1,0.35)},anchor=east}]
+				\addplot [-, thick,  blue, domain = 4:10, smooth] {1/(x-2)^2};
+				\addplot [-, thick,  blue, domain = 2:4, smooth] {(x-2)/(4-2)^3};
+				\draw[blue, thick] (0,0) -- (2,0);
+			\end{axis}
+		\end{tikzpicture}\\
+		\begin{minipage}{\textwidth}
+			\vspace{-1cm}\hspace{0.4cm}\includegraphics[width=0.65\textwidth]{3.pdf}
+			\hspace{-0.6cm}\includegraphics[scale=0.77]{2.pdf}
+		\end{minipage}
+	\end{enumerate}
+\end{mybox}
+
+
 \begin{mybox}{3. Zwei ringförmige Ladungsträger}
 	\centering \( k = \tfrac{1}{4\pi \epsilon_0} \)
 	\tcblower
@@ -136,16 +137,14 @@
 		\end{flalign*}	
 		\tcbline
 		\item \(  \)
+			\( \int\limits_{-d/2}^{d/2}\ qE(z)\ \mathrm{d}z = kQq\left( \int\limits_{-d/2}^{d/2}\ \tfrac{z+\tfrac{d}{2}}{\left(r^2 + \left(z+\tfrac{d}{2}\right)^2\right)^{3/2}}\ \mathrm{d}z + \int\limits_{-d/2}^{d/2}\ \tfrac{\tfrac{d}{2}-z}{\left(r^2 + \left(z-\tfrac{d}{2}\right)^2\right)^{3/2}}\ \mathrm{d}z\right) \\ \)
 		\begin{flalign*}
-			\int\limits_{-d/2}^{d/2}\ qE(z)\ \mathrm{d}z &= kQq\left( \int\limits_{-d/2}^{d/2}\ \tfrac{z+\tfrac{d}{2}}{\left(r^2 + \left(z+\tfrac{d}{2}\right)^2\right)^{3/2}}\ \mathrm{d}z + \int\limits_{-d/2}^{d/2}\ \tfrac{\tfrac{d}{2}-z}{\left(r^2 + \left(z-\tfrac{d}{2}\right)^2\right)^{3/2}}\ \mathrm{d}z\right) &&\\
-			&= \tfrac{kQq}{2} \left( \int\limits_{r^2}^{r^2+d^2}\ \tfrac{1}{u^{3/2}}\ \mathrm{d}u\ - \int\limits_{r^2-d^2}^{r^2}\ \tfrac{1}{v^{3/2}}\ \mathrm{d}v\right) &&
+			&= \tfrac{kQq}{2} \left( \int\limits_{r^2}^{r^2+d^2}\ \tfrac{1}{u^{3/2}}\ \mathrm{d}u\ - \int\limits_{r^2-d^2}^{r^2}\ \tfrac{1}{v^{3/2}}\ \mathrm{d}v\right) &&\\
+			&= \dl{2kQq \left( \tfrac{1}{r} - \tfrac{1}{\sqrt{r^2+d^2}} \right)} &&
 		\end{flalign*}
-%		\begin{minipage}[t]{0.6\textwidth}
-%				\( = \tfrac{kQq}{2} \left( \int\limits_{r^2}^{r^2+d^2}\ \tfrac{1}{u^{3/2}}\ \mathrm{d}u\ - \int\limits_{r^2-d^2}^{r^2}\ \tfrac{1}{v^{3/2}}\ \mathrm{d}v\right) \)
-%		\end{minipage}
 		\hfill
 		\begin{minipage}[t]{0.3\textwidth}
-			\vspace{-1.445cm}
+			\vspace{-3.2cm}
 			\boxed{
 				\begin{aligned}
 					u &= r^2 + \left(z + \tfrac{d}{2}\right)^2\\
@@ -154,12 +153,16 @@
 					\mathrm{d}v &= 2\left(z - \tfrac{d}{2}\right) \mathrm{d}z
 				\end{aligned}
 			}
-		\end{minipage}
+		\end{minipage}\\
+		\( qE(z) \) represents a force, which in turn gives the amount of work done when integrated over a distance
 		\tcbline
-		\item \( \delta\omega = \omega_b - \omega_a \)
+		\item \( r = 0.1 \unit{m};\quad d = 0.5 \unit{m};\quad Q = 10^{-6} \unit{C};\quad q = 1.6 * 10^{19} \unit{C};\quad m = 200.592 u \)
 		\begin{flalign*}
-			0 &= \cos(\tfrac{1}{2}\delta\omega t) &&\\
-			t &= \tfrac{2\arccos(0)}{\delta\omega} = \dl{50.29 \unit{s}} &&
+			W = 2kQq \left( \tfrac{1}{r} - \tfrac{1}{\sqrt{r^2+d^2}} \right) &= \dl{2.3 * 10^{24} \unit{J}} &&
+		\end{flalign*}
+		\begin{flalign*}
+			W &= \tfrac{1}{2} mv^2  &&\\
+			v &= \sqrt{\tfrac{2W}{m}} = \dl{3.73 * 10^{24} \unit{\v}} &&
 		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
