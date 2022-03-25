@@ -22,53 +22,54 @@
 				\end{cases} 
 			\end{aligned}
 		}\\[2em]
-		\underline{For  \(r \geq R_a\):}
+		\underline{For  \(R_a \leq r\):}
 		\begin{flalign*}
 			E(r) &= kQ \tfrac{1}{r^2} &&\\
-			V(R_a) &= \int\limits_{R_a}^{\infty}\ \vec{E}(r)\ \mathrm{d}\vec{r} = kQ \int\limits_{R_a}^{\infty}\ \tfrac{1}{r^2}\ \mathrm{d}r = kQ \tfrac{1}{R_a} &&\\
-			V(r) &= kQ \tfrac{1}{r} &&\\
+			V_1(r) &= \int\limits_{r}^{\infty}\ \vec{E}(r)\ \mathrm{d}\vec{r} = kQ \int\limits_{r}^{\infty}\ \tfrac{1}{r^2}\ \mathrm{d}r = kQ \tfrac{1}{R_a} &&\\
+			V_1(r) &= kQ \tfrac{1}{r} &&\\
 		\end{flalign*}
 		\underline{For \(R_i < r < R_a\):}
 		\begin{flalign*}
 			E(r) &= \tfrac{kQ}{R_a^3-R_i^3} \left(r - \tfrac{R_i^3}{r^2}\right) &&\\
-			V(R_i) &= \int\limits_{R_i}^{\infty}\ \vec{E}(r)\ \mathrm{d}\vec{r} = kQ\left( \int\limits_{R_i}^{R_a}\ \tfrac{r^3 - R_i^3}{r^2(R_a^3-R_i^3)}\ \mathrm{d}r + \tikzmark{1} \int\limits_{R_a}^{\infty}\ \tfrac{1}{r^2}\ \mathrm{d}r \tikzmark{2} \right)  = kQ\left( \tfrac{1}{R_i} - \tfrac{1}{R_a} + \tfrac{1}{R_a} \right)  &&\\
-			V(r) &= kQ \tfrac{1}{r^2} &&\\
+			V_2(r) &= \int\limits_{r}^{\infty}\ \vec{E}(r)\ \mathrm{d}\vec{r} = kQ\left( \int\limits_{r}^{R_a}\ \tfrac{r^3 - R_i^3}{r^2(R_a^3-R_i^3)}\ \mathrm{d}r + \tikzmark{1} \int\limits_{R_a}^{\infty}\ \tfrac{1}{r^2}\ \mathrm{d}r \tikzmark{2} \right)  = &&\\[2em]
+			&= kQ\left( -\tfrac{r^3R_a - rR_a^3 + 2 rR_i^3 + 2R_aR_i^3}{2rR_a^4 - 2rR_aR_i^3} + \tfrac{1}{R_a} \right)  &&\\[2em]
+			V_2(r) &= -kQ\frac{r^3-3rR_a^2 + 2 R_i^3}{2rR_a^3 - 2rR_i^3} &&\\
 		\end{flalign*}
-		\AddUnderBrace[2.2em]{1}{2}{$= V(R_a)$}
+		\AddUnderBrace[2.2em]{1}{2}{$= V_1(R_a)$}
+		\newpage
 		\underline{For \( r \leq R_i\):}
 		\begin{flalign*}
 			E(r) &= 0 &&\\
-			V(r) &= \int\limits_{0}^{\infty}\ \vec{E}(s)\ \mathrm{d}\vec{s} = kQ \int\limits_{R_a}^{\infty}\ \tfrac{1}{s^2}\ \mathrm{d}s = kQ \tfrac{1}{r^2} &&\\
-			V(r) &= kQ \tfrac{1}{r^2} &&
+			V_3(r) &= \int\limits_{r}^{\infty}\ \vec{E}(r)\ \mathrm{d}\vec{r} = kQ\left(\tikzmark{5} \int\limits_{r}^{R_i}\ 0\ \mathrm{d}r \tikzmark{6} + \tikzmark{3} \int\limits_{R_i}^{\infty}\ \tfrac{r^3 - R_i^3}{r^2(R_a^3-R_i^3)}\ \mathrm{d}r \tikzmark{4} \right) = &&\\[2em]
+			V_3(r) &= -kQ\frac{3 (R_a+R_i)}{2 (R_a^2+R_a R_i+R_i^2)} &&\\
 		\end{flalign*}
+		\AddUnderBrace[2.2em]{3}{4}{$= V_2(R_i)$}
+		\AddUnderBrace[2.2em]{5}{6}{$= O$}
 		\boxed{
 			\begin{aligned}
 				V(r) = \begin{cases}
-					0& \quad $for $\ 0 < r \le R_i, \\
-					\tfrac{kQ}{R_a^3-R_i^3} \left(r - \tfrac{R_i^3}{r^2}\right)& \quad $for $\ R_i < r < R_a, \\
-					kQ \tfrac{1}{r^2}& \quad $for $\ R_a \le r. 
+					-kQ\frac{3 (R_a+R_i)}{2 (R_a^2+R_a R_i+R_i^2)}& \quad $for $\ 0 < r \le R_i, \\[1.5ex]
+					-kQ\frac{r^3-3rR_a^2 + 2 R_i^3}{2rR_a^3 - 2rR_i^3}& \quad $for $\ R_i < r < R_a, \\[1.5ex]
+					kQ \tfrac{1}{r}& \quad $for $\ R_a \le r. 
 				\end{cases} 
 			\end{aligned}
 		}
-	\tcbline
-		\item \( F = -m\omega^2 x;\quad \Delta x = x_1 - x_2 \)
-		\begin{flalign*}
-			m\ddot{x_1} &= -m\omega_a\!^2x_1 - k(x_1 - x_2) &&\\
-			m\ddot{x_2} &= -m\omega_a\!^2x_2 - k(x_2 - x_1) &&\\
-			\Rightarrow\ m(\ddot{x_1}& - \ddot{x_2}) = -m\omega_a\!^2(x_1 - x_2) - 2k(x_1 - x_2) = -(m\omega_a\!^2 + 2k)(x_1 - x_2) &&\\
-			\Delta \ddot{x} &= -\tikzmark{Startw} (\omega_a\!^2 + \tfrac{2k}{m}) \tikzmark{Endw} \Delta x &&\\[3.5ex]
-			\omega_b &= \sqrt{\omega_a^2 + \tfrac{2k}{m}} = \dl{6.43 \unit{rad/s}} &&
-		\end{flalign*}
-		\AddUnderBrace{Startw}{Endw}{$= \omega_b$}
-	\tcbline
-		\item \( \delta\omega = \omega_b - \omega_a \)
-		\begin{flalign*}
-			0 &= \cos(\tfrac{1}{2}\delta\omega t) &&\\
-			t &= \tfrac{2\arccos(0)}{\delta\omega} = \dl{50.29 \unit{s}} &&
-		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
-
+\begin{mybox}{3. Elektrische Ladung zwischen Kugelladungen}
+	\centering \( k = \tfrac{1}{4\pi \epsilon_0}, V = \int\limits_{V_i}^{\infty}\ \vec{E}\ \mathrm{d}\vec{s} \)
+	\tcblower
+	\begin{enumerate}
+		\item 
+		\begin{flalign*}
+			F &= \vec{E}_2(r) * q = k \tfrac{qQ}{(9.5d)^2} &&
+		\end{flalign*}
+%		\item
+%		\begin{flalign*}
+%			
+%		\end{flalign*} 
+	\end{enumerate}
+\end{mybox}
 
 \end{document}
