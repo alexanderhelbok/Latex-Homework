@@ -6,14 +6,13 @@
 
 
 \begin{document}
-\renewcommand{\labelenumi}{\arabic{enumi}.}
+\renewcommand{\labelenumi}{\alph{enumi})}
 
 
 \begin{mybox}{1. Potentialverlauf einer geladenen Hohlkugel}
 	\centering \( k = \tfrac{1}{4\pi \epsilon_0}, V = \int\limits_{V_i}^{\infty}\ \vec{E}\ \mathrm{d}\vec{s} \)
 	\tcblower
-	\begin{enumerate}
-		\item \boxed{
+		\boxed{
 			\begin{aligned}
 				E(r) = \begin{cases}
 					0& \quad $for $\ 0 < r \le R_i, \\
@@ -53,22 +52,67 @@
 					kQ \tfrac{1}{r}& \quad $for $\ R_a \le r. 
 				\end{cases} 
 			\end{aligned}
-		}
-	\end{enumerate}
+		}\\[2cm]
+		\begin{tikzpicture}
+			\begin{axis}[
+				width=350pt,
+				height=250pt,
+				axis lines=center,
+				%y axis line style={thick},
+				tick align=outside,
+				xmin=0,xmax=14,ymin=0,ymax=0.45,
+				xlabel style={below},
+				xtick = {2,4}, ytick = {0.321},
+				xticklabels={\( R_i \), \( R_a \)},
+				yticklabels={\( V_{max} \)},
+				xlabel=$r$,
+				ylabel=$V$,
+				grid=major,
+				grid style={thin,densely dotted,black!20},
+				%legend columns=2,
+				legend style={at={(axis description cs:1,0.35)},anchor=east}]
+				\addplot [-, thick,  blue, domain = 4:14, smooth] {1/x};
+				\addplot [-, thick,  blue, domain = 2:4, smooth] {-(x^3 - 48*x + 16)/(128*x - 16*x)};
+				\addplot [-, thick,  blue, domain = 0:2, smooth] {-(2^3 - 48*2 + 16)/(128*2 - 16*2)};
+			\end{axis}
+		\end{tikzpicture}\\
+\end{mybox}
+
+\begin{mybox}{2. Elektrisches Feld und Potential eines geladenen Stabes}
+	\centering \( k = \tfrac{1}{4\pi \epsilon_0} \)
+	\tcblower
+%	\begin{enumerate}
+%	\end{enumerate}
 \end{mybox}
 
 \begin{mybox}{3. Elektrische Ladung zwischen Kugelladungen}
-	\centering \( k = \tfrac{1}{4\pi \epsilon_0}, V = \int\limits_{V_i}^{\infty}\ \vec{E}\ \mathrm{d}\vec{s} \)
+	\centering \( k = \tfrac{1}{4\pi \epsilon_0} \)
 	\tcblower
 	\begin{enumerate}
+		\item \( \vec{F} = \vec{E}_2(9.5d) * q = \dl{k \tfrac{qQ}{(9.5d)^2} \vector{1\\ 0\\ 0}} \)
+		\tcbline
+		\item
+		\begin{minipage}{\textwidth}
+			\hspace{1cm}
+			\includegraphics[scale=0.7]{4.pdf}
+		\end{minipage}\vspace{0.5cm}
+		\tcbline
 		\item 
 		\begin{flalign*}
-			F &= \vec{E}_2(r) * q = k \tfrac{qQ}{(9.5d)^2} &&
+			K &= W &&\\
+			\tfrac{1}{2}mv^2 &= \int\limits_{9.5d}^{9d}\ \vec{F}\ \mathrm{d}\vec{r} = kqQ\left( \tfrac{1}{9.5d} - \tfrac{1}{9d}\right)  = kqQ \tfrac{1}{171d} &&\\
+			v &= \dl{\sqrt{\tfrac{2kqQ}{171dm}}} &&
 		\end{flalign*}
-%		\item
-%		\begin{flalign*}
-%			
-%		\end{flalign*} 
+		\tcbline
+		\item 
+		\begin{flalign*}
+			kqQ \int\limits_{9.5d}^{9d}\ \tfrac{1}{r^2}\ \mathrm{d}r &= kqQ \int\limits_{d}^{x}\ \tfrac{1}{(r-10d)^2} - \tfrac{1}{r^2}\ \mathrm{d}r &&\\
+			\tfrac{1}{171d} &= \tfrac{1}{10 d-x}-\tfrac{10}{9 d}+\tfrac{1}{x} &&\\
+			x(10d-x) &= \tfrac{1710d^2}{191} &&\\
+			x_{1,2} &= \tfrac{1}{955}\left( 191d \pm \sqrt{585415}\ d \right) &&\\
+			x_1 &= \tfrac{1}{955}\left( 191d - \sqrt{585415}\ d \right) \approx 0.99d &&\\
+			d + x_1 &= \dl{1.99d} &&
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
