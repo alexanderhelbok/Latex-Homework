@@ -79,10 +79,34 @@
 \end{mybox}
 
 \begin{mybox}{2. Elektrisches Feld und Potential eines geladenen Stabes}
-	\centering \( k = \tfrac{1}{4\pi \epsilon_0} \)
+	\centering \( k = \tfrac{1}{4\pi \epsilon_0};\quad \mathrm{d}Q = \lambda \mathrm{d}z;\quad d = \sqrt{r_P^2 + (z_P - z)^2} \)
 	\tcblower
-%	\begin{enumerate}
-%	\end{enumerate}
+	\begin{enumerate}
+		\item 
+		\begin{flalign*}
+			\mathrm{d}V &= k\tfrac{1}{d}\ \mathrm{d}Q = k\lambda \tfrac{1}{\sqrt{r_P^2 + (z_P - z)^2}}\ \mathrm{d}z &&\\
+			V &= k\lambda \int\limits_{-l/2}^{l/2}\ \tfrac{1}{\sqrt{r_P^2 + (z_P - z)^2}}\ \mathrm{d}z = &&\\
+			&= \dl{k\lambda\ln \left(\frac{\sqrt{\left( \tfrac{l}{2}+z_P \right)^2 + r_P^2} + \tfrac{l}{2}+z_P}{\sqrt{\left( -\tfrac{l}{2}+z_P \right)^2 + r_P^2} - \tfrac{l}{2}+z_P }\right)} &&
+		\end{flalign*}
+		\tcbline
+		\item \( z_P = 0;\quad r_P = x_P;\quad l \ll x_P \)
+		\begin{flalign*}
+			V &= k\lambda\ln \left(\frac{\sqrt{l^2 + 4r_P^2} + l}{\sqrt{l^2 + 4r_P^2} - l}\right) &&\\
+			&= k\lambda\ln \left(\frac{\sqrt{l^2 + 4x_P^2} + l}{\sqrt{l^2 + 4x_P^2} - l}\right) &&\\
+			&\approx k\lambda\ln\left(\frac{2x_P + l}{2x_P - l}\right) \approx k\lambda \ln(1) &&\\
+			&= \dl{0} &&
+		\end{flalign*}
+		\hfill
+		\begin{minipage}[t]{0.3\textwidth}
+			\vspace{-4cm}
+			\boxed{
+				\begin{aligned}
+					\sqrt{l^2 + 4x_P^2} &\approx 2x_P \\
+					2x_P \pm l &\approx 2x_P
+				\end{aligned}
+			}
+		\end{minipage}\\
+	\end{enumerate}
 \end{mybox}
 
 \begin{mybox}{3. Elektrische Ladung zwischen Kugelladungen}
