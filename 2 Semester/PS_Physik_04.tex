@@ -1,0 +1,46 @@
+\documentclass{alex_hü}
+
+\name{Alexander Helbok}
+\course{PS Physik}
+\hwnumber{4}
+
+
+\begin{document}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+
+
+\begin{mybox}{1. Der Dipol}
+	\centering \(k = \tfrac{1}{4\pi \epsilon_0};\quad x_1 = -\tfrac{d}{2};\quad x_2 = \tfrac{d}{2} \)
+	\tcblower
+	\begin{enumerate}
+		\item \(  \)
+		\begin{flalign*}
+			V_{ges} &= V_+ + V_- = kq\left(\tfrac{1}{r_+} - \tfrac{1}{r_-} \right) &&
+		\end{flalign*}
+	\tcbline
+		\item \( d \ll r;\quad \vec{p} := q\vec{d} \)
+		\begin{flalign*}
+			kq\left(\tfrac{1}{r_+} - \tfrac{1}{r_-} \right) &= kq\left(\tfrac{r_- - r_+}{r_+r_-} \right) &&\\
+			&\approx kq\tfrac{d\cos(\theta)}{r^2} &&
+		\end{flalign*}
+		\hfill
+		\begin{minipage}[t]{0.3\textwidth}
+			\vspace{-2.3cm}
+			\boxed{
+				\begin{aligned}
+					r_- - r_+ &\approx d\cos(\theta) \\
+					r_+r_- \pm l &\approx r^2
+				\end{aligned}
+			}
+		\end{minipage}\\
+	\tcbline
+		\item \( \delta\omega = \omega_b - \omega_a \)
+		\begin{flalign*}
+			0 &= \cos(\tfrac{1}{2}\delta\omega t) &&\\
+			t &= \tfrac{2\arccos(0)}{\delta\omega} = \dl{50.29 \unit{s}} &&
+		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+
+\end{document}
