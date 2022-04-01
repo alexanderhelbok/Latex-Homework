@@ -42,5 +42,94 @@
 	\end{enumerate}
 \end{mybox}
 
+\begin{mybox}{2. Kondensator mit Dielektrikum}
+	\centering \(k = \tfrac{1}{4\pi \epsilon_0};\quad C = \tfrac{\epsilon A}{d};\quad \epsilon_{rel} = \tfrac{\epsilon}{\epsilon_0} \)
+	\tcblower
+	\begin{enumerate}
+		\item \(  \)
+		\begin{flalign*}
+			C_1 &= \tfrac{\epsilon_0 a(a-h)}{d} &&\\
+			C_2 &= \tfrac{\epsilon_r ah}{d} &&\\
+			C_{ges} &= C_1 + C_2 = \dl{\tfrac{\epsilon_0 a}{d}\left(\epsilon_{rel}h + a - h \right)}  &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			E &= \tfrac{CU^2}{2} = \dl{\tfrac{U^2\epsilon_0 a(\epsilon_{rel}h + a - h)}{2d}} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			E' &= \tfrac{C'U^2}{2} = \tfrac{U^2\epsilon_0 a(\epsilon_{rel}(h + \Delta h) + a - (h + \Delta h))}{2d} &&\\
+			\Delta E &= \dl{\tfrac{U^2\epsilon_0 a}{2d}(\epsilon_{rel}\Delta h - \Delta h)} &&\\
+			\Delta E_{pot} &= \tfrac{mg\Delta h}{2} = \dl{\tfrac{\rho a^2dg\Delta h}{2}} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			\Delta q &= 2\tfrac{\Delta E}{U} = \dl{\tfrac{U\epsilon_0 a}{d}(\epsilon_{rel}\Delta h - \Delta h)} &&
+		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+\begin{mybox}{3. Kapazität eines Koaxialkabels}
+	\centering \(k = \tfrac{1}{4\pi \epsilon_0};\quad C = \tfrac{\epsilon A}{d};\quad \epsilon_{rel} = \tfrac{\epsilon}{\epsilon_0} \)
+	\tcblower
+	\begin{enumerate}
+		\item \(  \)
+		\underline{For  \(r \leq d \leq R\):}
+		\begin{flalign*}
+			\frac{q_{in}}{\epsilon_0} &= \oint \vec{E}(\vec{d})\ \mathrm{d}\vec{A} = E(d) \oint \mathrm{d}A = E(d)2\pi dl &&\\
+			E(d) &= kq \tfrac{2}{dl} &&\\
+		\end{flalign*}
+		\underline{For \(R < d\):}
+		\begin{flalign*}
+			q_{in} &= 0 &&\\
+			E(d) &= 0 &&
+		\end{flalign*}
+		\boxed{
+			\begin{aligned}
+				E(d) = \begin{cases}
+					kQ \tfrac{2}{lr}& \quad $for $\ r \leq d \leq R, \\
+					0& \quad $for $\ R < d. 
+				\end{cases} 
+			\end{aligned}
+		}
+	\tcbline
+		\item \(  \)
+%		\underline{For \(R < d\):}
+%		\begin{flalign*}
+%			E(d) &= 0 &&\\
+%			V(d) &= \int\limits_{d}^{\infty}\ \vec{E}(r)\ \mathrm{d}\vec{r} = 0 &&
+%		\end{flalign*}
+		\underline{For  \(r \leq d \leq R\):}
+		\begin{flalign*}
+			E(d) &= kq \tfrac{2}{dl} &&\\
+			V(d) &= \int\limits_{d}^{\infty}\ \vec{E}(r)\ \mathrm{d}\vec{r} = \int\limits_{d}^{R}\ kq \tfrac{2}{rl}\ \mathrm{d}r + \tikzmark{1} \int\limits_{R}^{\infty}\ 0\ \mathrm{d}r \tikzmark{2} &&\\[2em]
+			V(d) &= \tfrac{2kq}{l}\ln(\tfrac{R}{d})  &&\\
+		\end{flalign*}
+	\AddUnderBrace[2.2em]{1}{2}{$= 0$}
+		\boxed{
+			\begin{aligned}
+				V(d) = \begin{cases}
+					\tfrac{2kq}{l}\ln(\tfrac{R}{d})& \quad $for $\ r \leq d \leq R, \\
+					0& \quad $for $\ R < d. 
+				\end{cases} 
+			\end{aligned}
+		}
+	\tcbline
+		\item \( r = 7.0 * 10^{-4} \unit{m};\quad R = 2.5 * 10^{-3} \unit{m};\quad C = 500 \unit{pF} \)
+		\begin{flalign*}
+			C &= \frac{q}{V(r)} = \tfrac{l}{2k\ln(\tfrac{R}{r})} &&\\
+			l &= \tfrac{C}{2k\ln(\tfrac{R}{r})} &&\\
+			&= \dl{11.44 \unit{m}} &&
+		\end{flalign*}
+	\tcbline
+		\item \( I = 0.1 \unit{A};\quad U = 10 \unit{V} \)
+		\begin{flalign*}
+			\Delta q &= 2\tfrac{\Delta E}{U} = \dl{\tfrac{U\epsilon_0 a}{d}(\epsilon_{rel}\Delta h - \Delta h)} &&
+		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
 
 \end{document}
