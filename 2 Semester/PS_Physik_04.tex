@@ -18,10 +18,10 @@
 			V_{ges} &= V_+ + V_- = kq\left(\tfrac{1}{r_+} - \tfrac{1}{r_-} \right) &&
 		\end{flalign*}
 	\tcbline
-		\item \( d \ll r;\quad \vec{p} := q\vec{d} \)
+		\item \( d \ll r;\quad \vec{p} := q\vec{d};\quad d\cos(\theta) = \vec{d} \)
 		\begin{flalign*}
-			kq\left(\tfrac{1}{r_+} - \tfrac{1}{r_-} \right) &= kq\left(\tfrac{r_- - r_+}{r_+r_-} \right) &&\\
-			&\approx kq\tfrac{d\cos(\theta)}{r^2} &&
+			V &= kq\left(\tfrac{1}{r_+} - \tfrac{1}{r_-} \right) = kq\left(\tfrac{r_- - r_+}{r_+r_-} \right) \approx kq\tfrac{d\cos(\theta)}{r^2} &&\\
+			&= k \frac{p\cos(\theta)}{r^2} = \dl{k \frac{\vec{p} \cdot \vec{r}}{r^3}} &&
 		\end{flalign*}
 		\hfill
 		\begin{minipage}[t]{0.3\textwidth}
@@ -34,10 +34,10 @@
 			}
 		\end{minipage}\\
 	\tcbline
-		\item \( \abs*{\vec{M}} = \abs*{\vec{p} \times \vec{E}} = \vec{p}\vec{E}\sin(\theta);\quad E_{pot} = \int\limits_{\theta}^{\pi/2}\ \abs*{\vec{M}}\ \mathrm{d}\tilde{\theta} \)
+		\item \( \abs*{\vec{M}} = \abs*{\vec{p} \times \vec{E}} = pE\sin(\theta);\quad E_{pot} = \int\limits_{\theta}^{\pi/2}\ \abs*{\vec{M}}\ \mathrm{d}\tilde{\theta} \)
 		\begin{flalign*}
-			0 &= \cos(\tfrac{1}{2}\delta\omega t) &&\\
-			t &= \tfrac{2\arccos(0)}{\delta\omega} = \dl{50.29 \unit{s}} &&
+			E_{pot} &= \int\limits_{\theta}^{\pi/2}\ \abs*{\vec{M}}\ \mathrm{d}\tilde{\theta} = pE \int\limits_{\theta}^{\pi/2}\ \sin(\tilde{\theta})\ \mathrm{d}\tilde{\theta} = pE\cos(\theta) &&\\
+			&= \dl{\vec{p} \cdot \vec{E}} &&
 		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
