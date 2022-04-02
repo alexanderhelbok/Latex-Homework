@@ -1,0 +1,26 @@
+\documentclass{scrartcl}
+\usepackage{xparse,xifthen}
+
+% Version 1, preferred but does not work
+\ExplSyntaxOn
+\NewDocumentCommand{\uint}{>{\SplitList{,}}D[]{-,-} m m}
+{\ifthenelse{\equal{\use_i:nn#1}{-}}{
+	\int#2 \,\mathrm{d}#3
+	}{
+	\int
+	\limits
+	\c_math_subscript_token   { \use_i:nn  #1 }
+	\c_math_superscript_token { \use_ii:nn #1 }
+	#2
+	\,
+	\mathrm{d}#3
+}}
+\ExplSyntaxOff
+
+\begin{document}
+	  \( \uint{f(x)}{x} \) % Fails with error
+	
+%	Example 2: \( \dintt[a,b]{f(x)}{x} \) % works, but is just for testing
+%	
+%	Example 3: \( \dinttt[a][b]{f(x)}{x} \) % Works, but slightly annoying
+\end{document}

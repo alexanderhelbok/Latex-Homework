@@ -8,7 +8,7 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage{fontspec}
 \RequirePackage[ngerman]{babel}
-\RequirePackage{xifthen, expl3}
+\RequirePackage{xifthen}
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{mtpro2}
 \pdfmapfile{=mtpro2.map}
@@ -46,26 +46,17 @@
 \DeclareSIUnit[]\a{\m\per\square\s}
 
 % define häufig used cmd
+\renewcommand*\dd{\mathop{}\!\mathrm{d}}
 \renewcommand*{\vector}[1]{\hspace{0.1cm} \begin{pmatrix}#1\end{pmatrix}}
 \newcommand*{\dl}[1]{\underline{\underline{#1}}}	%dl = double underline
 
-%\ExplSyntaxOn
-%\NewDocumentCommand{\uint}{>{\SplitArgument{1}{;}}m}{%
-%%	\ifthenelse{\isempty{#1}}
-%%	{\int\ x\ \mathrm{d}s}
-%	\int\limits_{\use_i:nn#1}^{\use_ii:nn#1}\ x\ \mathrm{d}r
-%}
-%\ExplSyntaxOff
-%\ExplSyntaxOn
-%\NewDocumentCommand{\cuts}{>{\SplitArgument{1}{;}}D[]{}}{%
-%	\int\limits_{\use_i:nn#1}^{\use_ii:nn#1}%
-%}
-%\ExplSyntaxOff
-
-%\NewDocumentCommand{\cut}{>{\SplitArgument{1}{|}}m}{%
-%	\int(\use_i:nn#1 \mid \use_ii:nn#1)%
-%}
-%\ExplSyntaxOff
+\ExplSyntaxOn
+\NewDocumentCommand{\uint}{>{\SplitArgument{1}{,}}D[]{-,-} m m}{%
+	\ifthenelse{\equal{\use_i:nn#1}{-}}
+	{\int#2\, \dd#3}
+	{\int\limits\c_math_subscript_token{\use_i:nn#1}\c_math_superscript_token{\use_ii:nn#1}#2 \dd#3}
+}
+\ExplSyntaxOff
 
 % redefine cmd to add spacing in math mode
 \let\oldtfrac\tfrac

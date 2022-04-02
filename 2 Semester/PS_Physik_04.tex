@@ -5,12 +5,6 @@
 \hwnumber{4}
 
 
-\ExplSyntaxOn
-\NewDocumentCommand{\cuts}{>{\SplitArgument{1}{;}}D[]{}}{%
-	\int\limits_{\use_i:nn#1}^{\use_ii:nn#1}%
-}
-\ExplSyntaxOff
-
 \begin{document}
 \renewcommand{\labelenumi}{(\alph{enumi})}
 
@@ -41,7 +35,7 @@
 	\tcbline
 		\item \( \abs*{\vec{M}} = \abs*{\vec{p} \times \vec{E}} = pE\sin(\theta);\quad E_{pot} = \int\limits_{\theta}^{\pi/2}\ \abs*{\vec{M}}\ \mathrm{d}\tilde{\theta} \)
 		\begin{flalign*}
-			E_{pot} &= \int\limits_{\theta}^{\pi/2}\ \abs*{\vec{M}}\ \mathrm{d}\tilde{\theta} = pE \int\limits_{\theta}^{\pi/2}\ \sin(\tilde{\theta})\ \mathrm{d}\tilde{\theta} = pE\cos(\theta) &&\\
+			E_{pot} &= \uint[\theta,\pi/2]{\abs*{\vec{M}}}{\tilde{\theta}} = pE \uint[\theta,\pi/2]{\sin(\tilde{\theta})}{\tilde{\theta}} = pE\cos(\theta) &&\\
 			&= \dl{\vec{p} \cdot \vec{E}} &&
 		\end{flalign*}
 	\end{enumerate}
@@ -114,7 +108,7 @@
 		\underline{For  \(r \leq d \leq R\):}
 		\begin{flalign*}
 			E(d) &= kq \tfrac{2}{dl} &&\\
-			V(d) &= \int\limits_{d}^{\infty}\ \vec{E}(r)\ \mathrm{d}\vec{r} = \int\limits_{d}^{R}\ kq \tfrac{2}{rl}\ \mathrm{d}r + \tikzmark{1} \int\limits_{R}^{\infty}\ 0\ \mathrm{d}r \tikzmark{2} &&\\[2em]
+			V(d) &= \uint[d,\infty]{\vec{E}(r)}{r} = \uint[d,R]{kq \tfrac{2}{rl}}{r} + \tikzmark{1} \uint[R,\infty]{0}{r} \tikzmark{2} &&\\[2em]
 			V(d) &= \tfrac{2kq}{l}\ln(\tfrac{R}{d})  &&\\
 		\end{flalign*}
 	\AddUnderBrace[2.2em]{1}{2}{$= 0$}
@@ -136,7 +130,7 @@
 	\tcbline
 		\item \( I = 0.1 \unit{A};\quad U = 10 \unit{V} \)
 		\begin{flalign*}
-			\Delta q &= 2\tfrac{\Delta E}{U} = \dl{\tfrac{U\epsilon_0 a}{d}(\epsilon_{rel}\Delta h - \Delta h)} &&
+			t &= \tfrac{CU}{I} = \dl{50 \unit{ns}} &&
 		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
