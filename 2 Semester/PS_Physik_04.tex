@@ -5,6 +5,12 @@
 \hwnumber{4}
 
 
+\ExplSyntaxOn
+\NewDocumentCommand{\cuts}{>{\SplitArgument{1}{;}}D[]{}}{%
+	\int\limits_{\use_i:nn#1}^{\use_ii:nn#1}%
+}
+\ExplSyntaxOff
+
 \begin{document}
 \renewcommand{\labelenumi}{(\alph{enumi})}
 
@@ -14,9 +20,8 @@
 	\tcblower
 	\begin{enumerate}
 		\item \(  \)
-		\begin{flalign*}
-			V_{ges} &= V_+ + V_- = kq\left(\tfrac{1}{r_+} - \tfrac{1}{r_-} \right) &&
-		\end{flalign*}
+			\( V_{ges} = V_+ + V_- = kq\left(\tfrac{1}{r_+} - \tfrac{1}{r_-} \right)\\[1em] \)
+			\includegraphics[scale=0.7]{dipole.pdf}
 	\tcbline
 		\item \( d \ll r;\quad \vec{p} := q\vec{d};\quad d\cos(\theta) = \vec{d} \)
 		\begin{flalign*}
@@ -50,7 +55,7 @@
 		\begin{flalign*}
 			C_1 &= \tfrac{\epsilon_0 a(a-h)}{d} &&\\
 			C_2 &= \tfrac{\epsilon_r ah}{d} &&\\
-			C_{ges} &= C_1 + C_2 = \dl{\tfrac{\epsilon_0 a}{d}\left(\epsilon_{rel}h + a - h \right)}  &&
+			C_{ges} &= C_1 + C_2 = \dl{\tfrac{\epsilon_0 a}{d}\left(\epsilon_{rel}h + a - h \right)} &&
 		\end{flalign*}
 	\tcbline
 		\item \(  \)
@@ -61,7 +66,7 @@
 		\item \(  \)
 		\begin{flalign*}
 			E' &= \tfrac{C'U^2}{2} = \tfrac{U^2\epsilon_0 a(\epsilon_{rel}(h + \Delta h) + a - (h + \Delta h))}{2d} &&\\
-			\Delta E &= \dl{\tfrac{U^2\epsilon_0 a}{2d}(\epsilon_{rel}\Delta h - \Delta h)} &&\\
+			\Delta E &= \dl{\tfrac{U^2\epsilon_0 a}{2d}(\epsilon_{rel}\Delta h - \Delta h)} &&\\[2em]
 			\Delta E_{pot} &= \tfrac{mg\Delta h}{2} = \dl{\tfrac{\rho a^2dg\Delta h}{2}} &&
 		\end{flalign*}
 	\tcbline
