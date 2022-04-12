@@ -33,10 +33,10 @@
 			}
 		\end{minipage}\\
 	\tcbline
-		\item \( \abs*{\vec{M}} = \abs*{\vec{p} \times \vec{E}} = pE\sin(\theta);\quad E_{pot} = \int\limits_{\theta}^{\pi/2}\ \abs*{\vec{M}}\ \mathrm{d}\tilde{\theta} \)
+		\item \( \abs*{\vec{M}} = \abs*{\vec{p} \times \vec{E}} = pE\sin(\theta);\quad E_{pot} = -\int\limits_{\theta}^{\pi/2}\ \abs*{\vec{M}}\ \mathrm{d}\tilde{\theta} \)
 		\begin{flalign*}
-			E_{pot} &= \uint[\theta,\pi/2]{\abs*{\vec{M}}}{\tilde{\theta}} = pE \uint[\theta,\pi/2]{\sin(\tilde{\theta})}{\tilde{\theta}} = pE\cos(\theta) &&\\
-			&= \dl{\vec{p} \cdot \vec{E}} &&
+			E_{pot} &= -\uint[\theta,\pi/2]{\abs*{\vec{M}}}{\tilde{\theta}} = -pE \uint[\theta,\pi/2]{\sin(\tilde{\theta})}{\tilde{\theta}} = -pE\cos(\theta) &&\\
+			&= \dl{-\vec{p} \cdot \vec{E}} &&
 		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
