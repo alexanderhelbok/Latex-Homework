@@ -76,7 +76,7 @@
 	\centering \( L = 1 \unit{m};\quad d = 0.001 \unit{m};\quad I = 1 \unit{A} \)
 	\tcblower
 	\begin{enumerate}
-		\item \( R = \tfrac{L}{\sigma_{el}A} = \tfrac{U}{I};\quad \sigma_{el} = 6 * 10^7 \unit{\ohm/m} \)
+		\item \( R = \tfrac{L}{\sigma_{el}A} = \tfrac{U}{I};\quad \sigma_{el} = 6 * 10^7 \unit{\per\ohm\m} \)
 		\begin{flalign*}
 			R &= \tfrac{4L}{\sigma_{el}\pi d^2} = \dl{0.021 \unit{\ohm}} &&\\
 			U &= RI = \dl{0.021 \unit{V}} &&
@@ -89,10 +89,9 @@
 			v_D &= \tfrac{I L}{n_{el}e} = \dl{9.43 * 10^{-5} \unit{\v}} &&
 		\end{flalign*}
 	\tcbline
-		\item \( \delta\omega = \omega_b - \omega_a \)
+		\item \( \sigma = \tfrac{J}{E};\quad J = nqv_mE;\quad v_m = 2 \unit{cm^2/Vs};\quad n = 400 \unit{\per\cubic\cm} \)
 		\begin{flalign*}
-			0 &= \cos(\tfrac{1}{2}\delta\omega t) &&\\
-			t &= \tfrac{2\arccos(0)}{\delta\omega} = \dl{50.29 \unit{s}} &&
+			\sigma &= \tfrac{J}{E} = nqv_m = \dl{1.28 * 10^{-14} \unit{\per\ohm\m}} &&
 		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
