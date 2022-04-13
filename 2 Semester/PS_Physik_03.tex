@@ -24,13 +24,13 @@
 		\underline{For  \(R_a \leq r\):}
 		\begin{flalign*}
 			E(r) &= kQ \tfrac{1}{r^2} &&\\
-			V_1(r) &= \int\limits_{r}^{\infty}\ \vec{E}(r)\ \mathrm{d}\vec{r} = kQ \int\limits_{r}^{\infty}\ \tfrac{1}{r^2}\ \mathrm{d}r = kQ \tfrac{1}{R_a} &&\\
+			V_1(r) &= \uint[r,\infty]{\vec{E}(r)}{r} = kQ \uint[r,\infty]{\tfrac{1}{r^2}}{r} = kQ \tfrac{1}{R_a} &&\\
 			V_1(r) &= kQ \tfrac{1}{r} &&\\
 		\end{flalign*}
 		\underline{For \(R_i < r < R_a\):}
 		\begin{flalign*}
 			E(r) &= \tfrac{kQ}{R_a^3-R_i^3} \left(r - \tfrac{R_i^3}{r^2}\right) &&\\
-			V_2(r) &= \int\limits_{r}^{\infty}\ \vec{E}(r)\ \mathrm{d}\vec{r} = kQ\left( \int\limits_{r}^{R_a}\ \tfrac{r^3 - R_i^3}{r^2(R_a^3-R_i^3)}\ \mathrm{d}r + \tikzmark{1} \int\limits_{R_a}^{\infty}\ \tfrac{1}{r^2}\ \mathrm{d}r \tikzmark{2} \right)  = &&\\[2em]
+			V_2(r) &= \uint[r,\infty]{\vec{E}(r)}{\vec{r}} = kQ\left( \uint[r,R_a]{\tfrac{r^3 - R_i^3}{r^2(R_a^3-R_i^3)}}{r} + \tikzmark{1} \uint[R_a,\infty]{\tfrac{1}{r^2}}{r} \tikzmark{2} \right)  = &&\\[2em]
 			&= kQ\left( -\tfrac{r^3R_a - rR_a^3 + 2 rR_i^3 + 2R_aR_i^3}{2rR_a^4 - 2rR_aR_i^3} + \tfrac{1}{R_a} \right)  &&\\[2em]
 			V_2(r) &= -kQ\frac{r^3-3rR_a^2 + 2 R_i^3}{2rR_a^3 - 2rR_i^3} &&\\
 		\end{flalign*}
@@ -39,7 +39,7 @@
 		\underline{For \( r \leq R_i\):}
 		\begin{flalign*}
 			E(r) &= 0 &&\\
-			V_3(r) &= \int\limits_{r}^{\infty}\ \vec{E}(r)\ \mathrm{d}\vec{r} = kQ\left(\tikzmark{5} \int\limits_{r}^{R_i}\ 0\ \mathrm{d}r \tikzmark{6} + \tikzmark{3} \int\limits_{R_i}^{\infty}\ \tfrac{r^3 - R_i^3}{r^2(R_a^3-R_i^3)}\ \mathrm{d}r \tikzmark{4} \right) = &&\\[2em]
+			V_3(r) &= \uint[r,\infty]{\vec{E}(r)}{\vec{r}} = kQ\left(\tikzmark{5} \uint[r,R_i]{0}{r} \tikzmark{6} + \tikzmark{3} \uint[R_i,\infty]{\tfrac{r^3 - R_i^3}{r^2(R_a^3-R_i^3)}}{r} \tikzmark{4} \right) = &&\\[2em]
 			V_3(r) &= -kQ\frac{3 (R_a+R_i)}{2 (R_a^2+R_a R_i+R_i^2)} &&\\
 		\end{flalign*}
 		\AddUnderBrace[2.2em]{3}{4}{$= V_2(R_i)$}
@@ -124,13 +124,13 @@
 		\item 
 		\begin{flalign*}
 			K &= W &&\\
-			\tfrac{1}{2}mv^2 &= \int\limits_{9.5d}^{9d}\ \vec{F}\ \mathrm{d}\vec{r} = kqQ\left( \tfrac{1}{9.5d} - \tfrac{1}{9d}\right)  = kqQ \tfrac{1}{171d} &&\\
+			\tfrac{1}{2}mv^2 &= \uint[9.5d,9d]{\vec{F}}{\vec{r}} = kqQ\left( \tfrac{1}{9.5d} - \tfrac{1}{9d}\right)  = kqQ \tfrac{1}{171d} &&\\
 			v &= \dl{\sqrt{\tfrac{2kqQ}{171dm}}} &&
 		\end{flalign*}
 		\tcbline
 		\item 
 		\begin{flalign*}
-			kqQ \int\limits_{9.5d}^{9d}\ \tfrac{1}{r^2}\ \mathrm{d}r &= kqQ \int\limits_{d}^{x}\ \tfrac{1}{(r-10d)^2} - \tfrac{1}{r^2}\ \mathrm{d}r &&\\
+			kqQ \uint[9.5d,9d]{\tfrac{1}{r^2}}{r} &= kqQ \uint[d,x]{\tfrac{1}{(r-10d)^2} - \tfrac{1}{r^2}}{r} &&\\
 			\tfrac{1}{171d} &= \tfrac{1}{10 d-x}-\tfrac{10}{9 d}+\tfrac{1}{x} &&\\
 			x(10d-x) &= \tfrac{1710d^2}{191} &&\\
 			x_{1,2} &= \tfrac{1}{955}\left( 191d \pm \sqrt{585415}\ d \right) &&\\
