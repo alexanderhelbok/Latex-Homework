@@ -26,48 +26,71 @@
 			\boxed{
 				\begin{aligned}
 					&U_1 - R_i(I_1 + I_2) - U_2 = 0 \\
-					&U_1 - R_iI_1 - IR = 0 \\
-					&U_2 - R_iI_2 - IR = 0 \\
+					&U_1 - R_iI_1 - RI = 0 \\
+					&U_2 - R_iI_2 - RI = 0 \\
 					&I_1 + I_2 = I 
 				\end{aligned}
-			}
+			} 
 		\end{minipage}
 		\vspace{-1cm}
+	\tcbline
 		\item 
 		\begin{flalign*}
-			U &= \dl{1.499 \unit{V}} &&\\
-			I &= \tfrac{U}{R} = \dl{14.99 \unit{mA}} &&\\
-			P &= UI = \dl{22.49 \unit{mW}} &&
+			I &= \tfrac{2U_1}{R_i + 2R} = \dl{14.99 \unit{mA}} &&\\
+			U &= IR = \dl{1.499 \unit{V}} &&\\
+			P &= UI = \dl{22.48 \unit{mW}} &&
 		\end{flalign*}
+	\tcbline
 		\item \( U_1 = 1.5 \unit{V};\quad U_2 = 1.2 \unit{V} \)
 		\begin{flalign*}
-			U &= \dl{1.199 \unit{V}} &&\\
-			I &= \tfrac{U}{R} = \dl{11.99 \unit{mA}} &&\\
-			P &= UI = \dl{14.38 \unit{mW}} &&
+			I &= \tfrac{U_1 + U_2}{R_i + 2R} = \dl{13.49 \unit{mA}} &&\\
+			U &= IR = \dl{1.349 \unit{V}} &&\\
+			P &= UI = \dl{18.21 \unit{mW}} &&
 		\end{flalign*}
+	\tcbline
 		\item 
 		\begin{flalign*}
-			I_1 &= \dl{1.51 \unit{A}} &&\\
-			I_2 &= \dl{-1.49 \unit{A}} &&
+			I_1 &= \tfrac{U_1 + U_2}{4R + 2R_i} - \tfrac{U_2 - U_1}{2R_i} = \dl{1.51 \unit{A}} &&\\
+			I_2 &= I - I_1 = \dl{-1.49 \unit{A}} &&
 		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
-
+\newpage
 \begin{mybox}{2. Umladen von Kondensatoren}
-	\centering \( m = 5 \unit{kg};\quad k = 2 \unit{N/m};\quad a = 0.1 \unit{m};\quad h = 0.4 \unit{m};\quad l = 0.1 \unit{m} \)
+	\centering \(  \)
 	\tcblower
 	\begin{enumerate}
 		\item 
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
 
-%\begin{mybox}{3. Wheatstone’sche Brucke}
-%	\centering \( m = 5 \unit{kg};\quad k = 2 \unit{N/m};\quad a = 0.1 \unit{m};\quad h = 0.4 \unit{m};\quad l = 0.1 \unit{m} \)
-%	\tcblower
-%	\begin{enumerate}
-%		\item 
-%	\end{enumerate}
-%\end{mybox}
+\begin{mybox}{3. Wheatstone’sche Brucke}
+	\centering \( R_1 = 17 \unit{\kilo\ohm};\quad R_2 = 9 \unit{\kilo\ohm};\quad R_3 = 3.6 \unit{\kilo\ohm} \)
+	\tcblower
+	\begin{enumerate}
+		\item 
+		\begin{flalign*}
+			U_1 &= \tfrac{R_1}{R_1 + R_2} U &&\\
+			U_2 &= \tfrac{R_x}{R_x + R_3} U &&\\
+			\Delta U &= U_1 - U_2 = \dl{\left( \tfrac{R_1}{R_1 + R_2} - \tfrac{R_x}{R_x + R_3}\right) U} &&
+		\end{flalign*}
+	\tcbline
+		\item 
+		\begin{flalign*}
+			0 &= U_1 - U_2 &&\\
+			0 &= \tfrac{R_1}{R_1 + R_2} - \tfrac{R_x}{R_x + R_3} &&\\
+			R_2 &= \dl{\tfrac{R_1R_3}{R_x}} &&
+		\end{flalign*}
+	\tcbline
+		\item 
+		\begin{flalign*}
+			R_x &= \tfrac{R_1R_3}{R_2} = \dl{6.8 \unit{\kilo\ohm}} &&
+		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
 
 \end{document}
