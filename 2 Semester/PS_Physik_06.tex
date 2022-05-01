@@ -70,23 +70,30 @@
 	\tcbline
 		\item 
 		\begin{flalign*}
-			Hallo
+			U_1(t) &= \dl{\dv{U_1(t)}{t}C_1R + U_2(t)} &&\\
+			U_2(t) &= \dl{\dv{U_2(t)}{t}C_2R + U_1(t)} &&\\
 		\end{flalign*}
 	\tcbline
 		\item 
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\begin{flalign*}
+			\Delta U(t) &= U_2(t) - U_1(t) = \dv{\Delta U(t)}{t}R(C_2 - C_1) - \Delta U(t) &&\\
+			\dv{\Delta U(t)}{t} &= \tfrac{2}{R(C_2 - C_1)}\Delta U(t) &&\\
+			\Delta U(t) &= \dl{c\,\mathrm{e}^{\supfrac[-]{2}{R(C_2 - C_1)}t}} &&
+		\end{flalign*}
 	\tcbline
 		\item \( C_1 = 1 \unit{nF};\quad C_2 = 200 \unit{pF};\quad R = 150 \unit{\ohm} \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\begin{flalign*}
+			\tfrac{\Delta U(t)}{\Delta U(0)} &= \mathrm{e}^{\supfrac[-]{2}{R(C_2 - C_1)}t} = 0.01 &&\\
+			t &= -\tfrac{\ln(0.01) R(C_2 - C_1)}{2} = \dl{2.76 * 10^{-7} \unit{s}} &&
+		\end{flalign*}
 	\tcbline
-		\item \( U_1(0) = 100 \unit{V};\quad U_2(0) = 0 \unit{V} \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\item \( U_1(0) = 100 \unit{V};\quad U_2(0) = 0 \unit{V};\Delta U(0) = U_0 = 100 \unit{V} \)
+		\begin{flalign*}
+			\Delta U(t) &= U_0\,\mathrm{e}^{-\tfrac{2}{R(C_2 - C_1)}t} &&\\
+			P(t) &= \tfrac{\Delta U(t)^2}{R} = \tfrac{U_0^2}{R}\,\mathrm{e}^{\supfrac[-]{2}{R(C_2 - C_1)}t} &&\\
+			P_{max} &= P(0) = \dl{66.6 \unit{W}} &&\\
+			E_{tot} &= \uint[0,\infty]{P(t)}{t} = \tfrac{U_0^2}{R}\uint[0,\infty]{\mathrm{e}^{\supfrac[-]{2}{R(C_2 - C_1)}t}}{t} = \dl{2 \unit{\micro\J}} &&
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 

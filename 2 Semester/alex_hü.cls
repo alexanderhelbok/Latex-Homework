@@ -49,6 +49,7 @@
 \renewcommand*\dd{\mathop{}\!\mathrm{d}}
 \renewcommand*{\vector}[1]{\hspace{0.1cm} \begin{pmatrix}#1\end{pmatrix}}
 \newcommand*{\dl}[1]{\underline{\underline{#1}}}	%dl = double underline
+\newcommand\supfrac[3][]{\mkern-2mu#1\frac{#2}{#3}\rule[-6pt]{0pt}{0pt}}
 
 \ExplSyntaxOn
 \NewDocumentCommand{\uint}{>{\SplitArgument{1}{,}}D[]{-,-} m m}{%
