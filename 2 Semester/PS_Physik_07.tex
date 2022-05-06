@@ -9,10 +9,30 @@
 \renewcommand{\labelenumi}{(\alph{enumi})}
 
 \begin{mybox}{1. Zyklotron}
-	\centering \( m = 5 \unit{kg};\quad k = 2 \unit{N/m};\quad a = 0.1 \unit{m};\quad h = 0.4 \unit{m};\quad l = 0.1 \unit{m} \)
+	\centering \( \)
 	\tcblower
 	\begin{enumerate}
-		\item \( \omega = \sqrt{\tfrac{mgl}{I}} \)
+		\item \( \)
+		\begin{flalign*}
+			F &= qvB = q\omega rB = ma = m\tfrac{v^2}{r} = m\omega^2r &&\\
+			\omega &= \dl{\tfrac{qB}{m}} &&\\
+			f &= \dl{\tfrac{qB}{2\pi m}} &&
+		\end{flalign*}
+	\tcbline
+		\item 
+		\begin{flalign*}
+			v &= \tfrac{qBr}{m} &&\\
+			K &= \tfrac{mv^2}{2} = \dl{\tfrac{(qBr)^2}{2m}} &&
+ 		\end{flalign*}
+	\tcbline
+		\item 
+		\begin{flalign*}
+			r &= \tfrac{mv}{qB} &&\\
+			v_n &= v_{n-1} + \sqrt{\tfrac{8W_0}{m}} = n\sqrt{\tfrac{8W_0}{m}}&&\\
+			r_n &= r_{n-1} + \tfrac{\sqrt{8W_0m}}{qB}  = \dl{n\tfrac{\sqrt{8m}}{qB} \sqrt{W_0}} &&
+		\end{flalign*}
+	\tcbline
+		\item The Cyclotron is used to accelerate charged Particles to up to \( 50 \unit{MeV} \). At these energies relativistic effects come into play and disrupt the cyclotron. To reach higher energies a similar machine with an adjustable B-Field (the Synchrotron) can be used.
 	\end{enumerate}
 \end{mybox}
 
@@ -25,10 +45,27 @@
 \end{mybox}
 
 \begin{mybox}{3. Der magnetische Spiegel}
-	\centering \( m = 5 \unit{kg};\quad k = 2 \unit{N/m};\quad a = 0.1 \unit{m};\quad h = 0.4 \unit{m};\quad l = 0.1 \unit{m} \)
+	\centering \( v = \vector{v_x\\ v_y\\ v_z} \)
 	\tcblower
 	\begin{enumerate}
-		\item \( \omega = \sqrt{\tfrac{mgl}{I}} \)
+		\item \( \)
+		\begin{flalign*}
+			v &= v_\perp + v_\parallel = \vector{v_x\\ v_y\\ 0}  + \vector{0\\ 0\\ v_z} &&\\
+			F_L &= qv_\perp B = m\tfrac{v_\perp^2}{r} = F_Z &&\\
+			r_L &= \dl{\tfrac{mv_\perp}{qB}} &&
+		\end{flalign*}
+	\tcbline
+		\item \( T = \tfrac{2\pi m}{qB};\quad r = \tfrac{mv_\perp}{qB} \)
+		\begin{flalign*}
+			E &= E_z + E_\perp = \tfrac{{mv_\parallel}^2}{2} + \tfrac{mv_\perp}{2} &&\\
+			\vec{\mu} &= I\vec{A} = \tfrac{q}{T}r^2\pi\vec{n_a} = \tfrac{q}{\tfrac{2\pi m}{qB}}\left( \tfrac{mv_\perp}{qB} \right)^2\pi\vec{n_a} = \tfrac{q^2B}{2\pi m}\tfrac{m^2{v_\perp}^2}{q^2B^2}\pi = \tfrac{m{v_\perp}^2}{2}\tfrac{1}{B} = &&\\
+			&= \dl{\tfrac{E_\perp}{B}} &&
+		\end{flalign*}
+	\tcbline
+		\item 
+		\begin{flalign*}
+			v_z(B) &= &&
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
