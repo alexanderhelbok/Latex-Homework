@@ -32,7 +32,7 @@
 			r_n &= r_{n-1} + \tfrac{\sqrt{8W_0m}}{qB}  = \dl{n\tfrac{\sqrt{8m}}{qB} \sqrt{W_0}} &&
 		\end{flalign*}
 	\tcbline
-		\item The Cyclotron is used to accelerate charged Particles to up to \( 50 \unit{MeV} \). At these energies relativistic effects come into play and disrupt the cyclotron. To reach higher energies a similar machine with an adjustable B-Field (the Synchrotron) can be used.
+		\item The Cyclotron is used to accelerate charged Particles to up to \( 50 \unit{MeV} \). At these energies relativistic effects come into play and disrupt the cyclotron motion. To reach higher energies a similar machine with an adjustable B-Field (the Synchrotron) can be used.
 	\end{enumerate}
 \end{mybox}
 
@@ -54,17 +54,17 @@
 			\vec{v}(t) &= \dl{\vector{-\tfrac{E}{B} + \left(\tfrac{E}{B} + v_0\right)\cos(\tfrac{qB}{m}t)\\ 0\\ \left(\tfrac{E}{B} + v_0\right)\sin(\tfrac{qB}{m}t)}} &&
 		\end{flalign*}
 	\tcbline
-		\item 
+		\item \( \vec{r}(0) = \vec{0} \)
 		\begin{flalign*}
-			\vec{r}(t) &= \dl{\vector{-\tfrac{E}{B}t + \left(\tfrac{E}{B} + v_0\right)\tfrac{m}{qB}\sin(\tfrac{qB}{m}t)\\ 0\\ -\left(\tfrac{E}{B} + v_0\right)\tfrac{m}{qB}\cos(\tfrac{qB}{m}t)}} &&
+			\vec{r}(t) &= \uint{\vec{v}(t)}{t} = \dl{\vector{-\tfrac{E}{B}t + \left(\tfrac{E}{B} + v_0\right)\tfrac{m}{qB}\sin(\tfrac{qB}{m}t)\\ 0\\ -\left(\tfrac{E}{B} + v_0\right)\tfrac{m}{qB}\cos(\tfrac{qB}{m}t)}} &&
 		\end{flalign*}
 	\tcbline
-		\item \( v_x = v_0;\quad v_z = 0 \)
+		\item 
 		\begin{flalign*}
-			\left(\tfrac{E}{B} + v_0\right)\sin(\tfrac{qB}{m}t) &= 0 \quad \Rightarrow \quad \tfrac{E}{B} = -v_0 &&
+			v_z(t) &= \left(\tfrac{E}{B} + v_0\right)\sin(\tfrac{qB}{m}t) = 0 \quad \Rightarrow \quad \tfrac{E}{B} = -v_0 &&
 		\end{flalign*}
 		\begin{flalign*}
-			-\tfrac{E}{B} + \left(\tfrac{E}{B} + v_0\right)\cos(\tfrac{qB}{m}t) &= -(-v_0) + \left(-v_0 + v_0\right)\cos(\tfrac{qB}{m}t) = v_0 &&\\
+			v_x(t) &= -\tfrac{E}{B} + \left(\tfrac{E}{B} + v_0\right)\cos(\tfrac{qB}{m}t) = -(-v_0) + \left(-v_0 + v_0\right)\cos(\tfrac{qB}{m}t) = v_0 &&\\
 		\end{flalign*}
 		\begin{flalign*}
 			&\Rightarrow \dl{\tfrac{E}{B} = -v_0;\quad m,q \text{ choose freely}} &&
@@ -78,7 +78,7 @@
 	\begin{enumerate}
 		\item \( \)
 		\begin{flalign*}
-			v &= v_\perp + v_\parallel = \vector{v_x\\ v_y\\ 0}  + \vector{0\\ 0\\ v_z} &&\\
+			\vec{v} &= \vec{v}_\perp + \vec{v}_\parallel = \vector{v_x\\ v_y\\ 0}  + \vector{0\\ 0\\ v_z} &&\\
 			F_L &= qv_\perp B = m\tfrac{v_\perp^2}{r} = F_Z &&\\
 			r_L &= \dl{\tfrac{mv_\perp}{qB}} &&
 		\end{flalign*}
