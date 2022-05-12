@@ -25,9 +25,9 @@
 	\end{flalign*}
 	\underline{For  \(R_2 \leq r \leq R_3\):}
 	\begin{flalign*}
-		I_{in} &= I\left( 1 - \tfrac{r^2}{R_1^2} \right)  &&\\
+		I_{in} &= I\left( 1 - \tfrac{r^2 - R_2^2}{R_3^2 - R_2^2} \right)  &&\\
 		I_{in}\mu_0 &= \oint \vec{B}(\vec{r})\ \mathrm{d}\vec{s} = B(r) \oint \mathrm{d}s = B(r)2r\pi &&\\
-		B(r) &= \tfrac{I\mu_0}{2\pi}\tfrac{1}{r} &&
+		B(r) &= \tfrac{I\mu_0}{2\pi}\left( \tfrac{1}{r} - \tfrac{r^2-R_2^2}{r(R_3^2 - R_2^2)} \right) &&
 	\end{flalign*}
 	\underline{For  \(R_3 \leq r\):}
 	\begin{flalign*}
@@ -37,12 +37,37 @@
 	\boxed{
 		\begin{aligned}
 			B(r) = \begin{cases}
-				0& \quad $for $\ 0 < r \le R_i, \\
-				\tfrac{kQ}{R_a^3-R_i^3} \left(r - \tfrac{R_i^3}{r^2}\right)& \quad $for $\ R_i < r < R_a, \\
-				kQ \tfrac{1}{r^2}& \quad $for $\ R_a \le r. 
+				\tfrac{I\mu_0}{2\pi R_1^2}r& \quad $for $\ 0 < r \le R_1, \\
+				\tfrac{I\mu_0}{2\pi}\tfrac{1}{r}& \quad $for $\ R_1 \leq r \leq R_2, \\
+				\tfrac{I\mu_0}{2\pi}\left( \tfrac{1}{r} - \tfrac{r^2-R_2^2}{r(R_3^2 - R_2^2)} \right)& \quad $for $\ R_2 \leq r \leq R_3, \\
+				0& \quad $for $\ R_3 \leq r. 
 			\end{cases} 
 		\end{aligned}
-	}
+	}\\[3cm]
+	\begin{tikzpicture}
+		\begin{axis}[
+			width=250pt,
+			height=150pt,
+			axis lines=center,
+			%y axis line style={thick},
+			tick align=outside,
+			xmin=0,xmax=3.5,ymin=0,ymax=1.2,
+			xlabel style={below},
+			xtick = {1,2,3}, ytick = {1},
+			xticklabels={\( R_1 \), \( R_2 \), \( R_3 \)},
+			yticklabels={\( B_{max} \)},
+			xlabel=$r$,
+			ylabel=$B$,
+			grid=major,
+			grid style={thin,densely dotted,black!20},
+			%legend columns=2,
+			legend style={at={(axis description cs:1,0.35)},anchor=east}]
+			\addplot [-, thick,  blue, domain = 0:1, smooth] {x};
+			\addplot [-, thick,  blue, domain = 1:2, smooth] {1/x};
+			\addplot [-, thick,  blue, domain = 2:3, smooth] {1/x-(x^2-4)/(5*x)};
+			\draw[thick, blue] (3, 0) -- (3.4, 0);
+		\end{axis}
+	\end{tikzpicture}\\
 \end{mybox}
 
 \begin{mybox}{2. Anwendung des Gesetzes von Biot-Savart – „Haarnadel“}
