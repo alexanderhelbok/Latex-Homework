@@ -70,20 +70,20 @@
 	\end{tikzpicture}\\
 \end{mybox}
 
-%\begin{mybox}{2. Anwendung des Gesetzes von Biot-Savart – „Haarnadel“}
-%	\centering \( r = \sqrt{x^2 + y^2 + z^2} \)
-%	\tcblower
-%	\begin{flalign*}
-%		\dd{B_1} &= \tfrac{\mu_0I}{4\pi}\tfrac{\abs*{\dd{\vec{l}}\times \vec{r}}}{r^3} = \tfrac{\mu_0I}{4\pi}\tfrac{\dd{l}}{r^2} = \tfrac{\mu_0I}{4\pi}\tfrac{\dd{\varphi}R}{r^2}  &&\\
-%		B_1 &= \tfrac{\mu_0I}{4\pi}\tfrac{R}{r^2}\uint[0,\pi]{1}{\varphi} = \tfrac{\mu_0I}{4}\tfrac{R}{r^2} &&\\
-%		B_{x, 1} &= B_1\sin(\theta) = \tfrac{\mu_0I}{4}\tfrac{R}{r^2} \sin(\theta) = \tfrac{\mu_0I}{4}\tfrac{R^2}{r^3} &&\\
-%		B_{z, 1} &= B_1\cos(\theta) = \tfrac{\mu_0I}{4}\tfrac{R}{r^2} \cos(\theta) = \tfrac{\mu_0I}{4}\tfrac{Rz}{r^3} &&\\[2em]
-%		\dd{B_2} &= \tfrac{\mu_0I}{4\pi}\tfrac{\abs*{\dd{\vec{l}}\times \vec{r}}}{r^3} = \tfrac{\mu_0I}{4\pi}\tfrac{\dd{l} \sin(\theta)}{r^2} = \tfrac{\mu_0I}{4\pi}\tfrac{\dd{l} \sqrt{y^2 + z^2}}{r^3} &&\\
-%		B_2 &= \tfrac{\mu_0I}{2\pi} \uint[-\infty,0]{\tfrac{\sqrt{y^2 + z^2}}{r^3}}{x} = \tfrac{\mu_0I}{2\pi}\tfrac{1}{\sqrt{y^2 + z^2}} &&\\
-%		B_{z, 2} &= B_2\cos(\theta) = \tfrac{\mu_0I}{2\pi}\tfrac{1}{\sqrt{y^2 + z^2}} \cos(\theta) = \tfrac{\mu_0I}{2\pi}\tfrac{z}{\sqrt{y^2 + z^2}\sqrt{x^2+y^2+z^2}} &&\\
-%		\vec{B}(z) &= \dl{\tfrac{\mu_0I}{4}\vector{R^2 / \left( x^2+y^2+z^2 \right)^{3/2}\\ 0\\ \tfrac{Rz}{\left( x^2 + y^2 + z^2 \right)^{3/2}} + \tfrac{2z}{\pi\sqrt{y^2 + z^2}\sqrt{x^2+y^2+z^2}}}} &&
-%	\end{flalign*}
-%\end{mybox}
+\begin{mybox}{2. Anwendung des Gesetzes von Biot-Savart – „Haarnadel“}
+	\centering \( R = \sqrt{x^2+y^2};\quad r = \sqrt{x^2 + y^2 + z^2} = \sqrt{R^2 + z^2} \)
+	\tcblower
+	\begin{flalign*}
+		\dd{B_1} &= \tfrac{\mu_0I}{4\pi}\tfrac{\abs*{\dd{\vec{l}}\times \vec{r}}}{r^3} = \tfrac{\mu_0I}{4\pi}\tfrac{\dd{l}}{r^2} = \tfrac{\mu_0I}{4\pi}\tfrac{\dd{\varphi}R}{r^2}  &&\\
+		B_1 &= \tfrac{\mu_0I}{4\pi}\tfrac{R}{r^2}\uint[0,\pi]{1}{\varphi} = \tfrac{\mu_0I}{4}\tfrac{R}{r^2} &&\\
+		B_{x, 1} &= B_1\sin(\theta) = \tfrac{\mu_0I}{4}\tfrac{R}{r^2} \sin(\theta) = \tfrac{\mu_0I}{4}\tfrac{R^2}{r^3} &&\\
+		B_{z, 1} &= B_1\cos(\theta) = \tfrac{\mu_0I}{4}\tfrac{R}{r^2} \cos(\theta) = \tfrac{\mu_0I}{4}\tfrac{Rz}{r^3} &&\\[2em]
+		\dd{B_2} &= \tfrac{\mu_0I}{4\pi}\tfrac{\abs*{\dd{\vec{l}}\times \vec{r}}}{r^3} = \tfrac{\mu_0I}{4\pi}\tfrac{\dd{l} \sin(\theta)}{r^2} = \tfrac{\mu_0I}{4\pi}\tfrac{\dd{l} \sqrt{y^2 + z^2}}{r^3} &&\\
+		B_2 &= \tfrac{\mu_0I}{2\pi} \uint[-\infty,0]{\tfrac{\sqrt{y^2 + z^2}}{r^3}}{x} = \tfrac{\mu_0I}{2\pi}\tfrac{1}{\sqrt{y^2 + z^2}} &&\\
+		B_{z, 2} &= B_2\cos(\theta) = \tfrac{\mu_0I}{2\pi}\tfrac{1}{\sqrt{y^2 + z^2}} \cos(\theta) = \tfrac{\mu_0I}{2\pi}\tfrac{z}{\sqrt{y^2 + z^2}\sqrt{x^2+y^2+z^2}} &&\\
+		\vec{B}(z) &= \dl{\tfrac{\mu_0I}{4}\vector{R^2 / \left( R^2+z^2 \right)^{3/2}\\ 0\\ \tfrac{Rz}{\left( R^2 + z^2 \right)^{3/2}} + \tfrac{2z}{\pi\sqrt{y^2 + z^2}\sqrt{R^2+z^2}}}} &&
+	\end{flalign*}
+\end{mybox}
 
 \begin{mybox}{3. Drehmoment auf rechteckige Leiterschleife}
 	\centering \(  \)
@@ -96,11 +96,19 @@
 			\vec{F}_2 &= I_2\vec{h}\times\vec{B} = \tfrac{\mu_0I_1I_2h}{2r\pi} \vector{\cos(\varphi)\\ \sin(\varphi)\\ 0} &&\\
 			\vec{M}_1 &= \vec{r}_1 \times \vec{F}_1 = \vector{0\\ d/2\\ 0} \times \tfrac{\mu_0I_1I_2h}{2r\pi} \vector{-\cos(\varphi)\\ -\sin(\varphi)\\ 0} = \tfrac{\mu_0I_1I_2hd}{4r\pi}\vector{0\\ 0\\ \cos(\varphi)} &&\\
 			\vec{M}_2 &= \vec{r}_2 \times \vec{F}_2 = \vector{0\\ -d/2\\ 0} \times \tfrac{\mu_0I_1I_2h}{2r\pi} \vector{\cos(\varphi)\\ \sin(\varphi)\\ 0} = \tfrac{\mu_0I_1I_2hd}{4r\pi}\vector{0\\ 0\\ \cos(\varphi)} &&\\
-			\vec{M} &= \vec{M}_1 + \vec{M}_2 = \tfrac{\mu_0I_1I_2hd}{2r\pi}\vector{0\\ 0\\ \cos(\varphi)} &&\\
+			\vec{M} &= \vec{M}_1 + \vec{M}_2 = \dl{\tfrac{\mu_0I_1I_2hd}{2r\pi}\vector{0\\ 0\\ \cos(\varphi)}} &&\\
 		\end{flalign*}
 	\tcbline
-		\item \( \mu_0 = 4\pi * 10^{-7} \unit{H/m};\quad I_1 = 14 \unit{A};\quad I_2 = 1 \unit{A};\quad d = h = 0.1 \unit{m};\quad x = 1 \unit{m}\) 
+		\item \( \mu_0 = 4\pi * 10^{-7} \unit{H/m};\quad I_1 = 16 \unit{A};\quad I_2 = 1 \unit{A};\quad d = h = x = 0.1 \unit{m}\) 
 	\end{enumerate}
+	\begin{flalign*}
+		\vec{M} &= \tfrac{\mu_0I_1I_2hd}{2r\pi}\cos(\varphi)\hat{z} = \dl{2.56 * 10^{-7} \unit{Nm}} &&
+	\end{flalign*}
+	\begin{flalign*}
+		\text{Bolts on Bike}&: 5-30 \unit{Nm} &&\\
+		\text{Basic Electromotor}&: 0.3-0.5 \unit{Nm} &&\\
+		\text{Car wheels}&: 110-120 \unit{Nm} &&
+	\end{flalign*}
 \end{mybox}
 
 
