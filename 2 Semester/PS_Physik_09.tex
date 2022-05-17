@@ -1,0 +1,69 @@
+\documentclass{alex_hü}
+
+\name{Alexander Helbok}
+\course{PS Physik}
+\hwnumber{9}
+
+
+\begin{document}
+\renewcommand{\labelenumi}{\alph{enumi})}
+
+
+\begin{mybox}{1. Magnetfeld eines asymmetrischen Leiters}
+	\centering \(  \)
+	\tcblower
+	\begin{enumerate}
+		\item \( r = \sqrt{x^2+y^2} \)
+		\begin{flalign*}
+			I_+ &= I(1 + \tfrac{a^2}{R^2}) &&\\
+			I_- &= -I\tfrac{a^2}{R^2} &&\\
+			B_+ &= \tfrac{\mu_0I_+}{2r\pi} = \tfrac{\mu_0I_+}{2\pi\sqrt{x^2+y^2}} &&\\
+			B_- &= \tfrac{\mu_0I_-}{2r\pi} = \tfrac{\mu_0I_-}{2\pi\sqrt{(x - b)^2+y^2}} &&\\
+			B &= B_+ + B_- = \tfrac{\mu_0I_+}{2\pi\sqrt{x^2+y^2}} + \tfrac{\mu_0I_-}{2\pi\sqrt{(x - b)^2+y^2}} = &&\\ 
+			&= \tfrac{\mu_0I}{2\pi}\left[ \tfrac{1}{\sqrt{x^2+y^2}} + \tfrac{a^2}{R^2} \left( \tfrac{1}{\sqrt{x^2+y^2}} - \tfrac{1}{\sqrt{(x - b)^2+y^2}} \right) \right] &&\\
+			B(2R, 0) &= \dl{\tfrac{\mu_0I}{4R\pi}\left[ 1 + \tfrac{a^2}{R} \left( \tfrac{1}{R} - \tfrac{1}{R - b} \right) \right]} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			B(0, 2R) &= \dl{\tfrac{\mu_0I}{2R\pi}\left[ \tfrac{1}{2} + \tfrac{a^2}{R} \left( \tfrac{1}{2R} - \tfrac{1}{\sqrt{b^2+4R^2}} \right) \right]} &&
+		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+%\begin{mybox}{193. Gekoppelte physikalische Pendel}
+%	\centering \( m = 5 \unit{kg};\quad k = 2 \unit{N/m};\quad a = 0.1 \unit{m};\quad h = 0.4 \unit{m};\quad l = 0.1 \unit{m} \)
+%	\tcblower
+%	\begin{enumerate}
+%		\item \( \omega = \sqrt{\tfrac{mgl}{I}} \)
+%		\begin{flalign*}
+%			I &= \tfrac{1}{12}m(a^2 + h^2) + ml^2 = 0.12 \unit{kg.m^2} &&\\
+%			\omega_a &= \sqrt{\tfrac{mgl}{I}} = \dl{6.37 \unit{rad/s}} &&
+%		\end{flalign*}
+%		\tcbline
+%		\item \( F = -m\omega^2 x;\quad \Delta x = x_1 - x_2 \)
+%		%		\begin{flalign*}
+%			%
+%			%		\end{flalign*}
+%	\end{enumerate}
+%\end{mybox}
+%
+%\begin{mybox}{193. Gekoppelte physikalische Pendel}
+%	\centering \( m = 5 \unit{kg};\quad k = 2 \unit{N/m};\quad a = 0.1 \unit{m};\quad h = 0.4 \unit{m};\quad l = 0.1 \unit{m} \)
+%	\tcblower
+%	\begin{enumerate}
+%		\item \( \omega = \sqrt{\tfrac{mgl}{I}} \)
+%		\begin{flalign*}
+%			I &= \tfrac{1}{12}m(a^2 + h^2) + ml^2 = 0.12 \unit{kg.m^2} &&\\
+%			\omega_a &= \sqrt{\tfrac{mgl}{I}} = \dl{6.37 \unit{rad/s}} &&
+%		\end{flalign*}
+%		\tcbline
+%		\item \( F = -m\omega^2 x;\quad \Delta x = x_1 - x_2 \)
+%		%		\begin{flalign*}
+%			%
+%			%		\end{flalign*}
+%	\end{enumerate}
+%\end{mybox}
+
+
+\end{document}
