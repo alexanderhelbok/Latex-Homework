@@ -26,24 +26,32 @@
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
-			B(0, 2R) &= \dl{\tfrac{\mu_0I}{2R\pi}\left[ \tfrac{1}{2} + \tfrac{a^2}{R} \left( \tfrac{1}{2R} - \tfrac{1}{\sqrt{b^2+4R^2}} \right) \right]} &&
+			B(0, 2R) &= \dl{\tfrac{\mu_0I}{2R\pi}\left[ \tfrac{1}{2} + \tfrac{a^2}{R} \left( \tfrac{1}{2R} - \tfrac{1}{\sqrt{b^2+4R^2}} \right) \right]} &&\\
 		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
 \begin{mybox}{2. Induktion}
-	\centering \(  \)
+	\centering \( \vec{B} = B_x\hat{x} \)
 	\tcblower
 	\begin{enumerate}
 		\item \(  \)
-%		\begin{flalign*}
-%		
-%		\end{flalign*}
-		\tcbline
+		\begin{flalign*}
+			\varPhi(t) &= \uint{\vec{B}}{\vec{A}} = B\cos(\omega t)\uint{1}{\vec{A}} = r^2\pi B\cos(\omega t) &&\\
+			U(t) &= -\dv{\varPhi}{t} = \dl{r^2\pi\omega B\sin(\omega t)} &&
+		\end{flalign*}
+	\tcbline
 		\item \(  \)
-		%		\begin{flalign*}
-			%
-			%	\end{flalign*}
+	%		\begin{flalign*}
+		%
+		%	\end{flalign*}
+	\tcbline
+		\item 
+		\begin{flalign*}
+			I &= \tfrac{U}{R} &&\\
+			\dv{Q}{t} &= -\tfrac{1}{R}\dv{\varPhi}{t} &&\\
+			\Delta Q &= -\tfrac{r^2\pi B}{R} \uint[0,\pi/2\omega]{\cos(\omega t)}{t} = \dl{\tfrac{r^2\pi B}{R}} &&
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
@@ -55,11 +63,16 @@
 %		\begin{flalign*}
 %			
 %		\end{flalign*}
-		\tcbline
+	\tcbline
 		\item \(  \)
 		%		\begin{flalign*}
 			%
 			%		\end{flalign*}
+	\tcbline
+		\item 
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
