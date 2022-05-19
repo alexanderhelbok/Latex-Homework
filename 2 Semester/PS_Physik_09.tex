@@ -56,23 +56,30 @@
 \end{mybox}
 
 \begin{mybox}{3. Indunktionsspannung - Stab}
-	\centering \(  \)
+	\centering \( I := I_{\text{Bat}} \)
 	\tcblower
 	\begin{enumerate}
 		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\begin{flalign*}
+			\varPhi &= Blx &&\\
+			U &= -Blv &&\\
+			I_{\text{Ind}} &= -\tfrac{Blv}{R} &&\\
+			\vec{F}_{\text{Ind}} &= I_{\text{Ind}}\vec{l} \times \vec{B} = -\tfrac{B^2l^2v}{R} \hat{x} &&\\
+			\vec{F}_L &= I\vec{l} \times \vec{B} = IlB \hat{x} &&\\
+			\vec{F}_{\text{ges}}(v) &= \vec{F}_{\text{Ind}} + \vec{F}_L = \dl{lB(I - \tfrac{Blv}{R}) \hat{x}} &&
+		\end{flalign*}
 	\tcbline
 		\item \(  \)
-		%		\begin{flalign*}
-			%
-			%		\end{flalign*}
+		\begin{flalign*}
+			m\dv{v}{t} &= lB\left(I - \tfrac{Bl}{R}v(t)\right) &&\\
+			v(t) &= \tfrac{IR}{Bl}\left( 1 - \mathrm{e}^{\supfrac[-]{B^2l^2}{mR}t} \right) &&\\
+			\lim_{t \to \infty} v(t) &= \dl{\tfrac{IR}{Bl}} &&
+		\end{flalign*}
 	\tcbline
 		\item 
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\begin{flalign*}
+			I_{\text{ges}} &= I + I_{\text{Ind}} = I - \tfrac{Blv}{R} = I - \tfrac{BlRI}{BlR} = \dl{0} &&
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
