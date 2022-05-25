@@ -10,14 +10,14 @@
 
 
 \begin{mybox}{1. Selbstinduktion}
-	\centering \( U = 50 \unit{V};\quad U_z = 80 \unit{V};\quad R = 1500 \unit{\ohm};\quad I = 0.15 \unit{A} \)
+	\centering \( U = 50 \unit{V};\quad U_z = 80 \unit{V};\quad R = 1500 \unit{\ohm};\quad I = 0.15 \unit{A};\quad \delta t = 1 \unit{ms} \)
 	\tcblower
 	\begin{enumerate}
 		\item \(  \)
-%		\begin{flalign*}
-%			I &= \tfrac{1}{12}m(a^2 + h^2) + ml^2 = 0.12 \unit{kg.m^2} &&\\
-%			\omega_a &= \sqrt{\tfrac{mgl}{I}} = \dl{6.37 \unit{rad/s}} &&
-%		\end{flalign*}
+		\begin{minipage}{\textwidth}
+			\hspace{2cm}
+			\includegraphics[scale=2]{Schem1.png}
+		\end{minipage}\vspace{0.5cm}
 	\tcbline
 		\item \(  \)
 %		\begin{flalign*}
@@ -42,26 +42,24 @@
 	\tcblower
 	\begin{enumerate}
 		\item \(  \)
-		%		\begin{flalign*}
-			%			I &= \tfrac{1}{12}m(a^2 + h^2) + ml^2 = 0.12 \unit{kg.m^2} &&\\
-			%			\omega_a &= \sqrt{\tfrac{mgl}{I}} = \dl{6.37 \unit{rad/s}} &&
-			%		\end{flalign*}
+		\begin{flalign*}
+			U_2 &= \dl{U_1\tfrac{N_2}{N_1}} &&
+		\end{flalign*}
 	\tcbline
-		\item \( R_2 = 0.2 \unit{\ohm};\quad P = 800 \unit{W} \)
-		%		\begin{flalign*}
-			%			
-			%		\end{flalign*}
+		\item \( N_2 = 1; R_2 = 0.2 \unit{\ohm};\quad P = 800 \unit{W} \)
+		\begin{flalign*}
+			P &= \tfrac{U_2^2}{R_2} &&\\
+			U_2 &= \sqrt{PR_2} &&\\
+			N_1 &= \tfrac{U_1N_2}{\sqrt{PR_2}} = \dl{18.18} &&
+		\end{flalign*}
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
-			%			0 &= \cos(\tfrac{1}{2}\delta\omega t) &&\\
-			%			t &= \tfrac{2\arccos(0)}{\delta\omega} = \dl{50.29 \unit{s}} &&
+			I &= \tfrac{P}{U} = \dl{3.48 \unit{A}} &&
 		\end{flalign*}
 	\tcbline
 		\item 
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+%		
 	\end{enumerate}
 \end{mybox}
 
@@ -69,27 +67,27 @@
 	\centering \( \)
 	\tcblower
 	\begin{enumerate}
-		\item \( n = 2000;\quad A = 4 \unit{cm^2};\quad l = 0.3 \unit{m};\quad I = 4 \unit{A} \)
-		%		\begin{flalign*}
-			%			I &= \tfrac{1}{12}m(a^2 + h^2) + ml^2 = 0.12 \unit{kg.m^2} &&\\
-			%			\omega_a &= \sqrt{\tfrac{mgl}{I}} = \dl{6.37 \unit{rad/s}} &&
-			%		\end{flalign*}
-	\tcbline
 		\item \(  \)
-		%		\begin{flalign*}
-			%			
-			%		\end{flalign*}
+		\begin{flalign*}
+			B &= \mu_0\tfrac{n}{l}I &&\\
+			\varPhi &= \uint{\vec{B}}{\vec{A}} = \mu_0\tfrac{n}{l}I\uint{1}{\vec{A}} = A \mu_0\tfrac{n}{l}I &&\\
+			L &= N\dv{\varPhi}{t} = \dl{\tfrac{\mu_0An^2}{l}} &&
+		\end{flalign*}
+	\tcbline
+		\item \( n = 2000;\quad A = 4 \unit{cm^2};\quad l = 0.3 \unit{m};\quad I = 4 \unit{A} \)
+		\begin{flalign*}
+			E &= \tfrac{1}{2}LI^2 = \tfrac{\mu_0An^2I^2}{2l} = \dl{0.054 \unit{J}} &&
+		\end{flalign*}
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
-			%			0 &= \cos(\tfrac{1}{2}\delta\omega t) &&\\
-			%			t &= \tfrac{2\arccos(0)}{\delta\omega} = \dl{50.29 \unit{s}} &&
+			\rho &= \tfrac{E}{V} = \tfrac{\mu_0n^2I^2}{2l^2} = \dl{446.80 \unit{J/m^3}} &&
 		\end{flalign*}
 	\tcbline
 		\item 
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\begin{flalign*}
+			\omega_{mag} &= \tfrac{B^2}{2\mu_0} = \mu_0\tfrac{n^2}{2l^2}I^2 = \dl{446.80 \unit{J/m^3}} &&
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
