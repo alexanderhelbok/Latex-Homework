@@ -132,7 +132,7 @@
 \end{mybox}
 
 \begin{mybox}{3. Elektrische Verschiebung}
-	\centering \( \epsilon_1 = 2;\quad \epsilon_2 = 1.5\)
+	\centering \( \epsilon_1 = 2\epsilon_0;\quad \epsilon_2 = 1.5\epsilon_0\)
 	\tcblower
 	\begin{enumerate}
 		\item \(  \)
@@ -142,30 +142,28 @@
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
-			\vec{E}_1 &= \tfrac{\vec{D}_1}{\epsilon_1} = \dl{\tfrac{\sigma}{\epsilon_1} \hat{z}} &&\\
-			\vec{E}_2 &= \tfrac{\vec{D}_2}{\epsilon_2} = \dl{\tfrac{\sigma}{\epsilon_2} \hat{z}} &&
+			\vec{E}_1 &= \tfrac{\vec{D}_1}{\epsilon_1} = \dl{\tfrac{\sigma}{2\epsilon_0} \hat{z}} &&\\
+			\vec{E}_2 &= \tfrac{\vec{D}_2}{\epsilon_2} = \dl{\tfrac{3\sigma}{2\epsilon_0} \hat{z}} &&
 		\end{flalign*}
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
-			\vec{P}_1 &= \vec{D}_1 - \epsilon_0\vec{E}_1 = \dl{\sigma (1 - \tfrac{\epsilon_0}{\epsilon_1}) \hat{z}} &&\\
-			\vec{P}_1 &= \vec{D}_1 - \epsilon_0\vec{E}_1 = \dl{\sigma (1 - \tfrac{\epsilon_0}{\epsilon_1}) \hat{z}} &&
+			\vec{P}_1 &= \vec{D}_1 - \epsilon_0\vec{E}_1 = \dl{\tfrac{\sigma}{2} \hat{z}} &&\\
+			\vec{P}_2 &= \vec{D}_2 - \epsilon_0\vec{E}_2 = \dl{\tfrac{\sigma}{3} \hat{z}} &&
 		\end{flalign*}
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
-			C &= \tfrac{1}{\tfrac{a}{A\epsilon_1} + \tfrac{a}{A\epsilon_2}} = \tfrac{A\epsilon_1\epsilon_2}{a(\epsilon_1 + \epsilon_2)} &&\\
-			U &= \tfrac{Q}{C} = \dl{\sigma \tfrac{a(\epsilon_1 + \epsilon_2)}{\epsilon_1\epsilon_2}} &&
+			C &= \tfrac{1}{\tfrac{a}{A\epsilon_1} + \tfrac{a}{A\epsilon_2}} = \tfrac{A\epsilon_1\epsilon_2}{a(\epsilon_1 + \epsilon_2)} = \tfrac{6A\epsilon_0}{7a} &&\\
+			U &= \tfrac{Q}{C} = \sigma \tfrac{a(\epsilon_1 + \epsilon_2)}{\epsilon_1\epsilon_2} = \dl{\sigma \tfrac{7a}{6\epsilon_0}} &&
 		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-	%			
-%		\end{flalign*}
+		\item From Top to Bottom: \( \sigma, -\tfrac{\sigma}{2}, \tfrac{\sigma}{2}, -\tfrac{\sigma}{3}, \tfrac{\sigma}{3}, -\sigma \)
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
-			U &= \abs*{E}2a = \dl{\sigma \tfrac{a(\epsilon_1 + \epsilon_2)}{\epsilon_1\epsilon_2}} &&	
+			\vec{E}_1 &= \tfrac{\tfrac{\sigma}{2}}{\epsilon_0} = \dl{\tfrac{\sigma}{2\epsilon_0}} &&\\
+			\vec{E}_2 &= \tfrac{\tfrac{2\sigma}{3}}{\epsilon_0} = \dl{\tfrac{2\sigma}{3\epsilon_0}} &&	
 		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
