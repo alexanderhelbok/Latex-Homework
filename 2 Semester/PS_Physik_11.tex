@@ -25,7 +25,7 @@
 				axis lines=center,
 				%y axis line style={thick},
 				tick align=outside,
-				xmin=0,xmax=2.4*pi,ymin=-1.1,ymax=1.5,
+				xmin=0,xmax=2.4*pi,ymin=-1.4,ymax=1.2,
 				xlabel style={below},
 				ylabel style={left},
 				xtick={pi/2, pi, 3/2*pi , 2*pi}, ytick = {-1, 1},
@@ -34,10 +34,10 @@
 				grid=major,
 				grid style={thin,densely dotted,black!20},
 				%legend columns=2,
-				legend style={at={(axis description cs:0.2,0.2)},anchor=east}]
-				\addplot[domain=0:2.4*pi, samples=200, blue, thick] {sin(deg(x))};
+				legend style={at={(axis description cs:0.4,0.9)},anchor=east}]
+				\addplot[domain=0:2.4*pi, samples=200, blue, thick] {-sin(deg(x))};
 				\addplot[domain=0:2.4*pi, samples=200, orange, thick] {cos(deg(x))};
-			 	\draw[dashed,olive,<->] (axis cs: 0,1.05) -- node[above,text=black,font=\footnotesize]{$\phi =  \tfrac{\pi}{2}$}(axis cs: 0.5*pi,1.05);
+			 	\draw[dashed,olive,<->] (axis cs: 0.5*pi,-1.05) -- node[below, text=black,font=\footnotesize]{$\phi =  \tfrac{\pi}{2}$}(axis cs: pi,-1.05);
 				\legend{$q(t)$~~~,$I(t)$};
 			\end{axis}
 		\end{tikzpicture}\\
@@ -64,7 +64,7 @@
 		\begin{flalign*}
 			U(t) &= R \dv{q}{t} + \tfrac{q(t)}{C} + L\dv[2]{q}{t} &&\\
 			U_0 &= R I_0 + \tfrac{I_0}{\omega \iu C} + LI_0\omega \iu &&\\
-			I_0 &= \tfrac{U_0}{R + L\omega\iu - \tfrac{\iu}{\omega C}} &&
+			I_0 &= \dl{\tfrac{U_0}{R + L\omega\iu - \tfrac{\iu}{\omega C}}} &&
 		\end{flalign*}
 	\tcbline
 		\item \(  \)
@@ -91,7 +91,7 @@
 				\addplot[->, blue, thick] (0,0) -- (1, 0) node [below, pos=0.5] {$R$};
 				\addplot[->, orange, thick] (0,0) -- (0, 1) node [right, pos=0.5] {$\omega L$};
 				\addplot[->, orange, thick] (0,0) -- (0, -0.5) node [right, pos=0.5] {$\tfrac{1}{C\omega}$};
-				\addplot[->, magenta, thick] (0,0) -- (1, 0.5) node [above, pos=0.5, rotate=26.5] {\tiny$\abs{Z} = \sqrt{R^2 + (\omega L + \tfrac{1}{C\omega})^2}$};
+				\addplot[->, magenta, thick] (0,0) -- (1, 0.5) node [above, pos=0.5, rotate=26.5] {\tiny$\abs{Z} = \sqrt{R^2 + (\omega L - \tfrac{1}{C\omega})^2}$};
 				\draw (0,0) -- (0:0.5) arc (0:60:1cm);
 				\node at (0.28, 0.075) {\small$\theta$};
 			\end{axis}
