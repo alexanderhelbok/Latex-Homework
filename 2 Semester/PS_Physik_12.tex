@@ -1,5 +1,8 @@
 \documentclass{alex_hü}
 
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}c<{$}} % math-mode version of "l" column type
+
 \name{Alexander Helbok}
 \course{PS Physik}
 \hwnumber{12}
@@ -28,10 +31,10 @@
 			\text{Direction: }\dl{\hat{x}} &&
 		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-	%			
-%		\end{flalign*}
+		\item \( B_0 = \tfrac{E_0}{c} \)
+		\begin{flalign*}
+			\vec{B} &= \dl{10^7 \cos(2\pi * 10^8 t - \tfrac{2\pi}{3}x)} &&
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
@@ -40,14 +43,19 @@
 	\tcblower
 	\begin{enumerate}
 		\item \(  \)
-%		\begin{flalign*}
-	%			
-%		\end{flalign*}
+		\begin{tabular}{ L | L | L }
+			\vec{E}_1(t) = E_0\vector{\cos(\omega t)\\ 0\\ 0} & \vec{E}_2(t) = E_0\vector{\cos(\omega t)\\ \sin(\omega t)\\ 0} & \vec{E}_3(t) = E_0\vector{a\cos(\omega t)\\ b\sin(\omega t)\\ 0} \\[2em]
+			w_{rms} = \tfrac{\epsilon_0E_0^2}{2} & w_{rms} = \epsilon_0E_0^2 & w_{rms} = \tfrac{\epsilon_0E_0^2(a^2 + b^2)}{2} \\[1em]
+			I_{rms} = \tfrac{c\epsilon_0E_0^2}{2} & I_{rms} = c\epsilon_0E_0^2 & I_{rms} = \tfrac{c\epsilon_0E_0^2(a^2 + b^2)}{2} \\[1em]
+			\text{Linear Polarization} & \text{Circular Polarization} & \text{Elliptical Polarization} \\
+		\end{tabular}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-	%		
-%		\end{flalign*}
+		\item \( \vec{F} = \dv{\vec{p}}{t} = \tfrac{P}{c} = \epsilon_0 E_{\text{rms}}^2A \)
+		\begin{flalign*}
+			F_1 &= \epsilon_0 E_{\text{rms}}^2A &&\\
+			F_2 &= 2\epsilon_0 E_{\text{rms}}^2A &&\\
+			F_3 &= 
+		\end{flalign*}
 	\tcbline
 		\item \(  \)
 %		\begin{flalign*}
@@ -62,17 +70,27 @@
 	\begin{enumerate}
 		\item \(  \)
 		\begin{flalign*}
-			\vec{E}_1(\hat{x}, t) &=  \Re\left( \vec{E}_0\, \expo[\iu\vec{k}\hat{x} - \iu\omega t] \right) &&\\
-			\vec{E}_2(-\hat{x}, t) &=  \Re\left( \vec{E}_0\, \expo[-\iu\vec{k}\hat{x} - \iu\omega t] \right) &&\\
-			\vec{E} &= \vec{E}_1 + \vec{E}_2 = \Re\left( \vec{E}_0\, \expo[\iu\vec{k}\hat{x} - \iu\omega t] + \expo[-\iu\vec{k}\hat{x} - \iu\omega t] \right) &&\\
+			\vec{E}_1(x\hat{x}, t) &=  \Re\left( \vec{E}_0\, \expo[\iu k_x x - \iu\omega t] \right) &&\\
+			\vec{E}_2(-x\hat{x}, t) &=  \Re\left( \vec{E}_0\, \expo[-\iu k_x x - \iu\omega t] \right) &&
 		\end{flalign*}
+		\begin{flalign*}
+			\vec{E} = \vec{E}_1 + \vec{E}_2 &= \Re\left( \vec{E}_0\, \left[ \expo[\iu k_x x - \iu\omega t] + \expo[-\iu k_x x - \iu\omega t] \right]\right) = &&\\
+			&= \Re\left( \vec{E}_0\, \expo[-][\iu\omega t] \right) * 2\cos(k_x x) &&
+		\end{flalign*}
+		For \( x = \tfrac{n\pi}{k_x},\ n \in \mathbb{N}:\quad \cos(k_x x) = 0\quad \Rightarrow\quad \vec{E} = 0\) \\[1em]
+		\( \Rightarrow \vec{E} \) describes a standing Wave
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
-			\vec{E}_1(\hat{x}, t) &=  \Re\left( \vec{E}_0\, \expo[\iu\vec{k}\hat{x} - \iu\omega t] \right) &&\\
-			\vec{E}_2(\hat{y}, t) &=  \Re\left( \vec{E}_0\, \expo[\iu\vec{k}\hat{y} - \iu\omega t] \right) &&\\
-			\vec{E} &= \vec{E}_1 + \vec{E}_2 = \Re\left( \vec{E}_0\, \expo[\iu\vec{k}\hat{y} - \iu\omega t] + \expo[-\iu\vec{k}\hat{x} - \iu\omega t] \right) &&\\
+			\vec{E}_1(x\hat{x}, t) &=  \Re\left( \vec{E}_0\, \expo[\iu k_x x - \iu\omega t] \right) &&\\
+			\vec{E}_2(y\hat{y}, t) &=  \Re\left( \vec{E}_0\, \expo[\iu k_y y - \iu\omega t] \right) &&
 		\end{flalign*}
+		\begin{flalign*}
+			\vec{E} = \vec{E}_1 + \vec{E}_2 &= \Re\left( \vec{E}_0\, \left[ \expo[\iu k_x x - \iu\omega t] + \expo[\iu k_y y - \iu\omega t] \right]\right) = &&\\
+			&= \Re\left( \vec{E}_0\, \expo[-][\iu\omega t] \right) * 2\cos(k_x x) &&
+		\end{flalign*}
+		For \( x = \tfrac{n\pi}{k_x},\ n \in \mathbb{N}:\quad \cos(k_x x) = 0\quad \Rightarrow\quad \vec{E} = 0\) \\[1em]
+		\( \Rightarrow \vec{E} \) describes a standing Wave
 	\tcbline
 		\item \(  \)
 %		\begin{flalign*}
