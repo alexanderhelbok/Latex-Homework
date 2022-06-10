@@ -22,8 +22,8 @@
 		\item \( R2 = \tfrac{U}{I_0};\quad U_{\text{ind}} = U(R_1 + R_2)\)
 		\begin{flalign*}
 			L\dv{I}{t} &= -I(R_1 + R_2) &&\\
-			I(t) &= I_0\, \expo[-]{R_1 + R_2}{L}{t} &&\\
-			U(t) &= -L\dv{I(t)}{t} = I_0(R_1 + R_2)\, \expo[-]{R_1 + R_2}{L}{t} &&\\ 
+			I(t) &= I_0\, \expo[-][R_1 + R_2/L][t] &&\\
+			U(t) &= -L\dv{I(t)}{t} = I_0(R_1 + R_2)\, \expo[-][R_1 + R_2/L][t] &&\\ 
 			U(10^{-6}) &= 80 \quad \Rightarrow \quad L = \dl{1.48 * 10^{-3} \unit{H}} &&
 		\end{flalign*}
 	\tcbline

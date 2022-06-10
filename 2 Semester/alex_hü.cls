@@ -9,7 +9,7 @@
 \RequirePackage{fontspec}
 \RequirePackage[ngerman]{babel}
 \RequirePackage{xifthen}
-\RequirePackage{l3regex}
+%\RequirePackage{l3regex}
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{mtpro2}
 \pdfmapfile{=mtpro2.map}
@@ -53,28 +53,18 @@
 \newcommand*{\iu}{{i\mkern1mu}}
 \newcommand*{\dl}[1]{\underline{\underline{#1}}}	%dl = double underline
 \newcommand\supfrac[3][]{\mkern-2mu#1\frac{#2}{#3}\rule[-6pt]{0pt}{0pt}}
-\newcommand\expo[4][]{\mathrm{e}^{\mkern-2mu#1\frac{#2}{#3}\rule[-6pt]{0pt}{0pt}#4}}
-
-%\ExplSyntaxOn
-%\NewDocumentCommand{\eee}{O{} >{\SplitArgument{1}{/}}D(){-/-} O{}}{%
-%	\ifthenelse{\equal{#1}{-}}
-%	{\ifthenelse{\equal{\regex_match:nnTF {/}{#2}{TRUE}{FALSE}}{FALSE}}{
-%			}{else clause}
-%		
-%		\mathrm{e}^{\mkern-2mu#1 #3}}
-%	{\mathrm{e}^{\mkern-2mu#1\frac{\use_i:nn#2}{\use_ii:nn#2}\rule[-6pt]{0pt}{0pt}#3}}
-%}
-%\ExplSyntaxOff
 
 \ExplSyntaxOn
-\int_new:N \l_foo_int
-\NewDocumentCommand{\eee}{O{-/-}}{%
-		\regex_count:nnN { / } { #1 } \l_foo_int
-		\ifthenelse{%
-			\equal{ \l_foo_int } { 1 } }
-		{hello}
-		{ \l_foo_int }
+\NewDocumentCommand{\expo}{>{\SplitArgument{1}{/}} O{} >{\SplitArgument{1}{/}} O{} O{} }{%
+	\ifthenelse{\equal{\use_i:nn#1}{-}}
+	{\regex_match:nnTF {NoValue}{\use_ii:n#2}
+	{\mathrm{e}^{\mkern-2mu\use_i:nn#1\rule[-6pt]{0pt}{0pt}\use_i:nn#2}}
+	{\mathrm{e}^{\mkern-2mu\use_i:nn#1\frac{\use_i:nn#2}{\use_ii:nn#2}\rule[-6pt]{0pt}{0pt}#3}}
 	}
+	{\regex_match:nnTF {NoValue}{\use_ii:n#1}
+	{\mathrm{e}^{\mkern-2mu\rule[-6pt]{0pt}{0pt}\use_i:nn#1}}
+	{\mathrm{e}^{\mkern-2mu\frac{\use_i:nn#1}{\use_ii:nn#1}\rule[-6pt]{0pt}{0pt}\use_i:nn#2}}
+	}}
 \ExplSyntaxOff
 
 \ExplSyntaxOn

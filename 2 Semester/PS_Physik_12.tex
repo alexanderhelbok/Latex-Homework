@@ -57,34 +57,34 @@
 \end{mybox}
 
 \begin{mybox}{3. Stehende Wellen}
-	\centering \( \vec{E}(\vec{r}, t) = \Re\left( \vec{E}_0\, \mathrm{e}^{\iu\vec{k}\vec{r} - \iu\omega t} \right) \)
+	\centering \( \vec{E}(\vec{r}, t) = \Re\left( \vec{E}_0\, \expo[\iu\vec{k}\vec{r} - \iu\omega t] \right) \)
 	\tcblower
 	\begin{enumerate}
 		\item \(  \)
 		\begin{flalign*}
-			\vec{E}_1(\hat{x}, t) &=  \Re\left( \vec{E}_0\, \mathrm{e}^{\iu\vec{k}\hat{x} - \iu\omega t} \right) &&\\
-			\vec{E}_2(-\hat{x}, t) &=  \Re\left( \vec{E}_0\, \mathrm{e}^{-\iu\vec{k}\hat{x} - \iu\omega t} \right) &&\\
-			\vec{E} &= \vec{E}_1 + \vec{E}_2 = \Re\left( \vec{E}_0\, \mathrm{e}^{\iu\vec{k}\hat{x} - \iu\omega t} + \mathrm{e}^{-\iu\vec{k}\hat{x} - \iu\omega t} \right) &&\\
+			\vec{E}_1(\hat{x}, t) &=  \Re\left( \vec{E}_0\, \expo[\iu\vec{k}\hat{x} - \iu\omega t] \right) &&\\
+			\vec{E}_2(-\hat{x}, t) &=  \Re\left( \vec{E}_0\, \expo[-\iu\vec{k}\hat{x} - \iu\omega t] \right) &&\\
+			\vec{E} &= \vec{E}_1 + \vec{E}_2 = \Re\left( \vec{E}_0\, \expo[\iu\vec{k}\hat{x} - \iu\omega t] + \expo[-\iu\vec{k}\hat{x} - \iu\omega t] \right) &&\\
 		\end{flalign*}
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
-			\vec{E}_1(\hat{x}, t) &=  \Re\left( \vec{E}_0\, \mathrm{e}^{\iu\vec{k}\hat{x} - \iu\omega t} \right) &&\\
-			\vec{E}_2(\hat{y}, t) &=  \Re\left( \vec{E}_0\, \mathrm{e}^{\iu\vec{k}\hat{y} - \iu\omega t} \right) &&\\
-			\vec{E} &= \vec{E}_1 + \vec{E}_2 = \Re\left( \vec{E}_0\, \mathrm{e}^{\iu\vec{k}\hat{y} - \iu\omega t} + \mathrm{e}^{-\iu\vec{k}\hat{x} - \iu\omega t} \right) &&\\
+			\vec{E}_1(\hat{x}, t) &=  \Re\left( \vec{E}_0\, \expo[\iu\vec{k}\hat{x} - \iu\omega t] \right) &&\\
+			\vec{E}_2(\hat{y}, t) &=  \Re\left( \vec{E}_0\, \expo[\iu\vec{k}\hat{y} - \iu\omega t] \right) &&\\
+			\vec{E} &= \vec{E}_1 + \vec{E}_2 = \Re\left( \vec{E}_0\, \expo[\iu\vec{k}\hat{y} - \iu\omega t] + \expo[-\iu\vec{k}\hat{x} - \iu\omega t] \right) &&\\
 		\end{flalign*}
 	\tcbline
 		\item \(  \)
 %		\begin{flalign*}
-			\eee[a/]
+%			
 %		\end{flalign*}
 	\tcbline
 		\item \( \omega_1 = 2\omega_2 \)
 		\begin{flalign*}
-			\vec{E}_1(\hat{x}, t) &=  \Re\left( \vec{E}_0\, \mathrm{e}^{\iu\vec{k}\hat{x} - \iu\omega_1 t} \right) &&\\
-			\vec{E}_2(-\hat{x}, t) &=  \Re\left( \vec{E}_0\, \mathrm{e}^{-\iu\vec{k}\hat{x} - \iu\omega_2 t} \right) &&\\
-			\vec{E} &= \vec{E}_1 + \vec{E}_2 = \Re\left( \vec{E}_0\, \mathrm{e}^{\iu\vec{k}\hat{x} - \iu2\omega_2	 t} + \mathrm{e}^{-\iu\vec{k}\hat{x} - \iu\omega_2 t} \right) &&\\
-		\end{flalign*}´
+			\vec{E}_1(\hat{x}, t) &=  \Re\left( \vec{E}_0\, \expo[\iu\vec{k}\hat{x} - \iu\omega_1 t] \right) &&\\
+			\vec{E}_2(-\hat{x}, t) &=  \Re\left( \vec{E}_0\, \expo[-\iu\vec{k}\hat{x} - \iu\omega_2 t] \right) &&\\
+			\vec{E} &= \vec{E}_1 + \vec{E}_2 = \Re\left( \vec{E}_0\, \expo[\iu\vec{k}\hat{x} - \iu2\omega_2	 t] + \expo[-\iu\vec{k}\hat{x} - \iu\omega_2 t] \right) &&\\
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
