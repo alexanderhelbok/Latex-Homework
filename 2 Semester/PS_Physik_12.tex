@@ -53,14 +53,12 @@
 		\item \( \vec{F} = \dv{\vec{p}}{t} = \tfrac{P}{c} = \epsilon_0 E_{\text{rms}}^2A \)
 		\begin{flalign*}
 			F_1 &= \epsilon_0 E_{\text{rms}}^2A &&\\
-			F_2 &= 2\epsilon_0 E_{\text{rms}}^2A &&\\
-			F_3 &= 
+			F_2 &= 2F_1 = 2\epsilon_0 E_{\text{rms}}^2A &&\\
+			F_3 &= \tfrac{F_1 + F_2}{2} = \tfrac{3}{2} \epsilon_0 E_{\text{rms}}^2A &&
 		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-		%			
-%		\end{flalign*}
+		\item pair Wave with largest \( E_{\text{rms}} \) with \( F_2 \)\\[1em]
+		\( \Rightarrow \dl{F_2 + \vec{E}_2} \text{ generate the highest mean Force } \overline{F} \)
 	\end{enumerate}
 \end{mybox}
 
@@ -77,9 +75,10 @@
 			\vec{E} = \vec{E}_1 + \vec{E}_2 &= \Re\left( \vec{E}_0\, \left[ \expo[\iu k_x x - \iu\omega t] + \expo[-\iu k_x x - \iu\omega t] \right]\right) = &&\\
 			&= \Re\left( \vec{E}_0\, \expo[-][\iu\omega t] \right) * 2\cos(k_x x) &&
 		\end{flalign*}
-		For \( x = \tfrac{n\pi}{k_x},\ n \in \mathbb{N}:\quad \cos(k_x x) = 0\quad \Rightarrow\quad \vec{E} = 0\) \\[1em]
-		\( \Rightarrow \vec{E} \) describes a standing Wave
+		For \( x = (2n+1)\tfrac{\pi}{2k_x},\ n \in \mathbb{N}:\quad \cos(k_x x) = 0\quad \Rightarrow\quad \vec{E} = 0\) \\[1em]
+		\( \Rightarrow \vec{E} \) describes a standing Wave with \( \lambda = \pi \)
 	\tcbline
+	\newpage
 		\item \(  \)
 		\begin{flalign*}
 			\vec{E}_1(x\hat{x}, t) &=  \Re\left( \vec{E}_0\, \expo[\iu k_x x - \iu\omega t] \right) &&\\
@@ -87,22 +86,34 @@
 		\end{flalign*}
 		\begin{flalign*}
 			\vec{E} = \vec{E}_1 + \vec{E}_2 &= \Re\left( \vec{E}_0\, \left[ \expo[\iu k_x x - \iu\omega t] + \expo[\iu k_y y - \iu\omega t] \right]\right) = &&\\
-			&= \Re\left( \vec{E}_0\, \expo[-][\iu\omega t] \right) * 2\cos(k_x x) &&
+			&= \Re\left( \vec{E}_0\, \expo[-][\iu\omega t] \tikzmark{1} \left[ \expo[\iu k_x x] + \expo[\iu k_y y] \right] \tikzmark{2} \right) &&\\
 		\end{flalign*}
-		For \( x = \tfrac{n\pi}{k_x},\ n \in \mathbb{N}:\quad \cos(k_x x) = 0\quad \Rightarrow\quad \vec{E} = 0\) \\[1em]
-		\( \Rightarrow \vec{E} \) describes a standing Wave
+		\AddUnderBrace[0.3]{1}{2}{\( > 0 \Rightarrow \) no Root}
+		\( \Rightarrow \vec{E} \) does not describe a standing Wave
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\item \( \vec{r}_1 = \cos(\tfrac{\pi}{10})\hat{x} + \sin(\tfrac{\pi}{10})\hat{y} \)
+		\begin{flalign*}
+			\vec{E}_1(x\hat{x}, t) &=  \Re\left( \vec{E}_0\, \expo[\iu k_x x - \iu\omega t] \right) &&\\
+			\vec{E}_2(\vec{r}_1, t) &=  \Re\left( \vec{E}_0\, \expo[\iu \vec{k}\vec{r}_1 - \iu\omega t] \right) &&
+		\end{flalign*}
+		\begin{flalign*}
+			\vec{E} = \vec{E}_1 + \vec{E}_2 &= \Re\left( \vec{E}_0\, \left[ \expo[\iu k_x x - \iu\omega t] + \expo[\iu \vec{k}\vec{r}_1 - \iu\omega t] \right]\right) = &&\\
+			&= \Re\left( \vec{E}_0\, \expo[-][\iu\omega t] \tikzmark{3} \left[ \expo[\iu k_x x] + \expo[\iu \vec{k}\vec{r}_1] \right] \tikzmark{4} \right) &&\\
+		\end{flalign*}
+		\AddUnderBrace[0.4]{3}{4}{\( > 0 \Rightarrow \) no Root}
+		\( \Rightarrow \vec{E} \) does not describe a standing Wave
 	\tcbline
 		\item \( \omega_1 = 2\omega_2 \)
 		\begin{flalign*}
 			\vec{E}_1(\hat{x}, t) &=  \Re\left( \vec{E}_0\, \expo[\iu\vec{k}\hat{x} - \iu\omega_1 t] \right) &&\\
-			\vec{E}_2(-\hat{x}, t) &=  \Re\left( \vec{E}_0\, \expo[-\iu\vec{k}\hat{x} - \iu\omega_2 t] \right) &&\\
-			\vec{E} &= \vec{E}_1 + \vec{E}_2 = \Re\left( \vec{E}_0\, \expo[\iu\vec{k}\hat{x} - \iu2\omega_2	 t] + \expo[-\iu\vec{k}\hat{x} - \iu\omega_2 t] \right) &&\\
+			\vec{E}_2(-\hat{x}, t) &=  \Re\left( \vec{E}_0\, \expo[-\iu\vec{k}\hat{x} - \iu\omega_2 t] \right) &&
 		\end{flalign*}
+			\begin{flalign*}
+			\vec{E} = \vec{E}_1 + \vec{E}_2 &= \Re\left( \vec{E}_0\, \left[ \expo[\iu k_x x - \iu2\omega_2 t] + \expo[-\iu k_x x - \iu\omega_2 t] \right]\right) = &&\\
+			&= \Re\left( \vec{E}_0\, \expo[-][\iu\omega_2 t] \tikzmark{5} \left[ \expo[\iu k_x x - \iu\omega_2 t] + \expo[\iu k_x x] \right] \tikzmark{6} \right) &&\\
+		\end{flalign*}
+		\AddUnderBrace[0.3]{5}{6}{time dependent Root}
+		\( \Rightarrow \vec{E} \) does not describe a standing Wave
 	\end{enumerate}
 \end{mybox}
 
