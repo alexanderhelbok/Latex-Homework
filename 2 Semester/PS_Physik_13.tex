@@ -130,22 +130,22 @@
 						legend style={at={(axis description cs:0.2,0.2)},anchor=east}]
 						\addplot[blue, thick] (-0.94 ,-0.34) -- (0.94 ,0.34) node[below, pos = 0.85,rotate = 20] {\tiny optic/slow Axis};
 						\addplot[red, thick] (-0.34 ,0.94) -- (0.34 ,-0.94) node[above, pos = 0.9, rotate = -70] {\tiny fast Axis};
-						\addplot[->, Tan, thick] (0,0) -- (-0.64, 0.766) node [right, pos=0.6] {\tiny$E$};
-						\addplot[->, orange, thick] (-0.32, -0.117) -- (-0.64, 0.766) node [left, pos=0.5] {\tiny$E_{\perp}$};
-						\addplot[->, magenta, thick] (0,0) -- (-0.32, -0.117) node [below, pos=0.4] {\tiny$E_{\parallel}$};
+						\addplot[->, Tan, thick] (0,0) -- (0.64, -0.766) node [left, pos=0.6] {\tiny$E$};
+						\addplot[->, orange, thick] (0.32, 0.117) -- (0.64, -0.766) node [right, pos=0.5] {\tiny$E_{\perp}$};
+						\addplot[->, magenta, thick] (0,0) -- (0.32, 0.117) node [below, pos=0.6] {\tiny$E_{\parallel}$};
 						\draw (0,0) circle (1);
-						\draw (0.32,0.117) arc (20:130:0.34);
+						\draw (0.32,0.117) arc (20:310:0.34);
 						\node at (0.11, 0.14) {\tiny$\theta'$};
 					\end{axis}
 				\end{tikzpicture}\\
 			\end{minipage}
 		\end{multicols}
-		\( \theta' = \theta + 2 \left(\ang{90} - \theta \right) = \dl{\ang{180} - \theta} \)
+		\( \theta' = \ang{360} - \theta = \dl{-\theta} \)
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
-			\text{For } \theta &= \ang{0} : \theta' = \dl{\ang{180}} && \\
-			\text{For } \theta &= \ang{45} : \theta' = \dl{\ang{135}} &&
+			\text{For } \theta &= \ang{0} : \theta' = \dl{\ang{0}} && \\
+			\text{For } \theta &= \ang{45} : \theta' = \dl{\ang{315} = \ang{-45}} &&
 		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
