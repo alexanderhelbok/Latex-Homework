@@ -16,7 +16,7 @@
 		\item \( n = 1.333 \)
 		\begin{flalign*}
 			\theta_{\text{crit}} &= \arcsin(\tfrac{1}{n}) &&\\
-			\epsilon &= \arcsin(n\sin(90 - \arcsin(\tfrac{1}{n}))) = \arcsin(\sqrt{n^2-1}) = \dl{\ang{68.68}} &&
+			\epsilon &= \arcsin(n\sin(90 - \arcsin(\tfrac{1}{n}))) = \arcsin(\sqrt{n^2-1}) = \dl{\ang{61.81}} &&
 		\end{flalign*}
 	\tcbline
 		\item \(  \)
@@ -131,7 +131,7 @@
 						\addplot[red, thick] (-0.34 ,0.94) -- (0.34 ,-0.94) node[above, pos = 0.9, rotate = -70] {\tiny fast Axis};
 						\addplot[->, Tan, thick] (0,0) -- (0.64, -0.766) node [left, pos=0.6] {\tiny$E$};
 						\addplot[->, orange, thick] (0.32, 0.117) -- (0.64, -0.766) node [right, pos=0.5] {\tiny$E_{\perp}$};
-						\addplot[->, magenta, thick] (0,0) -- (0.32, 0.117) node [below, pos=0.6] {\tiny$E_{\parallel}$};
+						\addplot[->, magenta, thick] (0,0) -- (-0.32, 0.117) node [below, pos=0.6] {\tiny$E_{\parallel}$};
 						\draw (0,0) circle (1);
 						\draw (0.32,0.117) arc (20:310:0.34);
 						\node at (0.11, 0.14) {\tiny$\theta'$};

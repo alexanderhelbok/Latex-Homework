@@ -18,6 +18,7 @@
 \tcbuselibrary{breakable,skins}
 \RequirePackage[headsepline]{scrlayer-scrpage}
 \RequirePackage{graphicx}
+\RequirePackage{array}
 \RequirePackage{listings} %env ignores LATEX commands, keeping all the line breaks (for printing code)
 \RequirePackage{hyperref}
 \RequirePackage{bookmark}
@@ -54,6 +55,9 @@
 \newcommand*{\dl}[1]{\underline{\underline{#1}}}	%dl = double underline
 \newcommand\supfrac[3][]{\mkern-2mu#1\frac{#2}{#3}\rule[-6pt]{0pt}{0pt}}
 
+\newcolumntype{L}{>{$}c<{$}} % math-mode version of "l" column type
+
+% expo function \expo[sign][nominator/denumerator][normal] (all optional)
 \ExplSyntaxOn
 \NewDocumentCommand{\expo}{>{\SplitArgument{1}{/}} O{} >{\SplitArgument{1}{/}} O{} O{} }{%
 	\ifthenelse{\equal{\use_i:nn#1}{-}}
@@ -67,6 +71,7 @@
 	}}
 \ExplSyntaxOff
 
+% uint function \uint[Interval]{function}{differential} (interval optional)
 \ExplSyntaxOn
 \NewDocumentCommand{\uint}{>{\SplitArgument{1}{,}}D[]{-,-} m m}{%
 	\ifthenelse{\equal{\use_i:nn#1}{-}}
