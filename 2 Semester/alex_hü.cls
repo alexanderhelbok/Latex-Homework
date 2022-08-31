@@ -9,7 +9,6 @@
 \RequirePackage{fontspec}
 \RequirePackage[ngerman]{babel}
 \RequirePackage{xifthen}
-%\RequirePackage{l3regex}
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{mtpro2}
 \pdfmapfile{=mtpro2.map}
