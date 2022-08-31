@@ -12,8 +12,9 @@ mode=$2
 if [ $mode = "pull" ]; then
     git -C "$path" pull
 elif [ $mode = "push" ]; then
+    git -C "$path" add -A
     git -C "$path" commit -a -m "Committed by TeXstudio"
-    git -C "$path" push -u origin "main"
+    git -C "$path" push -u origin main
 elif [ $mode = "stash" ]; then
     git -C "$path" stash
 fi
