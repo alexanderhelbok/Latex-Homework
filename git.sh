@@ -6,8 +6,8 @@ path=${path//[ ]/' '}         # enclose space in quotes
 mode=$2
 
 # Debug
-# echo $path
-# echo $2
+ echo $path
+ echo $2
 
 if [ $mode = "pull" ]; then
     git -C "$path" pull
