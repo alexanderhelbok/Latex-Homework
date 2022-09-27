@@ -77,7 +77,7 @@
 	{\regex_match:nnTF {NoValue}{\use_ii:n#1}
 	{\ifthenelse{\equal{\use_i:nn#1}{o}}
 	{\oint #2\, \dd#3}					% case 2: Closed loop Integral
-	{\int\sb{\use_i:nn#1}#2 \dd#3}		% case 3: Volume/Surface Integral
+	{\int\c_math_subscript_token{\use_i:nn#1}#2 \dd#3}		% case 3: Volume/Surface Integral
 	}
 	{\int\limits\c_math_subscript_token{\use_i:nn#1}\c_math_superscript_token{\use_ii:nn#1}#2 \dd#3}	% case 4: Integral with boundaries
 	}
