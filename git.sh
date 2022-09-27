@@ -1,7 +1,7 @@
 #!/bin/bash
 shopt -s extglob
 
-path=${1%%*([ü0-9a-zA-Z-._])}  # remove filename
+path=${1%%*([öäüß0-9a-zA-Z-._])}  # remove filename
 path=${path//[ ]/' '}         # enclose space in quotes
 mode=$2
 
