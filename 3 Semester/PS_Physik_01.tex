@@ -34,19 +34,21 @@
 	\begin{enumerate}
 		\item \(  \)
 		\begin{flalign*}
-			A_1(x, t) &= \tikzmark{1}\ A\ \tikzmark{2} \cos(kx - \omega t) &&	
+			A_1(x, t) &= \tikzmark{1}\ A_0\ \tikzmark{2} \cos(kx - \omega t) &&	
 		\end{flalign*}
-		The Amplitude of the wave, denoted A, in case of water waves this tells us how high the wave can get (in respect to still water) and in respect to sound 
+		The Amplitude of the wave, denoted \( A_0 \), in case of water waves this tells us how high the wave can get (in respect to still water) and in respect to sound 
 		\AddUnderBrace[0.1]{1}{2}{Amplitute}
 	\tcbline
 		\item \(  \)
-%		\begin{flalign*}
-	%		
-%		\end{flalign*}
+		\begin{flalign*}
+			A_2(r, \theta, \varphi) &= A_0 \cos(kr - \omega t) &&
+		\end{flalign*}
+		\( A_0 \propto \tfrac{1}{r^2} \) because the Energy of the wave gets spread out across an ever increasing surface (increasing with \( r^2 \))
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
-			A_1(x, t) &= A \cos(\omega t + kx) = A \expo[ikx - i\omega t] &&
+			A_1(x, t) &= A_0 \cos(kx - \omega t) = A_0 \expo[ikx - i\omega t] &&\\
+			A_2(r, \theta, \varphi) &= A_0 \cos(kr - \omega t) = A_0 \expo[ikr - i\omega t] &&\\
 		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
