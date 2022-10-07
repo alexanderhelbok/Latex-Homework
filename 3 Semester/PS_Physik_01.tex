@@ -34,10 +34,12 @@
 	\begin{enumerate}
 		\item \(  \)
 		\begin{flalign*}
-			A_1(x, t) &= \tikzmark{1}\ A_0\ \tikzmark{2} \cos(kx - \omega t) &&	
+			A_1(x, t) &= \tikzmark{1}\ A_0\ \tikzmark{2} \cos(\tikzmark{3}\, kx \, \tikzmark{4} - \tikzmark{5}\, \omega t \,\tikzmark{6}) &&\\	
 		\end{flalign*}
-		The Amplitude of the wave, denoted \( A_0 \), in case of water waves this tells us how high the wave can get (in respect to still water) and in respect to sound 
+		The Amplitude of the wave, denoted \( A_0 \), in case of water waves this tells us how high the wave can get (in respect to still water) and in respect to sound it tells you how much the air molecules that transmit the wave "wiggle". The cosine term is responsible for the oscillation and inside the cosine the wavenumber \( k \) tells you how many wavecycles happen in a distance of \( 1 \unit{m} \), so how often the waterwave reaches its maximum in \( 1 \unit{m} \). The angular frequency tells us something about how many wavecycles happen in a time period of \( 1 \unit{s} \).
 		\AddUnderBrace[0.1]{1}{2}{Amplitute}
+		\AddOverBrace[0.1]{3}{4}{Wavenumber}
+		\AddUnderBrace[0.1]{5}{6}{Frequency}
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
@@ -47,8 +49,8 @@
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
-			A_1(x, t) &= A_0 \cos(kx - \omega t) = A_0 \expo[ikx - i\omega t] &&\\
-			A_2(r, \theta, \varphi) &= A_0 \cos(kr - \omega t) = A_0 \expo[ikr - i\omega t] &&\\
+			A_1(x, t) &= A_0 \cos(kx - \omega t) = \dl{A_0 \expo[ikx - i\omega t]} &&\\
+			A_2(r, \theta, \varphi) &= A_0 \cos(kr - \omega t) = \dl{A_0 \expo[ikr - i\omega t]} &&\\
 		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
