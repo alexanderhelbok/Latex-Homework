@@ -16,7 +16,7 @@
 \RequirePackage{enumitem, multicol, tcolorbox, array}
 \tcbuselibrary{breakable,skins}
 \RequirePackage[headsepline]{scrlayer-scrpage}
-\RequirePackage{graphicx}
+\RequirePackage{graphicx, wrapfig2}
 \RequirePackage{listings} %env ignores LATEX commands, keeping all the line breaks (for printing code)
 \RequirePackage{hyperref}
 \RequirePackage{bookmark}
