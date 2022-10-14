@@ -16,7 +16,7 @@
 		\item \( E_1 = E_0 \expo[\iu(kx - \omega t)];\quad E_2 = E_0 \expo[\iu(kx - \omega t + k\Delta s)];\quad I = E^2 \)
 		\begin{flalign*}
 			I &= E^2 = \left(E_1 + E_2 \right)^2 = E_0^2 \expo[2\iu(kx - \omega t)] \left(1 + \expo[\iu\Delta sk] \right)^2 &&\\
-			I &= \dl{E_0^2} &&
+			I &= \dl{E_0^2 \left( 1 + 2\cos(\Delta s k) + \cos(\Delta sk)^2 - \sin(\Delta sk)^2 \right)} &&
 		\end{flalign*}
 	\tcbline
 		\item 
@@ -30,16 +30,27 @@
 	\begin{enumerate}
 		\item A cathode releases electrons, which pass through a hole in a membrane into a chamber full of nitrogen. At the end the electrons hit a detector and from the current \( I_{0} \) the electrons produce one can determine the cross-section of electrons and nitrogen.  
 	\tcbline
-		\item Instead of only varying the distance between Nitrogen molecules in one plane only, changing the pressure will yield a similar result while being much easier to achieve. When varying the distance in one plane you have to keep the molecules from escaping in other directions, which is pretty hard using electrically neutral molecules. \\
+		\item Instead of only varying the thickness of the medium, it is easier to change the pressure because in order to change the thickness you have to . When varying the distance in one plane you have to keep the molecules from escaping in other directions, which is pretty hard using electrically neutral molecules. \\
 		\begin{flalign*}
-			I(p) = I_0\expo[-][\beta p]
+			I(p) &= I_0\expo[-][\beta p] &&\\
+			N(p) &= N_0\expo[-][\beta p] \qquad \text{,with } N_0 \propto I_0 &&\\
+		\end{flalign*}
+		\begin{flalign*}
+			pV &= Nk_{\text{B}}T \qquad \Rightarrow \qquad p = \tfrac{Nk_{\text{b}}T}{V} &&\\
+			\Delta N &= -WN = \tfrac{\tfrac{\Delta pV}{k_{\text{B}}T}\sigma N}{A} = \tfrac{\Delta p x \sigma N}{k_{\text{B}}T} &&\\
+			\tfrac{\dd{N}}{N} &= \tfrac{\dd{p} x \sigma}{k_{\text{B}}T} &&\\
+			N(p) &= N_0\expo[-][x\sigma/k_{\text{B}}T][p] \qquad \Rightarrow \qquad \beta := \dl{\tfrac{x\sigma}{k_{\text{B}}T}} &&
 		\end{flalign*}
 	\tcbline
 		\item \( x = 2.5 \unit{m};\quad T = 300 \unit{K} \\ 
 		p_1 = 2 * 10^{-2} \unit{Pa};\quad p_2 = 10^{-2} \unit{Pa};\quad  p_3 = 10^5 \unit{Pa};\quad p_4 = 7 * 10^4 \unit{Pa} \)
-%		\begin{flalign*}
-	%			
-%		\end{flalign*}
+		\begin{flalign*}
+			\expo[-][\beta p_1] &= 2 \expo[-][\beta p_2] &&\\
+			\sigma_1 &= \tfrac{\ln(2)k_{\text{b}}T}{(p_1 - p_2) x} = \dl{1.15 * 10^{-19} \unit{m^2}} &&\\
+			\expo[-][\beta p_3] &= 2 \expo[-][\beta p_4] &&\\
+			\sigma_2 &= \tfrac{\ln(2)k_{\text{b}}T}{(p_3 - p_4) x} = \dl{3.83 * 10^{-26} \unit{m^2}} &&
+		\end{flalign*}
+		The Cross-section has drastically decreased because the more speed and momentum the electrons carry, the more they just smash through the gas and don't get scattered on the molecules 
 	\end{enumerate}
 \end{mybox}
 
