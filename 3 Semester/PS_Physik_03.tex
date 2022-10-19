@@ -10,21 +10,24 @@
 
 
 \begin{mybox}{Millikan-Versuch}
-	\centering \( \nu = 18.6 * 10^{-6}\unit{Pas};\quad \rho_{\text{air}} = 1.16 \unit{kg/m^3};\quad \rho_{\text{oil}} = 900 \unit{kg/m^3} \)
+	\centering \( \eta = 18.6 \times 10^{-6}\unit{Pas};\quad \rho_{\text{air}} = 1.16 \unit{kg/m^3};\quad \rho_{\text{oil}} = 900 \unit{kg/m^3} \)
 	\tcblower
 	\begin{enumerate}
-		\item \( v = 3.7 * 10^{-6} \unit{\v} \)
+		\item \( v = 3.7 \times 10^{-6} \unit{\v} \)
 		\begin{flalign*}
 			F_{\text{g}} &= Vg\rho_{\text{oil}} = \tfrac{4}{3}r^3\pi g\rho_{\text{oil}} &&\\
-			F_{\text{R}} &= \tfrac{v^2C_{\text{D}} A\rho_{\text{air}}}{2} = \tfrac{v^2 0.43 r^2 \pi\rho_{\text{air}}}{2} &&\\
+			F_{\text{R}} &= a\eta v = 6\pi r\eta v &&\\
 			F_{\text{A}} &= Vg\rho_{\text{air}} = \tfrac{4}{3}r^3\pi g\rho_{\text{air}} &&\\
-			F_{\text{tot}} &= F_{\text{g}} - F_{\text{A}} - F_{\text{R}} =  &&
+			F_{\text{tot}} &= F_{\text{g}} - F_{\text{A}} - F_{\text{R}} = 0 &&\\
+			r &= \sqrt{\tfrac{9\eta v}{2g\left(\rho_{\text{oil}} - \rho_{\text{air}}\right)}} = \dl{1.88 \times 10^{-7} \unit{m}} &&
  		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%		
-%		\end{flalign*}
+		\item \( E = 500 \unit{V/m}:\quad v = 0 \unit{m/s} \)
+		\begin{flalign*}
+			F_{\text{el}} &= qE &&\\
+			F_{\text{tot}} &= F_{\text{g}} - F_{\text{A}} - F_{\text{R}} - F_{\text{el}} &&\\
+			q &= \tfrac{2\pi r\left(2gr^2\left(\rho_{\text{air}} - \rho_{\text{oil}}\right) + 9\eta v\right)}{3E} = \dl{4.86 \times 10^{-19} \unit{C}} &&
+		\end{flalign*}
 	\tcbline
 		\item \(  \)
 %		\begin{flalign*}
@@ -37,20 +40,31 @@
 	\centering \(  \)
 	\tcblower
 	\begin{enumerate}
-		\item \(  \)
-%		\begin{flalign*}
-	%			
-%		\end{flalign*}
+		\item \( T := \tfrac{l}{v_z} \)
+		\begin{flalign*}
+			F_{\text{E}} &= qE = m\dv{v_y}{t} &&\\
+			v_y(t) &= \tfrac{qE}{m}t &&\\
+			v_y(T) &= \dl{\tfrac{qEl}{mv_z}} &&\\[2ex]
+			F_{\text{B}} &= qv_zB = m\dv{v_x}{t} &&\\
+			v_x(t) &= \tfrac{qB}{m} v_zt &&\\
+			v_x(T) &= \dl{\tfrac{qBl}{m}} &&\\[2ex]
+			A_{\text{E}} &= \uint[0, T]{v_y(t)}{t} = \tfrac{qEl^2}{2mv_z^2} &&\\
+			A_{\text{B}} &= \uint[0, T]{v_x(t)}{t} = \dl{\tfrac{qBl^2}{2mv_z}} &&
+		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-	%		
-%		\end{flalign*}
+		\item \( \tau = \tfrac{D}{v_z} \)
+		\begin{flalign*}
+			y &= A_{\text{E}} + v_y(T)\tau = \tfrac{qEl}{mv_z^2} \left(\tfrac{l}{2} + D \right) &&\\
+			x &= A_{\text{B}} + v_x(T)\tau = \tfrac{qBl}{mv_z} \left(\tfrac{l}{2} + D \right) &&\\
+			v_z &= \tfrac{qBl \left( \tfrac{l}{2} + D\right)}{mx} &&\\
+			y(x) &= \dl{\tfrac{mE}{qB^2l \left(\tfrac{l}{2} + D \right)}}x^2 &&
+		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-		%			
-%		\end{flalign*}
+		\item \( x = 0.05 \unit{m};\quad D = 0.4 \unit{m};\quad l = 0.03 \unit{m};\quad a = 1.5 \unit{mm};\quad \Delta m = 2\unit{u} \\
+		 U = 15 \unit{V};\quad B = 0.1 \unit{T} \)
+		\begin{flalign*}
+			\Delta y &= \tfrac{\Delta mE}{qB^2l \left(\tfrac{l}{2} + D \right)}x^2 = \dl{0.004 \unit{m}} &&
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
@@ -58,15 +72,9 @@
 	\centering \(  \)
 	\tcblower
 	\begin{enumerate}
-		\item \(  \)
-%		\begin{flalign*}
-		%			
-%		\end{flalign*}
+		\item The group velocity of a wave is the velocity of the enveloping wave, whereas the phase velocity is the speed the the inscribed wave travels through space.
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-	%		
-%		\end{flalign*}
+		\item Dispersion relation gives the relationship between the speed and the frequency of a wave. dispersion usually happens when waves go from one medium into another and there a change in speed happens. Electromagnetic waves in vacuum don't show dispersion because it always travels in the same medium and the frequency of em-waves does not depend on its speed. Matter waves however do have a speed dependent frequency and therefore do experience dispersion. 
 	\tcbline
 		\item \(  \)
 %		\begin{flalign*}
