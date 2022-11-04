@@ -18,9 +18,10 @@
 	\begin{enumerate}
 		\item \(  \)
 		\begin{flalign*}
-			1 &= \uint[-\infty,\infty]{\abs{\Psi(x)}^2}{x} = \uint[0,a]{A^2x^2(a-x)^2}{x} = \tfrac{a^5A^2}{30} &&\\
+			1 &= \uint[-\infty,\infty]{\abs{\tikzmark{1} \Psi(x) \tikzmark{2}}^2}{x} = \uint[0,a]{A^2x^2(a-x)^2}{x} = \tfrac{a^5A^2}{30} &&\\[2em]
 			A &= \dl{\sqrt{\tfrac{30}{a^5}}} &&
 		\end{flalign*}
+		\AddUnderBrace[0.3]{1}{2}{\( [\text{m}^{-\tfrac{1}{2}}] \)}
 	\tcbline
 		\item \( k = \tfrac{2\pi}{\lambda} = \tfrac{mv_{\text{T}}}{\hbar} = \tfrac{p}{\hbar};\quad \omega = \tfrac{2\pi v_{\text{T}}}{\lambda} = \tfrac{mv_{\text{T}}^2}{2\hbar} = \tfrac{E}{\hbar} = \tfrac{p^2}{2m\hbar} = \tfrac{k^2\hbar}{2m} \)
 		\begin{flalign*}
@@ -29,9 +30,10 @@
 	\tcbline
 		\item \( a_1 = 1 \unit{m};\quad a_2 = 0.5 \times 10^{-10} \unit{m} \)
 		\begin{flalign*}
-			\lambda_{\text{db}} &= \tfrac{h}{mv_{\text{T}}} &&\\
-			E_{\text{ges}} &= k\tfrac{e^2}{}
-			v_{\text{T}} &= 
+			E_{\text{ges}} &= \uint[-\infty,r]{k\tfrac{q^2}{s^2}}{s} = k\tfrac{q^2}{r} &&\\
+			\lambda_{\text{db}} &= \tfrac{h}{mv_{\text{T}}} = \tfrac{h}{\sqrt{2mE_{\text{ges}}}} &&\\[2ex]
+			\lambda_1 &= \dl{3.23 \times 10^{-5} \unit{m}} &&\\
+			\lambda_2 &= \dl{2.29 \times 10^{-10} \unit{m}} &&\\
 		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
