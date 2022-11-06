@@ -43,19 +43,26 @@
 	\tcblower
 	\begin{enumerate}
 		\item \(  \)
-%		\begin{flalign*}
-	%			
-%		\end{flalign*}
+		\begin{flalign*}
+			E_1 &= E_0\cos(kr - \omega t) &&\\
+			E_2 &= E_0\cos(k(r + d\sin(\alpha)) - \omega t) &&\\
+			E &= E_1 + E_2 = E_0\cos(kr - \omega t) + E_0\cos(k(r + d\sin(\alpha)) - \omega t) = &&\\
+			&= \tikzmark{1} 2E_0\cos(\tfrac{1}{2}kd\sin(\alpha)) \tikzmark{2} \cos(kr - \omega t + \tfrac{1}{2}kd\sin(\alpha)) &&
+		\end{flalign*}
+		\begin{flalign*}
+			I &\propto A^2 &&\\
+			I(\alpha) &= \dl{I_0\cos^2(\tfrac{d\pi}{\lambda}\sin(\alpha))} &&
+		\end{flalign*}
+		\AddUnderBrace[0.2]{1}{2}{\( :=A \)}
 	\tcbline
 		\item \( E = 10 \unit{eV};\quad d = 3 \unit{nm} \)
-%		\begin{flalign*}
-	%		
-%		\end{flalign*}
+		\begin{flalign*}
+			I(\alpha) &= 0 &&\\
+			\tfrac{d\pi}{\lambda}\sin(\alpha) &= \tfrac{\pi}{2} &&\\
+			\alpha &= \arcsin(\tfrac{\lambda}{2d}) =  \arcsin(\tfrac{h}{2d\sqrt{2Em_{\text{e}}}}) = \dl{\ang{3.71}} &&
+		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-		%			
-%		\end{flalign*}
+		\item The probability of finding a single electron at the first minima is zero because destructive interference is happening. If you close one slit, no interference happens and you have a gaussian distribution centered on the remaining slit.
 	\end{enumerate}
 \end{mybox}
 
@@ -63,16 +70,26 @@
 	\centering \(  \)
 	\tcblower
 	\begin{enumerate}
-		\item \(  \)
+		\item \( \phi_{\text{AC}} - \phi_{\text{BD}} = 0 \quad \) due to symmetry
 		\begin{flalign*}
-			\tfrac{mv_f^2}{2} &= \tfrac{mv_i^2}{2} - mgh &&\\
-			v_f &= \sqrt{v_i - 2gh} &&
+			\tfrac{p_{\text{f}}^2}{2m} &= \tfrac{p_{\text{i}}^2}{2m} - mgd &&\\
+			p_{\text{f}} &= \sqrt{p_{\text{i}}^2 - 2gdm^2} = \sqrt{\tfrac{h^2}{\lambda_0^2} - 2gdm^2} &&\\
+			\lambda_{\text{f}} &= \tfrac{h}{p_{\text{f}}} = \tfrac{h}{\sqrt{\tfrac{h^2}{\lambda_0^2} - 2gdm^2}} = \tfrac{1}{\sqrt{\tfrac{1}{\lambda_0^2} - \tfrac{2gdm^2}{h^2}}} &&
 		\end{flalign*}
+		\( \phi_{\text{AB}} - \phi_{\text{CD}} = k_{\text{i}}L - k_{\text{f}}L = 2\pi L\left(\tfrac{1}{\lambda_0} - \tfrac{1}{\lambda_{\text{f}}}\right) = \dl{2\pi L\left(\tfrac{1}{\lambda_0} - \sqrt{\tfrac{1}{\lambda_0^2} - \tfrac{2gdm^2}{h^2}} \right)} \)
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-	%		
-%		\end{flalign*}
+		\item \( \lambda_0 = 0.2 \unit{m};\quad L = 45 \unit{mm};\quad d = 24 \unit{mm};\quad \Delta\phi = \ang{81} \)
+		\begin{flalign*}
+			\psi_1 &= \psi_2\expo[2\Delta\phi + \pi/2][\iu] &&\\
+			\psi_2 &= \tfrac{\psi_0}{\sqrt{2}} &&\\
+			\psi_1' &= \tfrac{1}{\sqrt{2}}(\psi_1 + \iu\psi_2) = \tfrac{\psi_2}{\sqrt{2}}(\expo[2\Delta\phi + \pi/2][\iu] + \iu) = \tfrac{\psi_2}{\sqrt{2}}\expo[\pi/2][\iu](\expo[\Delta\phi\iu] + 1) &&\\
+			\psi_2' &= \tfrac{1}{\sqrt{2}}(\psi_2 + \iu\psi_1) = \tfrac{\psi_2}{\sqrt{2}}(\iu\expo[2\Delta\phi + \pi/2][\iu] + 1) = \tfrac{\psi_2}{\sqrt{2}}(\expo[(\Delta\phi + \pi)\iu] + 1) &&\\
+		\end{flalign*}
+		\begin{flalign*}
+			I_0 &\propto \abs{\psi_0}^2 = 5000 \unit{1/s} &&\\
+			I_1 &\propto \abs{\psi_1'}^2 = \abs{\tfrac{\psi_2}{\sqrt{2}}\expo[\pi/2][\iu](\expo[\Delta\phi\iu] + 1)}^2 = \tfrac{\psi_0^2}{2}\abs{1 + \cos(\Delta\phi)} = \dl{2891\unit{1/s}} &&\\
+			I_2 &\propto \abs{\tfrac{\psi_2}{\sqrt{2}}(\expo[(\Delta\phi + \pi)\iu] + 1)}^2 = \tfrac{\psi_0^2}{2}\abs{1 - \cos(\Delta\phi)} = \dl{2109 \unit{1/s}} &&
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
