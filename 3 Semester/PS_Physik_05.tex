@@ -20,9 +20,14 @@
 		\end{flalign*}
 	\tcbline
 		\item \(  \)
-%		\begin{flalign*}
-%		
-%		\end{flalign*}
+		\begin{flalign*}
+			\pdv{\rho(\lambda)}{\lambda} &= \tfrac{8 \pi  c^2 h^2 \expo[hc/\lambda k_{\text{B}}T]}{k_{\text{B}} \lambda^7 T \left(\expo[hc/\lambda k_{\text{B}}T]-1\right)^2}-\frac{40 \pi  c h}{\lambda^6 \left(\expo[hc/\lambda k_{\text{B}}T]-1\right)} = 0 &&
+		\end{flalign*}
+		\begin{flalign*}
+			\tfrac{hc}{\lambda k_{\text{B}}T}\tfrac{\expo[hc/\lambda k_{\text{B}}T]}{\expo[hc/\lambda k_{\text{B}}T] - 1} - 5 &= 0 &&
+		\end{flalign*}
+		 Using the Lambert W function and numeric approximation one get that
+		 \[ \lambda_{\text{max}} \approx \dl{\tfrac{2.88 \unit{µK}}{T}} \]
 	\end{enumerate}
 \end{mybox}
 
@@ -35,25 +40,29 @@
 		\item \( E = hf;\quad \lambda = \tfrac{c}{f} \)\\[2ex]
 		\( \lambda = \tfrac{ch}{E} = \dl{4.28 \times 10^{-7} \unit{m}} \)
 	\tcbline
-		\item \( \lambda = 400 \unit{nm};\quad I = 1 \unit{mA} \)
-%		\begin{flalign*}
-		%			
-%		\end{flalign*}
+		\item \( \lambda = 400 \unit{nm};\quad I_0 = 1 \unit{mA} \)
+		\begin{flalign*}
+			U &= -\tfrac{h\nu - W}{e} = \tfrac{\lambda W - hc}{e\lambda} &&\\
+			P_0 &= UI_0 = \dl{-1.996 \times 10^{-4} \unit{W}} &&
+		\end{flalign*}
 	\tcbline
 		\item \(  \)
-%		\begin{flalign*}
-	%			
-%		\end{flalign*}
+		\begin{flalign*}
+			UI_1 &= \tfrac{P_0}{2} = \tfrac{UI_0}{2} &&\\
+			I_1 &= \tfrac{I_0}{2} = \dl{I_1 = 0.5 \unit{mA}} &&
+		\end{flalign*}
 	\tcbline
 		\item \(  \)
-%		\begin{flalign*}
-	%			
-%		\end{flalign*}
+		\begin{flalign*}
+			UI_2 &= \tfrac{\lambda W - 2hc}{e\lambda}I_2 = P_0 = \tfrac{\lambda W - hc}{e\lambda}I_0 &&\\
+			I_2 &= 
+		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-	%			
-%		\end{flalign*}
+		\item \( \lambda > 450 \unit{nm} \)
+		\begin{flalign*}
+			U_3 &= \dl{-0.14 \unit{V}} &&
+		\end{flalign*}
+	 For \( \lambda > 428 \unit{nm} \) the Voltage \( U \) drops below 0 and therefore no no electrons are freed from their atoms. The photons don't carry enough energy at longer wavelengths for the electrons to overcome the attractive force of the atom core.
 	\end{enumerate}
 \end{mybox}
 
