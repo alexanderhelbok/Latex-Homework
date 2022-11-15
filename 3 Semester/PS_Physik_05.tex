@@ -145,9 +145,9 @@
 				grid=major,
 				grid style={thin,densely dotted,black!20},
 				legend style={fill=none, draw=none, at={(axis description cs:0.4,0.8)},anchor=east}],
-				\addplot[smooth, mark=none, samples=50, color=magenta] {gauss(-1,0.75)};
-				\addplot[smooth, mark=none, samples=50, color=blue] {gauss(0,0.5)};
-				\addplot[smooth, mark=none, samples=50, color=red] {gauss(2,1)};
+				\addplot[smooth, mark=none, samples=50, color=magenta, thick] {gauss(-1,0.75)};
+				\addplot[smooth, mark=none, samples=50, color=blue, thick] {gauss(0,0.5)};
+				\addplot[smooth, mark=none, samples=50, color=red, thick] {gauss(2,1)};
 				\legend{$\abs{\psi(t < 0)}^2$~~~,$\abs{\psi(t = 0)}^2$~~~,$\abs{\psi(t > 0)}^2$}
 			\end{axis}
 		\end{tikzpicture}
