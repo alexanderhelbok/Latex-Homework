@@ -110,17 +110,17 @@
 \setlength{\parskip}{0.05in}
 
 % define customizeable variables
-\newcommand*{\name}[1]{\def\@name{#1}}
-\newcommand*{\hwnumber}[1]{\def\@hwnumber{#1}}
-\newcommand*{\course}[1]{\def\@course{#1}}
+\newcommand*{\name}[1]{\newcommand*\Name{#1}}
+\newcommand*{\hwnumber}[1]{\newcommand*\Hwnumber{#1}}
+\newcommand*{\course}[1]{\newcommand*\Course{#1}}
 
 
 % create header
 \clearpairofpagestyles
 \setkomafont{pageheadfoot}{\normalfont}
-\ihead{\@name}
-\chead{\textbf{\Large Blatt \@hwnumber}}
-\ohead{\@course \\ \today}
+\ihead{\Name}
+\chead{\textbf{\Large Blatt \Hwnumber}}
+\ohead{\Course \\ \today}
 \cfoot{\pagemark}
 \headheight 35pt
 \headsep 2.5em
