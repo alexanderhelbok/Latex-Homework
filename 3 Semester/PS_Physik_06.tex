@@ -1,0 +1,97 @@
+\documentclass{alex_hü}
+
+\name{Alexander Helbok}
+\course{PS Physik}
+\hwnumber{6}
+
+
+\begin{document}
+\renewcommand{\labelenumi}{\alph{enumi})}
+
+
+\begin{mybox}{Relativität}
+	\centering \(  \)
+	\tcblower
+	\begin{enumerate}
+		\item \( t = 10 \unit{ns};\quad v = 0.6 c \)
+		\begin{flalign*}
+			t' &= \gamma t = 1.25 \times 10^-8 \unit{s} &&\\
+			x' &= vt' = \dl{7.5 \times 10^{-9} \unit{m}} &&
+		\end{flalign*}
+	\tcbline
+		\item \( E_0 = m_0c^2;\quad P = 3mc = 3\gamma m_0c \)
+		\begin{flalign*}
+			E &= c\sqrt{m_0^2c^2+P^2} = c\sqrt{m_0^2c^2+9m^2c^2} = c^2m_0\sqrt{1+9\gamma^2} = \dl{\sqrt{1+9\gamma^2} E_0} &&
+		\end{flalign*}
+	\tcbline
+		\item The wavelength decreases as the velocity increases, as can be seen in deBroglies formulation of Matterwaves. Considering relativity the wavelength still decreases but not as fast as in classiscal physics.
+	\end{enumerate}
+\end{mybox}
+
+\begin{mybox}{Compton-Effekt}
+	\centering \( E = 10 \unit{keV};\quad \varphi = \ang{60} \)
+	\tcblower
+	\begin{enumerate}
+		\item \( E = pc \)
+		\begin{flalign*}
+			\tfrac{1}{p_1} - \tfrac{1}{p_0} &= \tfrac{1}{m_0c}(1-\cos(\varphi)) &&\\
+			E_1 &= p_1c = \dl{9.90 \unit{keV}} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			K_{\text{el}} &= \gamma m_0c^2 - m_0c^2 &&\\
+			v &= \dl{5.84 \times 10^6 \unit{\v}} &&\\[2ex]
+			p_{\text{el}} &= \gamma m_0v &&\\
+			p_0 &= p_1\cos(\varphi) + p_{\text{el}} \cos(\alpha) &&\\
+			\alpha &= \arccos(\tfrac{p_0 - p_1\cos(\varphi)}{p_{\text{el}}}) = \dl{\ang{59.52}} &&
+		\end{flalign*}
+	\tcbline
+		\item Yes, Compton scattering occurs at all energy levels, even though at some it is less prominent, as other phenomena are more pronounced
+	\tcbline
+		\item The photon never vanishes because by definition the compton effect describes the phenomena of an electron scattering a photon, not absorbing it. If it were to absorb the entirety of the photons energy, it would fall under the photoelectric effect.
+	\end{enumerate}
+\end{mybox}
+
+\begin{mybox}{Zeitdilatation und Längenkontraktion}
+	\centering \( \tau = 2.2 \unit{\micro\s};\quad v = 0.995c\quad h = 10 \unit{km} \)
+	\tcblower
+	\begin{enumerate}
+		\item \(  \)
+		\begin{flalign*}
+			s &= v\tau = \dl{656.25 \unit{m}} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			\tau' &= \gamma\tau &&\\
+			s' &= v\tau' = \dl{6570.68 \unit{m}} &&
+		\end{flalign*}
+	\tcbline
+		\item \( \Phi(x) = \tfrac{N(x)}{t};\quad N(t) = N_0\expo[-][t/\tau] \)\\[2ex]
+		\underline{Classical:}
+		\begin{flalign*}
+			\Phi(0) &= \tfrac{N_0}{t} &&\\
+			t &= \tfrac{h}{v} &&\\
+			\Phi(h) &= \expo[-][h/v\tau] \tfrac{N_0}{t} = \dl{2.41 \times 10^{-7} \Phi(0)} &&
+		\end{flalign*}
+		\underline{Relativistic:}
+		\begin{flalign*}
+			t' &= \tfrac{h}{\gamma v} &&\\
+			\Phi(h) &= \expo[-][h/\gamma v\tau] \tfrac{N_0}{t} = \dl{0.218\, \Phi(0)} &&
+		\end{flalign*}
+	\tcbline
+		\item \( h = 2 \unit{km} \)
+		\begin{flalign*}
+			\Phi(h) &= \expo[-][h/\gamma v\tau] \Phi(0) = 0.7 \Phi(0) &&\\
+			\tau &= -\tfrac{h}{\gamma v\ln(0.7)} = \dl{1.88 \unit{\micro\s}} &&
+		\end{flalign*}
+	\tcbline
+		\item \( h = 10 \unit{km} \)
+		\begin{flalign*}
+			h' &= \tfrac{h}{\gamma} = \dl{998.75 \unit{m}} &&
+ 		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+\end{document}
