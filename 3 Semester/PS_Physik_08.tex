@@ -1,0 +1,103 @@
+\documentclass{alex_hü}
+
+\name{Alexander Helbok}
+\course{PS Physik}
+\hwnumber{8}
+\usepackage{biblatex}
+
+
+\begin{document}
+\renewcommand{\labelenumi}{\alph{enumi})}
+
+
+\begin{mybox}{}
+	\centering \(  \)
+	\tcblower
+	\begin{enumerate}
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%		
+%		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+\begin{mybox}{Unendlich tiefer Potentialtopf}
+	\centering \( V(x) = \begin{cases}
+		\infty \quad &\text{für } x \leq 0 \\
+		0 \quad &\text{für }  0 \le x \le a \\
+		\infty \quad &\text{für }  a \leq x
+	\end{cases} \)
+	\tcblower
+	\begin{enumerate}
+		\item 
+		\underline{For \( V(x) = \infty \):} \( \psi_{\text{\RN{1}}}(x) = 0  \) \\[2ex]
+		\underline{For \( V(x) = 0 \):} \( \psi_{\text{\RN{2}}}(x) = A\expo[-][\iu k x] + B\expo[\iu k x]  \)\\[2ex]
+		\underline{Boundary conditions:}
+		\begin{flalign*}
+			\psi_{\text{\RN{1}}}(x=0) &= 0 = \psi_{\text{\RN{1}}}(x=a) &&\\
+			\dv{}{x} \psi_{\text{\RN{1}}}(x=0) &= 0 = \dv{}{x} 	\psi_{\text{\RN{1}}}(x=a) &&\\
+		\end{flalign*}
+		\( \Rightarrow A + B = 0\ \land \tikzmark{1} -\iu k A \tikzmark{2}\left( \tikzmark{3} \expo[-][\iu k x] + \expo[\iu k x] \tikzmark{4} \right) = 0 \quad \Rightarrow \quad A = B = 0\)
+		\vspace{1em}
+		\AddUnderBrace[0.4]{1}{2}{\( =0 \)}
+		\AddUnderBrace[0.4]{3}{4}{\( \neq 0 \)}
+	\tcbline
+		\item For \( A = -B \)
+		\begin{flalign*}
+			\psi(x) &= -B\expo[-][\iu k x] + B\expo[\iu k x] = 2\iu B \sin(kx) = C\sin(kx) &&\\
+			\psi(a) &= 0 \quad \Rightarrow \quad k = \tfrac{n\pi}{a}\quad , n \in \mathbb{N} &&\\
+			\uint[0,a]{\abs{\psi(x)}^2}{x} &= 1 \quad \Rightarrow\quad C = \sqrt{\tfrac{2}{a}} &&\\
+			\Rightarrow \psi_n(x) &= \dl{\sqrt{\tfrac{2}{a}} \sin(\tfrac{n\pi x}{a})} &&\\[2ex]
+			E_n &= \tfrac{\hbar^2k^2}{2m} = \dl{\tfrac{\hbar^2\pi^2}{2m a^2}n^2} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)\vspace{10cm}
+	\tcbline
+		\item \( \lambda = 451 \unit{nm};\quad \Delta E = \tfrac{hc}{\lambda}  \)
+		\begin{flalign*}
+			\Delta E &= E_2 - E_1 = \tfrac{3\hbar^2\pi^2}{2m a^2} = \tfrac{hc}{\lambda} &&\\
+			a &= \sqrt{\tfrac{3\lambda}{2mhc}}\hbar\pi = \dl{6.41 \times 10^{-10} \unit{m}} &&
+		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+\begin{mybox}{Vertauschungsrelationen}
+	\centering \( \left[\hat{A}, \hat{B}\right] = \hat{A}\hat{B}-\hat{B}\hat{A} \)
+	\tcblower
+	\begin{enumerate}
+		\item \( \hat{x} = x;\quad \hat{p}_x = -\iu\hbar\pdv{}{x} \)
+		\begin{flalign*}
+			\left[\hat{x}, \hat{p}_x\right]\psi &= \left(-x\iu\hbar\pdv{}{x} + \iu\hbar\pdv{}{x}x\right)\psi = -\iu\hbar \left(x\pdv{\psi}{x} - \left(\pdv{\psi}{x} + x\pdv{\psi}{x} \right)\right) = \dl{\iu\hbar\psi}
+		\end{flalign*}
+		We have just (re)discovered Heisenberg's uncertainty principle! 
+	\tcbline
+		\item \( \hat{L} = \hat{\vec{r}} \times \hat{\vec{p}} = -\iu\hbar\left(\hat{r} \times \vec{\nabla}\right) \)
+		\begin{flalign*}
+			\left[\hat{L}_y,\hat{L}_x\right] &= \hat{L}_y\hat{L}_x - \hat{L}_x\hat{L}_y = &&\\
+			&= (\hat{z}\hat{p}_x - \hat{x}\hat{p}_z)(\hat{x}\hat{p}_y - \hat{y}\hat{p}_x) - (\hat{x}\hat{p}_y - \hat{y}\hat{p}_x)(\hat{z}\hat{p}_x - \hat{x}\hat{p}_z) &&\\
+			&= \hat{z}\left[\hat{x}, \hat{p}_x\right]\hat{p}_y - \left(\hat{z}\hat{y} \hat{p}_x^2 - \hat{y}\hat{z}\hat{p}_x^2\right) - \left(\hat{x}^2 \hat{p}_z\hat{p}_y - \hat{x^2} \hat{p}_y\hat{p}_z\right) + \hat{y}\left[\hat{x}, \hat{p}_x\right]\hat{p}_z = &&\\
+			&= -\iu\hbar \hat{z}\hat{p}_y + \iu\hbar \hat{y}\hat{p}_z = &&\\
+			&= \dl{\iu\hbar\hat{L}_x} &&
+		\end{flalign*}
+		\begin{flalign*}
+			\left[\hat{\vec{L}}^2, \hat{L}_z\right] &= \left[\hat{L}^2_x, \hat{L}_z\right] + \left[\hat{L}^2_y, \hat{L}_z\right] + \left[\hat{L}^2_z, \hat{L}_z\right] = &&\\
+			&= \hat{L}_x\left[\hat{L}_x, \hat{L}_z\right] + \left[\hat{L}_x, \hat{L}_z\right]\hat{L}_x + \hat{L}_y\left[\hat{L}_y, \hat{L}_z\right] + \left[\hat{L}_y, \hat{L}_z\right]\hat{L}_y = &&\\
+			&= -\iu\hbar\hat{L}_x\hat{L}_y - \iu\hbar\hat{L}_x\hat{L}_y + \iu\hbar\hat{L}_x\hat{L}_y + \iu\hbar\hat{L}_x\hat{L}_y = &&\\
+			&= \dl{0} &&
+		\end{flalign*}
+		We can conclude that we can not measure the x and y components of the angular momentum at the same time, whilst the z component and the absolute value can be measured simultaneously.
+	\end{enumerate}
+\end{mybox}
+
+
+\end{document}
