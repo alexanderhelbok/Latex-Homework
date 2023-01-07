@@ -92,6 +92,13 @@
 \let\oldunit\unit
 \renewcommand{\unit}[1]{\hspace{4pt}\oldunit{#1}}
 
+% --- Override \vec with an invocation of \xvec.
+\let\oldvec\vec
+\renewcommand{\vec}[1]{\xvec[]{#1}}
+% --- Define \dvec and \ddvec for dotted and double-dotted vectors.
+\newcommand{\dvec}[1]{\xvec[.]{#1}}
+\newcommand{\ddvec}[1]{\xvec[:]{#1}}
+
 \hypersetup{%
 	colorlinks=true,
 	linkcolor=blue,
