@@ -3,7 +3,7 @@
 \name{Alexander Helbok}
 \course{PS Physik}
 \hwnumber{9}
-
+\usepackage{bm, tkz-euclide}
 
 \begin{document}
 \renewcommand{\labelenumi}{\alph{enumi})}
@@ -70,20 +70,69 @@
 			E &= V + T = \dl{-\vec{\mu} \cdot \vec{B} + \tfrac{1}{2}m(\dvec{r})^2} &&
 		\end{flalign*}
 	\tcbline
-		\item In the reference frame of the electron in an atom, the nucleus (notably the protons) are circulating around the electron. This moving charge can be viewed as a current, which induces a magnetic field (which exerts an attracting force on the electron). The electron however does not move towards the nucleus due to its angular momentum. From a classical perspective the angular momentum prevents the electron from moving towards the proton and is therefore proportional to the magnetic moment.
-%		\begin{flalign*}
-	%		
-%		\end{flalign*}
+%		\item From a classical point of view, the electron is circulating around the nucleus. This moving charge can be viewed as a current in a closed loop, which in the presence of a magnetic field has a magnetic moment associated with it. The electron however does not move towards the nucleus due to its angular momentum. From a classical perspective the angular momentum prevents the electron from moving towards the proton and is therefore proportional to the magnetic moment.\\
+		\item 
+		\( \vec{B} = B\vec{e}_z;\quad |L_z| = \hbar m;\quad \vec{p}_{\text{m}} = -\tfrac{e}{2m_e}\vec{L} \)
+		\begin{flalign*}
+			E_{\text{pot, B}} &= -\vec{p}_{\text{m}} \cdot \vec{B} = \tfrac{e}{2m_e} \vec{L} \cdot \vec{B} = \tfrac{e\hbar}{2m_e}mB &&\\
+			E_{n,l,m} &= E_{n,l}  + \tfrac{e\hbar}{2m_e}mB &&\\
+			\Delta E &= \dl{\tfrac{e\hbar}{2m_e}mB} &&
+		\end{flalign*}
+	\tcbline
+		\item 
+		\begin{tikzpicture}
+			\coordinate (O) at (-2,0) {};
+			\coordinate (N) at (1,0) {};
+			\foreach \i [count=\xi] in {-2,...,2}{
+				\tkzDefPoint(1.5, \i){L\xi}
+				\tkzDefPoint(2.5, \i){M\xi}
+				\draw [dashed, line width=1pt] (N) -- (L\xi);
+				\draw [line width=1pt] (L\xi) -- (M\xi) node [right] {\( m = \i \)};}
+			
+			\draw [line width=1pt] (O) -- (N) node [above, pos=0.5] {\( n=3, l=2 \)}; 
+			
+			\begin{scope}[shift={(7, 0)}]
+				\coordinate (O) at (-2,0) {};
+				\coordinate (N) at (1,0) {};
+				\foreach \i [count=\xi] in {-1,...,1}{
+					\tkzDefPoint(1.5, \i){L\xi}
+					\tkzDefPoint(2.5, \i){M\xi}
+					\draw [dashed, line width=1pt] (N) -- (L\xi);
+					\draw [line width=1pt] (L\xi) -- (M\xi) node [right] {\( m = \i \)};}
+				
+				\draw [line width=1pt] (O) -- (N) node [above, pos=0.5] {\( n=2, l=1 \)}; 
+			\end{scope}
+		\end{tikzpicture}
 	\tcbline
 		\item \(  \)
-%		\begin{flalign*}
-		%			
-%		\end{flalign*}
-	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-	%			
-%		\end{flalign*}
+		\begin{tikzpicture}
+			\coordinate (O) at (-2,0) {};
+			\coordinate (N) at (1,0) {};
+			\foreach \i [count=\xi] in {-2,...,2}{
+				\tkzDefPoint(1.5, \i){L\xi}
+				\tkzDefPoint(3.5, \i){M\xi}
+				\draw [dashed, line width=1pt] (N) -- (L\xi);
+				\draw [line width=1pt] (L\xi) -- (M\xi) node [right] {\( m = \i \)};}
+			
+			\draw [line width=1pt] (O) -- (N) node [above, pos=0.5] {\( n=3, l=2 \)}; 
+			
+			\begin{scope}[shift={(0, -5)}]
+				\coordinate (O) at (-2,0) {};
+				\coordinate (N) at (1,0) {};
+				\foreach \i [count=\xi] in {-1,...,1}{
+					\tkzDefPoint(1.5, \i){L\xi}
+					\tkzDefPoint(3.5, \i){M\xi}
+					\draw [dashed, line width=1pt] (N) -- (L\xi);
+					\draw [line width=1pt] (L\xi) -- (M\xi) node [right] {\( m = \i \)};}
+				
+				\draw [line width=1pt] (O) -- (N) node [above, pos=0.5] {\( n=2, l=1 \)}; 
+			\end{scope}
+		
+			\foreach \i\j\k\l [count=\xi] in {2/1/red/0, 1/1/magenta/0.1, 1/0/magenta/0.1, 0/1/orange/0.2, 0/0/orange/0.2, 0/-1/orange/0.2, -1/0/blue/0.3, -1/-1/blue/0.3, -2/-1/OliveGreen/0.4}{
+				\draw[line width=0.75pt, \k, latex-latex] (1.6+\xi*0.15+\l, \i) -- (1.6+\xi*0.15+\l, \j - 5);}
+			
+			\node at (9, -2) {\( \textcolor{red}{1} + \textcolor{magenta}{2} + \textcolor{orange}{3} + \textcolor{blue}{2} + \textcolor{OliveGreen}{1} = \dl{9} \)};
+		\end{tikzpicture}
 	\end{enumerate}
 \end{mybox}
 
