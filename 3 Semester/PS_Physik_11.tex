@@ -4,37 +4,11 @@
 \course{PS Physik}
 \hwnumber{11}
 
-\usetikzlibrary{decorations.pathmorphing}
-\pgfdeclaredecoration{Snake}{initial}
-{
-	\state{initial}[switch if less than=+.625\pgfdecorationsegmentlength to final,
-	width=+.3125\pgfdecorationsegmentlength,
-	next state=down]{
-		\pgfpathmoveto{\pgfqpoint{0pt}{\pgfdecorationsegmentamplitude}}
-	}
-	\state{down}[switch if less than=+.8125\pgfdecorationsegmentlength to end down,
-	width=+.5\pgfdecorationsegmentlength,
-	next state=up]{
-		\pgfpathcosine{\pgfqpoint{.25\pgfdecorationsegmentlength}{-1\pgfdecorationsegmentamplitude}}
-		\pgfpathsine{\pgfqpoint{.25\pgfdecorationsegmentlength}{-1\pgfdecorationsegmentamplitude}}
-	}
-	\state{up}[switch if less than=+.8125\pgfdecorationsegmentlength to end up,
-	width=+.5\pgfdecorationsegmentlength,
-	next state=down]{
-		\pgfpathcosine{\pgfqpoint{.25\pgfdecorationsegmentlength}{\pgfdecorationsegmentamplitude}}
-		\pgfpathsine{\pgfqpoint{.25\pgfdecorationsegmentlength}{\pgfdecorationsegmentamplitude}}
-	}
-	\state{end down}[width=+.3125\pgfdecorationsegmentlength,
-	next state=final]{
-		\pgfpathcosine{\pgfqpoint{.15625\pgfdecorationsegmentlength}{-.5\pgfdecorationsegmentamplitude}}
-		\pgfpathsine{\pgfqpoint{.15625\pgfdecorationsegmentlength}{-.5\pgfdecorationsegmentamplitude}}
-	}
-	\state{end up}[width=+.3125\pgfdecorationsegmentlength,
-	next state=final]{
-		\pgfpathcosine{\pgfqpoint{.15625\pgfdecorationsegmentlength}{.5\pgfdecorationsegmentamplitude}}
-		\pgfpathsine{\pgfqpoint{.15625\pgfdecorationsegmentlength}{.5\pgfdecorationsegmentamplitude}}
-	}
-	\state{final}{\pgfpathlineto{\pgfpointdecoratedpathlast}}
+\usetikzlibrary{arrows,calc,decorations.pathmorphing}
+\tikzset{snake arrow/.style=
+	{-latex,
+		decorate,
+		decoration={snake,amplitude=.4mm,segment length=2mm,post length=1mm}},
 }
 
 \begin{document}
@@ -45,20 +19,29 @@
 	\centering \(  \)
 	\tcblower
 	\begin{enumerate}
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\item \( d = \tfrac{\sqrt{2}a}{4} \)
+		\begin{flalign*}
+			\theta &= 2\arctan(\tfrac{4d}{a}) = 2\arctan(\sqrt{2}) = \dl{\ang{109.47}} &&
+		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%		
-%		\end{flalign*}
+		\item \( V = a^3;\quad r_{\text{fcc}} = \tfrac{a}{2\sqrt{2}};\quad r_{\text{dia}} = \tfrac{a\sqrt{3}}{8} \)
+		\begin{flalign*}
+			V_{\text{fcc}} &= \tfrac{16}{3}\pi r_{\text{fcc}}^3 = \tfrac{\pi a^3}{3\sqrt{2}} &&\\
+			\tfrac{V_{\text{fcc}}}{V} &= \tfrac{\pi}{3\sqrt{2}} \approx \dl{74\%} &&\\[1em]
+			V_{\text{dia}} &= 8\tfrac{4}{3}\pi r_{\text{dia}}^3 = \tfrac{\sqrt{3}\pi a^3}{16} &&\\
+			\tfrac{V_{\text{dia}}}{V} &= \tfrac{\sqrt{3}\pi}{16} \approx \dl{34\%} &&
+		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\item \( \text{APF}_{\text{bcc}} \approx 68\%;\quad \text{APF}_{\text{sc}} \approx 52\%;\quad \text{APF}_{\text{hcp}} \approx 74\% \)
+		
+		Diamonds form by quite a margin the least dense crystal
+	\tcbline
+		\item \( \rho = 3.51 \unit{g/cm^3} \)
+		\begin{flalign*}
+			8m_{\text{C}} &= \rho V_{\text{dia}} &&\\
+			r_{\text{dia}}^3 &= \tfrac{3m_{\text{C}}}{\rho\pi4} &&\\
+			r_{\text{dia}} &= \dl{1.11 \times 10^{-10} \unit{m}} &&
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
@@ -140,8 +123,10 @@
 				\foreach \i in {1,...,11}{
 					\draw[dashed] (-4+\i, 8) -- (0+\i,0);}
 			\end{scope}
-			\draw[-latex, line width=1pt, decoration={snake}, decorate] (0, 5mm) -- ++(4,0);
-%			\draw[line width=1pt, snake=coil, segment aspect=0, shorten >= 50pt] (1in,2in) -- ++(0.375in,-0.75in);
+			\begin{scope}[every edge/.append style = {snake arrow}, shift={(-0.25, -1.5)}]
+				\draw[line width=1pt] (0.5, 1) edge (1.5,3);
+				\draw[line width=1pt] (1.5, 3) edge (-0.5,3);
+			\end{scope}
 		\end{tikzpicture}\\
 		The X-Ray gets reflected by the crystal and leaves in the negative x-Direction
 		\item \( \lambda = 1.46 \unit{\angstrom};\quad \theta = \ang{15} \)
