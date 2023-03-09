@@ -1,0 +1,94 @@
+\documentclass{alex_hü}
+
+\name{Alexander Helbok}
+\course{PS Physik}
+\hwnumber{1}
+
+
+\begin{document}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+
+
+\begin{mybox}{Einheiten der Kern- \& Teilchenphysik \& Raumwinkel}
+	\centering \(  \)
+	\tcblower
+	\begin{enumerate}
+		\item \( \Delta\phi = 1 \unit{V};\quad q_{\text{e}} = e \)
+		\begin{flalign*}
+			\Delta E &= q_{\text{e}}\Delta\phi = 1.602 \times 10^{-19} \unit{C J/C} = \dl{1.602 \times 10^{-19} \unit{J} = 1 \unit{eV}} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{enumerate}
+			\renewcommand{\labelenumii}{(\roman{enumii})}
+			\item \( m_{\text{e}} = 0.510999 \unit{MeV/c^2} = 0.510999 \frac{e}{c^2} \unit{J/C} = \dl{9.11 \times 10^{-31} \unit{kg}} \)
+			\item \( m_{\text{p}} = 938.272 \unit{MeV/c^2} = 938.272 \frac{e}{c^2} \unit{J/C} = \dl{1.67 \times 10^{-27} \unit{kg}} \)
+			\item \( m_{\text{d}} = 1875.613 \unit{MeV/c^2} = 1875.613 \frac{e}{c^2} \unit{J/C} = \dl{3.34 \times 10^{-27} \unit{kg}} \)
+		\end{enumerate}
+	\tcbline
+		\item Der Raumwinkel beschreibt das Verhältnis zwischen der Teilfläche einer Kugel zum Kugelradius \( r \) zum Quadrat.
+		\begin{flalign*}
+			\dd{\Omega} &= \tfrac{\dd{A}}{r^2} = \dl{\sin(\theta)\dd{\theta}\dd{\varphi}} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			A &= 2\pi r^2 &&\\
+			\Omega &= \tfrac{A}{r^2} = \dl{2\pi} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+\begin{mybox}{Relativistische Formel der Energie}
+	\centering \(  \)
+	\tcblower
+	\begin{enumerate}
+		\item \( p = \gamma m_0v;\quad \gamma = \tfrac{1}{\sqrt{1-\beta^2}};\quad \beta = \tfrac{v}{c};\quad F = \dv{p}{t} \)
+		\begin{flalign*}
+			E_{\text{kin}} &= \uint[0,r]{F}{r} 
+				= \uint[0,r]{\dv{p}{t}}{r} 
+				= \uint[0,r]{\dv{}{t}\left( \frac{m_0v}{\sqrt{1-\beta^2}} \right)}{r} &&
+		\end{flalign*}
+	\tcbline
+		\item \( \dd{p} = m_0\dv{(\gamma v)}{t}\dd{t} = m_0\gamma (1+\gamma^2\beta^2) \dd{v} \)
+		\begin{flalign*}
+			E_{\text{kin}} &= \uint[0,r]{\dv{p}{t}}{r} = \uint[0,p]{\dv{r}{t}}{\tilde{p}} 
+				= m_0 \uint[0,v]{\gamma \tilde{v}\left( 1 + \gamma^2\beta^2 \right)}{\tilde{v}} 
+				= \dl{m_0c^2(\gamma - 1)} &&
+		\end{flalign*}
+	\tcbline
+		\item \( \gamma \approx 1 + \tfrac{1}{2}\beta^2 \)
+		\begin{flalign*}
+			E_{\text{kin}} &= m_0c^2(\gamma - 1) \approx m_0c^2 \left( 1 + \tfrac{1}{2}\beta^2 - 1 \right) = \dl{\tfrac{m_0v^2}{2}} &&
+		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+\begin{mybox}{Streuung an harter Kugel}
+	\centering \(  \)
+	\tcblower
+	\begin{enumerate}
+		\item \(  \)
+%		\begin{flalign*}
+		%			
+%		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+	%		
+%		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+		%			
+%		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+
+\end{document}
