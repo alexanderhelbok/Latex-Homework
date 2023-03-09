@@ -34,13 +34,20 @@
 		\item \(  \)
 		\begin{flalign*}
 			A &= 2\pi r^2 &&\\
-			\Omega &= \tfrac{A}{r^2} = \dl{2\pi} &&
+			\Omega &= \tfrac{A}{r^2} 
+				= \dl{2\pi \unit{\steradian}} &&\\
+			\Omega &= 2\pi \left( \tfrac{180}{\pi} \right)^2 
+				= \dl{\tfrac{64800}{\pi} \unit{\deg\squared} 
+				= 20626.5  \unit{\deg\squared}} &&
 		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\item \( \theta = \ang{1} \)
+		\begin{flalign*}
+			A &= 2\pi r^2 \left(1 - \cos(\theta) + \tfrac{1}{2} \sin^{2}(\theta) \right) &&\\
+			\Omega &= \tfrac{A}{r^2} 
+				= 2\pi \left(1 - \cos(\theta) + \tfrac{1}{2} \sin^{2}(\theta) \right) 
+				= \dl{5.11284 \unit{sr}} &&
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
@@ -73,6 +80,23 @@
 	\centering \(  \)
 	\tcblower
 	\begin{enumerate}
+		\item \( 2\alpha + \theta = \pi;\quad R = R_1 + R_2 \)
+		\begin{flalign*}
+			\tfrac{b}{R} &= \sin(\alpha) 
+				= \sin(\tfrac{\pi}{2} - \tfrac{\theta}{2})
+				= \cos(\tfrac{\theta}{2}) &&\\
+			b &= R\cos(\tfrac{\theta}{2}) &&\\
+			\dd{b} &= -\tfrac{R}{2}\sin(\tfrac{\theta}{2}) \dd{\theta} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			\dv{\sigma}{\Omega} &= \abs{\frac{b\dd{b}}{\sin(\theta)\dd{\theta}}}
+				= \abs{\frac{\left( R\cos(\tfrac{\theta}{2}) \right) \left( -\tfrac{R}{2}\sin(\tfrac{\theta}{2}) \dd{\theta} \right)}{\sin(\theta)\dd{\theta}}}
+				= \abs{\frac{R^2\cos(\tfrac{\theta}{2})\sin(\tfrac{\theta}{2})}{2\sin(\theta)}}
+				= \dl{\frac{R^2}{4}} &&
+		\end{flalign*}
+	\tcbline
 		\item \(  \)
 %		\begin{flalign*}
 		%			
@@ -80,12 +104,7 @@
 	\tcbline
 		\item \(  \)
 %		\begin{flalign*}
-	%		
-%		\end{flalign*}
-	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-		%			
+%			
 %		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
