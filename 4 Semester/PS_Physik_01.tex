@@ -64,7 +64,7 @@
 	\tcbline
 		\item \( \dd{p} = m_0\dv{(\gamma v)}{t}\dd{t} = m_0\gamma (1+\gamma^2\beta^2) \dd{v} \)
 		\begin{flalign*}
-			E_{\text{kin}} &= \uint[0,r]{\dv{p}{t}}{r} = \uint[0,p]{\dv{r}{t}}{\tilde{p}} 
+			E_{\text{kin}} &= \uint[0,r]{\dv{p}{t}}{\tilde{r}} = \uint[0,p]{\dv{r}{t}}{\tilde{p}} 
 				= m_0 \uint[0,v]{\gamma \tilde{v}\left( 1 + \gamma^2\beta^2 \right)}{\tilde{v}} 
 				= \dl{m_0c^2(\gamma - 1)} &&
 		\end{flalign*}
@@ -98,14 +98,19 @@
 		\end{flalign*}
 	\tcbline
 		\item \(  \)
-%		\begin{flalign*}
-		%			
-%		\end{flalign*}
+		\begin{flalign*}
+			\sigma_{\text{tot}} &= \uint[0, \sigma]{}{\tilde{\sigma}} 
+				= \uint[0, \Omega]{\frac{R^2}{4}}{\tilde{\Omega}} 
+				= \frac{R^2}{4}\uint[0, \theta]{\sin(\tilde{\theta})}{\tilde{\theta}} \uint[0, 2\pi]{}{\phi} 
+				= \dl{-\frac{R^2\pi}{2} \left(\cos(\theta) - 1\right)} &&
+		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\item \( \tfrac{\pi}{2} < \theta < \tfrac{3\pi}{2} \)
+		\begin{flalign*}
+			\sigma_{\text{rück}} = \uint[\tfrac{\pi}{2}, \tfrac{3\pi}{2}]{-\frac{R^2\pi}{2} \left(\cos(\theta) - 1\right)}{\theta} 
+				= -\frac{R^2\pi}{2} \Bigg[ \sin(\theta) - \theta \Bigg]_{\tfrac{\pi}{2}}^{\tfrac{3\pi}{2}}
+				= \dl{R^2\pi(1 + \tfrac{\pi}{2})} &&
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
