@@ -94,7 +94,8 @@
 
 % --- Override \vec with an invocation of \xvec.
 \let\oldvec\vec
-\renewcommand{\vec}[1]{\xvec[]{#1}}
+\renewcommand{\vec}[1]{\mathbold{#1}}
+%\renewcommand{\vec}[1]{\xvec[]{#1}}
 % --- Define \dvec and \ddvec for dotted and double-dotted vectors.
 \newcommand{\dvec}[1]{\xvec[.]{#1}}
 \newcommand{\ddvec}[1]{\xvec[:]{#1}}

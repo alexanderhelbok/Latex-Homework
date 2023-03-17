@@ -1,0 +1,101 @@
+\documentclass{alex_hü}
+
+\name{Alexander Helbok}
+\course{PS Physik}
+\hwnumber{2}
+
+
+\begin{document}
+\renewcommand{\labelenumi}{\alph{enumi})}
+
+
+\begin{mybox}{Materiewellen und Formfaktoren}
+	\centering \(  \)
+	\tcblower
+	\begin{enumerate}
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			F(\mathbold{q}^2) &= \uint[\mathbb{R}^3]{\expo[\iu\vec{q}\vec{x} / \hbar] f(\vec{x}) }{\vec{x}} 
+				= \uint[0,2\pi]{\uint[0,\pi]{\uint[0,\infty]{\expo[\iu qr\cos(\theta) / \hbar] f(r) r^2 \sin(\theta)}{r}}{\theta}}{\varphi} &&\\
+				&= 2\pi \uint[0,\infty]{f(r)r^2 \uint[0,\pi]{\expo[\iu qr\cos(\theta) / \hbar] \sin(\theta) }{\theta}}{r} 
+				= 2\pi \uint[0,\infty]{f(r)r^2 \uint[-1,1]{\expo[\iu qru / \hbar] }{u}}{r} &&\\
+				&= 4\pi \uint[0,\infty]{f(r)r^2 \left( \expo[\iu qr / \hbar] - \expo[\iu qr / \hbar] \right) \tfrac{\hbar}{2\iu qr}}{r}
+				= 4\pi \uint[0,\infty]{\tfrac{\sin(\tfrac{qr}{\hbar})}{\tfrac{qr}{\hbar}} f(r)r^2}{r} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
+	\tcbline
+		\item \( f(r) = f_0\expo[-][ar] \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}\\
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+\begin{mybox}{Stabilstes Nuklid einer Isobare}
+	\centering \(  \)
+	\tcblower
+	\begin{enumerate}
+		\item \(  \)
+%		\begin{flalign*}
+	%			
+%		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+	%		
+%		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+		%			
+%		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+\begin{mybox}{Luminosität des LHC}
+	\centering \(  \)
+	\tcblower
+	\begin{enumerate}
+		\item \(  \)
+%		\begin{flalign*}
+		%			
+%		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+	%		
+%		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+		%			
+%		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+
+\end{document}
