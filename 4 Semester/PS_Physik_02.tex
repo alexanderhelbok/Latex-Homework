@@ -20,38 +20,55 @@
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
-			F(\mathbold{q}^2) &= \uint[\mathbb{R}^3]{\expo[\iu\vec{q}\vec{x} / \hbar] f(\vec{x}) }{\vec{x}} 
+			F(\vec{q}^2) &= \uint[\mathbb{R}^3]{\expo[\iu\vec{q}\vec{x} / \hbar] f(\vec{x}) }{\vec{x}} 
 				= \uint[0,2\pi]{\uint[0,\pi]{\uint[0,\infty]{\expo[\iu qr\cos(\theta) / \hbar] f(r) r^2 \sin(\theta)}{r}}{\theta}}{\varphi} &&\\
 				&= 2\pi \uint[0,\infty]{f(r)r^2 \uint[0,\pi]{\expo[\iu qr\cos(\theta) / \hbar] \sin(\theta) }{\theta}}{r} 
 				= 2\pi \uint[0,\infty]{f(r)r^2 \uint[-1,1]{\expo[\iu qru / \hbar] }{u}}{r} &&\\
-				&= 4\pi \uint[0,\infty]{f(r)r^2 \left( \expo[\iu qr / \hbar] - \expo[\iu qr / \hbar] \right) \tfrac{\hbar}{2\iu qr}}{r}
+				&= 4\pi \uint[0,\infty]{f(r)r^2 \left( \expo[\iu qr / \hbar] - \expo[-][\iu qr / \hbar] \right) \tfrac{\hbar}{2\iu qr}}{r}
 				= 4\pi \uint[0,\infty]{\tfrac{\sin(\tfrac{qr}{\hbar})}{\tfrac{qr}{\hbar}} f(r)r^2}{r} &&
 		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\item \( \langle r^2 \rangle = 4\pi\uint[0,\infty]{r^4f(r)}{r};\quad \tfrac{\sin(\tfrac{qr}{\hbar})}{\tfrac{qr}{\hbar}} \approx 1 + \tfrac{r^2q^2}{6\hbar^2} \)
+		\begin{flalign*}
+			F(\vec{q}^2) &\approx 4\pi \uint[0,\infty]{f(r) \left(r^2 + \tfrac{r^4q^2}{6\hbar^2} \right)}{r} 
+				= 4\pi \uint[0,\infty]{f(r)r^2}{r} + \langle r^2 \rangle \tfrac{6\hbar^2}{q^2} 
+				= 1 + \langle r^2 \rangle \tfrac{6\hbar^2}{q^2} &&\\[1em]
+			&\Rightarrow \langle r^2 \rangle = \dl{F(\vec{q}^2)\tfrac{6\hbar^2}{r^4q^2} - 1} &&
+		\end{flalign*}
 	\tcbline
 		\item \( f(r) = f_0\expo[-][ar] \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\begin{flalign*}
+			\uint[\mathbb{R}^3]{f(\vec{x})}{\vec{x}} \stackrel{!}{=} 1 
+				\quad\Longleftrightarrow\quad \uint[0,\infty]{f_0\expo[-][ar]r^2}{r} = \frac{1}{4\pi} 
+				\quad\Longleftrightarrow\quad \dl{f_0 = \frac{a^3}{8\pi}} &&
+		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\item \( F(\vec{q}^2) = \left(1+\alpha^2\right)^{-2} \)
+		\begin{flalign*}
+			F(\vec{q}^2) &= 4\pi \uint[0,\infty]{\tfrac{\sin(\tfrac{qr}{\hbar})}{\tfrac{qr}{\hbar}} f(r)r^2}{r} 
+				= \frac{\hbar a^3}{2q} \uint[0,\infty]{\sin(\tfrac{qr}{\hbar}) \expo[-][ar] r}{r} 
+				= \frac{a^4\hbar^4}{\left( a^2\hbar^2 + q^2 \right)^2} &&\\
+			&\Rightarrow \alpha(q, a) = \dl{\frac{q}{a\hbar}} &&
+		\end{flalign*}
+		Diese Ladungsverteilung beschreibt Protonen.
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}\\
+		\item \( f(r) = \begin{cases}
+			\tfrac{3}{4\pi R_0^3} \quad &\text{für } 0 \leq r \leq R_0 \\
+			0 \quad &\text{für }  R_0 < r
+		\end{cases} \)
+		\begin{flalign*}
+				F(\vec{q}^2) &= 4\pi \uint[0,\infty]{\tfrac{\sin(\tfrac{qr}{\hbar})}{\tfrac{qr}{\hbar}} f(r)r^2}{r} 
+					= 3\frac{\hbar}{qR_0^3} \uint[0,R_0]{\sin(\tfrac{qr}{\hbar}) r}{r} = &&\\
+					&= 3\frac{\sin \left(\frac{qR_0}{\hbar}\right)- \tfrac{qR_0}{\hbar} \cos \left(\frac{qR_0}{\hbar}\right)}{\tfrac{q^3R_0^3}{\hbar^3}} 
+					= 3\frac{\sin(x)- x\cos(x)}{x^3} \qquad, \text{mit } x(q) = \tfrac{qR_0}{\hbar}&&
+		\end{flalign*}
+		Diese Ladungsverteilung wird in der Natur nicht wiedergefunden, man kann schwerere Kerne aber dadurch approximieren.
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\item \( x(0) = 0 \)
+		\begin{flalign*}
+			F(0) &= \lim_{x \to 0} \left(3\frac{\sin(x)- x\cos(x)}{x^3}\right)
+				= 3\lim_{x \to 0} \left(\frac{1}{x^2}\right) && 
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
@@ -85,15 +102,7 @@
 		%			
 %		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-	%		
-%		\end{flalign*}
-	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-		%			
-%		\end{flalign*}
+		\item Die meisten pp-Wechselwirkungen fanden 2018 statt. 
 	\end{enumerate}
 \end{mybox}
 
