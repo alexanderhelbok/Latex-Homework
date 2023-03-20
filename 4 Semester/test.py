@@ -59,9 +59,9 @@ def get_dfA(A):
     dfA = df[df['A']==A]
     return dfA
 
-def plot_mass_parabola(A, Zst):
+def plot_mass_parabola(A, Zst, ax):
     dfA = get_dfA(A)
-    fig, ax = plt.subplots()
+    #fig, ax = plt.subplots()
     ax.errorbar(dfA['Z'], dfA['mass_excess'], dfA['mass_excess_unc'],
                 marker='o', capsize=4, label='Experimental')
     SEMF_mass_excess = get_SEMF_mass_excess(A, dfA['Z'])
@@ -71,16 +71,23 @@ def plot_mass_parabola(A, Zst):
                     + symbol + '}$' for Z, symbol in zip(dfA['Z'],
                                                          dfA['symbol'])]
     ax.set_xticklabels(xticklabels)
-    ax.set_xlim(Zst-3.5, Zst+3.5)
+    #ax.set_xlim(Zst-3.5, Zst+3.5)
     ax.set_xlabel('Atomic number Z')
     ax.set_ylabel('Mass excess / MeV')
     ax.legend()
-    plt.tight_layout()
-    plt.show()
+    #plt.tight_layout()
+    #plt.show()
 
-A = 67
-stable_Z = most_stable_Z(A)
-stable_symbol = df[(df['A']==A) & (df['Z']==stable_Z)].iloc[0]['symbol']
-print(f'A = {A}')
-print(f'Predicted most stable Z = {stable_Z} ({stable_symbol})')
-plot_mass_parabola(A, stable_Z)
+A1, A2 = 67, 118
+stable_Z1, stable_Z2 = most_stable_Z(A1), most_stable_Z(A2)
+stable_symbol = df[(df['A']==A1) & (df['Z']==stable_Z1)].iloc[0]['symbol']
+print(f'A = {A1}')
+print(f'Predicted most stable Z = {stable_Z1} ({stable_symbol})')
+fig, (ax1, ax2) = plt.subplots(2,1)
+plot_mass_parabola(A1, stable_Z1, ax1)
+plot_mass_parabola(A2, stable_Z2, ax2)
+#ax1.set_ylim(-80, -50)
+#ax2.set_ylim(-80, -50)
+plt.tight_layout()
+#plt.savefig("Graphics/plot1.pdf", transparent=True)
+plt.show()
