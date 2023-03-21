@@ -18,3 +18,6 @@ elif [ $mode = "push" ]; then
 elif [ $mode = "stash" ]; then
     git -C "$path" stash
 fi
+
+# Find all files containing "sync-conflict" in the name and delete them
+find . -type f -name "*sync-conflict*" -exec rm {} \;
