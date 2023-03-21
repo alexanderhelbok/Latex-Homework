@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Find all files containing "sync-conflict" in the name and delete them
-find . -type f -name "*sync-conflict*" -exec rm {} \;
+find "/home/taco/Documents/Latex HÜ" -type f -name "*sync-conflict*" -exec rm {} \;
 
 shopt -s extglob
 
