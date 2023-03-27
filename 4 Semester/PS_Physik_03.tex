@@ -31,7 +31,7 @@
 		\item \( V_{x} = \tfrac{4}{3}\pi R^3;\quad V_{p} = \tfrac{4}{3}\pi p_{\text{F}}^3 \)
 		\begin{flalign*}
 			n &= 2\tfrac{V_{x}V_{p}}{h^3} 
-				= \tfrac{4R^3p_{\text{F}}^3}{9\pi\hbar^3} 
+				= \tfrac{4R^3p_{\text{F}}^3}{9\pi\hbar^3} &&
 		\end{flalign*}
 	\tcbline
 		\item \( N = \tfrac{A}{2};\quad R = R_0A^{1/3};\quad R_0 = 1.3 \unit{\femto\meter} \)
@@ -58,20 +58,30 @@
 			&= \dl{\tfrac{3}{5}E_{\text{F}}} &&
 		\end{flalign*}
 	\tcbline
-	\item \(  \)
-%		\begin{flalign*}
-%		
-%		\end{flalign*}
+	\item \( n = \tfrac{Vp_{\text{F}}^3}{3\pi^2\hbar^3} \)
+		\begin{flalign*}
+			E_{\text{F}} &= \tfrac{p_{\text{F}}^2}{2m_{\text{n}}} 
+				= \tfrac{1}{2m_{\text{n}}} \left(\hbar\, \sqrt[3]{\tfrac{3n\pi^2}{V}} \right)^2
+				= \dl{\tfrac{\hbar^2}{2m_{\text{n}}} \left( \tfrac{3\pi^2n}{V} \right)^{2/3}} &&
+		\end{flalign*}
 	\tcbline
-	\item \(  \)
-%		\begin{flalign*}
-%		
-%		\end{flalign*}
+	\item \( E_{\text{F}} = \tfrac{\hbar^2}{2m_{\text{e}}} \left(\tfrac{9\pi Z}{4R^3}\right)^{2/3};\quad E_{\text{G}} = -\tfrac{3}{5}G\tfrac{M}{R^2};\quad E_{\text{ges}} = E_{\text{kin}} + E_{\text{G}} \)
+		\begin{flalign*}
+			\pdv{E_{\text{ges}}}{R} &= \frac{3 \left(4 G M^2 m_{\text{e}} - 3 \hbar^2 R Z \left(\frac{12\pi^2 Z^^2}{R^6}\right)^{1/3}\right)}{20 m_{\text{e}} R^2}
+				\stackrel{!}{=} 0 &&\\[2ex]
+			\Rightarrow R &= \tfrac{3\hbar^2 \sqrt[3]{3\pi^2Z^5}}{2\sqrt[3]{2}GM^2m_{\text{e}}} \propto M^{-2} &&
+		\end{flalign*}
 	\tcbline
-	\item \(  \)
-%		\begin{flalign*}
-%		
-%		\end{flalign*}
+	\item \( M_{\text{S}} = 1.99 \times 10^{30} \unit{kg};\quad Z \approx \tfrac{A}{2} \Rightarrow Z = \tfrac{M_{\text{S}}}{m_{\text{e}} + m_{\text{p}} + m_{\text{n}}} \)
+		\begin{flalign*}
+			R &= \tfrac{3\hbar^2 \sqrt[3]{3\pi^2Z^5}}{2\sqrt[3]{2}GM_{\text{S}}^2m_{\text{e}}} 
+					= \dl{7.15 \times 10^{6} \unit{m}} &&\\[2ex]
+			\rho_{\text{S}} &= \tfrac{M_{\text{S}}}{V} 
+				= \tfrac{3M_{\text{S}}}{4\pi R^3} 
+				= \dl{1.3 \times 10^{9} \unit{kg/m^3}} &&\\[2ex]
+			\rho_{\text{E}} &= 5515 \unit{kg/m^3} 
+				\approx 10^{-5} \rho_{\text{S}} &&
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
@@ -80,19 +90,12 @@
 	\tcblower
 	\begin{enumerate}
 		\item \(  \)
-%		\begin{flalign*}
-		%			
-%		\end{flalign*}
+		\begin{flalign*}
+			\Delta E &= \left[ E_{\text{B}}(\ch{^{16}O})	- E_{\text{B}}(\ch{^{17}O}) \right] - \left[ E_{\text{B}}(\ch{^{15}O})	- E_{\text{B}}(\ch{^{16}O}) \right]
+				= \dl{11.52 \unit{MeV}} &&
+		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-	%		
-%		\end{flalign*}
-	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-		%			
-%		\end{flalign*}
+		\item Protonen liegen aufgrund des Coulomb Potentials weniger tief bzw. die Energieniveaus stimmen weder in Höhe noch in Abstand mit denen von Neutronen überein. Deshalb kommt es zu einer Diskrepanz in der Energie, wenn man ein Neutron durch ein Proton ersetzt (\ch{_8^{17}O + e^{-} ->[\( \beta \)] _9^{17}F}).
 	\end{enumerate}
 \end{mybox}
 
