@@ -29,13 +29,29 @@
 			\expval{g_l \vec{j} \cdot \vec{l}}{j m_j} &= \expval{g_l \frac{1}{2}\left( \vec{j}^2 + \vec{l}^2 - \vec{s}^2 \right)}{j m_j} =&&\\
 				&= \frac{g_l}{2} \bigg[ j(j+1) + l(l+1) - s(s+1) \bigg] &&\\[2ex]
 			\expval{g_s \vec{s} \cdot \vec{j}}{j m_j} &= \expval{g_l \frac{1}{2}\left( \vec{j}^2 + \vec{s}^2 - \vec{l}^2 \right)}{j m_j} =&&\\
-				&= \frac{g_s}{2} \bigg[ j(j+1) + s(s+1) - l(l+1) \bigg] &&\\[3ex]
+				&= \frac{g_s}{2} \bigg[ j(j+1) + s(s+1) - l(l+1) \bigg] &&
 		\end{flalign*}
 		\begin{flalign*}
-			%			
-			\expval{g_l \vec{j} \cdot \vec{l} + g_s \vec{s} \cdot \vec{j}}{j m_j} &= &&\\
-			&= \expval{g_l \frac{1}{2}\left( \vec{j}^2 + \vec{l}^2 - \vec{s}^2 \right)}{j m_j} + \expval{g_s \frac{1}{2}\left( \vec{j}^2 + \vec{l}^2 - \vec{s}^2 \right)}{j m_j} &&\\
-			\frac{\expval{g_l \vec{j} \cdot \vec{l} + g_s \vec{s} \cdot \vec{j}}{j m_j}}{\expval{g_l \vec{j}^2}{j m_j}} &= 
+			&\expval{g_l \vec{j} \cdot \vec{l} + g_s \vec{s} \cdot \vec{j}}{j m_j} = 
+				\expval{g_l \vec{j} \cdot \vec{l}}{j m_j} + \expval{g_s \vec{s} \cdot \vec{j}}{j m_j} = &&\\
+			&= \frac{1}{2}\left(g_l \bigg[ j(j+1) + l(l+1) - s(s+1) \bigg] + g_s \bigg[ j(j+1) + s(s+1) - l(l+1) \bigg] \right) &&\\
+		\end{flalign*}
+		\begin{flalign*}
+			g_{\text{Kern}} &= \frac{\expval{g_l \vec{j} \cdot \vec{l} + g_s \vec{s} \cdot \vec{j}}{j m_j}}{\expval{g_l \vec{j}^2}{j m_j}} = &&\\[2ex]
+			&= \frac{g_l \big[ j(j+1) + l(l+1) - s(s+1) \big] + g_s \big[ j(j+1) + s(s+1) - l(l+1) \big]}{2j(j+1)} &&
+		\end{flalign*}
+	\tcbline
+		\item \( \Delta_{lsj} := j(j+1) + s(s+1) - l(l+1) \)
+		\begin{flalign*}
+			g_{\text{Kern}} &= g_{\text{Kern}} + g_l - g_l 
+			= g_l + \frac{g_l(-\Delta_{lsj} + 2j(j+1)) + g_s\Delta_{lsj} - g_l2j(j + 1)}{2j(j+1)} &&\\[2ex]
+			&= g_l + \frac{g_l(-\Delta_{lsj}) + g_s\Delta_{lsj}}{2j(j+1)}
+			= g_l + (g_s - g_l) \frac{\Delta_{lsj}}{2j(j+1)}
+		\end{flalign*}
+	\tcbline
+		\item \( j = l \pm \tfrac{1}{2};\quad s = \tfrac{1}{2};\quad s(s+1) = \tfrac{3}{4};\quad j(j+1) =  \)
+		\begin{flalign*}
+			g_{\text{Kern}} &= g_l \pm (g_s - g_l)\tfrac{}{} 
 		\end{flalign*}
 	\tcbline
 		\item \(  \)
@@ -45,7 +61,7 @@
 	\end{enumerate}
 \end{mybox}
 
-\begin{mybox}{}
+\begin{mybox}{Der Isospin des Deuterons}
 	\centering \(  \)
 	\tcblower
 	\begin{enumerate}
@@ -63,27 +79,52 @@
 %		\begin{flalign*}
 		%			
 %		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
-\begin{mybox}{}
-	\centering \(  \)
+\begin{mybox}{Quadrupolmoment der Kerne}
+	\vspace{-0.75cm}\begin{align*}
+		x &= ar\sin(\theta)\cos(\varphi) \\
+		y &= ar\sin(\theta)\sin(\varphi) \\
+		z &= br\cos(\theta) 
+	\end{align*}
 	\tcblower
 	\begin{enumerate}
-		\item \(  \)
-%		\begin{flalign*}
-		%			
-%		\end{flalign*}
+		\item \( \rho_{\text{el}} = \tfrac{Ze}{V} = \tfrac{3Ze}{4\pi a^2b};\quad \norm{\vec{r}}^2 = r^2 \left(a^2\sin(\theta)^2 + b^2\cos(\theta)^2 \right) \)
+		\begin{flalign*}
+			Q &= \uint[V]{\rho_{\text{el}}(\vec{r}) \left[3z^2 - \norm{\vec{r}}^2\right]}{V} 
+				= \uint[0,1]{\uint[0,2\pi]{\uint[0,\pi]{\rho_{\text{el}} a^2b r^2\sin(\theta)(3z^2 - r^2)}{\theta}}{\varphi}}{r} &&\\
+			&= 2\pi\rho_{\text{el}} ab^2 \uint[0,1]{\uint[0,\pi]{r^2\sin(\theta)(3r^2\cos(\theta)^2 - r^2)}{\theta}}{r} 
+		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-	%		
-%		\end{flalign*}
-	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-		%			
-%		\end{flalign*}
+		\item \( Q(\text{Ta}) = 6 \cdot 10^{-24} e \unit{cm^2};\quad Q(\text{Sb}) = -1.2 \cdot 10^{-24} e \unit{cm^2}  \)
+		\begin{flalign*}
+			a &= R(1+\epsilon) &&\\
+			b &= \frac{R}{\sqrt{1+\epsilon}} &&
+		\end{flalign*}
+		\begin{minipage}{0.5\textwidth}
+			$\Rightarrow a^2 - b^2 = (1 + \epsilon)^2 R^2-\frac{R^2}{1 + \epsilon} \approx 3R^2\epsilon $ 
+		\end{minipage}
 	\end{enumerate}
 \end{mybox}
 
