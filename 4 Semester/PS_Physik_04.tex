@@ -49,9 +49,15 @@
 			= g_l + (g_s - g_l) \frac{\Delta_{lsj}}{2j(j+1)}
 		\end{flalign*}
 	\tcbline
-		\item \( j = l \pm \tfrac{1}{2};\quad s = \tfrac{1}{2};\quad s(s+1) = \tfrac{3}{4};\quad j(j+1) =  \)
+		\item \( j = l \pm \tfrac{1}{2};\quad s = \tfrac{1}{2};\quad s(s+1) = \tfrac{3}{4};\quad j(j+1) = l^2 + 2l + \tfrac{3}{4} \)
 		\begin{flalign*}
-			g_{\text{Kern}} &= g_l \pm (g_s - g_l)\tfrac{}{} 
+			\frac{\Delta_{lsj}}{2j(j+1)} &= \frac{j(j+1) + s(s+1) - l(l+1)}{2j(j+1)}
+				= \frac{l^2 + 2l + \tfrac{3}{4} + \tfrac{3}{4} - l^2 - l}{2l^2 + 4l + \tfrac{3}{2}} &&\\
+			&= \frac{l + \tfrac{3}{2}}{2l^2 + 4l + \tfrac{3}{2}} 
+				= \frac{l + \tfrac{3}{2}}{\left( 2l + 1 \right) \left( l + \tfrac{3}{2} \right)} 
+				= \frac{1}{2l + 1} &&\\[4ex]
+			\Rightarrow g_{\text{Kern}} &= g_l \pm (g_s - g_l) \frac{\Delta_{lsj}}{2j(j+1)} 
+				= g_l \pm \frac{(g_s - g_l)}{2l + 1} &&
 		\end{flalign*}
 	\tcbline
 		\item \(  \)
@@ -110,21 +116,47 @@
 	\end{align*}
 	\tcblower
 	\begin{enumerate}
-		\item \( \rho_{\text{el}} = \tfrac{Ze}{V} = \tfrac{3Ze}{4\pi a^2b};\quad \norm{\vec{r}}^2 = r^2 \left(a^2\sin(\theta)^2 + b^2\cos(\theta)^2 \right) \)
+		\item \( \rho_{\text{el}} = \tfrac{Ze}{V} = \tfrac{3Ze}{4\pi a^2b};\quad \norm{\vec{r}}^2 = r^2 \left(a^2\sin[2](\theta) + b^2\cos[2](\theta) \right) \)
 		\begin{flalign*}
 			Q &= \uint[V]{\rho_{\text{el}}(\vec{r}) \left[3z^2 - \norm{\vec{r}}^2\right]}{V} 
-				= \uint[0,1]{\uint[0,2\pi]{\uint[0,\pi]{\rho_{\text{el}} a^2b r^2\sin(\theta)(3z^2 - r^2)}{\theta}}{\varphi}}{r} &&\\
-			&= 2\pi\rho_{\text{el}} ab^2 \uint[0,1]{\uint[0,\pi]{r^2\sin(\theta)(3r^2\cos(\theta)^2 - r^2)}{\theta}}{r} 
+				= \uint[0,1]{\uint[0,2\pi]{\uint[0,\pi]{\rho_{\text{el}} a^2b r^2\sin(\theta) \left[ 3z^2 - \norm{\vec{r}}^2 \right]}{\theta}}{\varphi}}{r} &&\\
+			&= 2\pi\rho_{\text{el}} ab^2 \uint[0,1]{\uint[0,\pi]{r^4\sin(\theta) \left[ -a^2\sin[2](\theta) + 2b^2\cos[2](\theta) \right]}{\theta}}{r} &&\\
+			&= 2\pi\rho_{\text{el}} ab^2 \uint[0,1]{r^4}{r}\uint[0,\pi]{\sin(\theta) \left[ -a^2\sin[2](\theta) + 2b^2\cos[2](\theta) \right]}{\theta} &&\\
+			&= \frac{2}{5}\pi\rho_{\text{el}} ab^2 \left[ -a^2\uint[0,\pi]{\sin[3](\theta)}{\theta} + 2b^2\uint[0,\pi]{\cos[2](\theta)\sin(\theta)}{\theta} \right] &&\\
+			&= \frac{2}{5}\pi\rho_{\text{el}} ab^2 \left[ -a^2\frac{4}{3} + b^2\frac{4}{3} \right] &&\\
+			&= \frac{2}{5}(b^2 - a^2) \frac{4\rho_{\text{el}}\pi a b^2}{3} &&\\
+			&= \frac{2}{5}Ze(b^2 - a^2) &&
 		\end{flalign*}
+	\( a \) und \( b \) hier vertauscht (im Vergleich zur Angabe) wegen der Parametrisierung. Können aber durch neue Parametrisierung einfach getauscht werden. Der Übersichtlichkeit halber wird in der nächsten Aufgabe die Notation aus der Angabe übernommen.
 	\tcbline
-		\item \( Q(\text{Ta}) = 6 \cdot 10^{-24} e \unit{cm^2};\quad Q(\text{Sb}) = -1.2 \cdot 10^{-24} e \unit{cm^2}  \)
-		\begin{flalign*}
-			a &= R(1+\epsilon) &&\\
-			b &= \frac{R}{\sqrt{1+\epsilon}} &&
-		\end{flalign*}
-		\begin{minipage}{0.5\textwidth}
-			$\Rightarrow a^2 - b^2 = (1 + \epsilon)^2 R^2-\frac{R^2}{1 + \epsilon} \approx 3R^2\epsilon $ 
+		\item \( Q(\text{Ta}) = 6 \cdot 10^{-24} e \unit{cm^2};\quad Q(\text{Sb}) = -1.2 \cdot 10^{-24} e \unit{cm^2}  \)\\
+		\begin{minipage}{.2\textwidth}
+			\begin{flalign*}
+				a &= R(1+\epsilon) &&\\
+				b &= \frac{R}{\sqrt{1+\epsilon}} &&
+			\end{flalign*}
+		\end{minipage}%
+		\begin{minipage}{0.15\textwidth}
+			\vspace{0.4cm}\fontsize{45}{12}\selectfont$\Rightarrow$
+		\end{minipage}%
+		\begin{minipage}{.6\textwidth}
+			\vspace{0.4cm}$a^2 - b^2 = (1 + \epsilon)^2 R^2-\frac{R^2}{1 + \epsilon} \approx 3R^2\epsilon $ 
 		\end{minipage}
+	
+		\begin{flalign*}
+			Q(\text{Ta}) &= \tfrac{2}{5}Z_{\text{Ta}}e(a^2 - b^2) 
+				\approx \tfrac{2}{5}73 e 3R^2\epsilon_{\text{Ta}}
+				= \tfrac{438}{5}e R^2\epsilon_{\text{Ta}} &&\\[2ex]
+			\Rightarrow \epsilon_{\text{Ta}} &= \tfrac{5}{438}\tfrac{Q(\text{Ta})}{eR^2} 
+				= 0.146 &&\\[4ex]
+			Q(\text{Sb}) &= \tfrac{2}{5}Z_{\text{Sb}}e(a^2 - b^2) 
+				\approx \tfrac{2}{5}51 e 3R^2\epsilon_{\text{Sb}}
+				= \tfrac{306}{5}e R^2\epsilon_{\text{Sb}} &&\\[2ex]
+			\Rightarrow \epsilon_{\text{Sb}} &= \tfrac{5}{306}\tfrac{Q(\text{Sb})}{eR^2} 
+				= -0.037 &&\\[4ex]
+			\left.\frac{a}{b}\right\vert_{\epsilon_{\text{Ta}}} &= \dl{1.227} &&\\[2ex]
+			\left.\frac{a}{b}\right\vert_{\epsilon_{\text{Sb}}} &= \dl{0.945} &&
+		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
