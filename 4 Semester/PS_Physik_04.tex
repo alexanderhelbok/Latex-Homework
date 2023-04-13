@@ -1,11 +1,14 @@
 % !TeX spellcheck = de_DE
 \documentclass{alex_hü}
-%\usepackage{braket}
+\usepackage{booktabs}
 
 \name{Alexander Helbok}
 \course{PS Physik}
 \hwnumber{4}
 
+
+\NewDocumentCommand{\p}{}{\uparrow}
+\NewDocumentCommand{\n}{}{\downarrow}
 
 \begin{document}
 \renewcommand{\labelenumi}{\alph{enumi})}
@@ -60,7 +63,7 @@
 				= g_l \pm \frac{(g_s - g_l)}{2l + 1} &&
 		\end{flalign*}
 	\tcbline
-		\item \(  \)
+		\item \( \mu_N = \tfrac{e\hbar}{2m_{\text{p}}} \)
 %		\begin{flalign*}
 %			
 %		\end{flalign*}
@@ -68,43 +71,41 @@
 \end{mybox}
 
 \begin{mybox}{Der Isospin des Deuterons}
-	\centering \(  \)
-	\tcblower
 	\begin{enumerate}
 		\item \(  \)
-%		\begin{flalign*}
-	%			
-%		\end{flalign*}
+		\begin{flalign*}
+			T_z = 1&:\ \psi_{pp} = \ket{\p\p} &&\\
+			T_z = 0&:\ \psi_{pn} = \ket{\p\n} &&\\
+			T_z = -1&:\ \psi_{nn} = \ket{\n\n} &&
+		\end{flalign*}
 	\tcbline
 		\item \(  \)
-%		\begin{flalign*}
-	%		
-%		\end{flalign*}
+		\begin{flalign*}
+			\psi(T_z = 1) &= \ket{\p\p} &&\\
+			\psi_1(T_z = 0) &= \tfrac{1}{\sqrt{2}}\left( \ket{\p\n} + \ket{\n\p} \right) &&\\
+			\psi_2(T_z = 0) &= \tfrac{1}{\sqrt{2}}\left( \ket{\p\n} - \ket{\n\p} \right) &&\\
+			\psi(T_z = -1) &= \ket{\n\n} &&
+		\end{flalign*}
 	\tcbline
 		\item \(  \)
-%		\begin{flalign*}
-		%			
-%		\end{flalign*}
+		\renewcommand{\arraystretch}{1.5}
+		\setlength{\tabcolsep}{0.3cm} 		
+		\begin{tabular}{ l l L L }
+			Symmetrie & \( \psi \) & T_z & T \\
+		\toprule
+			Antisymmetrisch & \( \psi = \tfrac{1}{\sqrt{2}}\left( \ket{\p\n} - \ket{\n\p} \right) \) & 0 & 0 \\[1em]
+			Symmetrisch & \( \psi = \ket{\p\p} \) & 1 & 1 \\
+			 & \( \psi = \tfrac{1}{\sqrt{2}}\left( \ket{\p\n} + \ket{\n\p} \right) \) & 0 & 1 \\
+			 & \( \psi = \ket{\n\n} \) & -1 & 1 
+		\end{tabular}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\item \( \ket{\Psi_{\text{Ort}}} \) is symmetrisch, da \( L = 0 \)
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\item \( \ket{\Psi_{\text{Spin}}}\ket{\Psi_{\text{Isospin}}} \) muss antisymmetrisch sein, damit \( \ket{\Psi} \) antisymmetrisch ist.
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\item Da \( S = 1 \) ist die Spin-Wellenfunktion symmetrisch, weshalb die Isospin-Wellenfunktion antisymmetrisch sein muss.
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\item 
 	\end{enumerate}
 \end{mybox}
 
@@ -129,7 +130,7 @@
 		\end{flalign*}
 	\( a \) und \( b \) hier vertauscht (im Vergleich zur Angabe) wegen der Parametrisierung. Können aber durch neue Parametrisierung einfach getauscht werden. Der Übersichtlichkeit halber wird in der nächsten Aufgabe die Notation aus der Angabe übernommen.
 	\tcbline
-		\item \( Q(\text{Ta}) = 6 \cdot 10^{-24} e \unit{cm^2};\quad Q(\text{Sb}) = -1.2 \cdot 10^{-24} e \unit{cm^2}  \)\\
+		\item \( Q(\text{Ta}) = 6 \cdot 10^{-24} e \unit{cm^2};\quad Q(\text{Sb}) = -1.2 \cdot 10^{-24} e \unit{cm^2};\quad R = 1.3 \cdot A^{\tfrac{1}{3}} \unit{fm} \)\\
 		\begin{minipage}{.2\textwidth}
 			\begin{flalign*}
 				a &= R(1+\epsilon) &&\\
@@ -140,7 +141,10 @@
 			\vspace{0.4cm}\fontsize{45}{12}\selectfont$\Rightarrow$
 		\end{minipage}%
 		\begin{minipage}{.6\textwidth}
-			\vspace{0.4cm}$a^2 - b^2 = (1 + \epsilon)^2 R^2-\frac{R^2}{1 + \epsilon} \approx 3R^2\epsilon $ 
+			\begin{flalign*} 
+				a^2 - b^2 &= (1 + \epsilon)^2 R^2-\frac{R^2}{1 + \epsilon} \approx 3R^2\epsilon &&\\
+				\frac{a}{b} &= (1 + \epsilon)^{3/2} &&
+			\end{flalign*}
 		\end{minipage}
 	
 		\begin{flalign*}
@@ -153,9 +157,9 @@
 				\approx \tfrac{2}{5}51 e 3R^2\epsilon_{\text{Sb}}
 				= \tfrac{306}{5}e R^2\epsilon_{\text{Sb}} &&\\[2ex]
 			\Rightarrow \epsilon_{\text{Sb}} &= \tfrac{5}{306}\tfrac{Q(\text{Sb})}{eR^2} 
-				= -0.037 &&\\[4ex]
+				= -0.053 &&\\[4ex]
 			\left.\frac{a}{b}\right\vert_{\epsilon_{\text{Ta}}} &= \dl{1.227} &&\\[2ex]
-			\left.\frac{a}{b}\right\vert_{\epsilon_{\text{Sb}}} &= \dl{0.945} &&
+			\left.\frac{a}{b}\right\vert_{\epsilon_{\text{Sb}}} &= \dl{0.921} &&
 		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
