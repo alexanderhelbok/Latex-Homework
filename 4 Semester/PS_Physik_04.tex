@@ -28,7 +28,7 @@
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
-			\expval{g_l \vec{j}^2}{j m_j} &= j(j+1) &&\\[2ex]
+			\expval{\vec{j}^2}{j m_j} &= j(j+1) &&\\[2ex]
 			\expval{g_l \vec{j} \cdot \vec{l}}{j m_j} &= \expval{g_l \frac{1}{2}\left( \vec{j}^2 + \vec{l}^2 - \vec{s}^2 \right)}{j m_j} =&&\\
 				&= \frac{g_l}{2} \bigg[ j(j+1) + l(l+1) - s(s+1) \bigg] &&\\[2ex]
 			\expval{g_s \vec{s} \cdot \vec{j}}{j m_j} &= \expval{g_l \frac{1}{2}\left( \vec{j}^2 + \vec{s}^2 - \vec{l}^2 \right)}{j m_j} =&&\\
@@ -40,7 +40,7 @@
 			&= \frac{1}{2}\left(g_l \bigg[ j(j+1) + l(l+1) - s(s+1) \bigg] + g_s \bigg[ j(j+1) + s(s+1) - l(l+1) \bigg] \right) &&\\
 		\end{flalign*}
 		\begin{flalign*}
-			g_{\text{Kern}} &= \frac{\expval{g_l \vec{j} \cdot \vec{l} + g_s \vec{s} \cdot \vec{j}}{j m_j}}{\expval{g_l \vec{j}^2}{j m_j}} = &&\\[2ex]
+			g_{\text{Kern}} &= \frac{\expval{g_l \vec{j} \cdot \vec{l} + g_s \vec{s} \cdot \vec{j}}{j m_j}}{\expval{\vec{j}^2}{j m_j}} = &&\\[2ex]
 			&= \frac{g_l \big[ j(j+1) + l(l+1) - s(s+1) \big] + g_s \big[ j(j+1) + s(s+1) - l(l+1) \big]}{2j(j+1)} &&
 		\end{flalign*}
 	\tcbline
@@ -52,21 +52,62 @@
 			= g_l + (g_s - g_l) \frac{\Delta_{lsj}}{2j(j+1)}
 		\end{flalign*}
 	\tcbline
-		\item \( j = l \pm \tfrac{1}{2};\quad s = \tfrac{1}{2};\quad s(s+1) = \tfrac{3}{4};\quad j(j+1) = l^2 + 2l + \tfrac{3}{4} \)
+		\item \( j = l \pm \tfrac{1}{2};\quad s = \tfrac{1}{2};\quad s(s+1) = \tfrac{3}{4};\quad j(j+1) = l^2 + 2l + \tfrac{3}{4} \)\\[3ex]
+		Für \( j = l + \frac{1}{2}: \)
 		\begin{flalign*}
 			\frac{\Delta_{lsj}}{2j(j+1)} &= \frac{j(j+1) + s(s+1) - l(l+1)}{2j(j+1)}
 				= \frac{l^2 + 2l + \tfrac{3}{4} + \tfrac{3}{4} - l^2 - l}{2l^2 + 4l + \tfrac{3}{2}} &&\\
 			&= \frac{l + \tfrac{3}{2}}{2l^2 + 4l + \tfrac{3}{2}} 
 				= \frac{l + \tfrac{3}{2}}{\left( 2l + 1 \right) \left( l + \tfrac{3}{2} \right)} 
-				= \frac{1}{2l + 1} &&\\[4ex]
+				= \frac{1}{2l + 1} &&\\[2ex]
+		\end{flalign*}
+		Für \( j = l - \frac{1}{2}: \)
+		\begin{flalign*}
+			\frac{\Delta_{lsj}}{2j(j+1)} &= \frac{j(j+1) + s(s+1) - l(l+1)}{2j(j+1)}
+				= \frac{l^2 - \tfrac{1}{4} + \tfrac{3}{4} - l^2 - l}{2l^2 - \tfrac{1}{2}} &&\\
+			&= \frac{-l + \tfrac{1}{2}}{2l^2 - \tfrac{1}{2}} 
+				= \frac{-l + \tfrac{1}{2}}{\left( -2l - 1 \right) \left( -l + \tfrac{1}{2} \right)} 
+				= -\frac{1}{2l + 1} &&\\[4ex]
 			\Rightarrow g_{\text{Kern}} &= g_l \pm (g_s - g_l) \frac{\Delta_{lsj}}{2j(j+1)} 
 				= g_l \pm \frac{(g_s - g_l)}{2l + 1} &&
 		\end{flalign*}
+		
 	\tcbline
-		\item \( \mu_N = \tfrac{e\hbar}{2m_{\text{p}}} \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\item \( g_l = \begin{cases}
+					0 \quad &\text{für Neutronen} \\
+					1 \quad &\text{für Protonen} \\
+				\end{cases};\quad 
+				g_s \approx \begin{cases}
+					−3.8263 \quad &\text{für Neutronen} \\
+					5.5858 \quad &\text{für Protonen} \\
+				\end{cases} \)\\[2ex]
+		Für \ch{^{17}O}: \\
+		Leuchtnukleon ist Neutron
+		\begin{flalign*}
+			l &= 2; j = \tfrac{5}{2} &&\\[1ex]
+			g_{\text{Kern}} &= g_l + \frac{(g_s - g_l)}{2l + 1} 
+				= \frac{g_s}{5} 
+				\approx -0.76526 &&\\[2ex]
+			\frac{\mu_{\text{Kern}}}{\mu_{N}} &= g_{\text{Kern}}j 
+				= \frac{5}{2} \frac{g_s}{5}  
+				= \frac{g_s}{2} 
+				\approx \dl{-1.91315} &&\\
+		\end{flalign*}
+		Passt gut mit dem experimentellen Wert von \( \frac{\mu_{\text{Kern}}}{\mu_{N}} = −1.894 \) zusammen. 
+	\newpage
+		Für \ch{^{17}F}: \\
+		Leuchtnukleon ist Proton
+		\begin{flalign*}
+			l &= 2; j = \tfrac{5}{2} &&\\[1ex]
+			g_{\text{Kern}} &= g_l + \frac{(g_s - g_l)}{2l + 1} 
+				= 1 + \frac{g_s - 1}{5} 
+				\approx 1.91716 &&\\[2ex]
+			\frac{\mu_{\text{Kern}}}{\mu_{N}} &= g_{\text{Kern}}j 
+				= \frac{5}{2} \left( 1 + \frac{g_s - 1}{5} \right)
+				= \frac{4 + g_s}{2} 
+				\approx \dl{4.7929} &&\\
+		\end{flalign*}
+		Passt gut mit dem experimentellen Wert von \( \frac{\mu_{\text{Kern}}}{\mu_{N}} = 4.793 \) zusammen. 
 	\end{enumerate}
 \end{mybox}
 
@@ -99,13 +140,13 @@
 			 & \( \psi = \ket{\n\n} \) & -1 & 1 
 		\end{tabular}
 	\tcbline
-		\item \( \ket{\Psi_{\text{Ort}}} \) is symmetrisch, da \( L = 0 \)
+		\item \( \ket{\Psi_{\text{Ort}}} \) ist symmetrisch, da \( \ket{\Psi_{\text{Ort}}} = Y_{\ell}^{m}(\theta ,\varphi ) \) und die Parität von \( Y_{\ell}^{m}(\theta ,\varphi ) = (-1)^{L} \) ist 1 für \( L = 0 \)
 	\tcbline
-		\item \( \ket{\Psi_{\text{Spin}}}\ket{\Psi_{\text{Isospin}}} \) muss antisymmetrisch sein, damit \( \ket{\Psi} \) antisymmetrisch ist.
+		\item \( \ket{\Psi_{\text{Spin}}}\ket{\Psi_{\text{Isospin}}} \) muss symmetrisch sein, damit \( \ket{\Psi} \) antisymmetrisch ist.
 	\tcbline
 		\item Da \( S = 1 \) ist die Spin-Wellenfunktion symmetrisch, weshalb die Isospin-Wellenfunktion antisymmetrisch sein muss.
 	\tcbline
-		\item 
+		\item Nach obigen Überlegungen folgt, dass die Isospin-Wellenfunktion antisymmetrisch mit \( T = 0 \) sein muss (Singulett-Zustand) für den Grundzustand mit \( L = 0 \). Damit Triplett Zustände auftreten, muss \( L = 1 \), was selten, aber doch vorkommt.
 	\end{enumerate}
 \end{mybox}
 
