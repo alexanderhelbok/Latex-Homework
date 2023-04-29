@@ -4,96 +4,122 @@
 \name{Alexander Helbok}
 \course{PS Physik}
 \hwnumber{6}
-
+\usepackage{booktabs}
 
 \begin{document}
-\renewcommand{\labelenumi}{\alph{enumi})}
-
-
-\begin{mybox}{Kernspaltung - “Little Boy”}
-	\centering \(  \)
-	\tcblower
-	\begin{enumerate}
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
-	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%		
-%		\end{flalign*}
-	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
-	\end{enumerate}
-\end{mybox}
-
-\begin{mybox}{Kernfusion und Gamov-Faktor}
-	\centering \(  \)
-	\tcblower
-	\begin{enumerate}
-		\item \(  \)
-%		\begin{flalign*}
-	%			
-%		\end{flalign*}
-	\tcbline
-		\item \(  \)
-		\begin{flalign*}
-			Q &= c^2(M_{\text{U}} - M_{\text{Ba}} - M_{\text{Kr}} - 3M_{\text{n}}) 
-				= \dl{166.7 \unit{MeV}} &&
-		\end{flalign*}
-	\tcbline
-		\item \( m = 0.8 \unit{kg};\quad E_{\text{TNT}} = 4.184 \unit{\mega\joule} = 2.61 \cdot 10^{19} \unit{MeV} \)
-		\begin{flalign*}
-			E_{\text{U}} &= \frac{m}{M_{\text{U}}} Q 
-				= 3.40 \cdot 10^{24} \unit{MeV} &&\\
-			\frac{E}{E_{\text{TNT}}} &= 1.3 \cdot 10^{7} &&
-		\end{flalign*}
-	\tcbline
-		\item \(  \)
-		\begin{flalign*}
-			\Delta E_{\text{TNT}} &= Q \frac{E_{\text{TNT}}}{E_{\text{U}}}
-				= \dl{12.79 \unit{eV}} &&
-		\end{flalign*}
-	\tcbline
-		\item \(  \)
-		\begin{flalign*}
-			\Delta &M = \frac{E_{\text{U}}}{c^2} 
-				= \dl{3.65 \cdot 10^{23} \unit{u}}
-				= 0.60 \unit{g} &&
-		\end{flalign*}
-	\end{enumerate}
-\end{mybox}
-
-\begin{mybox}{Energiebilanz der Sonne}
-	\centering \(  \)
-	\tcblower
-	\begin{enumerate}
-		\item \( \expval{E_{\text{p}}} = 1.3 \unit{keV};\quad \mu = \tfrac{m}{denumerator} \)
-		\begin{flalign*}
-			E_{\text{G}} &= 2\mu c^2(\alpha\pi Z_{\text{p}}^2) 
-				= m_{\text{p}}c^2 (2\alpha\pi)^2
-				= \dl{1.97 \unit{MeV}} &&\\[2ex]
-			G(E) &= \sqrt{\tfrac{ER_{\text{G}}}{\expval{E_{\text{p}}}}} 
-				= \dl{38.95} &&\\[2ex]
-			T &= \expo[-][G(R)]
-				= \dl{1.21 \cdot 10^{-17}} &&
-		\end{flalign*}
-	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-	%		
-%		\end{flalign*}
-	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
+	\renewcommand{\labelenumi}{\alph{enumi})}
+	
+	
+	\begin{mybox}{Kernspaltung - “Little Boy”}
+		\centering \(  \)
+		\tcblower
+		\begin{enumerate}
+			\item \(  \)
+	%		\begin{flalign*}
 		%			
-%		\end{flalign*}
-	\end{enumerate}
-\end{mybox}
-
-
+	%		\end{flalign*}
+		\tcbline
+			\item \(  \)
+			\begin{flalign*}
+				Q &= c^2(M_{\text{U}} - M_{\text{Ba}} - M_{\text{Kr}} - 3M_{\text{n}}) 
+					= \dl{166.7 \unit{MeV}} &&
+			\end{flalign*}
+			Es wird pro Reaktion ein Neutron benötigt, und 3 davon erzeugt. Ist die Absorption von Neutronen in der Umgebung gering genug, führt das zu einer laufenden Kettenreaktion.
+		\tcbline
+			\item \( m = 0.8 \unit{kg};\quad E_{\text{TNT}} = 4.184 \unit{\mega\joule} = 2.61 \cdot 10^{19} \unit{MeV} \)
+			\begin{flalign*}
+				E_{\text{U}} &= \frac{m}{M_{\text{U}}} Q 
+					= 3.40 \cdot 10^{24} \unit{MeV} &&\\
+					\frac{E}{E_{\text{TNT}}} &= 1.3 \cdot 10^{7} &&
+			\end{flalign*}
+		\tcbline
+			\item \(  \)
+			\begin{flalign*}
+				\Delta E_{\text{TNT}} &= Q \frac{E_{\text{TNT}}}{E_{\text{U}}}
+					= \dl{12.79 \unit{eV}} &&
+			\end{flalign*}
+		\tcbline
+			\item \(  \)
+			\begin{flalign*}
+				\Delta &M = \frac{E_{\text{U}}}{c^2} 
+					= \dl{3.65 \cdot 10^{23} \unit{u}}
+					= 0.60 \unit{g} &&
+			\end{flalign*}
+		\end{enumerate}
+	\end{mybox}
+	
+	\begin{mybox}{Kernfusion und der Gamov-Faktor}
+		\centering \(  \)
+		\tcblower
+		\begin{enumerate}
+			\item \( \expval{E_{\text{p}}} = \tfrac{3}{2}k_{\text{B}}T;\quad \mu = \tfrac{m_{\text{p}} m_{\text{p}}}{m_{\text{p}} + m_{\text{p}}} = \tfrac{m_{\text{p}}}{2} \)
+			\begin{flalign*}
+				E_{\text{G}} &= 2\mu c^2(\alpha\pi Z_{\text{p}}^2) 
+					= m_{\text{p}}c^2 (\alpha\pi)^2
+					= \dl{0.49 \unit{MeV}} &&
+			\end{flalign*}
+			\centering
+			\begin{tabular}{m{0.4\textwidth} | m{0.4\textwidth}}
+				Sonne & Antares \\
+				\midrule
+				{\begin{flalign*}
+					\expval{E_{\text{p}}} &= 1.55 \unit{keV} &&\\[1em]
+					G(E) &= \sqrt{\tfrac{E_{\text{G}}}{\expval{E_{\text{p}}}}} 
+						= \dl{17.83} &&\\[1em]
+					T &= \expo[-][G(E)]
+						= \dl{1.80 \cdot 10^{-8}} &&\\
+				\end{flalign*}} & 
+				{\begin{flalign*}
+					\expval{E_{\text{p}}} &= 21.97 \unit{keV} &&\\[1em]
+					G(E) &= \sqrt{\tfrac{E_{\text{G}}}{\expval{E_{\text{p}}}}} 
+						= \dl{4.74} &&\\[1em]
+					T &= \expo[-][G(E)]
+						= \dl{8.76 \cdot 10^{-3}} &&\\
+				\end{flalign*}}
+			\end{tabular}
+		\tcbline
+			\item \( R(E) \propto \expo[-][E/k_{\text{B}}T]\expo[-][G(E)] \)
+			\begin{flalign*}
+				\pdv{R}{E} &= \left( \tfrac{E_{\text{G}}}{2 E^2 G(E)} - \tfrac{1}{k_{\text{B}}T} \right) \expo[-][E/k_{\text{B}}T]\expo[-][G(E)]
+					\stackrel{!}{=} 0 &&\\[2ex]
+				\Rightarrow & \tfrac{E_{\text{G}}}{2 E_0^2 G(E_0)} = \tfrac{1}{k_{\text{B}}T} 
+					\quad\Leftrightarrow\quad E_0^2\sqrt{\tfrac{E_{\text{G}}}{E_0}} = \tfrac{E_{\text{G}} k_{\text{B}} T}{2}
+					\quad\Leftrightarrow\quad E_0 = \sqrt[3]{\tfrac{E_{\text{G}} k_{\text{B}}^2 T^2}{4}} &&\\[4ex]
+				E_0^{\text{Sonne}} &= \dl{5.09 \unit{keV}} &&\\[2ex]
+				E_0^{\text{Antares}} &= \dl{29.80 \unit{keV}} &&
+			\end{flalign*}
+		\end{enumerate}
+	\end{mybox}
+	
+	
+	\begin{mybox}{Energiebilanz der Sonne}
+		\centering \ch{4 _1^1H -> ^4_2He + \( 2 e^+ + 2 \nu_{\( e \)} + 2 \gamma \)}
+		\tcblower
+		\begin{enumerate}
+			\item \(  \)
+			\begin{flalign*}
+				\Delta E &= 4M_{\text{H}} - M_{\text{He}} 
+					= \dl{26.73 \unit{Mev}} &&
+			\end{flalign*}
+			Die Energie wird in Form von Neutrinos, elektromagentischer Strahlung und Sekundärstrahlung nach Elektron-Positron Annihilation freigesetzt. 
+		\tcbline
+			\item \( E_0 = 1.361 \unit{kW\per m^2};\quad A_{\text{Erde}} = r^2\pi;\quad P_{\text{Erde}} = AE_0 \)
+			\begin{flalign*}
+				P_{\text{ges}} &= P_{\text{Erde}}\tfrac{A}{4d^2\pi}
+					= A^2E_0 \tfrac{r^2}{4d^2} 
+					= \dl{78.69 \unit{MW}} &&
+			\end{flalign*}
+		\tcbline	
+			\item \(  \)
+			\begin{flalign*}
+				E_{\text{ges}} &= \tfrac{M_{\text{Sonne}}}{4M_{\text{H}}} \Delta E &&\\[2ex]
+				t &= \tfrac{E_{\text{ges}}}{5P_{\text{ges}}}
+					= \dl{3.23 \cdot 10^{36} \unit{s}}
+					\approx 10^{29} \unit{a} &&
+			\end{flalign*}
+		\end{enumerate}
+	\end{mybox}
+	
 \end{document}
+
+		
