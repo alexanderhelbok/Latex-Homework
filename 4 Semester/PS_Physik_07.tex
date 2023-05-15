@@ -21,25 +21,33 @@
 		\end{flalign*}
 	\tcbline
 		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\begin{flalign*}
+			E_{\text{kin}} &= \gamma m_0c^2 - m_0c^2
+				\stackrel{!}{=} 1.31 \unit{MeV} &&\\[2ex]
+			\gamma &= \tfrac{1.31 \unit{MeV}}{m_0c^2} + 1 
+				= \dl{1.944} &&\\[3ex]
+			\gamma &= \tfrac{1}{\sqrt{1 - \tfrac{v^2}{c^2}}} &&\\
+			v &= c \sqrt{1 - \tfrac{1}{\gamma^2}}
+				= \dl{2.57 \cdot 10^{8} \unit{\v}}
+				= 0.858 \unit{c} &&
+		\end{flalign*}
 	\tcbline
 		\item \ch{^{40}K ->[\( \beta+ \)] ^{40}Ar + e+ + \( \nu_{\text{e}} \)}
 		\begin{flalign*}
-			Q &= (M_{\text{K}} - M_{\text{Ar}})c^2
-			= \dl{1.50 \unit{MeV}} &&
+			Q &= (M_{\text{K}} - M_{\text{Ar}} - 2M_{\text{e}})c^2
+			= \dl{0.48 \unit{MeV}} &&
+		\end{flalign*}
+		Wenn man aber berücksichtigt, dass das Positron mit dem ungebundenen Hüllenelektron annihiliert werden wieder \( 1.5 \unit{meV} \) an Energie frei.
+	\tcbline
+		\item \ch{^{40}K ->[EC] ^{40}Ar^* + \( \nu_{\text{e}} \) -> ^{40}Ar + \( \gamma \) + \( \nu_{\text{e}} \)}
+		\begin{flalign*}
+			E_{\nu} &= c^2(M_{\text{K}} - M_{\text{Ar}}) - E_{\gamma}
+				= \dl{44.4 \unit{keV}} &&
 		\end{flalign*}
 	\tcbline
-		\item \ch{^{40}K + e- ->[EC] ^{40}Ar^* + \( \nu_{\text{e}} \) -> ^{40}Ar + \( \gamma \) + \( \nu_{\text{e}} \)}
+		\item \( m = 2.3 \unit{g/kg};\quad M = 70 \unit{kg};\quad p = 0.00012;\quad N_0 = \tfrac{mM}{M_{\text{K}}}p \)
 		\begin{flalign*}
-			E_{\nu} &= c^2(M_{\text{K}} + M_{\text{e}} - M_{\text{Ar}}) - E_{\gamma}
-				= \dl{0.5 \unit{MeV}} &&
-		\end{flalign*}
-	\tcbline
-		\item \( m = 2.3 \unit{g/kg};\quad M = 70 \unit{kg};\quad N = \tfrac{mM}{M_{\text{K}}}p \)
-		\begin{flalign*}
-			A &= N\lambda 
+			A &= N_0\lambda 
 				= \dl{5127.35 \unit{Bq}} &&
 		\end{flalign*}
 	\tcbline
@@ -48,10 +56,7 @@
 %			
 %		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
+		\item Reiner E2 Zerfall, da 
 	\end{enumerate}
 \end{mybox}
 
@@ -61,7 +66,7 @@
 	\begin{enumerate}
 		\item Für \( \theta = \ang{0} \), ist \( E_1 = E_0 \). Das heißt, dass die Energie vom Neutron zur Gänze auf das Atom übertragen wird und daher das Neutron keine kinetische Energie mehr besitzt.
 	\tcbline
-		\item \( m = 1;\quad M = A;\quad \expval{\cos(\theta)} = 0 \)
+		\item \( m = 1;\quad M = A;\quad \expval{\cos(\theta)} = 0,\ \theta \in [-\pi, \pi) \)
 		\begin{flalign*}
 			\expval{\tfrac{\Delta E_n}{E_n}} &= \expval{\tfrac{E_n - E_n'}{E_n}}
 				= 1 - \expval{\tfrac{E_n'}{E_n}}
