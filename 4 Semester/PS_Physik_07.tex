@@ -1,0 +1,89 @@
+% !TeX spellcheck = de_DE
+\documentclass{alex_hü}
+
+\name{Alexander Helbok}
+\course{PS Physik}
+\hwnumber{1}
+
+
+\begin{document}
+\renewcommand{\labelenumi}{\alph{enumi})}
+
+
+\begin{mybox}{Beta-Zerfälle von Kalium-40}
+	\centering \(  \)
+	\tcblower
+	\begin{enumerate}
+		\item \ch{^{40}K ->[\( \beta- \)] ^{40}Ca + e- + \( \overline{\nu}_{\text{e}} \)}
+		\begin{flalign*}
+			Q &= (M_{\text{K}} - M_{\text{Ca}})c^2
+				= \dl{1.31 \unit{MeV}} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
+	\tcbline
+		\item \ch{^{40}K ->[\( \beta+ \)] ^{40}Ar + e+ + \( \nu_{\text{e}} \)}
+		\begin{flalign*}
+			Q &= (M_{\text{K}} - M_{\text{Ar}})c^2
+			= \dl{1.50 \unit{MeV}} &&
+		\end{flalign*}
+	\tcbline
+		\item \ch{^{40}K + e- ->[EC] ^{40}Ar^* + \( \nu_{\text{e}} \) -> ^{40}Ar + \( \gamma \) + \( \nu_{\text{e}} \)}
+		\begin{flalign*}
+			E_{\nu} &= c^2(M_{\text{K}} + M_{\text{e}} - M_{\text{Ar}}) - E_{\gamma}
+				= \dl{0.5 \unit{MeV}} &&
+		\end{flalign*}
+	\tcbline
+		\item \( m = 2.3 \unit{g/kg};\quad M = 70 \unit{kg};\quad N = \tfrac{mM}{M_{\text{K}}}p \)
+		\begin{flalign*}
+			A &= N\lambda 
+				= \dl{5127.35 \unit{Bq}} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+\begin{mybox}{Wechselwirkung von Neutronen in Materie}
+	\centering \( E_n' = E_n \left[1 - \tfrac{2mM}{(m + M)^2}\left(1 - \cos(\theta) \right) \right] \)
+	\tcblower
+	\begin{enumerate}
+		\item Für \( \theta = \ang{0} \), ist \( E_1 = E_0 \). Das heißt, dass die Energie vom Neutron zur Gänze auf das Atom übertragen wird und daher das Neutron keine kinetische Energie mehr besitzt.
+	\tcbline
+		\item \( m = 1;\quad M = A;\quad \expval{\cos(\theta)} = 0 \)
+		\begin{flalign*}
+			\expval{\tfrac{\Delta E_n}{E_n}} &= \expval{\tfrac{E_n - E_n'}{E_n}}
+				= 1 - \expval{\tfrac{E_n'}{E_n}}
+				= 1 - \expval{1 - \frac{2mM}{(m + M)^2}\bigg(1 - \cos(\theta) \bigg)} &&\\[3ex]
+			&= 1 - \expval{1 - \frac{2A}{(A + 1)^2}\bigg(1 - \cos(\theta) \bigg)}
+				= 1 - \expval{1 - \frac{2A}{(A + 1)^2}} 
+				= \dl{\frac{2A}{(A + 1)^2}} &&
+		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+\begin{mybox}{Kernreaktionen in der Erdatmosphäre und der Sonne}
+	\centering \(  \)
+	\tcblower
+	\begin{enumerate}
+		\item 
+	\tcbline
+		\item “The energy losses to radiation always overcompensate the gains due to the reactions.” Sprich die angeregten Kerne in der Atmosphäre strahlen ihre Energie schnell wieder ab, sodass es zu keiner stabilen (sich erhaltenden) Kernfusion kommen kann.
+	\tcbline
+		\item \ch{^{16}O} ist ein doppeltmagischer Kern, also ein sehr stabiler mit höherer Bindungsenergie im Vergleich zu seine Nachbarn in der Nuklidkarte. Deshalb wird zuerst Neon fusioniert, bevor es zum Sauerstoffbrennen kommt.
+	\end{enumerate}
+\end{mybox}
+
+
+\end{document}
