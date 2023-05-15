@@ -19,7 +19,7 @@
 \RequirePackage{graphicx}
 \RequirePackage{listings} %env ignores LATEX commands, keeping all the line breaks (for printing code)
 \RequirePackage{hyperref}
-\RequirePackage{bookmark}
+\RequirePackage{bookmark, booktabs}
 \RequirePackage{custom}
 \RequirePackage{tikz, pgfplots}
 \usetikzlibrary{arrows.meta,positioning, calc, shapes, math, decorations.pathreplacing, decorations.markings}
