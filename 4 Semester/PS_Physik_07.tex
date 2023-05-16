@@ -73,10 +73,10 @@
 \end{mybox}
 
 \begin{mybox}{Wechselwirkung von Neutronen in Materie}
-	\centering \( E_n' = E_n \left[1 - \tfrac{2mM}{(m + M)^2}\left(1 - \cos(\theta) \right) \right] \)
+	\centering \( E_1 = E_0 \left[1 - \tfrac{2mM}{(m + M)^2}\left(1 - \cos(\theta) \right) \right] \)
 	\tcblower
 	\begin{enumerate}
-		\item Für \( \theta = \ang{0} \), ist \( E_n' = E_n \). Das heißt, dass die Energie vom Neutron zur Gänze auf das Atom übertragen wird und daher das Neutron keine kinetische Energie mehr besitzt.
+		\item Für \( \theta = \pi \), ist \( \tfrac{E_1}{E_0} = 1 - \tfrac{4mM}{(m + M)^2} \approx 98 \% \) 
 	\tcbline
 		\item \( m = 1;\quad M = A;\quad \expval{\cos(\theta)} = 0,\ \theta \in [-\pi, \pi) \)
 		\begin{flalign*}
@@ -85,7 +85,10 @@
 				= 1 - \expval{1 - \frac{2mM}{(m + M)^2}\bigg(1 - \cos(\theta) \bigg)} &&\\[3ex]
 			&= 1 - \expval{1 - \frac{2A}{(A + 1)^2}\bigg(1 - \cos(\theta) \bigg)}
 				= 1 - \expval{1 - \frac{2A}{(A + 1)^2}} 
-				= \dl{\frac{2A}{(A + 1)^2}} &&
+				= \dl{\frac{2A}{(A + 1)^2}} &&\\[2ex]
+			\expval{\tfrac{E_n'}{E_n}}_{\ch{^{238}U}} &= \expval{1 - \frac{2A}{(A + 1)^2}\bigg(1 - \cos(\theta) \bigg)} 
+				= 1 - \frac{476}{239^2} 
+				\approx \dl{99 \%} &&
 		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
