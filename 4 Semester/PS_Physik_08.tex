@@ -103,33 +103,40 @@
 			};
 			
 %			main particle
-			\draw[thick, -Latex] 
+			\draw[thick, -Latex, green] 
 			(m-3-1) edge (m-3-2) 
 			(m-3-2) edge (m-3-3)
 			(m-3-3) edge (m-3-4) 
 			(m-3-4) edge (m-3-5);
 %			photons
-			\draw[thick, -Latex, snake arrow] (m-3-2) -- (m-5-3);
-			\draw[thick, -Latex, snake arrow] (m-3-3) -- (m-2-4);
-			\draw[thick, -Latex, snake arrow] (m-3-4) -- (m-4-5);
-			\draw[thick, -Latex, snake arrow] (m-5-4) -- (m-6-5);
-			\draw[thick, -Latex, snake arrow] (m-7-4) -- (m-7-5);
+			\draw[thick, -Latex, snake arrow, blue] (m-3-2) -- (m-5-3);
+			\draw[thick, -Latex, snake arrow, blue] (m-3-3) -- (m-2-4);
+			\draw[thick, -Latex, snake arrow, blue] (m-3-4) -- (m-4-5);
+			\draw[thick, -Latex, snake arrow, blue] (m-5-4) -- (m-6-5);
+			\draw[thick, -Latex, snake arrow, blue] (m-7-4) -- (m-7-5);
 %			secondary particle
-			\draw[thick, -Latex] 
+			\draw[thick, -Latex, green] 
 			(m-2-4) edge (m-2-5) 
-			(m-2-4) edge (m-1-5)
 			(m-5-3) edge (m-5-4) 
-			(m-5-4) edge (m-5-5)
+			(m-5-4) edge (m-5-5);
+			\draw[thick, -Latex, red] 
+			(m-2-4) edge (m-1-5)
 			(m-5-3) edge (m-7-4) 
 			(m-7-4) edge (m-8-5);
 			
 			\draw[Latex-Latex] (-1,-2) -- (0,-2) node [midway, above] {\( X_0 \)};
+			
+			\draw[thick, -Latex, green] (5,0) -- (6,0) node [pos=0, left] {\( e^- \)};
+			\draw[thick, -Latex, red] (5,-0.5) -- (6,-0.5) node [pos=0, left] {\( e^+ \)};
+			\draw[thick, -Latex, blue, snake arrow] (5,0.5) -- (6,0.5) node [pos=0, left] {\( \gamma \)};
 		\end{tikzpicture}
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
 			E_{n \cdot X_0} &= \tfrac{E_0}{2^n} &&\\
-			X_{\text{max}} &= \tfrac{\ln(\tfrac{E_0}{E_c})}{\ln(2)} X_0 &&
+			X_{\text{max}} &= \tfrac{\ln(\tfrac{E_0}{E_c})}{\ln(2)} X_0 &&\\[2ex]
+			N_n &= N_{n-1} + 2N_{n-2} 
+				= \dl{\tfrac{2}{3}2^n + \tfrac{1}{3}(-1)^n} &&
 		\end{flalign*}
 	\tcbline
 		\item \( E_c = 84 \unit{MeV};\quad E_1 = 1 \unit{TeV};\quad E_2 = 10^8 \unit{TeV} \)
