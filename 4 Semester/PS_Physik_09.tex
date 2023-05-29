@@ -1,0 +1,101 @@
+% !TeX spellcheck = de_DE
+\documentclass{alex_hü}
+
+%\usepackage[mtpscr,mtpccal]{mtpro2}
+
+\name{Alexander Helbok}
+\course{PS Physik}
+\hwnumber{9}
+
+\NewDocumentCommand{\g}{}{g_{\mu\nu}}
+\NewDocumentCommand{\lam}{}{\Lambda_{\mu}^{\nu'}}
+\RenewDocumentCommand{\P}{m}{\mathscr{P}^{#1}}
+
+\begin{document}
+\renewcommand{\labelenumi}{\alph{enumi})}
+
+
+\begin{mybox}{Relativistik und invariante Masse}
+	\centering \( \P{\mu} = (E/c, p^{\mu});\quad \P{\nu'} = \lam\P{\mu} \)
+	\tcblower
+	\begin{enumerate}
+		\item \(  \)
+		\begin{flalign*}
+			\braket{\P{}}{\P{}} &= \P{\mu}\P{\nu}\g
+				= \tfrac{E^2}{c^2} - p_x^2 - p_y^2 - p_z^2 
+				= \tfrac{E^2}{c^2} - p^2 &&\\[2ex]
+			\braket{\P{'}}{\P{'}} &= \lam\P{\mu}\lam\P{\nu}\g
+				= (\gamma\tfrac{E}{c} + \gamma\beta p_x)^2 - (\gamma\beta\tfrac{E}{c} + \gamma p_x)^2 - p_y^2 - p_z^2 &&\\
+			&= (\gamma^2 - \gamma^2\beta^2)\tfrac{E^2}{c^2} - (\gamma^2 - \gamma^2\beta^2)p_x^2 - p_y^2 - p_z^2 &&\\
+			&= \tfrac{E^2}{c^2} - p_x^2 - p_y^2 - p_z^2 
+				= \tfrac{E^2}{c^2} - p^2 &&
+		\end{flalign*}
+	\tcbline
+		\item \( \P{\mu} = (E/c, p^{\mu}) = (m_0c, 0) \)
+		\begin{flalign*}
+			\braket{\P{}}{\P{}} &= m_0^2c^2 
+				\stackrel{a)}{=} \tfrac{E^2}{c^2} - p^2 &&\\[2ex]
+			\Rightarrow E^2 &= p^2c^2 - m_0^2c^4 &&
+		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+\begin{mybox}{Pionen-Erzeugung}
+	\centering \( \P{\mu}_{p1} = (m_p c, 0);\quad \P{\mu}_{p2} = (E/c, p^{\mu});\quad \P{\mu}_{\pi} = (m_{\pi}c, 0)  \)
+	\tcblower
+%	
+\end{mybox}
+
+\begin{mybox}{Teilchenzerfall im Laborsystem}
+	\centering \(  \)
+	\tcblower
+	\begin{enumerate}
+		\item \(  \)
+		\begin{tabular}{c | c}
+			Schwerpunktsystem & Laborsystem \\
+			\begin{tikzpicture}
+				\draw[-Latex] (0, 0) -- (0, 1) node [midway, right] {\( \pi^- \)};
+				\draw[-Latex] (0, 0) -- (0, -1) node [midway, right] {\( p \)};
+				\filldraw[black] (0,0) circle (2pt) node [left] {\( \Delta^0 \)};
+			\end{tikzpicture} & 
+			\begin{tikzpicture}
+				\draw[-Latex] (0, 0) -- (1, 0) node [midway, above] {\( \Delta^0 \)};
+				\draw[-Latex] (1, 0) -- (2, 1) node [pos=0.7, below right] {\( p \)};
+				\draw[-Latex] (1, 0) -- (2, -1) node [pos=0.7, above right] {\( \pi^- \)};
+			\end{tikzpicture}
+		\end{tabular}
+	\tcbline
+		\item \( E_{\Delta} = 1.35 \unit{GeV} \)
+		\begin{flalign*}
+			E_{\Delta} &= \gamma m_{\Delta}c^2
+				= \frac{m_{\Delta}c^2}{\sqrt{1-\beta^2}} &&\\[2ex]
+			\Rightarrow \beta &= \sqrt{1 - \frac{m_{\Delta}^2c^4}{E_{\Delta}^2}}
+				= \dl{} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			\P{\mu}_{p} &= () &&\\
+			\P{\mu}_{\pi} &= () &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			\P{\nu'}_{p} &= \lam\P{\mu}_{p} = () &&\\
+			\P{\nu'}_{\pi} &= \lam\P{\mu}_{\pi} = () &&\\
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%		
+%		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+
+\end{document}
