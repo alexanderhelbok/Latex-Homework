@@ -117,6 +117,8 @@
 \setlength{\parindent}{0.0in}
 \setlength{\parskip}{0.05in}
 
+\setlength{\jot}{2ex}
+
 % define customizeable variables
 \newcommand*{\name}[1]{\newcommand*\Name{#1}}
 \newcommand*{\hwnumber}[1]{\newcommand*\Hwnumber{#1}}

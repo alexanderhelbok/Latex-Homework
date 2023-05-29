@@ -1,8 +1,6 @@
 % !TeX spellcheck = de_DE
 \documentclass{alex_hü}
 
-%\usepackage[mtpscr,mtpccal]{mtpro2}
-
 \name{Alexander Helbok}
 \course{PS Physik}
 \hwnumber{9}
@@ -10,6 +8,7 @@
 \NewDocumentCommand{\g}{}{g_{\mu\nu}}
 \NewDocumentCommand{\lam}{}{\Lambda_{\mu}^{\nu'}}
 \RenewDocumentCommand{\P}{m}{\mathscr{P}^{#1}}
+\NewDocumentCommand{\mpro}{}{m_{\text{p}}}
 
 \begin{document}
 \renewcommand{\labelenumi}{\alph{enumi})}
@@ -35,15 +34,21 @@
 		\begin{flalign*}
 			\braket{\P{}}{\P{}} &= m_0^2c^2 
 				\stackrel{a)}{=} \tfrac{E^2}{c^2} - p^2 &&\\[2ex]
-			\Rightarrow E^2 &= p^2c^2 - m_0^2c^4 &&
+			\Rightarrow E^2 &= p^2c^2 + m_0^2c^4 &&
 		\end{flalign*}
 	\end{enumerate}
 \end{mybox}
 
 \begin{mybox}{Pionen-Erzeugung}
-	\centering \( \P{\mu}_{p1} = (m_p c, 0);\quad \P{\mu}_{p2} = (E/c, p^{\mu});\quad \P{\mu}_{\pi} = (m_{\pi}c, 0)  \)
+	\centering \( \P{\mu}_{p1} = (\mpro, 0);\quad \P{\mu}_{p2} = (E, p^{\mu});\quad \P{\mu}_{\pi} = (m_{\pi}, 0)  \)
 	\tcblower
-%	
+	\begin{align*}
+		(\P{\mu}_{p1} + \P{\mu}_{p2})(\P{\nu}_{p1} + \P{\nu}_{p2})\g &= (2\P{\mu}_{p1} + \P{\mu}_{\pi})(2\P{\nu}_{p1} + \P{\nu}_{\pi})\g \\
+		E^2 + 2E\mpro + \mpro^2 - p^2 &= (m_\pi + 2\mpro)^2 \\
+		p^2 + \mpro^2 + 2E\mpro + \mpro^2 - p^2 &= (m_\pi + 2\mpro)^2 \\
+		\gamma\mpro + \mpro &= \tfrac{(m_\pi + 2\mpro)^2}{2\mpro} \\
+		T = (\gamma - 1)\mpro c^2 &= (\tfrac{(m_\pi + 2\mpro)^2}{2\mpro} - 2\mpro)c^2 = \dl{279.66 \unit{MeV}} 
+	\end{align*}
 \end{mybox}
 
 \begin{mybox}{Teilchenzerfall im Laborsystem}
@@ -60,8 +65,15 @@
 			\end{tikzpicture} & 
 			\begin{tikzpicture}
 				\draw[-Latex] (0, 0) -- (1, 0) node [midway, above] {\( \Delta^0 \)};
-				\draw[-Latex] (1, 0) -- (2, 1) node [pos=0.7, below right] {\( p \)};
-				\draw[-Latex] (1, 0) -- (2, -1) node [pos=0.7, above right] {\( \pi^- \)};
+				\draw[-Latex] (1, 0) -- (3, 1) node [pos=0.3, above left] {\( p \)};
+				\draw[-Latex] (1, 0) -- (2, -1) node [pos=0.7, below left] {\( \pi^- \)};
+				\draw[dashed] (1, 0) -- (4, 0);
+				
+				\draw (2.6, 0) arc (0:27:1.6);
+				\node[above] at (2,0) {\small$\theta$};
+				
+				\draw (2.2, 0) arc (0:-45:1.2);
+				\node[below] at (1.8, -0.1) {\small$\varphi$};
 			\end{tikzpicture}
 		\end{tabular}
 	\tcbline
@@ -70,30 +82,32 @@
 			E_{\Delta} &= \gamma m_{\Delta}c^2
 				= \frac{m_{\Delta}c^2}{\sqrt{1-\beta^2}} &&\\[2ex]
 			\Rightarrow \beta &= \sqrt{1 - \frac{m_{\Delta}^2c^4}{E_{\Delta}^2}}
-				= \dl{} &&
+				= \dl{0.41} &&
+		\end{flalign*}
+	\tcbline
+		\item \( E_1 = \tfrac{(m_0^2 + m_1^2 - m_2^2)c^2}{2m_0} \)
+		\begin{flalign*}
+			\P{\mu}_{p} &= (0.97, 0, 0.23, 0) \unit{GeV/c} &&\\
+			\P{\mu}_{\pi} &= (0.27, 0, -0.23, 0) \unit{GeV/c} &&
 		\end{flalign*}
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
-			\P{\mu}_{p} &= () &&\\
-			\P{\mu}_{\pi} &= () &&
+			\P{\nu'}_{p} &= \lam\P{\mu}_{p} = (1.06, 0.12, 0.23, 0) \unit{GeV/c} &&\\
+			\P{\nu'}_{\pi} &= \lam\P{\mu}_{\pi} = (0.29, 0.43, -0.23, 0) \unit{GeV/c} &&\\[4ex]
+			\P{\nu'}_{p} &+ \P{\nu'}_{\pi} = (1.35, 0.55, 0, 0) \unit{GeV/c} = \P{\nu'}_{\Delta} &&
 		\end{flalign*}
 	\tcbline
 		\item \(  \)
 		\begin{flalign*}
-			\P{\nu'}_{p} &= \lam\P{\mu}_{p} = () &&\\
-			\P{\nu'}_{\pi} &= \lam\P{\mu}_{\pi} = () &&\\
+			\theta &= \arctan(\frac{\P{2'}_p}{\P{1'}_p})
+				= \dl{\ang{27.71}} &&\\
+			\varphi &= \arctan(\frac{\P{2'}_\pi}{\P{1'}_\pi})
+				= \dl{\ang{62.26}} &&\\	
+			\theta &+ \varphi = \ang{89.97} &&
 		\end{flalign*}
 	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%			
-%		\end{flalign*}
-	\tcbline
-		\item \(  \)
-%		\begin{flalign*}
-%		
-%		\end{flalign*}
+		\item Im Schwerpunktsystem sind die Impulse der Teilchen betragsmäßig gleich, was bedeutet, dass das Proton aufgrund seiner geringeren Masse schneller ist als das Pion. Die Transformation ins Laborsystem beeinflusst die vertikale Komponente des Impulses nicht, wodurch das Proton auch im Laborsystem das schnellere Teilchen ist (die x-Komponenten der Geschwindigkeit sind nach gemeinsamer Lorentz-Trafo gleich).
 	\end{enumerate}
 \end{mybox}
 
