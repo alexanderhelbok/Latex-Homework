@@ -1,0 +1,139 @@
+% !TeX spellcheck = de_DE
+\documentclass{alex_hü}
+
+\name{Alexander Helbok}
+\course{PS Physik}
+\hwnumber{11}
+
+\NewDocumentCommand{\Pe}{O{\mu} O{1}}{\mathscr{P}_{#2}^{#1}}
+\NewDocumentCommand{\Pp}{O{\mu} O{2}}{\mathscr{P}_{#2}^{#1}}
+\NewDocumentCommand{\Pee}{O{\mu}}{\mathscr{P}_{3}^{#1}}
+\NewDocumentCommand{\Ppp}{O{\mu}}{\mathscr{P}_{4}^{#1}}
+
+\NewDocumentCommand{\me}{}{m_{\text{e}}}
+\NewDocumentCommand{\mP}{}{m_{\text{p}}}
+
+\begin{document}
+\renewcommand{\labelenumi}{\alph{enumi})}
+
+
+\begin{mybox}{Elastische und tief-inelastische Elektron-Nukleonstreuung}
+	\centering \( \Pe = (E_1, \vec{p_1});\quad \Pp = (\mP, \vec{0});\quad \Pee = (E_3, \vec{p_3});\quad \Ppp = (E_4, \vec{p_4}) \)
+	\tcblower
+	\begin{enumerate}
+		\item \( \Pe + \Pp = \Pee + \Ppp \quad\Longleftrightarrow\quad \Pe - \Pee = \Ppp - \Pp \)
+		\begin{align*}
+			(\Pe - \Pee)^2 &= (\Ppp - \Pp)^2 &&\\
+			(E_1 - E_3)^2 - (\vec{p_1} - \vec{p_3})^2 &= (E_4 - \mP)^2 - \vec{p_4}^2 &&\\
+			E_1^2 - 2E_1E_3 + E_3^2 - E_1^2 + 2\vec{p_1}\vec{p_3} - E_3^2 &= E_4^2 - 2E_4\mP + \mP^2 - \vec{p_4}^2 &&\\
+			-2E_1E_3 + 2p_1p_3\cos(\theta) &= -2E_4\mP + 2\mP^2 &&\\
+			E_1E_3(\cos(\theta) - 1) &= \mP^2 - (E_1 + \mP - E_3)\mP &&\\
+		\end{align*}
+		\begin{flalign*}
+			\Rightarrow E_3 &= \frac{E_1\mP}{E_1 + m_p - E_1\cos(\theta)} = \dl{374 \unit{MeV}} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			q^2 &= (\Pe - \Pee)^2
+				= 2E_1E_3(\cos(\theta) - 1) &&\\
+			Q &= \sqrt{-q^2}
+				= \sqrt{-2E_1E_3(\cos(\theta) - 1)}
+				= \dl{542 \unit{MeV}} &&
+		\end{flalign*}
+	\tcbline
+		\item \( E_4 = E_1 - E_3 + m_p;\quad \vec{p_4} = \sqrt{(E_1 - E_3\cos(\theta))^2 + E_3^2\sin(\theta)^2} \)
+		\begin{flalign*}
+			\beta &= \frac{p}{E}
+				= \dl{0.52} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			x &= \tfrac{Q^2}{2\mP(E_1 - E_3)}
+				= \dl{1} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			x &= \tfrac{Q^2}{2\mP(E_1 - E_3)}
+				= \dl{0.40} &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			W^2 &= p_4^2 
+				= (E_1 - E_3\cos(\theta))^2 + E_3^2\sin(\theta)^2
+				= \dl{0.318 \unit{GeV^2}} &&
+		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+\begin{mybox}{Zentraler relativistischer Stoß und Bethe-Bloch-Formel}
+	\centering \( \Pe = (E_1, \vec{p_1}),\quad \Pp = (\me, \vec{0}) \)
+	\tcblower
+	\begin{enumerate}
+		\item \( \tilde{\beta} = \tfrac{p}{E} = \tfrac{p_1}{E_1 + \me} = \tfrac{\gamma\beta M}{\gamma M + \me} \)
+		\begin{flalign*}
+			\Pp[\nu'][2i] &= \Lambda_{\mu}^{\nu'}\Pp[\mu][2i]
+				= (\tilde{\gamma}\me, -\tilde{\beta}\tilde{\gamma}\me) &&\\
+			\Pp[\nu'][2f] &= (\tilde{\gamma}\me, \tilde{\beta}\tilde{\gamma}\me) &&\\
+			\Pp[\mu][2f] &= \Lambda_{\nu'}^{\mu}\Pp[\nu'][2f]
+			= (\tilde{\gamma}^2\me + \tilde{\beta}^2\tilde{\gamma}^2\me, \tilde{\beta}\tilde{\gamma}^2\me + \tilde{\beta}\tilde{\gamma}^2\me) &&\\[3ex]
+			T &= \tilde{\gamma}^2\me + \tilde{\beta}^2\tilde{\gamma}^2\me - \me 
+				= \me \tfrac{1 + \tilde{\beta}^2}{1 - \tilde{\beta}^2} - \me 
+				= \me
+		\end{flalign*}
+	\tcbline
+		\item \( \Pe[\mu][\text{ges}] = (E_{\text{ges}}, \vec{p}_{\text{ges}}) \)
+		\begin{flalign*}
+			\Pe[\nu'][\text{ges}] &= \Lambda_{\nu'}^{\mu}\Pe[\nu'][\text{ges}]
+				= (E', \gamma E_{\text{ges}} - \gamma\vec{\beta}\vec{p}_{\text{ges}}) 
+				\stackrel{!}{=} (E', \vec{0}) &&\\[2ex]
+			\vec{0} &= \gamma E_{\text{ges}} - \gamma\vec{\beta}\vec{p}_{\text{ges}} 
+				\quad\Longleftrightarrow\quad \vec{\beta} = \frac{\vec{p}_{\text{ges}}}{E_{\text{ges}}} &&
+		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+\begin{mybox}{Das Mesonen-Nonett}
+	\centering \(  \)
+	\tcblower
+	\begin{enumerate}
+		\item \( \psi_1 = N_1 \left(\ket{u\bar{u}} + \ket{d\bar{d}} + \ket{s\bar{s}}\right) \)
+		\begin{flalign*}
+			\braket{\psi_1}{\psi_1} &= N_1^2 \left(\braket{u\bar{u}}{u\bar{u}} + \braket{d\bar{d}}{d\bar{d}} + \braket{s\bar{s}}{s\bar{s}}\right)
+				= 3N_1^2
+				\stackrel{!}{=} 1 &&\\
+			N_1 = \tfrac{1}{\sqrt{3}}
+		\end{flalign*}
+	\tcbline
+		\item \( \psi_2 = N_2(\ket{u\bar{u}} \pm \ket{d\bar{d}});\quad N_2 = \tfrac{1}{\sqrt{2}} \)
+		\begin{flalign*}
+			\braket{\psi_1}{\psi_2} &= \tfrac{1}{\sqrt{6}} \left(\braket{u\bar{u}}{u\bar{u}} \pm \braket{d\bar{d}}{d\bar{d}}\right)
+				= \tfrac{1}{\sqrt{6}}(1 \pm 1)
+				\stackrel{!}{=} 0 &&\\
+			\psi_2 &= \tfrac{1}{\sqrt{2}} \left(\ket{u\bar{u}} - \ket{d\bar{d}}\right) &&
+		\end{flalign*}
+	\tcbline
+		\item \( \psi_3 = N_3 \left(\ket{u\bar{u}} + \ket{d\bar{d}} - 2\ket{s\bar{s}}\right);\quad N_3 = \tfrac{1}{\sqrt{6}} \)
+		\begin{flalign*}
+			\braket{\psi_3}{\psi_3} &= 1 &&\\
+			\braket{\psi_3}{\psi_2} &= 0 &&\\
+			\braket{\psi_3}{\psi_1} &= 0 &&
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			\eta &= \ket{\psi_1}
+				= \tfrac{1}{\sqrt{3}}\left(\ket{u\bar{u}} + \ket{d\bar{d}} + \ket{s\bar{s}}\right) &&\\
+			\pi^0 &= \ket{\psi_2}
+				= \tfrac{1}{\sqrt{2}}(\ket{u\bar{u}} \pm \ket{d\bar{d}}) &&\\
+			\eta' &= \ket{\psi_3}
+				= \tfrac{1}{\sqrt{6}}\left(\ket{u\bar{u}} + \ket{d\bar{d}} - 2\ket{s\bar{s}}\right) &&
+		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+
+\end{document}
