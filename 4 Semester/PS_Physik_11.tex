@@ -70,20 +70,21 @@
 \end{mybox}
 
 \begin{mybox}{Zentraler relativistischer Stoß und Bethe-Bloch-Formel}
-	\centering \( \Pe = (E_1, \vec{p_1}),\quad \Pp = (\me, \vec{0}) \)
+	\centering \( \Pp[\mu][i] \dots \) LS, vor dem Stoß, \(\qquad \Pp[\mu][f] \dots \) LS, nach dem Stoß \\
+				\( \Pp[\nu'][i] \dots \) CMS, vor dem Stoß, \(\qquad \Pp[\nu'][f] \dots \) CMS, nach dem Stoß
 	\tcblower
 	\begin{enumerate}
-		\item \( \tilde{\beta} = \tfrac{p}{E} = \tfrac{p_1}{E_1 + \me} = \tfrac{\gamma\beta M}{\gamma M + \me} \)
+		\item \( \Pp[\mu][i] = (\me, \vec{0}) ;\quad \tilde{\beta} = \tfrac{p}{E} = \tfrac{p_1}{E_1 + \me} = \tfrac{\gamma\beta M}{\gamma M + \me} \)
 		\begin{flalign*}
-			\Pp[\nu'][2i] &= \Lambda_{\mu}^{\nu'}\Pp[\mu][2i]
+			\Pp[\nu'][i] &= \Lambda_{\mu}^{\nu'}\Pp[\mu][i]
 				= (\tilde{\gamma}\me, -\tilde{\beta}\tilde{\gamma}\me) &&\\
-			\Pp[\nu'][2f] &= (\tilde{\gamma}\me, \tilde{\beta}\tilde{\gamma}\me) &&\\
-			\Pp[\mu][2f] &= \Lambda_{\nu'}^{\mu}\Pp[\nu'][2f]
+			\Pp[\nu'][f] &= (\tilde{\gamma}\me, \tilde{\beta}\tilde{\gamma}\me) &&\\
+			\Pp[\mu][f] &= \Lambda_{\nu'}^{\mu}\Pp[\nu'][f]
 			= (\tilde{\gamma}^2\me + \tilde{\beta}^2\tilde{\gamma}^2\me, \tilde{\beta}\tilde{\gamma}^2\me + \tilde{\beta}\tilde{\gamma}^2\me) &&\\[4ex]
 %			
 			T &= \tilde{\gamma}^2\me + \tilde{\beta}^2\tilde{\gamma}^2\me - \me 
 				= \me \tfrac{1 + \tilde{\beta}^2}{1 - \tilde{\beta}^2} - \me 
-				= 2\me \tfrac{\beta^2}{1 - \beta^2} &&\\
+				= 2\me \tfrac{\tilde{\beta}^2}{1 - \tilde{\beta}^2} &&\\
 			&= 2\me \frac{\tfrac{\gamma^2\beta^2 M^2}{(\gamma M + \me)^2}}{\tfrac{(\gamma M + \me)^2 - \gamma^2\beta^2 M^2}{(\gamma M + \me)^2}}
 				= 2\me \frac{\gamma^2\beta^2 M^2}{(\gamma M + \me)^2 - \gamma^2\beta^2 M^2} &&\\
 			&= \frac{2\me\gamma^2\beta^2 M^2}{2\gamma M\me + \me^2 + \gamma^2M^2(1 - \beta^2)}
