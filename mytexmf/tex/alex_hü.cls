@@ -10,8 +10,12 @@
 \RequirePackage[ngerman]{babel}
 \RequirePackage{xifthen}
 \RequirePackage[dvipsnames]{xcolor}
+\RequirePackage{ifxetex}
+\ifxetex
+% Code to be executed only if XeLaTeX is used
 \RequirePackage[mtpscr,mtpccal]{mtpro2}
 \pdfmapfile{=mtpro2.map}
+\fi
 \RequirePackage{mathtools, amsthm, amsfonts, siunitx, physics, chemformula, empheq}
 \RequirePackage{enumitem, multicol, tcolorbox, array}
 \tcbuselibrary{breakable,skins}
