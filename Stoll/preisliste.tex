@@ -1,0 +1,87 @@
+\documentclass[11pt, a5paper]{article}
+\usepackage[left=1cm, right=1cm, bottom=1cm, top=1cm]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage{graphicx, wrapfig, float, url}
+\usepackage{tikz}
+
+\usepackage[most]{tcolorbox}
+\usepackage{varwidth}
+
+\usepackage{array,tabularx,lipsum}
+
+\usetikzlibrary{calc}
+
+\newtcolorbox{mybox}[3]{
+	enhanced, breakable,
+	colbacktitle=#3, fonttitle=\large\bfseries, title=#1,
+	subtitle style={empty, coltext=black},
+	colback=white,
+	sidebyside,
+%	lower separated=false,
+%	sidebyside align=left,
+	sidebyside gap=5pt,
+	lefthand width=3.2cm,
+	boxrule=2pt, leftrule=1.7cm,
+	drop lifted shadow=#3!80!black,
+	frame style={top color=#3!80, bottom color=#3!80, middle color=#3!40},
+	overlay={
+		\node[scale=1.5,inner sep=0pt, xshift=.5cm, anchor=center] at ($ (frame.north west)!.5!(frame.south west) $) {#2};
+	},
+	attach boxed title to top left={xshift=1cm, yshift*=1mm-\tcboxedtitleheight},
+	varwidth boxed title*=-3cm,
+	boxed title style={
+		frame code={
+			\path[fill=tcbcolback!30!black]
+			([yshift=-1mm, xshift=-1mm] frame.north west) arc[start angle=0, end angle=180, radius=1mm]
+			([yshift=-1mm, xshift=1mm] frame.north east) arc[start angle=180, end angle=0, radius=1mm];
+			\path[left color=tcbcolback!60!black, right color=tcbcolback!60!black, middle color=tcbcolback!80!black!75]
+			([xshift=-2mm] frame.north west) -- ([xshift=2mm] frame.north east)
+			[rounded corners=1mm] -- ([xshift=1mm, yshift=-1mm] frame.north east) -- (frame.south east) -- (frame.south west) --
+			([xshift=-1mm, yshift=-1mm] frame.north west) [sharp corners] -- cycle;
+		},
+		interior engine=empty
+	},
+	segmentation style={#3, line width=1.5pt},
+	after skip=3ex,
+}
+
+
+
+\pagestyle{empty}
+\begin{document}
+	\begin{mybox}{Sonnenblume}{\includegraphics[scale=0.1]{sunflower}}{green}
+	\phantom{My}\\ \\
+		\tcblower
+%		\begin{minipage}[t]{0.8\linewidth}
+%			\vspace*{0pt}
+%			\hspace{0.25cm}
+%			\includegraphics[scale=0.1]{sun}
+%			\includegraphics[scale=0.1]{sun}
+%			\includegraphics[scale=0.3]{water}
+%			\includegraphics[scale=0.05]{dirt}
+%		\end{minipage}
+	\end{mybox}
+	
+	\begin{mybox}{Erbsenkanone}{\includegraphics[scale=0.1]{pea}}{red!75!black}
+		\phantom{My}\\ \\
+	\end{mybox}
+	
+	\begin{mybox}{Erbsenminigun}{\includegraphics[scale=0.1]{minigun}}{red!75!black}
+		\phantom{My}\\ \\
+	\end{mybox}
+	
+	\begin{mybox}{Walnuss}{\includegraphics[scale=0.25]{walnut}}{red!75!black}
+		\phantom{My}\\ \\
+	\end{mybox}
+	
+	\begin{mybox}{Frosty}{\includegraphics[scale=0.1]{frosty}}{red!75!black}
+		\phantom{My}\\ \\
+	\end{mybox}
+	
+	\begin{mybox}{Rösti}{\includegraphics[scale=0.1]{fire}}{red!75!black}
+		\phantom{My}\\ \\
+	\end{mybox}
+
+\end{document}
