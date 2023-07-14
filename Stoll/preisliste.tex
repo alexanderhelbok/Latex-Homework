@@ -19,8 +19,8 @@
 	subtitle style={empty, coltext=black},
 	colback=white,
 	sidebyside,
-%	lower separated=false,
-%	sidebyside align=left,
+	%	lower separated=false,
+	%	sidebyside align=left,
 	sidebyside gap=5pt,
 	lefthand width=3.2cm,
 	boxrule=2pt, leftrule=1.7cm,
@@ -44,44 +44,105 @@
 		interior engine=empty
 	},
 	segmentation style={#3, line width=1.5pt},
-	after skip=3ex,
+	after skip=0ex,
 }
 
-
+\def\now{\hspace{0.2cm}}
 
 \pagestyle{empty}
 \begin{document}
 	\begin{mybox}{Sonnenblume}{\includegraphics[scale=0.1]{sunflower}}{green}
-	\phantom{My}\\ \\
+		\phantom{My}\\ \\
 		\tcblower
-%		\begin{minipage}[t]{0.8\linewidth}
-%			\vspace*{0pt}
-%			\hspace{0.25cm}
-%			\includegraphics[scale=0.1]{sun}
-%			\includegraphics[scale=0.1]{sun}
-%			\includegraphics[scale=0.3]{water}
-%			\includegraphics[scale=0.05]{dirt}
-%		\end{minipage}
+		\begin{minipage}[t]{\textwidth}
+			\vspace*{-1.2cm}
+			\now\includegraphics[scale=0.1]{sun} 
+			\now\includegraphics[scale=0.075]{peap} 
+			\now\includegraphics[scale=0.3]{water} 
+			\now\includegraphics[scale=0.04]{dirt} 
+			\now\includegraphics[scale=0.075]{firef} 
+			\now\includegraphics[scale=0.3]{icei} 
+		\end{minipage}
 	\end{mybox}
 	
-	\begin{mybox}{Erbsenkanone}{\includegraphics[scale=0.1]{pea}}{red!75!black}
+	\begin{mybox}{Erbsenkanone}{\includegraphics[scale=0.1]{pea}}{green!55!black}
 		\phantom{My}\\ \\
+		\tcblower
+		\begin{minipage}[t]{\textwidth}
+			\vspace*{-1.2cm}
+			\now\includegraphics[scale=0.1]{sun} 
+			\now\includegraphics[scale=0.075]{peap} 
+			\now\includegraphics[scale=0.3]{water} 
+			\now\includegraphics[scale=0.04]{dirt} 
+			\now\includegraphics[scale=0.075]{firef} 
+			\now\includegraphics[scale=0.3]{icei} 
+		\end{minipage}
 	\end{mybox}
 	
-	\begin{mybox}{Erbsenminigun}{\includegraphics[scale=0.1]{minigun}}{red!75!black}
+	\begin{mybox}{Erbsenminigun}{\includegraphics[scale=0.1]{minigun}}{green!55!black}
 		\phantom{My}\\ \\
+		\tcblower
+		\begin{minipage}[t]{\textwidth}
+			\vspace*{-1.2cm}
+			\now\includegraphics[scale=0.1]{sun} 
+			\now\includegraphics[scale=0.075]{peap} 
+			\now\includegraphics[scale=0.3]{water} 
+			\now\includegraphics[scale=0.04]{dirt} 
+			\now\includegraphics[scale=0.075]{firef} 
+			\now\includegraphics[scale=0.3]{icei} 
+		\end{minipage}
 	\end{mybox}
 	
-	\begin{mybox}{Walnuss}{\includegraphics[scale=0.25]{walnut}}{red!75!black}
+	\begin{mybox}{Walnuss}{\includegraphics[scale=0.25]{walnut}}{brown!75!black}
 		\phantom{My}\\ \\
+		\tcblower
+		\begin{minipage}[t]{\textwidth}
+			\vspace*{-1.2cm}
+			\now\includegraphics[scale=0.1]{sun} 
+			\now\includegraphics[scale=0.075]{peap} 
+			\now\includegraphics[scale=0.3]{water} 
+			\now\includegraphics[scale=0.04]{dirt} 
+			\now\includegraphics[scale=0.075]{firef} 
+			\now\includegraphics[scale=0.3]{icei} 
+		\end{minipage}
 	\end{mybox}
 	
-	\begin{mybox}{Frosty}{\includegraphics[scale=0.1]{frosty}}{red!75!black}
+	\begin{mybox}{Frosty}{\includegraphics[scale=0.1]{frosty}}{blue!75!black}
 		\phantom{My}\\ \\
+		\tcblower
+		\begin{minipage}[t]{\textwidth}
+			\vspace*{-1.2cm}
+			\now\includegraphics[scale=0.1]{sun} 
+			\now\includegraphics[scale=0.075]{peap} 
+			\now\includegraphics[scale=0.3]{water} 
+			\now\includegraphics[scale=0.04]{dirt} 
+			\now\includegraphics[scale=0.075]{firef} 
+			\now\includegraphics[scale=0.3]{icei} 
+		\end{minipage}
 	\end{mybox}
 	
 	\begin{mybox}{Rösti}{\includegraphics[scale=0.1]{fire}}{red!75!black}
 		\phantom{My}\\ \\
+		\tcblower
+		\begin{minipage}[t]{\textwidth}
+			\vspace*{-1.2cm}
+			\now\includegraphics[scale=0.1]{sun} 
+			\now\includegraphics[scale=0.075]{peap} 
+			\now\includegraphics[scale=0.3]{water} 
+			\now\includegraphics[scale=0.04]{dirt} 
+			\now\includegraphics[scale=0.075]{firef} 
+			\now\includegraphics[scale=0.3]{icei} 
+		\end{minipage}
 	\end{mybox}
-
+	\vspace{0.5cm}
+	\begin{minipage}{\textwidth}
+		\includegraphics[scale=0.3]{icei}  \hspace{5cm}
+		\includegraphics[scale=0.075]{firef} 
+	\end{minipage}
+	
+	\begin{minipage}{\textwidth}
+		\vspace{-0.75cm}
+		\hspace{1cm}\includegraphics[scale=0.01]{eq} \hspace{5.3cm}
+		\includegraphics[scale=0.01]{eq}
+	\end{minipage}
 \end{document}
