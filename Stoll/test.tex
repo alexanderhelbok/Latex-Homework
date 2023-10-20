@@ -1,0 +1,21 @@
+\documentclass{scrartcl}
+\usepackage{xparse}
+
+\ExplSyntaxOn
+\DeclareExpandableDocumentCommand{\getlengthratio}{mm}
+{
+	\fp_eval:n { floor ( \dim_to_fp:n { #1 } / \dim_to_fp:n { #2 } , 0 ) }
+}
+\ExplSyntaxOff
+
+\newcounter{test}
+
+\begin{document}
+	
+	There are \getlengthratio{\textwidth}{\parindent} parindents in a line
+	
+	\setcounter{test}{\getlengthratio{\textwidth}{\parindent}}
+	
+	The same number: \thetest
+	
+\end{document}
