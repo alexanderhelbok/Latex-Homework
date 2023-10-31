@@ -1,0 +1,41 @@
+% !TeX spellcheck = de_DE
+\documentclass{alex_hü}
+
+\name{Alexander Helbok}
+\course{PS Astrophysics}
+\hwnumber{2}
+
+
+\begin{document}
+\renewcommand{\labelenumi}{\alph{enumi})}
+
+
+\begin{mybox}{Die Friedmann–Gleichung}
+	\centering \( H^2(t) = \left( \tfrac{\dot{a}}{a} \right)^2 = H_0^2\left( \tfrac{\Omega_r}{a^4} + \tfrac{\Omega_m}{a^3} + \Omega_\Lambda - \tfrac{\Omega_0 - 1}{a^2} \right) \)
+	\tcblower
+	\begin{enumerate}
+		\item 
+		\begin{itemize}
+			\item \( \Omega_0 \dots \) Density 
+			\item \( \Omega_r \dots \) radiation density
+			\item \( \Omega_m \dots \) matter density (Dark + Baryonic)
+			\item \( \Omega_\Lambda \dots \) cosmological constant (vacuum density)
+		\end{itemize}
+	\tcbline
+		\item \(  \)
+		\begin{flalign*}
+			H^2(t) &= \left( \tfrac{\dot{a}}{a} \right)^2
+				= \left( \tfrac{\dv{a}{t}}{a} \right)^2 
+				\quad\Rightarrow\quad a^2H^2(t) = \left(\dv{a}{t}\right)^2
+				\quad\Rightarrow\quad \dd{a} = \tfrac{\dd{t}}{a H(t)} &&\\
+			\uint[]{\ }{t} &= \uint[]{\tfrac{1}{a H(a)}}{a}
+		\end{flalign*}
+	\tcbline
+		\item \(  \)
+%		\begin{flalign*}
+%			
+%		\end{flalign*}
+	\end{enumerate}
+\end{mybox}
+
+\end{document}
