@@ -1,0 +1,130 @@
+% !TeX document-id = {7b7d88a4-0972-4202-9c89-33327d1050f5}
+% !TeX spellcheck = en_EN
+\documentclass[10pt, dvipsnames]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{fontawesome5, lipsum}
+\usepackage{graphicx}
+\usepackage[USenglish]{babel}
+\usepackage{setspace, multicol, makecell, booktabs, multirow}
+\usepackage{mathtools, amsthm, amsfonts, siunitx, physics, chemformula, empheq}
+\usepackage{mtpro2, pifont}
+\pdfmapfile{=mtpro2.map}
+\usepackage{enumitem}
+\usepackage[backend=biber, abbreviate=true, doi=false, style=numeric-comp, giveninits=true, sorting=none]{biblatex}
+
+\usepackage[font=footnotesize, bf, format=plain, font=normalsize]{caption}
+\graphicspath{ {./bilder/} }
+\addbibresource{literatur.bib}
+
+%\catcode`_=\active
+%\newcommand_[1]{\ensuremath{\sb{\fontfamily{Times New Roman}\selectfont \mathrm{#1}}}}
+
+\AtBeginDocument{\sisetup{per-mode = symbol, sticky-per, mode=text, text-font-command=\fontfamily{Times New Roman}\selectfont}}
+\let\oldunit\unit
+\renewcommand{\unit}[1]{\hspace{4pt}\oldunit{#1}}
+\DeclareSIUnit[]\ko{\kilo\ohm}
+
+\newcommand{\nair}{n\sb{\fontfamily{Times New Roman}\selectfont \mathrm{air}}}
+
+\usepackage{scalerel,stackengine}
+\newcommand\equalhat{\mathrel{\stackon[1.5pt]{=}{\stretchto{%
+				\scalerel*[\widthof{=}]{\wedge}{\rule{1ex}{3ex}}}{0.5ex}}}}
+
+% ------------------------------------------------------------------------------
+% Use the beautiful metropolis beamer template
+% ------------------------------------------------------------------------------
+\usepackage[T1]{fontenc}
+%\usepackage{FiraSans} 
+\mode<presentation>
+{
+	\usetheme[progressbar=frametitle,numbering=fraction,background=light]{metropolis} 
+	\usecolortheme{default} % or try albatross, beaver, crane, ...
+	\usefonttheme[onlymath]{serif}  % or try serif, structurebold, ...
+	\setbeamertemplate{navigation symbols}{}
+	\setbeamertemplate{caption}[numbered]
+	\setbeamertemplate{section in toc}[sections numbered]
+	\setbeamerfont{frametitle}{size=\LARGE}
+	\metroset{block=fill}
+} 
+
+\makeatletter
+\setlength{\metropolis@progressinheadfoot@linewidth}{3pt}
+\setlength{\metropolis@titleseparator@linewidth}{3pt}
+\setlength{\metropolis@progressonsectionpage@linewidth}{3pt}
+
+\makeatother
+
+% ------------------------------------------------------------------------------
+% tcolorbox / tcblisting
+% ------------------------------------------------------------------------------	
+\definecolor{MyBlue}{HTML}{0072B2}
+\definecolor{MyOrange}{HTML}{D55E00}
+\definecolor{MyRed}{HTML}{F00F0F}
+
+\setstretch{1.5}
+
+\usepackage{multimedia}
+
+
+\title{Das Hubble Gesetz}
+\author{Alexander Helbok\\Experiment date: May 4, 2023}
+\date{}
+
+\begin{document}
+	\maketitle
+	\begin{frame}[noframenumbering, plain]{Overview}
+		\tableofcontents
+	\end{frame}
+
+	\begin{frame}{Setting 1925}
+		Zitat beide seiten (statisches universum + dynamisches)
+		Gr war draußen, sagt dynamisch voraus, statisch instabil
+	\end{frame}
+	
+%	########### Theorie #############
+	\begin{frame}{Enternungsbestimmung über Standardkerzen}
+		Cepheiden in nebulae (H. Swan Leavitt relation)
+	\end{frame}
+
+%	########## Methodik ############
+	\begin{frame}{Messdaten}
+		von slipher am … aufgenommen
+		optisches teleskop
+	\end{frame}
+	
+%	########## ergebnisse ##########
+	\begin{frame}{Ergebnisse}
+		originaler plot, obwohl viel scattering klarer zusammenhang
+	\end{frame}
+	
+%	######### 1st Interpretation ########
+	\begin{frame}{Intrepretation}
+		de Sitter 
+	\end{frame}
+	
+%	######### folgeexperimente #########
+	\begin{frame}{Messung über SN1a}
+		Vermessung üer Typ 1a supernovae (standardkerzen)
+	\end{frame}
+	
+%	
+
+%	\begin{frame}{Introduction}
+%	\begin{itemize}[label={--}, itemindent=0.5cm]
+%		%\item Daten sind Farbcodiert \\ \hspace{1cm}\ding{241} {\color{MyBlue}Eingangsspannung}, {\color{black}Ausgangsspannung}, {\color{MyOrange}Fits}
+%		\item color coding: {\color{Black}Data} and {\color{MyBlue}Fit}
+%		\item used Python/Julia for the Analysis (SciPy, NumPy)
+%		\item error propagation fully automatic with Uncertainties/Measurements package \cite{Hubble1929}\cite{Hubble1931}\cite{betoule2014improved}
+%	\end{itemize}
+%\end{frame}
+
+\begin{frame}[standout]
+	\Huge Fragen?
+\end{frame}
+
+\begin{frame}{Sources}
+	\printbibliography
+\end{frame}
+
+\end{document}
