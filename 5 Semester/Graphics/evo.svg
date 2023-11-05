@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.0"
+   id="svg2"
+   height="854.42999"
+   width="1486.4399">
+  <defs
+     id="defs4">
+    <marker
+       style="overflow:visible"
+       id="Arrow1Sstart"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(0.2,0,0,0.2,1.2,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         d="M 0,0 L 5,-5 L -12.5,0 L 5,5 L 0,0 z "
+         id="path3223" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleInL"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="scale(-0.8,-0.8)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         d="M 5.77,0 L -2.88,5 L -2.88,-5 L 5.77,0 z "
+         id="path3300" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Tail"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <g
+         transform="scale(-1.2,-1.2)"
+         id="g3247">
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round;marker-start:none;marker-end:none"
+           d="M -3.8048674,-3.9585227 L 0.54352094,0"
+           id="path3249" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round;marker-start:none;marker-end:none"
+           d="M -1.2866832,-3.9585227 L 3.0617053,0"
+           id="path3251" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round;marker-start:none;marker-end:none"
+           d="M 1.3053582,-3.9585227 L 5.6537466,0"
+           id="path3253" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round;marker-start:none;marker-end:none"
+           d="M -3.8048674,4.1775838 L 0.54352094,0.21974226"
+           id="path3255" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round;marker-start:none;marker-end:none"
+           d="M -1.2866832,4.1775838 L 3.0617053,0.21974226"
+           id="path3257" />
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round;marker-start:none;marker-end:none"
+           d="M 1.3053582,4.1775838 L 5.6537466,0.21974226"
+           id="path3259" />
+      </g>
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         d="M 0,0 L 5,-5 L -12.5,0 L 5,5 L 0,0 z "
+         id="path3211" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         d="M 0,0 L 5,-5 L -12.5,0 L 5,5 L 0,0 z "
+         id="path3217" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         d="M 0,0 L 5,-5 L -12.5,0 L 5,5 L 0,0 z "
+         id="path3214" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Send"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         d="M 0,0 L 5,-5 L -12.5,0 L 5,5 L 0,0 z "
+         id="path3226" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lstart"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(1.1,0,0,1.1,1.1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.97309,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path3229" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(1627.7977,577.90396)"
+     id="layer1">
+    <g
+       transform="translate(-690.3434,-108.31538)"
+       id="g23884">
+      <rect
+         y="-469.58859"
+         x="-937.45428"
+         height="854.42999"
+         width="1486.4399"
+         id="rect3566"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.20599997;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         id="g23823">
+        <path
+           id="path16033"
+           d="M -412.06652,309.34128 C -411.86628,256.0286 -373.10507,103.37795 -268.39438,35.997508 -90.47774,-78.490347 48.437612,178.26729 49.059554,304.09502"
+           style="fill:none;fill-rule:evenodd;stroke:#ff007f;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           transform="matrix(0.5374223,-0.0090713,0.0090713,0.5374223,179.13429,439.83271)"
+           d="m -235.70642,-245.60862 -14.40066,-21.28119 -14.40066,-21.2812 25.63039,-1.83074 25.63039,-1.83074 -11.22973,23.11193 z"
+           id="path23799"
+           style="fill:#ff007f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.53333285" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:28px;font-family:'Bitstream Vera Sans';fill:#ff007f;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="63.971413"
+         y="268.7128"
+         id="text23847"><tspan
+           id="tspan23849"
+           x="63.971413"
+           y="268.7128">Ω &gt; 1</tspan></text>
+    </g>
+    <g
+       transform="translate(-690.3434,-108.31538)"
+       id="g23856">
+      <g
+         id="g23817">
+        <path
+           id="path8275"
+           d="m -739.31063,309.34128 c -0.004,-59.47564 188.84674,-91.83731 470.91625,-273.343772 C -23.314304,-121.70694 57.940771,-399.10246 57.940771,-399.10246"
+           style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           transform="matrix(0.42124163,-0.33385699,0.33385699,0.42124163,250.06697,-362.46907)"
+           d="m -235.70642,-245.60862 -14.40066,-21.28119 -14.40066,-21.2812 25.63039,-1.83074 25.63039,-1.83074 -11.22973,23.11193 z"
+           id="path21853"
+           style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.53333285" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:28px;font-family:'Bitstream Vera Sans';fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-22.161934"
+         y="-430.4104"
+         id="text23831"><tspan
+           id="tspan23833"
+           x="-22.161934"
+           y="-430.4104">acceleration</tspan></text>
+    </g>
+    <g
+       transform="translate(-690.3434,-108.31538)"
+       id="g23863">
+      <g
+         id="g23813">
+        <path
+           id="path4383"
+           d="M 260.39748,-304.26248 -693.06409,309.24637"
+           style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffdf00;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none" />
+        <path
+           transform="matrix(0.53741712,0.00936905,-0.00936905,0.53741712,385.62781,-154.13497)"
+           d="m -235.70642,-245.60862 -14.40066,-21.28119 -14.40066,-21.2812 25.63039,-1.83074 25.63039,-1.83074 -11.22973,23.11193 z"
+           id="path23793"
+           style="opacity:1;fill:#ffdf00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.53333285" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:28px;font-family:'Bitstream Vera Sans';fill:#ffdf00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="222.0804"
+         y="-329.92929"
+         id="text23835"><tspan
+           id="tspan23837"
+           x="222.0804"
+           y="-329.92929">Ω = 0</tspan></text>
+    </g>
+    <g
+       transform="translate(-690.3434,-108.31538)"
+       id="g23870">
+      <g
+         id="g23809">
+        <path
+           id="path9246"
+           d="m -558.37582,309.34128 c 0.6892,-54.08615 98.58349,-150.18294 289.98144,-273.343772 C -14.775814,-127.20107 385.61806,-224.26253 385.61806,-224.26253"
+           style="fill:none;fill-rule:evenodd;stroke:#00ff34;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           transform="matrix(-0.0800841,-0.53149924,0.53149924,-0.0800841,512.76544,-372.48827)"
+           d="m -235.70642,-245.60862 -14.40066,-21.28119 -14.40066,-21.2812 25.63039,-1.83074 25.63039,-1.83074 -11.22973,23.11193 z"
+           id="path23795"
+           style="opacity:1;fill:#00ff34;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.53333285" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:28px;font-family:'Bitstream Vera Sans';fill:#00ff34;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="346.08167"
+         y="-250.20686"
+         id="text23839"><tspan
+           id="tspan23841"
+           x="346.08167"
+           y="-250.20686">Ω &lt; 1</tspan></text>
+    </g>
+    <g
+       transform="translate(-690.3434,-108.31538)"
+       id="g23877">
+      <g
+         id="g23805">
+        <path
+           id="path14093"
+           d="m -501.64275,309.34128 c 0.11612,-50.31487 37.86123,-147.61599 233.24837,-273.343772 C -14.277141,-127.52194 497.9364,-137.97576 497.9364,-137.97576"
+           style="fill:none;fill-rule:evenodd;stroke:#005bff;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           transform="matrix(0.02552337,-0.53689253,0.53689253,0.02552337,651.85767,-258.52305)"
+           d="m -235.70642,-245.60862 -14.40066,-21.28119 -14.40066,-21.2812 25.63039,-1.83074 25.63039,-1.83074 -11.22973,23.11193 z"
+           id="path23797"
+           style="opacity:1;fill:#005bff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.53333285" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:28px;font-family:'Bitstream Vera Sans';fill:#005bff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="447.73019"
+         y="-161.75668"
+         id="text23843"><tspan
+           id="tspan23845"
+           x="447.73019"
+           y="-161.75668">Ω = 1</tspan></text>
+    </g>
+    <g
+       transform="translate(14.218516,5.985546)"
+       id="g24067">
+      <g
+         id="g24055">
+        <text
+           transform="matrix(0,-1,1,0,0,0)"
+           id="text2221"
+           y="-1587.7118"
+           x="181.69753"
+           style="font-style:normal;font-weight:normal;font-size:56px;font-family:'Bitstream Vera Sans';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="text-align:center;writing-mode:lr-tb;text-anchor:middle"
+             id="tspan2225"
+             y="-1587.7118"
+             x="181.69753">mean distance</tspan><tspan
+             id="tspan2229"
+             style="text-align:center;writing-mode:lr-tb;text-anchor:middle"
+             y="-1517.7118"
+             x="181.69753">between galaxies</tspan></text>
+        <path
+           id="path4381"
+           d="m -1479.5491,-553.87049 0,797.01561"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+      </g>
+      <g
+         id="g24061">
+        <text
+           id="text2231"
+           y="257.35635"
+           x="-950.22748"
+           style="font-style:normal;font-weight:normal;font-size:56px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="257.35635"
+             x="-950.22748"
+             id="tspan2233">time</tspan><tspan
+             id="tspan2235"
+             y="327.35635"
+             x="-950.22748" /></text>
+        <path
+           id="path2237"
+           d="m -204.32742,195.04035 -1312.44058,0"
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+      </g>
+    </g>
+    <g
+       transform="translate(-690.34244,-108.31538)"
+       id="g23851">
+      <circle
+         r="13.384521"
+         cy="36.065533"
+         cx="-268.29816"
+         style="opacity:1;fill:#535353;fill-opacity:0.78440366;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.53333285"
+         id="path19911" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:28px;font-family:'Bitstream Vera Sans';fill:#787878;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-373.75607"
+         y="0.10887601"
+         id="text23827"><tspan
+           id="tspan23829"
+           x="-373.75607"
+           y="0.10887601">today</tspan></text>
+    </g>
+  </g>
+</svg>
