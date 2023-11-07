@@ -69,17 +69,17 @@
 
 \setstretch{1.5}
 
-\newtcolorbox{quotebox}{enhanced, colframe=MyOrange, top=0.2cm, bottom=0.2cm, colback=orange!15}
+\newtcolorbox{quotebox}{enhanced, colframe=MyOrange, top=0.2cm, bottom=0.2cm, colback=orange!15, left=0.1cm}
 
 \title{Das Hubble Gesetz}
-\author{Alexander Helbok\\Experiment date: May 4, 2023}
-\date{}
+\author{Alexander Helbok}
+\date{\today}
 
 \begin{document}
 	\maketitle
-	\begin{frame}[noframenumbering, plain]{Overview}
-		\tableofcontents
-	\end{frame}
+%	\begin{frame}[noframenumbering, plain]{Overview}
+%		\tableofcontents
+%	\end{frame}
 
 	\begin{frame}{Timeline}
 		\begin{tikzpicture}[scale=2, every node/.style={scale=0.8, black}]
@@ -130,7 +130,7 @@
 	\begin{frame}{Analyse}
 		\[ v = rK + \tikzmark{1} X\cos(\delta)\cos(\alpha) + Y\cos(\delta)\sin(\alpha) + Z\sin(\delta) \tikzmark{2} \]\\[4ex]
 		
-		\begin{quotebox}\blockcquote{Hubble1929}{Two solutions have been made, ...}\end{quotebox}
+		\begin{quotebox}\hspace{0.1cm} \blockcquote{Hubble1929}{Two solutions have been made, ...}\end{quotebox}
 		
 		\begin{tikzpicture}
 			\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\textwidth]{solutions}};
@@ -200,14 +200,14 @@
 		\begin{quotebox}
 			\begin{itemize}
 				\only<1>{\item[1)] \blockcquote{Hubble1929}{The results establish a roughly linear relation between velocities and distances among nebulae ...}\\
-				Mit Faktor \( K = 465(50) \unit{km/s/Mpc} \), \( K = 513(60) \unit{km/s/Mpc} \)}
+				Mit Faktor \( K = 465(50) \text{ bzw. } 513(60) \unit{km/s/Mpc} \)}
 				\only<2>{\item[2)] \blockcquote{Hubble1929}{New data to be expected in the near future may modify the significance of the present investigation or, if confirmatory, will lead to a solution having many times the weight.}}
 				\only<3>{\item[3)] \blockcquote{Hubble1929}{The outstanding feature, however, is the possibility that the velocity-distance relation may represent the de Sitter effect, ...}}
 			\end{itemize}
 		\end{quotebox}
 	\end{minipage}
 	\begin{minipage}[b][.5\textheight][t]{\textwidth}
-			\begin{itemize}[label={\textendash}, itemindent=0.5cm]
+			\begin{itemize}[label={\textendash}]
 				\only<1>{
 					\item linearer Zusammenhang deutlich sichtbar
 					\item keine statistischen Fehler
@@ -218,9 +218,9 @@
 					\item viele Nachfolgeexperimente (bis heute noch)
 					\item "crisis in cosmology"}
 				\only<3>{
-					\item linearer Zusammenhang deutlich sichtbar
-					\item keine statistischen Fehler
-					\item keine Fitgüte im Paper}
+					\item deSitter Universum: statisch, keine Materie
+					\item Redshift durch Zeitverlangsamung bei großen Entfernungen \cite{deSitter}
+					\item Y}
 			\end{itemize}
 		\end{minipage}
 	\end{frame}
@@ -233,11 +233,12 @@
 	\begin{frame}{Messung über SN1a}
 		\centering
 		\begin{tikzpicture}
-			\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height=0.9\textheight]{Sn1a}};
+			\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height=0.9\textheight]{Sn1a}};	
 			
 			\begin{scope}[x={(image.south east)},y={(image.north west)}]
-%				\draw[line width=1pt] (0.09, 0.355) -- (1, 0.93);
-				\draw[line width=1pt] (0.09, 0.355) -- (1, 0.89);
+
+				\only<1>{\draw[line width=1pt, opacity=0] (0.09, 0.355) -- (1, 0.89);}
+				\only<2>{\draw[line width=1pt] (0.09, 0.355) -- (1, 0.89);}
 				\node[] at (0.75, 0.02) {(\citeauthor{betoule2014improved} \citeyear{betoule2014improved})};
 %				\draw[fill] (0.5, 0.59) circle (.005) node [below] {\( \approx 1.4 \unit{\giga\year} \)};
 			\end{scope}
@@ -246,10 +247,10 @@
 	
 	\begin{frame}{Krise}
 		\begin{tikzpicture}
-			\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height=0.9\textheight]{crisis2}};
+			\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height=0.9\textheight]{crisis}};
 			
 			\begin{scope}[x={(image.south east)},y={(image.north west)}]
-				\node[] at (0.75, 0.02) {(\citeauthor{betoule2014improved} \citeyear{betoule2014improved})};
+				\node[] at (0.15, 0.02) {(\citeauthor{Di_Valentino_2021} \citeyear{Di_Valentino_2021})};
 			\end{scope}
 		\end{tikzpicture}
 	\end{frame}
