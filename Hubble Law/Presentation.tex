@@ -7,7 +7,7 @@
 \usepackage{hyperref}
 \usepackage{fontawesome5, lipsum}
 \usepackage{graphicx}
-\usepackage[USenglish]{babel}
+\usepackage[ngerman]{babel}
 \usepackage{setspace, multicol, makecell, booktabs, multirow}
 \usepackage{mathtools, amsthm, amsfonts, siunitx, physics, chemformula, empheq}
 \usepackage{mtpro2, pifont, custom}
@@ -119,18 +119,20 @@
 	\end{frame}
 	
 %	########### Theorie #############
-	\begin{frame}{Enternungsbestimmung der Nebulae}
-		Geschwindigkeit von 46 Nebel von Slipher vermessen (Doppler-shift) \cite{slipher1915spectrographic} \\
-		Enfernungsbestimmung von Hubble über
+	\begin{frame}{Messdaten}
+		\phantom{}{\color{MyBlue} Geschwindigkeit} von 46 Nebel von Slipher vermessen (Doppler) \cite{slipher1915spectrographic} \\[2ex]
+		{\color{MyOrange}Enfernungsbestimmung} (nur 24 Nebel) von Hubble über
 		\begin{itemize}[label={\textendash}, itemindent=0.5cm]
 			\item Cepheiden Perioden-Leuchtkraft-Beziehung (7)
-			\item Vergleich mit bekannten Galaxien (13)
+			\item statistische Leuchtkraftverteilung von Sternen (13)
 			\item statistische Leuchtkraftverteilung von Nebel (4)
 		\end{itemize}
+		
+		Restlichen Nebel gemittelt betrachtet
 	\end{frame}
 	
 	\begin{frame}{Analyse}
-		\[ v = rK + \tikzmark{1} X\cos(\delta)\cos(\alpha) + Y\cos(\delta)\sin(\alpha) + Z\sin(\delta) \tikzmark{2} \]\\[4ex]
+		\[ {\color{MyBlue}v} = {\color{MyOrange}r}K + \tikzmark{1} X\cos(\delta)\cos(\alpha) + Y\cos(\delta)\sin(\alpha) + Z\sin(\delta) \tikzmark{2} \]\\[4ex]
 		
 		\begin{quotebox}\hspace{0.1cm} \blockcquote{Hubble1929}{Two solutions have been made, ...}\end{quotebox}
 		
@@ -149,7 +151,7 @@
 			\begin{scope}[xshift=1.5cm]
 				\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\textwidth]{HubbleLaw}};
 				\begin{scope}[x={(image.south east)},y={(image.north west)}]
-					\begin{onlyenv}<1>
+					\begin{onlyenv}<2>
 						\fill[Gray, opacity=0.3, rounded corners] (0.205, 0.665) rectangle (0.5, 0.97);
 						\draw[MyOrange,ultra thick,rounded corners] (0.2,0.15) rectangle (0.31,0.3);
 						\draw[MyOrange,ultra thick,rounded corners] (0.335,0.43) rectangle (0.37,0.49);
@@ -168,7 +170,7 @@
 							\draw[ultra thick, line cap=round] (0.7, 0.1) -- (0.73, 0.1) node [right] {Fit};
 						\end{scope}
 					\end{onlyenv}
-					\begin{onlyenv}<2>
+					\begin{onlyenv}<3>
 						\fill[Gray, opacity=0.3, rounded corners] (0.205, 0.72) rectangle (0.5, 0.89);
 %						Legend
 						\begin{scope}[shift={(-0.48, 0.6)}]
@@ -176,8 +178,8 @@
 							\draw[ultra thick, line cap=round, dashed] (0.7, 0.16) -- (0.73, 0.16) node [right] {Fit};
 						\end{scope}
 					\end{onlyenv}
-					\begin{onlyenv}<3>
-						\fill[Gray, opacity=0.3, rounded corners] (0.205, 0.805) rectangle (0.55, 0.88);
+					\begin{onlyenv}<4>
+						\fill[Gray, opacity=0.3, rounded corners] (0.205, 0.805) rectangle (0.53, 0.88);
 						\draw[MyRed,ultra thick, rounded corners] (0.65,0.62) rectangle (0.7,0.69);
 %						Legend
 						\begin{scope}[shift={(-0.48, 0.6)}]
@@ -218,24 +220,20 @@
 				\only<2>{
 					\item Absolut Richtig
 					\item viele Nachfolgeexperimente (bis heute noch)
-					\item "crisis in cosmology"}
+					\item \enquote{crisis in cosmology}}
 				\only<3>{
-					\item deSitter Universum: statisch, keine Materie
+					\item deSitter Universum: statisch, keine (normale) Materie
 					\item Redshift durch Zeitverlangsamung bei großen Entfernungen \cite{deSitter}
-					\item Y}
+					\item \enquote{richtige} Interpretation: dynamisches Universum (nach Friedmann/Lema\^{i}tre)}
 			\end{itemize}
 		\end{minipage}
 	\end{frame}
 	
 %	######### folgeexperimente #########
-	\begin{frame}{Typ1a Supernovae}
-		Theorie und leuchtkraftrelation
-	\end{frame}
-
 	\begin{frame}{Messung über SN1a}
 		\centering
 		\begin{tikzpicture}
-			\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height=0.9\textheight]{Sn1a}};	
+			\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height=0.9\textheight]{Sn1ahubble}};	
 			
 			\begin{scope}[x={(image.south east)},y={(image.north west)}]
 
@@ -262,10 +260,10 @@
 % 	######### Recap #########
 	\begin{frame}{Recap}
 		\begin{itemize}[label={\textendash}, itemindent=0.1cm]
-			\item \s{Entferungsbestimmung} über Leuchtkraftrelationenen
-			\item \s{Geschwindigkeit} über Doppler shift
+			\item {\color{MyBlue}Entferungsbestimmung} über Leuchtkraftrelationenen
+			\item {\color{MyOrange}Geschwindigkeit} über Doppler shift
 			\item[\( \Rightarrow \)] linearer Zusammenhang (obwohl systematische Abweichung)
-			\item vergleich Modell, Experiment
+			\item \( H_0 \) erlaubt Vergleich Modell, Experiment
 		\end{itemize}
 	\end{frame}
 
@@ -285,7 +283,7 @@
 \end{frame}
 
 \begin{frame}{Frage 2}
-	Warum habe ich \( H_0 \) immer Hubble Parameter und nicht Hubble Konstante (wie man es in vielen Lehrbüchern und sieht) genannt?
+	Warum habe ich \( H_0 \) immer Hubble Parameter und nicht Hubble Konstante (wie man es in vielen Publikationen sieht) genannt?
 	\begin{itemize}
 		\item[A)] Die beiden Begriffe sind ja Synonyme
 		\only<1>{\item[B)] Naja, \( H_0 \) ist ja zeitlich nicht konstant geblieben}
@@ -294,8 +292,81 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Backup/Theory slide}
-	cepehid relation, SN1a relation
+\begin{frame}{Doppler-Effekt/Kosmologischer Redshift}
+	\begin{columns}
+		\begin{column}{0.37\textwidth}
+			\vspace{0.5cm}
+			\begin{tikzpicture}
+				\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\textwidth]{doppler}};
+				
+				\begin{scope}[x={(image.south east)},y={(image.north west)}]
+					\node[] at (0.175, -0.05) {\tiny\url{www.simple.wikipedia.org}};
+				\end{scope}
+			\end{tikzpicture}
+		\end{column}
+		\begin{column}{0.6\textwidth}
+			\begin{tikzpicture}
+				\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\textwidth]{doppler_effect}};
+				
+				\begin{scope}[x={(image.south east)},y={(image.north west)}]
+					\node[align=left] at (0.5, -0.05) {\tiny\url{www.online-learning-college.com}};
+				\end{scope}
+			\end{tikzpicture}
+			\begin{tikzpicture}
+				\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\textwidth]{redshift}};
+				
+				\begin{scope}[x={(image.south east)},y={(image.north west)}]
+					\node[align=left] at (0.85, 0.02) {\tiny\url{www.sites.pitt.edu/}};
+				\end{scope}
+			\end{tikzpicture}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Cepheiden Perioden-Leuchtkraft Beziehung}
+	\vspace{1cm}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{tikzpicture}
+				\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\textwidth]{cepheid-variables}};
+				
+				\begin{scope}[x={(image.south east)},y={(image.north west)}]
+					\node[] at (0.175, -0.05) {\tiny\url{www.mso.anu.edu.au}};
+				\end{scope}
+			\end{tikzpicture}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{tikzpicture}
+				\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\textwidth]{out}};
+				
+				\begin{scope}[x={(image.south east)},y={(image.north west)}]
+					\node[align=left] at (0.2, 0.02) {\tiny\url{www.atnf.csiro.au}};
+				\end{scope}
+			\end{tikzpicture}
+		\end{column}
+	\end{columns}
+	\begin{flalign*}
+		\qquad \text{Typ I Cepheiden: } M_v &= -2.54 \log\left( P_{\oldunit{days}} \right) - 1.61 &&\\
+		M &= m - 5\log\left( d_{\oldunit{pc}} \right) + 5 &&
+	\end{flalign*}
+\end{frame}
+
+\begin{frame}{SN1a als Standardkerzen}
+	\centering
+	\begin{tikzpicture}
+		\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.85\textwidth]{sn1a}};
+		
+		\begin{scope}[x={(image.south east)},y={(image.north west)}]
+			\node[align=left] at (0.85, 0.02) {\tiny\url{www.astronomy.swin.edu.au}};
+		\end{scope}
+	\end{tikzpicture}
+	\begin{tikzpicture}
+		\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.85\textwidth]{stretch2}};
+		
+		\begin{scope}[x={(image.south east)},y={(image.north west)}]
+			\node[align=left] at (0.2, 0.02) {\tiny\url{www.johnlucey.webspace.durham.ac.uk}};
+		\end{scope}
+	\end{tikzpicture}
 \end{frame}
 
 \begin{frame}[allowframebreaks]{Sources}
