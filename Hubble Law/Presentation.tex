@@ -18,7 +18,7 @@
 \usepackage{multimedia, tikz}
 \usepackage[font=footnotesize, bf, format=plain, font=normalsize]{caption}
 
-\usetikzlibrary{math}
+\usetikzlibrary{math, arrows.meta}
 
 \graphicspath{ {./bilder/} }
 \addbibresource{literatur.bib}
@@ -274,7 +274,7 @@
 \appendix
 
 \begin{frame}{Frage 1}
-	Warum habe ich \( H_0 \) immer Hubble Parameter und nicht Hubble Konstante (wie man es in vielen Publikationen sieht) genannt?
+	Warum habe ich \( H_0 \) immer Hubble Parameter und nicht Hubble Konstante genannt (wie man es in vielen Publikationen sieht)?
 	\begin{itemize}
 		\item[A)] Die beiden Begriffe sind ja Synonyme
 		\only<1>{\item[B)] Naja, \( H_0 \) ist ja zeitlich nicht konstant geblieben}
@@ -289,8 +289,34 @@
 	\begin{itemize}
 		\item[A)] Ja, weil ... 
 		\only<1>{\item[B)] Nein, weil ...}
-		\only<2>{{\color{Green}\item[B)] Nein, weil ...}}
+		\only<2-3>{{\color{Green}\item[B)] Nein, weil ...}}
 	\end{itemize}
+	\hspace{5cm}\begin{minipage}{0.6\textwidth}
+		\vspace{-1.5cm}
+		\begin{onlyenv}<3>
+			\[ \vec{V}' = \vec{V} - \vec{V}_s = H_0 (\vec{r} - \vec{r}_s) = H_0 \vec{r}' \]
+			\begin{tikzpicture}
+				\coordinate (O) at (0,0);
+				\coordinate (Vs) at (2,1);
+				\coordinate (V) at (1,1.25);
+				\coordinate (rs) at (4,2);
+				\coordinate (r) at (2,2.5);
+				
+				\draw[ultra thick, -latex] (-0.3,0) -- (5,0) node [below] {\large\( X \)};
+				\draw[ultra thick, -latex] (0,-0.3) -- (0,3) node [left] {\large\( Y \)};
+				\draw[fill] (0,0) circle (0.1) node [below left] {\large\( 0 \)};
+				
+				\draw[thick, -{Latex[length=3mm,width=2mm]}] (O) -- (Vs) node [below, yshift=-0.1cm, pos=0.95] {\( \vec{V}_s \)};
+				\draw[thick, -{Latex[length=3mm,width=2mm]}] (O) -- (V) node [left, xshift=-0.2cm, pos=0.9] {\( \vec{V} \)};
+				\draw[thick, -{Latex[length=3mm,width=2mm]}] (Vs) -- (rs) node [below, yshift=-0.1cm, pos=0.95] {\( \vec{r}_s \)};
+				\draw[thick, -{Latex[length=3mm,width=2mm]}] (V) -- (r) node [left, xshift=-0.2cm, pos=0.9] {\( \vec{r} \)};
+				\draw[thick, -{Latex[length=3mm,width=2mm]}] (Vs) -- (V) node [above, pos=0.3] {\( \vec{V}' \)};
+				\draw[thick, -{Latex[length=3mm,width=2mm]}] (rs) -- (r) node [above, pos=0.5] {\( \vec{r}' \)};
+				
+				\draw[fill, Goldenrod] (rs) circle (0.1) node [above right, black] {\( \mathrm{Sonne} \)};
+			\end{tikzpicture}
+		\end{onlyenv}
+	\end{minipage}
 \end{frame}
 
 \begin{frame}{Doppler-Effekt/Kosmologischer Redshift}
