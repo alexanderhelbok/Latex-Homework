@@ -1,0 +1,65 @@
+% !TeX spellcheck = de_DE
+\documentclass{alex_hü}
+
+\name{Alexander Helbok}
+\course{PS Astrophysics}
+\hwnumber{3}
+
+\newcommand{\np}{n_{\text{p}}}
+\newcommand{\nn}{n_{\text{n}}}
+\newcommand{\nHe}{n_{\text{He}}}
+\newcommand{\nH}{n_{\text{H}}}
+
+\begin{document}
+\renewcommand{\labelenumi}{\alph{enumi})}
+
+
+\begin{mybox}{Die thermische Geschichte des Universums}
+	\begin{enumerate}[label=\arabic*)]
+		\item \( T \approx 8 \times 10^9 \unit{K} \) - \textbf{neutrino freeze out}
+		\begin{enumerate}
+			\item Elementary particles are at equilibrium when
+			\item Cosmic expansion reduces the energy density and therefore also the temperature of the universe. reactions however are energy (and therefore temperature) dependent so an expanding universe will influence what reactions occur
+			\item The neutrino freeze out mean, that reactions involving neutrinos become rare and therefore the existing neutrinos decouple from the evolution of the rest of the universe
+			\item No one has measured the neutrino background, as its energy is really low and neutrinos are hard to detect. 
+		\end{enumerate}		
+	\tcbline
+	\item \( T \approx 8 \times 10^8 \unit{K} \) - \textbf{Primoridial nucleosynthesis}
+		\begin{enumerate}
+			\item 
+			\begin{flalign*}
+				\frac{\nn}{\np} &= \expo[-][\Delta mc^2/k_{\text{B}}T]
+				= \dl{0.15} &&
+			\end{flalign*}
+			\item 
+			\begin{flalign*}
+				\left.\frac{\nn}{\np} \right|_{t=3 \unit{min}} &= \expo[-][t/\tau] \left.\frac{\nn}{\np} \right|_{t=0} 
+				= \dl{0.125} &&
+			\end{flalign*} 
+			\item 
+			\begin{flalign*}
+				Y &= \frac{4 \nHe}{4 \nHe + \nH} 
+					= \frac{2\nn}{\np + \nn}
+					= \frac{2(\nn / \np)}{1 + (\nn / \np)} 
+					=  \begin{cases}
+						0.265     & t = 0 \\
+						0.222        & t = 3 \unit{min}
+					\end{cases} &&
+			\end{flalign*}
+		\end{enumerate}
+	\tcbline
+	\item \( T \approx 3000 \unit{K} \) - \textbf{recombination}
+		\begin{enumerate}
+			\item \( 13.6 \unit{eV} \approx 158 000 \unit{K} \), which is higher than \( 3000 \unit{K} \). The reason for this is, that at this time most of the hydrogen wasn't at ground state but at a and therefore the energy needed to ionise it is much less.
+			\item once protons were able to from neutral hydrogen, photons stopped being absorbed and emittet continously, and therefore the existing photons were able to persist and travel much greater distances than before. The CMB is therefore a snapshot of the universe at the moment neutral hydrogen formed and the universe became transparent
+		\end{enumerate}
+	\tcbline
+	\item \( T \approx 50 \unit{K} \) - \textbf{reionization}
+		\begin{enumerate}
+			\item Today the universe is mostly ionized. This was caused by atoms forming gas clouds and and heating up, ionizing 
+			\item Information about the reinization era can be extracted from the CMB and from quasar spectra
+		\end{enumerate}
+	\end{enumerate}
+\end{mybox}
+
+\end{document}
