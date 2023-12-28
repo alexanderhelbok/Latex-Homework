@@ -1,0 +1,40 @@
+\documentclass[border=3pt]{standalone}
+\usepackage{tikz}
+\usepackage{mtpro2}
+
+\def\beta{0.7}
+\def\time{3.4}
+\def\Rinit{0.5}
+
+\begin{document}
+	\begin{tikzpicture}		
+%		\draw (0, 0) circle (\Rinit + \beta*\time);
+		
+		\draw[] (0, 0) circle (0.05);
+		
+		\draw[fill] (-\Rinit, 0) circle (0.05);
+		
+%		\foreach \t in {0, 0.1}{
+%			\draw[fill] (-\Rinit + \t, 0) circle (0.05);
+%			\draw (0, 0) circle (\Rinit + \beta*\t);}
+		
+		\draw[fill] (2.5,  0.6) circle (0.05);
+		\draw[fill] (2.5, -0.6) circle (0.05);
+		
+		\draw[fill] (1.5,  1.1) circle (0.05);
+		\draw[fill] (1.5, -1.1) circle (0.05);
+		
+		\draw[fill] (0.5,  1.1) circle (0.05);
+		\draw[fill] (0.5, -1.1) circle (0.05);
+		
+		\draw[fill] (0, 0.85) circle (0.05);
+		\draw[fill] (0,	-.85) circle (0.05);
+		
+		\draw[fill] (-0.4, 0.4) circle (0.05);
+		\draw[fill] (-0.4,	-.4) circle (0.05);
+		
+		\draw[fill] (2.9, 0) circle (0.05);
+		
+		\draw[-latex] (-\Rinit, 0) -- (-\Rinit + \time, 0);
+	\end{tikzpicture}
+\end{document}

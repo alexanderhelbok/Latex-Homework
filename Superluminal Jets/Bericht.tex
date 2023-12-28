@@ -1,0 +1,33 @@
+\documentclass{alex_bericht}
+\usepackage{pdfpages}
+
+\begin{document}
+%Seiten ohne Kopf- und Fußzeile sowie Seitenzahl
+\pagenumbering{Roman}
+\input{01_titel}
+
+%Inhaltsverzeichnis
+{\hypersetup{linkcolor=black}
+\clearpage
+\tableofcontents
+
+%Verzeichnis aller Bilder
+%\listoffigures
+
+%Verzeichnis aller Tabellen
+%\listoftables}
+\cleardoubleoddpage
+
+\pagenumbering{arabic}
+\input{02_Einleitung}
+
+\input{03_Main}
+
+\input{04_Diskussion}
+
+%%Literaturverzeichnis
+\printbibliography
+
+%\includepdf[noautoscale]{Unterschriften}
+
+\end{document}
