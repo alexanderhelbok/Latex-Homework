@@ -1,5 +1,6 @@
 **/build
 **/figures
+**/.vscode
 *.synctex.gz
 *.log
 .directory
