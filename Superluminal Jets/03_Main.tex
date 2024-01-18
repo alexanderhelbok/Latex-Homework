@@ -1,60 +1,61 @@
 % !TeX root = Bericht.tex
 % !TeX spellcheck = de_DE
 
-\section{Grundlagen und Theorie}
-Allgemein betrachtet können auf ein Ölteilchen in dem Kondensator vier verschiedene Kräfte wirken. Dazu zählen die Gewichtskraft $F_{\text{g}} = \rho_{\text{Öl}} \cdot V \cdot g$ und die entgegengesetzte Auftriebskraft $F_{\text{A}} = \rho_{\text{Luft}} \cdot V \cdot g$. Die daraus resultierende Kraft berechnet sich dann zu
-\begin{equation}
-	F_{\text{g, A}} = F_{\text{g}} - F_{\text{A}} = (\rho_{\text{Öl}} - \rho_{\text{Luft}}) \cdot V \cdot g,
-\end{equation}
-mit den jeweiligen Dichten von Luft \( \rho_{\text{Luft}} \) und Öl \( \rho_{\text{Öl}} \), dem Volumen des Tropfens \( V \) und der Beschleunigung im Gravitationsfeld der Erde \( g \). Darüber hinaus wirkt in einem eingeschalteten Plattenkondensator die elektrische Kraft $F_{\text{el}}$ auf ein geladenes Öltröpfchen. Diese lautet:
-\begin{equation}
-	F_{\text{el}} = Q \cdot E = Q \cdot \frac{U}{d}
-\end{equation}
-Dabei steht \( E \) für die Stärke des elektrischen Feldes, \( U \) ist die angelegte Spannung und \( d \) der Abstand zwischen den zwei horizontalen Kondensatorplatten. 
-Abschließend lässt sich eine Kraft, die Reibungskraft welche immer der Bewegung des Öltröpfchens entgegen wirkt, erkennen. Unter der Annahme, das Tröpfchen befindet sich in einer laminaren Strömung, wird der Luftwiderstand durch die Stokes'sche-Reibung charakterisiert und sieht wie folgt aus:
-\begin{equation}
-	F_{\text{R}} =  6 \pi \cdot r \cdot \eta \cdot v 
-\end{equation}
-Der Koeffizient $ \eta $ steht für die Viskosität der Luft, $ r $ für den Radius des Öltröpfchens und $v$ dessen Geschwindigkeit. 
+\section{Standpunkt 1965}
+Der Bereich der Radioastronomie ist in den 30er aufgekommen und hat Astronomen §§ geöffnet. Während optische Lichtwellen leicht abgeschirmt werden (durch Staub und Gas), können Radiowellen aufgrund ihrer große Wellenlänge (und niedriger Energie) sich viel weiter fortpflanzen ohne starke Verluste zu erleiden. Deshalb können mit Radioteleskopen Objekte beobachtet werden, die große Entfernungen besitzen, s
 
-Während der Versuchsdurchführung werden zwei verschiedene Zustände betrachtet. Zuerst fällt das Tröpfchen, der Kondensator ist ausgeschaltet. Nach einer gewissen Strecke, welche das Tröpfchen im Sinkflug zurückgelegt hat, wird der Kondensator eingeschalten und die elektrische Kraft beginnt zu wirken, das Öltröpfchen fängt an zu steigen. 
+Mitte der 60er Jahre wurde eine neue Klasse an astronomischen Objekten entdeckt. Im Optischen erscheinen diese entweder gar nicht oder nur sehr schwach und punktförmig, wie Sterne. Im Radiobereich, der in dem Jahrzehnt neu aufgeschlossen wurde, strahlen sie sehr stark und man erkennt zum Teil räumliche Ausdehnungen. Hinzu  kommt, dass das Spektrum das eines schwarzen Strahlers gar nicht ähnelt und Spektralinien zu sehen sind, die hohe Rotverschiebungen und somit hohe Enfernungen andeuten. Diese Objekte wurden aufgrund ihrer optischen Ähnlichkeit mit Sternen quasi-stellare-Objekte, kurz QSO oder Quasare, getauft. 
 
-Aus physikalischer Sicht wird das Tröpfchen während des Sinkfluges durch die Gewichtskraft beschleunigt, bis diese durch die Reibungskraft kompensiert wird und sich ein Kräftegleichgewicht einstellt. Dieses lautet: 
-\begin{equation*}
-	F_{\text{g, A}} - F_{\text{R}} = 0 \quad\Leftrightarrow\quad F_{\text{g, A}} = F_{\text{R}}
-\end{equation*}
-\begin{equation}
-	\label{eqn:1_raw}
-	(\rho_{\text{Öl}} - \rho_{\text{Luft}}) \cdot V \cdot g = 6 \pi \cdot r \cdot \eta \cdot v_1
-\end{equation}
-Nimmt man an, die Öltropfen seien sphärisch, ist das Volumen \( V = 4/3 \pi r^3 \) und die einzigen verbleibenden unbekannten in \autoref{eqn:1_raw} sind \( v_1 \) und \( r \). Mithilfe der Messung der Sinkgeschwindigkeit $v_1$ ergibt sich für \( r \)
-\begin{equation}
-	\label{eqn:1}
-	r = \sqrt{\frac{18\eta v_1}{4(\rho_{\text{Öl}} - \rho_{\text{Luft}}) g}}
-\end{equation}
-Nach einer gewissen Zeit im Sinkflug wird der Kondensator eingeschalten, das Kräfteverhältnis wird um die elektrische Kraft $F_{\text{el}}$ verändert. Ist diese groß genug, dreht sich die Bewegungsrichtung der Öltropfen um, was die Richtung der Reibungskraft invertiert. Das neue Kräftegleichung lässt sich folgend anschreiben: 
-\begin{equation*}
-	F_{\text{g, A}} + F_{\text{R}} - F_{\text{el}} = 0 \quad\Leftrightarrow\quad F_{g,A} + F_{\text{R}} = F_{\text{el}}
-\end{equation*}
-\begin{equation}
-	(\rho_{\text{Öl}} - \rho_{\text{Luft}}) \cdot V \cdot g + 6 \pi \cdot r \cdot \eta \cdot v_{2} = Q \cdot \frac{U}{d}
-\end{equation}
-Mithilfe der Messung der Steiggeschwindigkeit $v_2$ und der Berechnung des Radius \( r \) kann die Ladung \( Q \) des steigenden Öltröpfchens bestimmt werden und es ergibt sich
-\begin{equation}
-	\label{eqn:2}
-	Q = \left(\frac{4\pi r^3(\rho_{\text{Öl}} - \rho_{\text{Luft}}) g}{3} + 6\pi\eta rv_2 \right) \frac{d}{U}
-\end{equation} 
-Als Spezialfall der oberen Gleichung kann wenn die Spannung gerade richtig gewählt ist, dass das Tröpfchen zum Schweben gebracht wird und somit \( v_2 = 0 \) gilt. Damit vereinfacht sich \autoref{eqn:2} zu 
-\begin{equation}
-	Q = \left(\frac{4\pi r^3(\rho_{\text{Öl}} - \rho_{\text{Luft}}) g}{3} \right) \frac{d}{U}
-\end{equation}
-Dabei zeigt die Erfahrung, die aus mehreren Versuchsdurchführungen und Berechnungen der Elementarladung \( e \) gezogen werden konnte, dass die experimentell bestimmten Werte etwas zu groß ausfallen. In der Theorie wird das Stokessche-Gesetz für die Beschreibung der Reibungskraft verwendet, jedoch gilt diese Gesetzmäßigkeit nicht mehr exakt für die Größenordnung der Tröpfchenradien zwischen $10^{-3} \unit{mm}$ und $10^{-4} \unit{mm}$. Dies ist durch die Übereinstimmung der Größe der Radien mit der mittleren freien Weglänge der Luftmoleküle zu begründen. Die Korrektur, welche auch schon von Millikan selbst verwendet wurde, kann mathematisch wie folgt definiert werden:
-\begin{equation}
-	\label{eqn:b}
-	Q_k = \frac{Q}{(1+\frac{b}{rp})^{2/3}} \quad\Leftrightarrow\quad Q^{2/3} = Q_{k}^{2/3} \left(1 + \frac{b}{rp}\right)
-\end{equation}
-mit der korrigierten Ladung \( Q_k \), dem Luftdruck \( p \), dem Radius der Tropfen \( r \) und einem zu bestimmenden Parameter \( b \). Dies kann durch eine lineare Geradengleichung der Form:
-\begin{equation}
-	y = y_0(1+bx)
-\end{equation}
-dargestellt werden. Dabei bezeichnet $y_0 = Q_{k}^{2/3} $ den Schnittpunkt der Gerade mit der y-Achse des Koordinatensystems, die Geradensteigung entspricht dem konstanten Parameter \( b \). 
+Was Quasare zu einzigartigen (und physikalisch äußerst problematischen) Objekten macht, sind folgende drei Beobachtungen:
+\begin{enumerate}
+	\renewcommand{\labelenumi}{\arabic{enumi})}
+	\item Falls die Rotverschiebung der Spektrallinien (\( z > 0.1\)) der Expansion des Universums zugeschrieben werden kann, dann haben Quasare Entfernungen von über \( 500 \unit{Mpc} \).
+	\item Der gemessene Fluss von Quasaren ist hoch.
+	\item Der Strahlungsfluss von Quasaren verfielfacht sich innerhalb von Tagen.
+\end{enumerate}
+
+Stimmen diese drei Aussagen/Beobachtungen, dann haben wir es bei Quasaren mit Objekten zu tun, deren Kernregion die Größe des Sonnensystems hat (Aussage 3), ein vielfaches der Milchstraße strahlt (Aussage 1 \& 2). 
+
+Der gemessene Fluss kann unter der Annahme von Isotropie 
+Die größe kernregion
+
+ 
+
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{oldflux}
+	\end{subfigure}%
+	\begin{subfigure}{.55\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{newflux}
+	\end{subfigure}
+	\caption{Links ist der gemessene Fluss auf die Zeit aufgetragen. An Beobachtungen die bei gleichen Wellenlängen durchgeführt wurden, sind Geraden angepasst worden. In der rechten Abbildung ist der gemessene Fluss des gleichen Quasars auf die Wellenlänge für drei Verschiedene Messreihen (farblich hervorgehoben) aufgetragen.}
+	\label{fig:quasarflux}
+\end{figure}
+
+In \autoref{fig:quasarflux} sind 
+In der Linken Abbildung aus 1965 \autocite{oldflux} sind Flussmessungen bei verschiednen Wellenlängen zu unterschiedlichen Zeitpunkten angegeben. Die gemessene Flussdichte ist mit Fehlerbalken auf den Beobachtungszeitpunkt aufgetragen, die Unterscheidung der Spektralbänder entsteht automatisch durch den Unterschied der Flüsse bei unterschiedlichen Wellenlängen. Auf Messungen aus dem gleichen Spektralband wurden lineare Regressionen angewendet und die erhaltenen Geraden sind strichliert dargestellt. 
+
+In der rechten Abbildung aus 2020 \autocite{newflux} ist die Flussdichte auf die Wellenlänge aufgetragen, wobei drei farblich unterscheidbare Kurven drei Messungen aus 2013 bis 2015, mit jeweils einem Jahr Abstand, darstellen. 
+
+Man erkennt, dass die Flussdichte im Zeitraum von 6 Jahren in allen Wellenlängen zugenommen hat. 
+
+Drastische Helligkeitsschwankungen sind in der Astronomie nichts neues, das Problem ist die Kombination aus der Stärke und Geschwindigkeit der Fluktuationen. Damit sich ein ausgedehntes Objekt 
+Wir haben es hier also mit 
+
+
+Eine erhöhte Flussdichte kann man entweder durch einen erhöhten gesamten Energieausstoß oder durch eine vergrößerte Oberfläche, welche mit der gleichen Energiedichte strahlt. Prozesse, die so schnell den Energieausstoß auf den Größenordnungen wie es bei Quasaren beobachtet wird erhöht, sind schwer.
+
+Eine vergrößerung der strahlenden Oberfläche kann zb durch Explosionen leicht gemacht werden, reicht aber aus klassischer Sicht nicht aus, um die Beobachtungen zu erklären. Betrachtet man dieses Argument aber relativistisch, sieht das ganze aber anders aus.
+
+Betrachte eine Explosion, welche sich sphärisch vom Mittelpunkt \( S \) glaichförmig mit der Geschwindigkeit \( v \) ausbreitet. Im klassischen Regime \( v \ll c \) erscheint die sich ausbreitene Oberfläche für einen Beobachter \( O \) im Abstand \( R \ll vt \) kreisförmig (2D Projektion). Der Radius des Kreises nach der Zeit \( t \) (\( t \) wird ab dem Zeitpunkt gemessen, an dem die Explosion in \( O \) beobachtet wird) ist dabei \( r = vt \), und der Winkeldurchmesser beträgt \( \theta = 2\arctan(\tfrac{vt}{R}) \approx 2\tfrac{vt}{R} \).
+
+Breitet sich die Explosion aber mit relativistischen Geschwindigkeiten aus \( v ~ c \) stimmt das klassische Bild nicht mehr. Aufgrund der Endlichkeit der Lichtgeschwindigkeit, wird in \( O \) kein "Snapshot" der Explosion beobachtet, das Licht, welches Gleichzeitig eintrifft und somit das gesehen Bild erzeugt, wurde an unterschiedlichen Orten der Explosion zu verschiedenen Zeiten losgeschickt. Die Expansion erscheint also nicht mehr perfekt sphärisch, sondern wie ein Ellipsoid (siehe autoref). 
+
+
+
+
+

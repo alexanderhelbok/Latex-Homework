@@ -10,7 +10,7 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage{fontspec}
 \setmainfont[Mapping=tex-text]{Times New Roman}
-\RequirePackage[backend=biber, abbreviate=true,doi=false,style=numeric-comp,giveninits=true,sorting=none]{biblatex}
+\RequirePackage[backend=biber, abbreviate=true, doi=false,style=authoryear,giveninits=true,sorting=none, parentracker=true]{biblatex}
 \RequirePackage[ngerman]{babel}
 \RequirePackage{xifthen, xstring, csquotes, etoolbox}
 \RequirePackage[dvipsnames]{xcolor}
@@ -31,6 +31,7 @@
 	%Links nicht einrahmen
 	hidelinks
 ]{hyperref}
+\RequirePackage{subcaption}
 \RequirePackage{bookmark, makecell}
 %\RequirePackage{custom}
 \RequirePackage{tikz, pgfplots}

@@ -1,0 +1,62 @@
+\documentclass[border=3pt]{standalone}
+
+\usepackage{tikz}  
+\usepackage{tikz-3dplot} 
+
+\definecolor{MyBlue}{HTML}{0072B2}
+\definecolor{MyOrange}{HTML}{D55E00}
+\definecolor{MyRed}{HTML}{F00F0F}
+
+\begin{document}
+	%Axis Angles
+	\tdplotsetmaincoords{70}{90}
+	
+	%Macros
+	\pgfmathsetmacro{\rvec}{6}
+	\pgfmathsetmacro{\thetavec}{65}
+	\pgfmathsetmacro{\phivec}{55}
+	
+	\pgfmathsetmacro{\dphivec}{30}
+	\pgfmathsetmacro{\dthetavec}{20}
+	
+	%Layers
+	\pgfdeclarelayer{background}
+	\pgfdeclarelayer{foreground}
+	
+	\pgfsetlayers{background, main, foreground}
+	
+	\begin{tikzpicture}[tdplot_main_coords, scale=0.5]
+		%Coordinates
+		\coordinate (O) at (0,0,0);
+		%
+		\tdplotsetcoord{A}{\rvec}{\thetavec}{\phivec}
+		\tdplotsetcoord{B}{\rvec}{\thetavec + \dthetavec}{\phivec}
+		\tdplotsetcoord{C}{\rvec}{\thetavec + \dthetavec}{\phivec + \dphivec}
+		\tdplotsetcoord{D}{\rvec}{\thetavec}{\phivec + \dphivec}
+		%
+		\tdplotsetcoord{A'}{\rvec + 4}{\thetavec}{\phivec}
+		\tdplotsetcoord{B'}{\rvec + 3}{\thetavec + \dthetavec}{\phivec}
+		\tdplotsetcoord{C'}{\rvec + 1}{\thetavec + \dthetavec}{\phivec + \dphivec}
+		\tdplotsetcoord{D'}{\rvec + 2}{\thetavec}{\phivec + \dphivec}
+%		
+		%Help Lines
+		\begin{pgfonlayer}{background}
+			%Up
+			\draw[] (O) -- (A') node [pos=0, below] {\( S \)};
+			\draw (O) -- (B') node[pos=0.4, below] {$r$};
+			\draw (O) -- (C');
+			\draw[] (O) -- (D');
+		\end{pgfonlayer}
+		
+		\begin{scope}
+			%Fill Color
+			\begin{pgfonlayer}{main}
+				\clip[canvas is zy plane at x=0] (\rvec - 0.09,0) arc (0:200:\rvec - 0.09);
+				%Front
+				\filldraw[opacity=0.6, color=black, fill=MyOrange, thick] (A) to[bend left=4] (B)  to[bend left=2] (C) to[bend right=6.5] (D) to[bend right=4] cycle;
+			\end{pgfonlayer}
+			
+			\draw[canvas is zy plane at x=0, ultra thick, MyBlue] (\rvec - 0.1,0) arc (0:200:\rvec - 0.1);	
+		\end{scope}
+	\end{tikzpicture}
+\end{document}

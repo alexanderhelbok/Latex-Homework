@@ -15,15 +15,21 @@
 \usepackage[backend=biber, abbreviate=true, doi=false, style=numeric-comp, giveninits=true, sorting=none]{biblatex}
 \usepackage{enumitem, csquotes, xurl}
 \usepackage[most]{tcolorbox}
-\usepackage{multimedia, tikz}
+\usepackage{multimedia, tikz, tikz-3dplot, pgfplots}
 \usepackage[font=footnotesize, bf, format=plain, font=normalsize]{caption}
 
-\usetikzlibrary{math, arrows.meta, calc, angles, quotes}
+\usetikzlibrary{math, arrows.meta, calc, angles, quotes, arrows, shapes.geometric, decorations.pathmorphing, overlay-beamer-styles, patterns.meta}
 
 \tikzset{
 	partial ellipse/.style args={#1:#2:#3}{
 		insert path={+ (#1:#3) arc (#1:#2:#3)}
 	}
+}
+
+\tikzset{snake arrow/.style=
+	{-Latex,
+		decorate,
+		decoration={snake,amplitude=.4mm,segment length=2mm,post length=1mm}},
 }
 
 \graphicspath{ {./bilder/} }
@@ -36,6 +42,7 @@
 \let\oldunit\unit
 \renewcommand{\unit}[1]{\hspace{4pt}\oldunit{#1}}
 \DeclareSIUnit\year{yr}
+\DeclareSIUnit\FU{F.U.}
 
 \newcommand{\nair}{n\sb{\fontfamily{Times New Roman}\selectfont \mathrm{air}}}
 
@@ -77,6 +84,49 @@
 \newcommand{\s}[1]{{\color{MyBlue}#1}}
 
 \setstretch{1.5}
+
+\newcommand{\relexpansion}[2]{\begin{tikzpicture}[every node/.style={scale=0.9}, xscale=#1, sxale=#2]
+		%		\node[inner sep=0pt] (russell) at (0,0.05){\includegraphics[scale=0.25]{bilder/aberration2}};
+		
+		%		\draw [step=.1, gray,thin, opacity=0.5] (-4,-2) grid (4,2);
+		%		\draw [step=1, black, opacity=0.5] (-4,-2) grid (4,2);
+		
+		\coordinate (S) at (-2.5, 0);
+		
+		\draw[-latex] (S) -- (-3.5, 0);
+		
+		\draw[-latex] (S) -- (-3.2, 0.7);
+		\draw[-latex] (S) -- (-3.2, -0.7);
+		
+		\draw[-latex] (S) -- (-2.5, 1.2);
+		\draw[-latex] (S) -- (-2.5, -1.2);
+		
+		\draw[-latex] (S) -- (-1, 1.5);
+		\draw[-latex] (S) -- (-1, -1.5);
+		
+		\draw[-latex] (S) -- (0.9, 1.7);
+		\draw[-latex] (S) -- (0.9, -1.7);
+		
+		\draw[-latex] (S) -- (2.4, 1);
+		\draw[-latex] (S) -- (2.4, -1);
+		
+		
+		\draw[fill=bg] (-0.25,0) ellipse (2.7 and 1.1);
+		
+		\draw[MyBlue, line cap=round, thick] (S) -- (-2.5, 0.6) node [right, pos=0.55] {\( v t \)};
+		\draw[MyRed, thick] (-0.25, 0) -- (-0.25, 1.1) node [left, pos=0.5] {\( \gamma v t \)};
+		
+		\draw[thick] (-0.25,0) ellipse (2.7 and 1.1);
+		
+		\draw[line width=2.5, MyOrange, opacity=0.75, line cap=round] (-0.25,0) [partial ellipse=-90:90:2.7 and 1.1];
+		
+		\draw[fill] (S) circle (0.05cm) node [below, yshift=-1] {\( S \)};
+		
+		\draw[-latex, semithick] (S) -- (3.5, 0) node [above left, pos=0.975] {to \( O \)};
+		
+		%			\node[rectangle, rounded corners, draw=MyRed, align=left] at (3.5, 2.5) 
+		%			{\(\gamma = \frac{1}{\sqrt{1-\beta^2}}\)\\[1ex] \(\beta = \frac{v}{c} \)};
+\end{tikzpicture}}
 
 \newtcolorbox{quotebox}{enhanced, colframe=MyOrange, top=0.2cm, bottom=0.2cm, colback=orange!15, left=0.1cm}
 
@@ -126,78 +176,170 @@
 			\end{scope}
 		\end{tikzpicture}
 	\end{frame}
-
-	\begin{frame}{Helligkeitsschwankungen in 3c273}
+	
+	\begin{frame}{Leuchtkraft von 3c273}
+		%Axis Angles
+		\tdplotsetmaincoords{70}{90}
+		%Macros
+		\pgfmathsetmacro{\rvec}{6}
+		\pgfmathsetmacro{\thetavec}{65}
+		\pgfmathsetmacro{\phivec}{55}
+		
+		\pgfmathsetmacro{\dphivec}{30}
+		\pgfmathsetmacro{\dthetavec}{20}
+		%Layers
+		\pgfdeclarelayer{background}
+		
+		\pgfsetlayers{background, main}
 		\begin{columns}
-		\begin{column}{0.5\textwidth}
-			\vspace{-0.35cm}
-			\begin{tikzpicture}
-				\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[scale=0.33]{oldflux-}};
-						
-				\begin{scope}[x={(image.south east)},y={(image.north west)}]
-					\node[] at (0.35, 0.925) {\tiny(\citeauthor{oldflux} \citeyear{oldflux})};
-				\end{scope}
-			\end{tikzpicture}
-		\end{column}
-		\begin{column}{0.5\textwidth}
-			\hspace{-0.3cm}\vspace{-0.25cm}
-			\begin{tikzpicture}
-				\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[scale=0.19]{newflux}};
+			\begin{column}{0.6\textwidth}
+				\vspace{-1cm}
+				\begin{tikzpicture}[tdplot_main_coords, scale=0.65]
+					%Coordinates
+					\coordinate (O) at (0,0,0);
+					%
+					\tdplotsetcoord{A}{\rvec}{\thetavec}{\phivec}
+					\tdplotsetcoord{B}{\rvec}{\thetavec + \dthetavec}{\phivec}
+					\tdplotsetcoord{C}{\rvec}{\thetavec + \dthetavec}{\phivec + \dphivec}
+					\tdplotsetcoord{D}{\rvec}{\thetavec}{\phivec + \dphivec}
+					%
+					\tdplotsetcoord{A'}{\rvec + 4}{\thetavec}{\phivec}
+					\tdplotsetcoord{B'}{\rvec + 3}{\thetavec + \dthetavec}{\phivec}
+					\tdplotsetcoord{C'}{\rvec + 1}{\thetavec + \dthetavec}{\phivec + \dphivec}
+					\tdplotsetcoord{D'}{\rvec + 2}{\thetavec}{\phivec + \dphivec}
+					%		
+					%Help Lines
+					\begin{pgfonlayer}{background}
+						%Up
+						\draw[] (O) -- (A') node [pos=0, below] {\( S \)};
+						\draw (O) -- (B') node[pos=0.4, below] {$d$};
+						\draw (O) -- (C');
+						\draw[] (O) -- (D');
+					\end{pgfonlayer}
 					
-				\begin{scope}[x={(image.south east)},y={(image.north west)}]
-					\node[align=left] at (0.3, 0.925) {\tiny(\citeauthor{newflux} \citeyear{newflux})};
-				\end{scope}
-			\end{tikzpicture}
-		\end{column}
+					\begin{scope}
+						%Fill Color
+						\begin{pgfonlayer}{main}
+							\clip[canvas is zy plane at x=0] (\rvec - 0.09,0) arc (0:200:\rvec - 0.09);
+							%Front
+							\filldraw[opacity=0.6, color=black, fill=MyOrange, thick] (A) to[bend left=4] (B)  to[bend left=2] (C) to[bend right=6.5] (D) to[bend right=4] cycle;
+						\end{pgfonlayer}
+						
+						\draw[canvas is zy plane at x=0, ultra thick, MyBlue] (\rvec - 0.1,0) arc (0:200:\rvec - 0.1);	
+					\end{scope}
+				\end{tikzpicture}
+			\end{column}
+			\begin{column}{0.45\textwidth}
+				\centering
+				\begin{tikzpicture}
+					\draw[-latex, shorten >=0.35cm] (0.5, -1) -- (0.8, 0);
+					\node at (0, -1) [below, align=center] {Flussmessung im Radiobereich};
+					
+					\node at (0, 0) {\( L = 4\pi d^2F \)};
+					
+					\draw[-latex, shorten >=0.35cm] (0, 1) -- (0.4, 0);
+					\node [align=center, above] at (0, 1) {Entfernung über Rotverschiebung\\ (\( z = 0.158 \))};
+					
+					\node [] at (0, -3) {\( \Rightarrow \) extrem Hell};
+				\end{tikzpicture}
+			\end{column}
 		\end{columns}
 	\end{frame}
 	
-	\begin{frame}{Problem}
-		content...
+	\begin{frame}{Helligkeitsschwankungen in 3c273}
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\vspace{-0.35cm}
+				\begin{tikzpicture}
+					\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[scale=0.33]{oldflux-}};
+					
+					\begin{scope}[x={(image.south east)},y={(image.north west)}]
+						\node[] at (0.4, 0.925) {\tiny(\citeauthor{oldflux} \citeyear{oldflux})};
+					\end{scope}
+				\end{tikzpicture}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\hspace{-0.3cm}\vspace{-0.25cm}
+				\begin{tikzpicture}
+					\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[scale=0.185]{newflux}};
+					
+					\begin{scope}[x={(image.south east)},y={(image.north west)}]
+						\node[align=left] at (0.3, 0.925) {\tiny(\citeauthor{newflux} \citeyear{newflux})};
+					\end{scope}
+				\end{tikzpicture}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}{Fluktuationen erklärt}
+		\begin{columns}
+			\begin{column}{0.4\textwidth}
+				\begin{tikzpicture}			
+					\foreach \j [count=\i] in {2,...,8}{
+						\coordinate (P\i) at (0, \i);
+						\draw[snake arrow, MyOrange] (P\i) -- (1, \i);
+						\only<\j>{\draw[snake arrow, MyRed, thick] (P\i) -- (1, \i);}}
+					
+					\draw[thick, line cap=round] (P1) -- (P7);
+					
+					\begin{scope}
+						\clip[] (-0.5, 1) rectangle (0, 7);
+						\fill[pattern={Lines[distance=3mm,angle=45,line width=0.4mm]}] (-1, 1) rectangle (0, 7);
+					\end{scope}
+					%			\draw[snake arrow, MyRed, thick] (P2) -- (1, 2);
+				\end{tikzpicture}
+			\end{column}
+			\begin{column}{0.6\textwidth}
+				\begin{tikzpicture}
+					\begin{axis}[]
+				\end{axis}
+			\end{tikzpicture}
+			\end{column}
+		\end{columns}
+		
 	\end{frame}
 	
 %	########### Theorie #############
-	\begin{frame}{Bild}
-		\begin{tikzpicture}[scale=1.4]
-			\coordinate (O) at (6,1.5);
-			\coordinate (S) at (0,1.5);
-			\coordinate (U) at (0,3);
-			
-			\filldraw[ball color=white] (S) circle (1.5);
-			
-			\draw[dashed,color=darkgray] (0,0) arc (-90:90:0.5 and 1.5);% right half of the left ellipse
-			\draw[thick] (0,0) -- (O);% bottom line
-			\draw[thick] (U) -- (O);% top line
-			\draw[thick] (0,0) arc (270:90:0.5 and 1.5);% left half of the left ellipse
-			
-			\draw[fill] (S) circle (0.05) node [below, yshift=-2] {\( S \)};
-			\draw[fill] (O) circle (0.05) node [above, yshift=2] {\( O \)};
-			
-			\draw[semithick, dashed] (O) -- (S) node [above, pos=0.6] {\( R \)};
-			\draw[semithick, dashed] (S) -- (U) node [left, pos=0.5] {\( r \)}; 
-			
-			\pic [draw, angle radius=3cm] {angle = U--O--S};
-			\pic [draw, angle radius=0.25cm, thick] {right angle = O--S--U};
-			
-			\draw (4.5, 1.7) node {\( \theta \)};
-		\end{tikzpicture}	
-		\vspace{-1cm}\hspace{4cm}
-		\begin{minipage}{.5\textwidth}
-			\begin{quotebox}
-				\( r \ll R,\ \tan(\theta) \approx \theta \)\\
-				\( \sphericalangle = 2\theta = 2\tfrac{r}{R} \)
-			\end{quotebox}
+%	\begin{frame}{Winkeldurchmesser}
+%		\begin{tikzpicture}[scale=1.4]
+%			\coordinate (O) at (6,1.5);
+%			\coordinate (S) at (0,1.5);
+%			\coordinate (U) at (0,3);
 %			
-		\end{minipage}
-	\end{frame}
+%			\filldraw[ball color=white] (S) circle (1.5);
+%			
+%			\draw[dashed,color=darkgray] (0,0) arc (-90:90:0.5 and 1.5);% right half of the left ellipse
+%			\draw[thick] (0,0) -- (O);% bottom line
+%			\draw[thick] (U) -- (O);% top line
+%			\draw[thick] (0,0) arc (270:90:0.5 and 1.5);% left half of the left ellipse
+%			
+%			\draw[fill] (S) circle (0.05) node [below, yshift=-2] {\( S \)};
+%			\draw[fill] (O) circle (0.05) node [above, yshift=2] {\( O \)};
+%			
+%			\draw[semithick, dashed] (O) -- (S) node [above, pos=0.6] {\( R \)};
+%			\draw[semithick, dashed] (S) -- (U) node [left, pos=0.5] {\( r \)}; 
+%			
+%			\pic [draw, angle radius=3cm] {angle = U--O--S};
+%			\pic [draw, angle radius=0.25cm, thick] {right angle = O--S--U};
+%			
+%			\draw (4.5, 1.7) node {\( \theta \)};
+%		\end{tikzpicture}	
+%		\vspace{-1cm}\hspace{4cm}
+%		\begin{minipage}{.5\textwidth}
+%			\begin{quotebox}
+%				\( r \ll R,\ \tan(\theta) \approx \theta \)\\
+%				\( \sphericalangle = 2\theta = 2\tfrac{r}{R} \)
+%			\end{quotebox}
+%%			
+%		\end{minipage}
+%	\end{frame}
 	
-	\begin{frame}{Analyse}
-		\only<1>{%
+	\begin{frame}{sphärische Expansion \( v \ll c \)}
 		\begin{tikzpicture}[every node/.style={scale=0.9}, scale=1.4]
-		%		\node[inner sep=0pt] (russell) at (0,0.05){\includegraphics[scale=0.25]{bilder/aberration2}};
-		
-		%		\draw [step=.1, gray,thin, opacity=0.5] (-4,-2) grid (4,2);
-		%		\draw [step=1, black, opacity=0.5] (-4,-2) grid (4,2);
+	%		\node[inner sep=0pt] (russell) at (0,0.05){\includegraphics[scale=0.25]{bilder/aberration2}};
+	
+	%		\draw [step=.1, gray,thin, opacity=0.5] (-4,-2) grid (4,2);
+	%		\draw [step=1, black, opacity=0.5] (-4,-2) grid (4,2);
 			
 			\coordinate (S) at (-2.5, 0);
 			
@@ -217,15 +359,17 @@
 			
 			\draw[MyBlue, line cap=round, thick] (S) -- (-2.5, 0.6) node [right, pos=0.55] {\( v t \)};
 			
-			\draw (S) circle (0.6);
+			\draw[thick] (S) circle (0.6);
 			
-			\draw[ultra thick, MyOrange, opacity=0.75, line cap=round] (-2.5, -0.6) arc (-90:90:0.6);
+			\draw[line width=2.5, MyOrange, opacity=0.75, line cap=round] (-2.5, -0.6) arc (-90:90:0.6);
 			
 			\draw[fill] (S) circle (0.05cm) node [below, yshift=-1] {\( S \)};
 			
-			\draw[-latex] (S) -- (3.5, 0) node [above left, pos=0.975] {to \( O \)};
-		\end{tikzpicture}}
-		\only<2>{%
+			\draw[-latex, semithick] (S) -- (3.5, 0) node [above left, pos=0.975] {to \( O \)};
+		\end{tikzpicture}
+	\end{frame}
+	
+	\begin{frame}{sphärische Expansion \( v \sim c \)}
 		\begin{tikzpicture}[every node/.style={scale=0.9}, scale=1.4]
 	%		\node[inner sep=0pt] (russell) at (0,0.05){\includegraphics[scale=0.25]{bilder/aberration2}};
 	
@@ -257,138 +401,242 @@
 			\draw[MyBlue, line cap=round, thick] (S) -- (-2.5, 0.6) node [right, pos=0.55] {\( v t \)};
 			\draw[MyRed, thick] (-0.25, 0) -- (-0.25, 1.1) node [left, pos=0.5] {\( \gamma v t \)};
 			
-			\draw (-0.25,0) ellipse (2.7 and 1.1);
+			\draw[thick] (-0.25,0) ellipse (2.7 and 1.1);
 			
-			\draw[ultra thick, MyOrange, opacity=0.75, line cap=round] (-0.25,0) [partial ellipse=-90:90:2.7 and 1.1];
+			\draw[line width=2.5, MyOrange, opacity=0.75, line cap=round] (-0.25,0) [partial ellipse=-90:90:2.7 and 1.1];
 			
 			\draw[fill] (S) circle (0.05cm) node [below, yshift=-1] {\( S \)};
 			
-			\draw[-latex] (S) -- (3.5, 0) node [above left, pos=0.975] {to \( O \)};
-		\end{tikzpicture}}
+			\draw[-latex, semithick] (S) -- (3.5, 0) node [above left, pos=0.975] {to \( O \)};
+			\node[rectangle, rounded corners, draw=MyRed, align=left] at (3.5, 2.5) 
+				{\(\gamma = \frac{1}{\sqrt{1-\beta^2}}\)\\[1ex] \(\beta = \frac{v}{c} \)};
+		\end{tikzpicture}
+%		\begin{minipage}{\textwidth}
+%			\begin{tikzpicture}
+%%				\node[rectangle, rounded corners, draw=MyRed, align=left] at (3.5, 2.5) 
+%%				{\(\gamma = \frac{1}{\sqrt{1-\beta^2}}\)\\[1ex] \(\beta = \frac{v}{c} \)};
+%			\end{tikzpicture}
+%		\end{minipage}
 	\end{frame}
 	
-%%	########## ergebnisse ##########
-%	\begin{frame}{Ergebnisse}
-%		\begin{tikzpicture}
-%			\begin{scope}[xshift=1.5cm]
-%				\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\textwidth]{HubbleLaw}};
-%				\begin{scope}[x={(image.south east)},y={(image.north west)}]
-%					\begin{onlyenv}<2>
-%						\fill[Gray, opacity=0.3, rounded corners] (0.205, 0.665) rectangle (0.5, 0.97);
-%						\draw[MyOrange,ultra thick,rounded corners] (0.2,0.15) rectangle (0.31,0.3);
-%						\draw[MyOrange,ultra thick,rounded corners] (0.335,0.43) rectangle (0.37,0.49);
-%						
-%						\draw[rotate around={-60:(0.575,0.55)},MyBlue, ultra thick] (0.575,0.55) ellipse (40pt and 95pt);
-%	%					\draw[red, ultra thick, line cap=round] (0.345,0.445) -- (0.36,0.475);
-%	%					\draw[red, ultra thick, line cap=round] (0.345,0.475) -- (0.36,0.445);
-%						
-%						\draw[MyRed,ultra thick,rounded corners] (0.86,0.5) rectangle (0.9,0.9);
-%						
-%%						Legend
-%						\begin{scope}[shift={(-0.48, 0.6)}]							
-%							\draw[MyOrange,ultra thick,rounded corners] (0.7,0.3) rectangle (0.73,0.35) node [black, right, yshift=-0.18cm] {Cepheiden};
-%							\draw[MyBlue,ultra thick,rounded corners] (0.7,0.22) rectangle (0.73,0.27) node [black, right, yshift=-0.18cm] {Standardkerzen};
-%							\draw[MyRed,ultra thick,rounded corners] (0.7,0.14) rectangle (0.73,0.19) node [black, right, yshift=-0.18cm] {Virgo};
-%							\draw[ultra thick, line cap=round] (0.7, 0.1) -- (0.73, 0.1) node [right] {Fit};
-%						\end{scope}
-%					\end{onlyenv}
-%					\begin{onlyenv}<3>
-%						\fill[Gray, opacity=0.3, rounded corners] (0.205, 0.72) rectangle (0.5, 0.89);
-%%						Legend
-%						\begin{scope}[shift={(-0.48, 0.6)}]
-%							\draw[line width=1.25pt] (0.715,0.24) circle (2 pt) node [right, xshift=0.18cm] {Gebinnte Daten};
-%							\draw[ultra thick, line cap=round, dashed] (0.7, 0.16) -- (0.73, 0.16) node [right] {Fit};
-%						\end{scope}
-%					\end{onlyenv}
-%					\begin{onlyenv}<4>
-%						\fill[Gray, opacity=0.3, rounded corners] (0.205, 0.805) rectangle (0.53, 0.88);
-%						\draw[MyRed,ultra thick, rounded corners] (0.65,0.62) rectangle (0.7,0.69);
-%%						Legend
-%						\begin{scope}[shift={(-0.48, 0.6)}]
-%							\draw[line width=1.25pt, line cap=round] (0.7, 0.24) -- (0.73, 0.24) node [right, xshift=0.05cm] {Gemittelte Daten};
-%							\draw[line width=1.25pt, line cap=round] (0.715, 0.22) -- (0.715, 0.26);
-%						\end{scope}
-%					\end{onlyenv}
-%					
-%					\node[] at (0.9, -0.05) {(\citeauthor{Hubble1929} \citeyear{Hubble1929})};
-%%					\foreach \i in {1,...,10}{
-%%					\draw[black] (0.\i, 0) -- (0.\i, 1);
-%%					\draw[black] (0, 0.\i) -- (1, 0.\i);}
-%				\end{scope}
-%			\end{scope}
-%		\end{tikzpicture}
-%	\end{frame}
-%	
-%%	######### 1st Interpretation ########
-%	\begin{frame}{Intrepretation von Hubble}
-%		\vspace{0.5cm}
-%		\begin{minipage}[b][.425\textheight][t]{\textwidth}
-%		\begin{quotebox}
-%			\begin{itemize}
-%				\only<1>{\item[1)] \blockcquote{Hubble1929}{The results establish a roughly linear relation between velocities and distances among nebulae ...}\\
-%				Mit Faktor \( K = 465(50) \text{ bzw. } 513(60) \unit{km/s/Mpc} \)}
-%				\only<2>{\item[2)] \blockcquote{Hubble1929}{New data to be expected in the near future may modify the significance of the present investigation or, if confirmatory, will lead to a solution having many times the weight.}}
-%				\only<3>{\item[3)] \blockcquote{Hubble1929}{The outstanding feature, however, is the possibility that the velocity-distance relation may represent the de Sitter effect, ...}}
-%			\end{itemize}
-%		\end{quotebox}
-%	\end{minipage}
-%	\begin{minipage}[b][.5\textheight][t]{\textwidth}
-%			\begin{itemize}[label={\textendash}]
-%				\only<1>{
-%					\item linearer Zusammenhang deutlich sichtbar
-%					\item keine statistischen Fehler
-%					\item dafür Entfernungen systematisch zu klein (Faktor 7!)
-%					\item keine Fitgüte im Paper}
-%				\only<2>{
-%					\item Absolut Richtig
-%					\item viele Nachfolgeexperimente (bis heute noch)
-%					\item \enquote{crisis in cosmology}}
-%				\only<3>{
-%					\item deSitter Universum: statisch, keine (normale) Materie
-%					\item Redshift durch Zeitverlangsamung bei großen Entfernungen \cite{deSitter}
-%					\item \enquote{richtige} Interpretation: dynamisches Universum (nach Friedmann/Lema\^{i}tre)}
-%			\end{itemize}
-%		\end{minipage}
-%	\end{frame}
-%	
-%%	######### folgeexperimente #########
-%	\begin{frame}{Messung über SN1a}
-%		\centering
-%		\begin{tikzpicture}
-%			\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height=0.9\textheight]{Sn1ahubble}};	
-%			
-%			\begin{scope}[x={(image.south east)},y={(image.north west)}]
-%
-%				\only<1>{\draw[line width=1pt, opacity=0] (0.09, 0.355) -- (1, 0.89);}
-%				\only<2>{\draw[line width=1pt] (0.09, 0.355) -- (1, 0.89);}
-%				\node[] at (0.75, 0.02) {(\citeauthor{betoule2014improved} \citeyear{betoule2014improved})};
-%%				\draw[fill] (0.5, 0.59) circle (.005) node [below] {\( \approx 1.4 \unit{\giga\year} \)};
-%			\end{scope}
-%		\end{tikzpicture}
-%	\end{frame}
-%	
-%	\begin{frame}{Inkonsistenz in \( H_0 \)?}
-%		\centering	
-%		\begin{tikzpicture}
-%			\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height=0.9\textheight]{crisis}};
-%			
-%			\begin{scope}[x={(image.south east)},y={(image.north west)}]
-%				\node[] at (0.15, 0.02) {(\citeauthor{Di_Valentino_2021} \citeyear{Di_Valentino_2021})};
-%			\end{scope}
-%		\end{tikzpicture}
-%	\end{frame}
-%%	######### Interpretation
-%
+	\begin{frame}{Beobachtung}
+		\begin{columns}
+			\begin{column}{0.6\textwidth}
+				\vspace{-0.35cm}
+				\begin{tikzpicture}
+					\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[scale=0.33]{oldflux-}};
+					
+					\begin{scope}[x={(image.south east)},y={(image.north west)}]
+%						\draw [step=.02, gray,thin, opacity=0.5] (0,0) grid (1,1);
+%						\draw [step=.1, black, opacity=0.5] (0,0) grid (1,1);
+						
+						\node[] at (0.4, 0.925) {\tiny(\citeauthor{oldflux} \citeyear{oldflux})};
+						
+%						horizontal
+						\draw[dashed, ultra thick, line cap=round, MyOrange, opacity=0.7] (0.145, 0.3) -- (0.5, 0.3);
+						\draw[dashed, ultra thick, line cap=round, MyOrange, opacity=0.7] (0.145, 0.44) -- (0.86, 0.44);
+%						vertical
+						\draw[dashed, ultra thick, line cap=round, opacity=0.75, MyBlue] (0.5, 0.066) -- (0.5, 0.3);
+						\draw[dashed, ultra thick, line cap=round, opacity=0.75, MyBlue] (0.86, 0.066) -- (0.86, 0.44);
+						
+						\node[MyOrange] at (0.375, 0.41) {\small\( \Delta F \approx 6 \unit{\FU}\)};
+						\node[MyBlue] at (0.675, 0.2) {\small\( \Delta t \approx 3 \unit{\year}\)};
+					\end{scope}
+				\end{tikzpicture}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\( F \propto \sphericalangle = 2\tfrac{vt}{R} \)
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	
+	\begin{frame}{Konsequenz}
+		\begin{tikzpicture}[every node/.style={scale=0.9}, scale=1.4]
+	%		\node[inner sep=0pt] (russell) at (0,0.05){\includegraphics[scale=0.25]{bilder/aberration2}};
+	
+	%		\draw [step=.1, gray,thin, opacity=0.5] (-4,-2) grid (4,2);
+	%		\draw [step=1, black, opacity=0.5] (-4,-2) grid (4,2);
+			
+			\coordinate (S) at (-2.5, 0);
+			
+			\draw[-latex] (S) -- (-3.5, 0);
+			
+			\draw[-latex] (S) -- (-3.2, 0.7);
+			\draw[-latex] (S) -- (-3.2, -0.7);
+			
+			\draw[-latex] (S) -- (-2.5, 1.2);
+			\draw[-latex] (S) -- (-2.5, -1.2);
+			
+			\draw[-latex] (S) -- (-1, 1.5);
+			\draw[-latex] (S) -- (-1, -1.5);
+			
+			\draw[-latex] (S) -- (0.9, 1.7);
+			\draw[-latex] (S) -- (0.9, -1.7);
+			
+			\draw[-latex] (S) -- (2.4, 1);
+			\draw[-latex] (S) -- (2.4, -1);
+			
+			
+			\draw[fill=bg] (-0.25,0) ellipse (2.7 and 1.1);
+			
+			\draw[MyBlue, line cap=round, thick] (S) -- (-2.5, 0.6) node [right, pos=0.55] {\( v t \)};
+			\draw[MyRed, thick] (-0.25, 0) -- (-0.25, 1.1) node [left, pos=0.5] {\( \gamma v t \)};
+			
+			\draw[thick] (-0.25,0) ellipse (2.7 and 1.1);
+			
+			\draw[line width=2.5, MyOrange, opacity=0.75, line cap=round] (-0.25,0) [partial ellipse=-90:90:2.7 and 1.1];
+			
+			\draw[fill] (S) circle (0.05cm) node [below, yshift=-1] {\( S \)};
+			
+			\draw[-latex, semithick] (S) -- (3.5, 0) node [above left, pos=0.975] {to \( O \)};
+			
+%			\node[rectangle, rounded corners, draw=MyRed, align=left] at (3.5, 2.5) 
+%			{\(\gamma = \frac{1}{\sqrt{1-\beta^2}}\)\\[1ex] \(\beta = \frac{v}{c} \)};
+		\end{tikzpicture}
+		\( \beta = \frac{v}{c} \in [0; 1] \)\\
+		\( \gamma = \frac{1}{\sqrt{1 - \beta^2}} \in [1, \infty) \)
+		\( \Rightarrow \gamma v > c \) möglich!
+	\end{frame}
+	
 %% 	######### Recap #########
 %	\begin{frame}{Recap}
 %		\begin{itemize}[label={\textendash}, itemindent=0.1cm]
-%			\item {\color{MyBlue}Entferungsbestimmung} über Leuchtkraftrelationenen
-%			\item {\color{MyOrange}Geschwindigkeit} über Doppler shift
-%			\item[\( \Rightarrow \)] linearer Zusammenhang (obwohl systematische Abweichung)
-%			\item \( H_0 \) erlaubt Vergleich Modell, Experiment
+%			\item relativstisch um \( \gamma \) gestreckt
+%			\item kann Fluktuationen erklären
+%			\item Tatsächlich: Überlichtgeschwindigkeit in Jets beobachtet \autocite{recap}
 %		\end{itemize}
 %	\end{frame}
 
+	\begin{frame}{Recap}
+		\begin{tikzpicture}[xscale=4, yscale=2]
+			\node (A) at (0, 0) {%Axis Angles
+				\tdplotsetmaincoords{70}{90}
+				%Macros
+				\pgfmathsetmacro{\rvec}{6}
+				\pgfmathsetmacro{\thetavec}{65}
+				\pgfmathsetmacro{\phivec}{55}
+				
+				\pgfmathsetmacro{\dphivec}{30}
+				\pgfmathsetmacro{\dthetavec}{20}
+				%Layers
+				\pgfdeclarelayer{background}
+				
+				\pgfsetlayers{background, main}
+				\begin{tikzpicture}[tdplot_main_coords, scale=0.35]
+					%Coordinates
+					\coordinate (O) at (0,0,0);
+					%
+					\tdplotsetcoord{A}{\rvec}{\thetavec}{\phivec}
+					\tdplotsetcoord{B}{\rvec}{\thetavec + \dthetavec}{\phivec}
+					\tdplotsetcoord{C}{\rvec}{\thetavec + \dthetavec}{\phivec + \dphivec}
+					\tdplotsetcoord{D}{\rvec}{\thetavec}{\phivec + \dphivec}
+					%
+					\tdplotsetcoord{A'}{\rvec + 4}{\thetavec}{\phivec}
+					\tdplotsetcoord{B'}{\rvec + 3}{\thetavec + \dthetavec}{\phivec}
+					\tdplotsetcoord{C'}{\rvec + 1}{\thetavec + \dthetavec}{\phivec + \dphivec}
+					\tdplotsetcoord{D'}{\rvec + 2}{\thetavec}{\phivec + \dphivec}
+					%		
+					%Help Lines
+					\begin{pgfonlayer}{background}
+						%Up
+						\draw[] (O) -- (A') node [pos=0, below] {\( S \)};
+						\draw (O) -- (B') node[pos=0.4, below] {$d$};
+						\draw (O) -- (C');
+						\draw[] (O) -- (D');
+					\end{pgfonlayer}
+					
+					\begin{scope}
+						%Fill Color
+						\begin{pgfonlayer}{main}
+							\clip[canvas is zy plane at x=0] (\rvec - 0.09,0) arc (0:200:\rvec - 0.09);
+							%Front
+							\filldraw[opacity=0.6, color=black, fill=MyOrange, thick] (A) to[bend left=4] (B)  to[bend left=2] (C) to[bend right=6.5] (D) to[bend right=4] cycle;
+						\end{pgfonlayer}
+						
+						\draw[canvas is zy plane at x=0, ultra thick, MyBlue] (\rvec - 0.1,0) arc (0:200:\rvec - 0.1);	
+					\end{scope}
+			\end{tikzpicture}};
+			
+			\node (B) at (1, 0) {B};
+			
+			\node[MyRed] (C) at (2, 0) {\Large\faBolt};
+			\node (E) at (0.5, -1) {\begin{tikzpicture}[every node/.style={scale=0.9}, scale=0.7]
+					\coordinate (S) at (-2.5, 0);
+					
+					\draw[-latex] (S) -- (-3.5, 0);
+					
+					\draw[-latex] (S) -- (-3.2, 0.7);
+					\draw[-latex] (S) -- (-3.2, -0.7);
+					
+					\draw[-latex] (S) -- (-2.5, 1.2);
+					\draw[-latex] (S) -- (-2.5, -1.2);
+					
+					\draw[-latex] (S) -- (-1, 1.5);
+					\draw[-latex] (S) -- (-1, -1.5);
+					
+					\draw[-latex] (S) -- (0.9, 1.7);
+					\draw[-latex] (S) -- (0.9, -1.7);
+					
+					\draw[-latex] (S) -- (2.4, 1);
+					\draw[-latex] (S) -- (2.4, -1);
+					
+					
+					\draw[fill=bg] (-0.25,0) ellipse (2.7 and 1.1);
+					
+%					\draw[MyBlue, line cap=round, thick] (S) -- (-2.5, 0.6) node [right, pos=0.55] {\( v t \)};
+%					\draw[MyRed, thick] (-0.25, 0) -- (-0.25, 1.1) node [left, pos=0.5] {\( \gamma v t \)};
+					
+					\draw[thick] (-0.25,0) ellipse (2.7 and 1.1);
+					
+					\draw[line width=2.5, MyOrange, opacity=0.75, line cap=round] (-0.25,0) [partial ellipse=-90:90:2.7 and 1.1];
+					
+					\draw[fill] (S) circle (0.05cm);
+					
+					\draw[-latex, semithick] (S) -- (3.5, 0);
+			\end{tikzpicture}};
+		
+			\node (F) at (1.5, -1) {\begin{tikzpicture}[every node/.style={scale=0.9}, scale=0.7]				
+					\coordinate (S) at (-2.5, 0);
+					
+					\draw[-latex] (S) -- (-3.5, 0);
+					
+					\draw[-latex] (S) -- (-2.5+0.7,  0.7);
+					\draw[-latex] (S) -- (-2.5+0.7, -0.7);
+					
+					\draw[-latex] (S) -- (-2.5-0.7,  0.7);
+					\draw[-latex] (S) -- (-2.5-0.7, -0.7);
+					
+					\draw[-latex] (S) -- (-2.5, 1);
+					\draw[-latex] (S) -- (-2.5, -1);
+					
+					
+					\draw[fill=bg] (S) circle (0.6);
+					
+%					\draw[MyBlue, line cap=round, thick] (S) -- (-2.5, 0.6) node [right, pos=0.55] {\( v t \)};
+					
+					\draw[thick] (S) circle (0.6);
+					
+					\draw[line width=2.5, MyOrange, opacity=0.75, line cap=round] (-2.5, -0.6) arc (-90:90:0.6);
+					
+					\draw[fill] (S) circle (0.05cm);
+					
+					\draw[-latex, semithick] (S) -- (-1.5, 0);
+			\end{tikzpicture}};
+		
+			\node[green] (G) at (0, -2) {\Large\faCheck};
+			
+			\node (H) at (2, -2) {\( \gamma v > c \)};
+			
+			\node at (0.5, 0) {\Large \( + \)};
+			\node at (1.5, 0) {\Large \( = \)};
+			\node at (0.5, -2) {\Large \( \Rightarrow \)};
+			
+			\draw[-latex] (C.south) to [out=-90,in=0] (F.east);
+			\draw[-latex] (F) -- (E) node [above, pos=0.5] {\( c =  \)const.};
+			\draw[-latex] (E.west) to [out=180,in=90] (G.north);
+		\end{tikzpicture}
+	\end{frame}
 \begin{frame}[standout]
 	\Huge Fragen?
 \end{frame}
@@ -499,24 +747,86 @@
 %		M &= m - 5\log\left( d_{\oldunit{pc}} \right) + 5 &&
 %	\end{flalign*}
 %\end{frame}
-%
-%\begin{frame}{SN1a als Standardkerzen}
-%	\centering
-%	\begin{tikzpicture}
-%		\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.85\textwidth]{sn1a}};
-%		
-%		\begin{scope}[x={(image.south east)},y={(image.north west)}]
-%			\node[align=left] at (0.85, 0.02) {\tiny\url{www.astronomy.swin.edu.au}};
-%		\end{scope}
-%	\end{tikzpicture}
-%	\begin{tikzpicture}
-%		\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.85\textwidth]{stretch2}};
-%		
-%		\begin{scope}[x={(image.south east)},y={(image.north west)}]
-%			\node[align=left] at (0.2, 0.02) {\tiny\url{www.johnlucey.webspace.durham.ac.uk}};
-%		\end{scope}
-%	\end{tikzpicture}
-%\end{frame}
+
+\def\cbeta{0.835}
+\def\time{6}
+\def\Rinit{0.5}
+
+\begin{frame}{Relativistische Expansion}
+	\begin{tikzpicture}[every node/.style={scale=0.9}, scale=1.2]	
+		\clip[] (-1, -3) rectangle (85, 3);
+		
+%		\draw [step=.1, gray,thin, opacity=0.5] (-4,-2) grid (4,2);
+%		\draw [step=1, black, opacity=0.5] (-4,-2) grid (4,2);
+		
+		\coordinate (O) at (0, 0);
+		\draw[] (O) circle (0.05) node [below, yshift=-1] {\( S \)};
+		
+		\node[rectangle, rounded corners, draw=MyRed] at (6.5, 2.5) {\( \beta = \cbeta,\ \gamma = 1.82 \)};
+		
+		\foreach \j [count=\i] in {0, 0.25, 0.59, 1.5, 2.5, 4, 5.5, 6}{
+			\uncover<\i>{
+				\def\time{\j}
+				\node[draw=MyRed, rectangle, rounded corners, align=left, text width=1.25cm] at (7.2, 2) {\( t = \time \)};
+				
+				\draw[dashed] (0, 0) circle (\Rinit + \cbeta*\time);
+				\draw[snake arrow, MyBlue] (-\Rinit + \j - 0.5, 0) -- (-\Rinit + \j, 0);
+			}
+		}
+		
+		\draw[fill] (-\Rinit, 0) circle (0.05);
+		\only<1>{\draw[fill, MyOrange] (-\Rinit, 0) circle (0.05);}
+		
+		\only<2>{
+				\draw[fill, MyOrange] (-0.25,  0.65) circle (0.05);
+				\draw[fill, MyOrange] (-0.25, -0.65) circle (0.05);}
+		\uncover<3->{
+				\draw[fill] (-0.25,  0.65) circle (0.05);
+				\draw[fill] (-0.25, -0.65) circle (0.05);}
+				
+		\only<3>{
+				\draw[fill, MyOrange] (0,  1) circle (0.05);
+				\draw[fill, MyOrange] (0, -1) circle (0.05);}
+		\uncover<4->{
+				\draw[fill] (0,  1) circle (0.05);
+				\draw[fill] (0, -1) circle (0.05);}
+				
+		\only<4>{
+			\draw[fill, MyOrange] (1,  1.45) circle (0.05);
+			\draw[fill, MyOrange] (1, -1.45) circle (0.05);}
+		\uncover<5->{
+			\draw[fill] (1,  1.45) circle (0.05);
+			\draw[fill] (1, -1.45) circle (0.05);}
+		
+		\only<5>{
+			\draw[fill, MyOrange] (2,  1.6) circle (0.05);
+			\draw[fill, MyOrange] (2, -1.6) circle (0.05);}
+		\uncover<6->{
+			\draw[fill] (2,  1.6) circle (0.05);
+			\draw[fill] (2, -1.6) circle (0.05);}
+			
+		\only<6>{
+			\draw[fill, MyOrange] (3.5,  1.6) circle (0.05);
+			\draw[fill, MyOrange] (3.5, -1.6) circle (0.05);}
+		\uncover<7->{
+			\draw[fill] (3.5,  1.6) circle (0.05);
+			\draw[fill] (3.5, -1.6) circle (0.05);}
+			
+		\only<7>{
+			\draw[fill, MyOrange] (5,  1) circle (0.05);
+			\draw[fill, MyOrange] (5, -1) circle (0.05);}
+		\uncover<8->{
+			\draw[fill] (5,  1) circle (0.05);
+			\draw[fill] (5, -1) circle (0.05);}
+		
+		\only<8>{\draw[fill, MyOrange] (5.5, 0) circle (0.05);}
+		\uncover<9->{\draw[fill] (5.5, 0) circle (0.05);
+					\node[draw=MyRed, rectangle, rounded corners, text width=1.25cm, align=left] at (7.2, 2) {\( t > 6 \)};
+					\draw[snake arrow, MyBlue] (-\Rinit + 7 - 0.5, 0) -- (-\Rinit + 7, 0);}
+		
+		\draw[-latex] (6.5, 0) -- (7.5, 0) node [above left] {to \( O \)};
+	\end{tikzpicture}
+\end{frame}
 
 \begin{frame}[allowframebreaks]{Sources}
 	\printbibliography
