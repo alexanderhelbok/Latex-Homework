@@ -79,105 +79,50 @@
 \definecolor{MyBlue}{HTML}{0072B2}
 \definecolor{MyOrange}{HTML}{D55E00}
 \definecolor{MyRed}{HTML}{F00F0F}
+\definecolor{MyGreen}{HTML}{20B312}
 \definecolor{bg}{HTML}{FBFBFB}
 
 \newcommand{\s}[1]{{\color{MyBlue}#1}}
 
 \setstretch{1.5}
 
-\newcommand{\relexpansion}[2]{\begin{tikzpicture}[every node/.style={scale=0.9}, xscale=#1, sxale=#2]
-		%		\node[inner sep=0pt] (russell) at (0,0.05){\includegraphics[scale=0.25]{bilder/aberration2}};
-		
-		%		\draw [step=.1, gray,thin, opacity=0.5] (-4,-2) grid (4,2);
-		%		\draw [step=1, black, opacity=0.5] (-4,-2) grid (4,2);
-		
-		\coordinate (S) at (-2.5, 0);
-		
-		\draw[-latex] (S) -- (-3.5, 0);
-		
-		\draw[-latex] (S) -- (-3.2, 0.7);
-		\draw[-latex] (S) -- (-3.2, -0.7);
-		
-		\draw[-latex] (S) -- (-2.5, 1.2);
-		\draw[-latex] (S) -- (-2.5, -1.2);
-		
-		\draw[-latex] (S) -- (-1, 1.5);
-		\draw[-latex] (S) -- (-1, -1.5);
-		
-		\draw[-latex] (S) -- (0.9, 1.7);
-		\draw[-latex] (S) -- (0.9, -1.7);
-		
-		\draw[-latex] (S) -- (2.4, 1);
-		\draw[-latex] (S) -- (2.4, -1);
-		
-		
-		\draw[fill=bg] (-0.25,0) ellipse (2.7 and 1.1);
-		
-		\draw[MyBlue, line cap=round, thick] (S) -- (-2.5, 0.6) node [right, pos=0.55] {\( v t \)};
-		\draw[MyRed, thick] (-0.25, 0) -- (-0.25, 1.1) node [left, pos=0.5] {\( \gamma v t \)};
-		
-		\draw[thick] (-0.25,0) ellipse (2.7 and 1.1);
-		
-		\draw[line width=2.5, MyOrange, opacity=0.75, line cap=round] (-0.25,0) [partial ellipse=-90:90:2.7 and 1.1];
-		
-		\draw[fill] (S) circle (0.05cm) node [below, yshift=-1] {\( S \)};
-		
-		\draw[-latex, semithick] (S) -- (3.5, 0) node [above left, pos=0.975] {to \( O \)};
-		
-		%			\node[rectangle, rounded corners, draw=MyRed, align=left] at (3.5, 2.5) 
-		%			{\(\gamma = \frac{1}{\sqrt{1-\beta^2}}\)\\[1ex] \(\beta = \frac{v}{c} \)};
-\end{tikzpicture}}
-
 \newtcolorbox{quotebox}{enhanced, colframe=MyOrange, top=0.2cm, bottom=0.2cm, colback=orange!15, left=0.1cm}
 
-\title{Überlichtgeschwindigkeit in kosmischen Jets}
+\title{relativistische Betrachtung von Bewegungen}
 \author{Alexander Helbok}
 \date{\today}
 
 \begin{document}
 	\maketitle
-%	\begin{frame}[noframenumbering, plain]{Overview}
-%		\tableofcontents
-%	\end{frame}
 
-%	\begin{frame}{Timeline}
-%		\begin{tikzpicture}[scale=2, every node/.style={scale=0.8, black}]
-%			\draw[line width=1.5pt] (0, 0) -- (5, 0);
-%			\foreach \i in {0,...,5}{
-%			\draw[MyBlue, fill](\i,0) circle (.045) node [below, yshift=-0.2cm] {\Large\( 19\i0 \)};}
-%			
-%			\draw[MyBlue, line width=1pt] (0.5, 0) -- (0.5, 0.25) node [above left, xshift=0.5cm] {SRT (1905)};
-%			
-%			\draw[MyBlue, line width=1pt] (1.5, 0) -- (1.5, .75) node [above left, xshift=0.2cm] {ART (1915)};
-%			
-%			\draw[MyBlue, line width=1pt] (1.7, 0) -- (1.7, 1.25) node [above left, align=left] {Einstein/de Sitter\\ Universum (1917)};
-%			
-%			\draw[MyBlue, line width=1pt] (1.9, 0) -- (1.9, 2) node [above left, align=left] {Eddington: Beweis über\\ Lichtumlenkung (1919)};
-%			
-%			\draw[MyBlue, line width=1pt] (2.2, 0) -- (2.2, 2.5) node [above right, xshift=-0.4cm] {Friedmann's Gleichungen (1922)};
-%			
-%			\draw[MyBlue, line width=1pt] (2.7, 0) -- (2.7, 1.5) node [above right, align=left, xshift=-0.4cm] {Lema\^{i}tres expandierendes\\ Universum (1927)};
-%			
-%			\draw[MyOrange, line width=1pt] (2.9, 0) -- (2.9, 0.8) node [above right, align=left, xshift=-0.5cm] {Hubble Messungen\\ (1929, 1931, 1934)};
-%			\draw[MyOrange, line width=1pt] (3.1, 0) -- (3.1, 0.8);
-%			\draw[MyOrange, line width=1pt] (3.4, 0) -- (3.4, 0.8);
-%			
-%			\draw[MyRed, line width=1pt] (4.8, 0) -- (4.8, 0.5) node [above] {CMBR postuliert (1948)};
-%		\end{tikzpicture}
-%	\end{frame}
-
-	\begin{frame}{3c273}
+	\begin{frame}{Radiobeobachtungen}
 		\centering
-		\begin{tikzpicture}
-			\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[scale=0.3]{3c273new}};
-			
-			\begin{scope}[x={(image.south east)},y={(image.north west)}]
-				\node[] at (0.15, -0.02) {\tiny© ESA/HUBBLE \& NASA};
-			\end{scope}
-		\end{tikzpicture}
+		\vspace*{0.4cm}
+		\begin{columns}
+			\begin{column}{.5\textwidth}
+				\centering
+				\begin{tikzpicture}
+					\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[scale=0.26]{radio1}};
+					
+					\begin{scope}[x={(image.south east)},y={(image.north west)}]
+						\node[] at (0.35, -0.02) {\tiny(\citeauthor{radio} \citeyear{radio})};
+					\end{scope}
+				\end{tikzpicture}
+			\end{column}
+			\begin{column}{.5\textwidth}
+				\centering
+				\begin{tikzpicture}
+					\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[scale=0.26]{radio2}};
+					
+					\begin{scope}[x={(image.south east)},y={(image.north west)}]
+						\node[] at (0.35, -0.02) {\tiny(\citeauthor{radio} \citeyear{radio})};
+					\end{scope}
+				\end{tikzpicture}
+			\end{column}
+		\end{columns}
 	\end{frame}
 	
-	\begin{frame}{Leuchtkraft von 3c273}
+	\begin{frame}{Leuchtkraft von 3C 273}
 		%Axis Angles
 		\tdplotsetmaincoords{70}{90}
 		%Macros
@@ -246,7 +191,7 @@
 		\end{columns}
 	\end{frame}
 	
-	\begin{frame}{Helligkeitsschwankungen in 3c273}
+	\begin{frame}{Helligkeitsschwankungen in 3C 273}
 		\begin{columns}
 			\begin{column}{0.5\textwidth}
 				\vspace{-0.35cm}
@@ -273,30 +218,85 @@
 	
 	\begin{frame}{Fluktuationen erklärt}
 		\begin{columns}
-			\begin{column}{0.4\textwidth}
-				\begin{tikzpicture}			
-					\foreach \j [count=\i] in {2,...,8}{
-						\coordinate (P\i) at (0, \i);
-						\draw[snake arrow, MyOrange] (P\i) -- (1, \i);
-						\only<\j>{\draw[snake arrow, MyRed, thick] (P\i) -- (1, \i);}}
-					
-					\draw[thick, line cap=round] (P1) -- (P7);
-					
+			\begin{column}{0.3\textwidth}
+				\begin{tikzpicture}		
 					\begin{scope}
-						\clip[] (-0.5, 1) rectangle (0, 7);
-						\fill[pattern={Lines[distance=3mm,angle=45,line width=0.4mm]}] (-1, 1) rectangle (0, 7);
+						\clip[] (-0.5, 2) rectangle (0, 6);
+						\fill[pattern={Lines[distance=3mm,angle=45,line width=0.4mm]}] (-1, 1) rectangle (0, 6);
 					\end{scope}
-					%			\draw[snake arrow, MyRed, thick] (P2) -- (1, 2);
+					
+					\draw[latex-latex] (-0.7,2) -- (-0.7,6) node [above, pos=0.5, rotate=90] {\( 2 \) Lichtjahre};
+						
+					\foreach \i in {1, 2, 3}{
+						\coordinate (P\i) at (0, 2*\i);
+						\draw[snake arrow, MyOrange] (P\i) -- (1, 2*\i);}
+						
+					\uncover<2-5>{\draw[snake arrow, MyRed, thick] (P1) -- (1, 2);}
+					\uncover<3-6>{\draw[snake arrow, MyRed, thick] (P2) -- (1, 4);}
+					\uncover<4-7>{\draw[snake arrow, MyRed, thick] (P3) -- (1, 6);}
+					
+					\draw[thick, line cap=round, MyOrange, thick, opacity=1] (P1) -- (P3);
+					
+					\only<3>{\draw[thick, line cap=round, MyRed, ultra thick, opacity=1] (P1) -- (P2);}
+					\only<4-5>{\draw[thick, line cap=round, MyRed, ultra thick, opacity=1] (P1) -- (P3);}
+					\only<6>{\draw[thick, line cap=round, MyRed, ultra thick, opacity=1] (P3) -- (P2);}
+					
+					\only<8>{};
 				\end{tikzpicture}
 			\end{column}
-			\begin{column}{0.6\textwidth}
+			\begin{column}{0.7\textwidth}
 				\begin{tikzpicture}
-					\begin{axis}[]
+					\begin{axis}[
+						axis lines = left,
+						axis line style = ultra thick,
+						xlabel = \(t\) in Jahren,
+						ylabel = {Fluss},
+						enlargelimits=true,
+						xtick={0, 1, 2, 3, 4, 5, 6},
+						ytick={1, 2},
+						xmin=0,
+						xmax=6,
+						ymin=1,
+						ymax=2,
+						tick align=inside,
+						tickwidth=5pt,
+						yticklabels={\( F_0 \), \( 2F_0 \)}]
+					\only<1->{\addplot [domain=-1:0, color=MyBlue, thick] {1};}
+					\only<3->{\addplot [domain=0:1, color=MyBlue, thick] {x/2+1};}
+					\only<4->{\addplot [domain=1:2, color=MyBlue, thick] {x/2+1};}
+					\only<5->{\addplot [domain=2:3, color=MyBlue, thick] {2};}
+					\only<6->{\addplot [domain=3:4, color=MyBlue, thick] {-x/2+3.5};}
+					\only<7->{\addplot [domain=4:5, color=MyBlue, thick] {-x/2+3.5};}
+					\only<8->{\addplot [domain=5:6, color=MyBlue, thick] {1};}
 				\end{axis}
 			\end{tikzpicture}
 			\end{column}
 		\end{columns}
-		
+	\end{frame}
+	
+	\begin{frame}{Helligkeitsschwankungen in 3C 273}
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\vspace{-0.35cm}
+				\begin{tikzpicture}
+					\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[scale=0.33]{oldflux-}};
+					
+					\begin{scope}[x={(image.south east)},y={(image.north west)}]
+						\node[] at (0.4, 0.925) {\tiny(\citeauthor{oldflux} \citeyear{oldflux})};
+					\end{scope}
+				\end{tikzpicture}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\hspace{-0.3cm}\vspace{-0.25cm}
+				\begin{tikzpicture}
+					\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[scale=0.185]{newflux}};
+					
+					\begin{scope}[x={(image.south east)},y={(image.north west)}]
+						\node[align=left] at (0.3, 0.925) {\tiny(\citeauthor{newflux} \citeyear{newflux})};
+					\end{scope}
+				\end{tikzpicture}
+			\end{column}
+		\end{columns}
 	\end{frame}
 	
 %	########### Theorie #############
@@ -408,7 +408,7 @@
 			\draw[fill] (S) circle (0.05cm) node [below, yshift=-1] {\( S \)};
 			
 			\draw[-latex, semithick] (S) -- (3.5, 0) node [above left, pos=0.975] {to \( O \)};
-			\node[rectangle, rounded corners, draw=MyRed, align=left] at (3.5, 2.5) 
+			\node[rectangle, rounded corners, draw=MyRed, align=left] at (3.5, 1.2) 
 				{\(\gamma = \frac{1}{\sqrt{1-\beta^2}}\)\\[1ex] \(\beta = \frac{v}{c} \)};
 		\end{tikzpicture}
 %		\begin{minipage}{\textwidth}
@@ -421,7 +421,7 @@
 	
 	\begin{frame}{Beobachtung}
 		\begin{columns}
-			\begin{column}{0.6\textwidth}
+			\begin{column}{0.5\textwidth}
 				\vspace{-0.35cm}
 				\begin{tikzpicture}
 					\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[scale=0.33]{oldflux-}};
@@ -444,8 +444,11 @@
 					\end{scope}
 				\end{tikzpicture}
 			\end{column}
-			\begin{column}{0.5\textwidth}
+			\begin{column}{0.6\textwidth}
 				\( F \propto \sphericalangle = 2\tfrac{vt}{R} \)
+				\blockcquote{rees}{Because the observed intensity of a source, for a given surface brightness, is proportional to the apparent size}
+				
+				\blockcquote{rees}{If, however, a source at the distance of 3C 273 were to start to explode with a velocity corresponding to \( \gamma = 5 \), and if \( H \) (measured in a frame sharing the mean particle motion) \( \sim 10^{-2} \unit{gauss} \), the flux density would have risen to \( \sim 15 \unit{\FU} \) in 3 years}
 			\end{column}
 		\end{columns}
 	\end{frame}
@@ -499,17 +502,21 @@
 		\( \Rightarrow \gamma v > c \) möglich!
 	\end{frame}
 	
+	\begin{frame}{3C 273}
+		\centering
+		\begin{tikzpicture}
+			\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[scale=0.3]{3c273new}};
+			
+			\begin{scope}[x={(image.south east)},y={(image.north west)}]
+				\node[] at (0.15, -0.02) {\tiny© ESA/HUBBLE \& NASA};
+			\end{scope}
+		\end{tikzpicture}
+	\end{frame}
+	
 %% 	######### Recap #########
-%	\begin{frame}{Recap}
-%		\begin{itemize}[label={\textendash}, itemindent=0.1cm]
-%			\item relativstisch um \( \gamma \) gestreckt
-%			\item kann Fluktuationen erklären
-%			\item Tatsächlich: Überlichtgeschwindigkeit in Jets beobachtet \autocite{recap}
-%		\end{itemize}
-%	\end{frame}
-
 	\begin{frame}{Recap}
-		\begin{tikzpicture}[xscale=4, yscale=2]
+		\hspace*{-1cm}
+		\begin{tikzpicture}[xscale=5, yscale=2.5]
 			\node (A) at (0, 0) {%Axis Angles
 				\tdplotsetmaincoords{70}{90}
 				%Macros
@@ -523,7 +530,7 @@
 				\pgfdeclarelayer{background}
 				
 				\pgfsetlayers{background, main}
-				\begin{tikzpicture}[tdplot_main_coords, scale=0.35]
+				\begin{tikzpicture}[tdplot_main_coords, scale=0.2]
 					%Coordinates
 					\coordinate (O) at (0,0,0);
 					%
@@ -558,10 +565,32 @@
 					\end{scope}
 			\end{tikzpicture}};
 			
-			\node (B) at (1, 0) {B};
+			\node (B) at (1, 0) {\begin{tikzpicture}[scale=0.4, every node/.style={scale=2}]
+					\begin{axis}[
+					axis lines = left,
+					axis line style = ultra thick,
+					xlabel = \(t\) in Jahren,
+					ylabel = {Fluss},
+					enlargelimits=true,
+					xtick=\empty,
+					ytick=\empty,
+					xmin=0,
+					xmax=6,
+					ymin=1,
+					ymax=2,
+					tick align=inside,
+					tickwidth=5pt]
+					\addplot [domain=-1:0, color=MyBlue, ultra thick] {1};
+					\addplot [domain=0:2, color=MyBlue, ultra thick] {x/2+1};
+					\addplot [domain=2:3, color=MyBlue, ultra thick] {2};
+					\addplot [domain=3:5, color=MyBlue, ultra thick] {-x/2+3.5};
+					\addplot [domain=5:6, color=MyBlue, ultra thick] {1};
+			\end{axis}
+			\end{tikzpicture}};
 			
-			\node[MyRed] (C) at (2, 0) {\Large\faBolt};
-			\node (E) at (0.5, -1) {\begin{tikzpicture}[every node/.style={scale=0.9}, scale=0.7]
+			\uncover<2->{\node[MyRed] (C) at (1.9, 0) {\fontsize{40pt}{10pt}\selectfont\faBolt};}
+			
+			\uncover<4->{\node (E) at (0.45, -1) {\begin{tikzpicture}[every node/.style={scale=0.9}, scale=0.7]
 					\coordinate (S) at (-2.5, 0);
 					
 					\draw[-latex] (S) -- (-3.5, 0);
@@ -584,9 +613,6 @@
 					
 					\draw[fill=bg] (-0.25,0) ellipse (2.7 and 1.1);
 					
-%					\draw[MyBlue, line cap=round, thick] (S) -- (-2.5, 0.6) node [right, pos=0.55] {\( v t \)};
-%					\draw[MyRed, thick] (-0.25, 0) -- (-0.25, 1.1) node [left, pos=0.5] {\( \gamma v t \)};
-					
 					\draw[thick] (-0.25,0) ellipse (2.7 and 1.1);
 					
 					\draw[line width=2.5, MyOrange, opacity=0.75, line cap=round] (-0.25,0) [partial ellipse=-90:90:2.7 and 1.1];
@@ -594,9 +620,9 @@
 					\draw[fill] (S) circle (0.05cm);
 					
 					\draw[-latex, semithick] (S) -- (3.5, 0);
-			\end{tikzpicture}};
+			\end{tikzpicture}};}
 		
-			\node (F) at (1.5, -1) {\begin{tikzpicture}[every node/.style={scale=0.9}, scale=0.7]				
+			\uncover<3->{\node (F) at (1.5, -1) {\begin{tikzpicture}[every node/.style={scale=0.9}, scale=0.7]				
 					\coordinate (S) at (-2.5, 0);
 					
 					\draw[-latex] (S) -- (-3.5, 0);
@@ -622,19 +648,21 @@
 					\draw[fill] (S) circle (0.05cm);
 					
 					\draw[-latex, semithick] (S) -- (-1.5, 0);
-			\end{tikzpicture}};
+			\end{tikzpicture}};}
 		
-			\node[green] (G) at (0, -2) {\Large\faCheck};
+			\uncover<5->{\node[MyGreen] (G) at (0.15, -2) {\fontsize{40pt}{10pt}\faCheck};}
 			
-			\node (H) at (2, -2) {\( \gamma v > c \)};
+			\uncover<6->{\node[draw=MyOrange, rectangle, rounded corners, fill=orange!15, thick] (H) at (1, -2) {\Huge\( \gamma v > c \)};
+			\node at (1.5, -2) {\fontsize{40pt}{10pt}\selectfont!!!};}
 			
-			\node at (0.5, 0) {\Large \( + \)};
-			\node at (1.5, 0) {\Large \( = \)};
-			\node at (0.5, -2) {\Large \( \Rightarrow \)};
+			\node at (0.5, 0) {\Huge\faPlus};
+			\uncover<2->{\node at (1.5, 0) {\Huge\faEquals};}	
 			
-			\draw[-latex] (C.south) to [out=-90,in=0] (F.east);
-			\draw[-latex] (F) -- (E) node [above, pos=0.5] {\( c =  \)const.};
-			\draw[-latex] (E.west) to [out=180,in=90] (G.north);
+			\uncover<3->{\draw[-latex, thick, dashed, shorten <= 0.15cm, shorten >= 0.15cm] (C.south) to [out=-90,in=0] (F.east);}
+			\uncover<4->{\draw[-latex, thick, dashed, shorten >=0.15cm, shorten <= 0.15cm] (F) -- (E) node [above, pos=0.5] {\( c =  \)const.};}
+			\uncover<5->{\draw[-latex, thick, dashed, shorten <= 0.15cm, shorten >= -0.15cm] (E.west) to [out=220,in=125] (G.north west);}
+			
+			\uncover<6->{\draw[-latex, thick, dashed, shorten <= 0.15cm, shorten >= 0.15cm] (E.west) to [out=220,in=150] (H.north west);}
 		\end{tikzpicture}
 	\end{frame}
 \begin{frame}[standout]
@@ -642,111 +670,6 @@
 \end{frame}
 
 \appendix
-
-%\begin{frame}{Frage 1}
-%	Warum habe ich \( H_0 \) immer Hubble Parameter und nicht Hubble Konstante genannt (wie man es in vielen Publikationen sieht)?
-%	\begin{itemize}
-%		\item[A)] Die beiden Begriffe sind ja Synonyme
-%		\only<1>{\item[B)] Naja, \( H_0 \) ist ja zeitlich nicht konstant geblieben}
-%		\only<2>{{\color{Green}\item[B)] Naja, \( H_0 \) ist ja zeitlich nicht konstant geblieben}}
-%		\item[C)] Man kann \( H_0 \) nicht aus Naturkonstanten ableiten, also ist es selber keine Konstante
-%	\end{itemize}
-%\end{frame}
-%
-%\begin{frame}{Frage 2}
-%	%	Wäre Hubble zum gleichen Schluss gekommen, wären die Fehler statistisch und nicht systematisch?	
-%	Wenn jetzt alle Galaxien von uns wegfliegen, heißt das, dass wir uns im Zentrum des Universums befinden wo der Urknall stattfand?
-%	\begin{itemize}
-%		\item[A)] Ja, weil ... 
-%		\only<1>{\item[B)] Nein, weil ...}
-%		\only<2-3>{{\color{Green}\item[B)] Nein, weil ...}}
-%	\end{itemize}
-%	\hspace{5cm}\begin{minipage}{0.6\textwidth}
-%		\vspace{-1.5cm}
-%		\begin{onlyenv}<3>
-%			\[ \vec{V}' = \vec{V} - \vec{V}_s = H_0 (\vec{r} - \vec{r}_s) = H_0 \vec{r}' \]
-%			\begin{tikzpicture}
-%				\coordinate (O) at (0,0);
-%				\coordinate (Vs) at (2,1);
-%				\coordinate (V) at (1,1.25);
-%				\coordinate (rs) at (4,2);
-%				\coordinate (r) at (2,2.5);
-%				
-%				\draw[ultra thick, -latex] (-0.3,0) -- (5,0) node [below] {\large\( X \)};
-%				\draw[ultra thick, -latex] (0,-0.3) -- (0,3) node [left] {\large\( Y \)};
-%				\draw[fill] (0,0) circle (0.1) node [below left] {\large\( 0 \)};
-%				
-%				\draw[thick, -{Latex[length=3mm,width=2mm]}] (O) -- (Vs) node [below, yshift=-0.1cm, pos=0.95] {\( \vec{V}_s \)};
-%				\draw[thick, -{Latex[length=3mm,width=2mm]}] (O) -- (V) node [left, xshift=-0.2cm, pos=0.9] {\( \vec{V} \)};
-%				\draw[thick, -{Latex[length=3mm,width=2mm]}] (Vs) -- (rs) node [below, yshift=-0.1cm, pos=0.95] {\( \vec{r}_s \)};
-%				\draw[thick, -{Latex[length=3mm,width=2mm]}] (V) -- (r) node [left, xshift=-0.2cm, pos=0.9] {\( \vec{r} \)};
-%				\draw[thick, -{Latex[length=3mm,width=2mm]}] (Vs) -- (V) node [above, pos=0.3] {\( \vec{V}' \)};
-%				\draw[thick, -{Latex[length=3mm,width=2mm]}] (rs) -- (r) node [above, pos=0.5] {\( \vec{r}' \)};
-%				
-%				\draw[fill, Goldenrod] (rs) circle (0.1) node [above right, black] {\( \mathrm{Sonne} \)};
-%			\end{tikzpicture}
-%		\end{onlyenv}
-%	\end{minipage}
-%\end{frame}
-%
-%\begin{frame}{Doppler-Effekt/Kosmologischer Redshift}
-%	\begin{columns}
-%		\begin{column}{0.37\textwidth}
-%			\vspace{0.5cm}
-%			\begin{tikzpicture}
-%				\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\textwidth]{doppler}};
-%				
-%				\begin{scope}[x={(image.south east)},y={(image.north west)}]
-%					\node[] at (0.175, -0.05) {\tiny\url{www.simple.wikipedia.org}};
-%				\end{scope}
-%			\end{tikzpicture}
-%		\end{column}
-%		\begin{column}{0.6\textwidth}
-%			\begin{tikzpicture}
-%				\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\textwidth]{doppler_effect}};
-%				
-%				\begin{scope}[x={(image.south east)},y={(image.north west)}]
-%					\node[align=left] at (0.5, -0.05) {\tiny\url{www.online-learning-college.com}};
-%				\end{scope}
-%			\end{tikzpicture}
-%			\begin{tikzpicture}
-%				\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\textwidth]{redshift}};
-%				
-%				\begin{scope}[x={(image.south east)},y={(image.north west)}]
-%					\node[align=left] at (0.85, 0.02) {\tiny\url{www.sites.pitt.edu/}};
-%				\end{scope}
-%			\end{tikzpicture}
-%		\end{column}
-%	\end{columns}
-%\end{frame}
-%
-%\begin{frame}{Cepheiden Perioden-Leuchtkraft Beziehung}
-%	\vspace{1cm}
-%	\begin{columns}
-%		\begin{column}{0.5\textwidth}
-%			\begin{tikzpicture}
-%				\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\textwidth]{cepheid-variables}};
-%				
-%				\begin{scope}[x={(image.south east)},y={(image.north west)}]
-%					\node[] at (0.175, -0.05) {\tiny\url{www.mso.anu.edu.au}};
-%				\end{scope}
-%			\end{tikzpicture}
-%		\end{column}
-%		\begin{column}{0.5\textwidth}
-%			\begin{tikzpicture}
-%				\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\textwidth]{out}};
-%				
-%				\begin{scope}[x={(image.south east)},y={(image.north west)}]
-%					\node[align=left] at (0.2, 0.02) {\tiny\url{www.atnf.csiro.au}};
-%				\end{scope}
-%			\end{tikzpicture}
-%		\end{column}
-%	\end{columns}
-%	\begin{flalign*}
-%		\qquad \text{Typ I Cepheiden: } M_v &= -2.54 \log\left( P_{\oldunit{days}} \right) - 1.61 &&\\
-%		M &= m - 5\log\left( d_{\oldunit{pc}} \right) + 5 &&
-%	\end{flalign*}
-%\end{frame}
 
 \def\cbeta{0.835}
 \def\time{6}
