@@ -156,9 +156,9 @@
 					%Help Lines
 					\begin{pgfonlayer}{background}
 						%Up
-						\draw[] (O) -- (A') node [pos=0, below] {\( S \)};
+						\draw[] (O) -- (A') node [pos=0, below] {\( L \)};
 						\draw (O) -- (B') node[pos=0.4, below] {$d$};
-						\draw (O) -- (C');
+						\draw (O) -- (C') node [pos=0.9, above, yshift=0] {\( F \)};
 						\draw[] (O) -- (D');
 					\end{pgfonlayer}
 					
@@ -445,10 +445,18 @@
 				\end{tikzpicture}
 			\end{column}
 			\begin{column}{0.6\textwidth}
-				\( F \propto \sphericalangle = 2\tfrac{vt}{R} \)
-				\blockcquote{rees}{Because the observed intensity of a source, for a given surface brightness, is proportional to the apparent size}
+				\only<2-3>{\begin{quotebox}
+					\blockcquote{rees}{Because the {\color{MyBlue}observed intensity} of a source, for a given {\color{MyRed}surface brightness}, is proportional to the {\color{MyOrange}apparent size}}
+				\end{quotebox}
+				\( {\color{MyBlue}F} = {\color{MyRed}B}{\color{MyOrange}\sphericalangle} \propto 2\tfrac{\gamma vt}{R}\quad \uncover<3>{\dv{\color{MyBlue}F}{t} = 2\tfrac{\gamma v}{R} \propto \gamma} \)
 				
-				\blockcquote{rees}{If, however, a source at the distance of 3C 273 were to start to explode with a velocity corresponding to \( \gamma = 5 \), and if \( H \) (measured in a frame sharing the mean particle motion) \( \sim 10^{-2} \unit{gauss} \), the flux density would have risen to \( \sim 15 \unit{\FU} \) in 3 years}
+				\uncover<3>{\begin{quotebox}
+						\blockcquote{rees}{it is already clear that an expanding  source could exhibit a rate of increase of flux density high enough to explain the observations.}
+					\end{quotebox}}}
+				
+				\only<4>{\begin{quotebox}
+					\blockcquote{rees}{If, however, a source at the distance of 3C 273 were to start to explode with a velocity corresponding to \( \gamma = 5 \), and if \( H \) (measured in a frame sharing the mean particle motion) \( \sim 10^{-2} \unit{gauss} \), the flux density would have risen to\\ \( \sim 15 \unit{\FU} \) in 3 years}
+				\end{quotebox}}
 			\end{column}
 		\end{columns}
 	\end{frame}
@@ -499,18 +507,32 @@
 		\end{tikzpicture}
 		\( \beta = \frac{v}{c} \in [0; 1] \)\\
 		\( \gamma = \frac{1}{\sqrt{1 - \beta^2}} \in [1, \infty) \)
-		\( \Rightarrow \gamma v > c \) möglich!
+		\(\quad\Rightarrow\quad \gamma v > c \) möglich!
 	\end{frame}
 	
-	\begin{frame}{3C 273}
-		\centering
-		\begin{tikzpicture}
-			\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[scale=0.3]{3c273new}};
-			
-			\begin{scope}[x={(image.south east)},y={(image.north west)}]
-				\node[] at (0.15, -0.02) {\tiny© ESA/HUBBLE \& NASA};
-			\end{scope}
-		\end{tikzpicture}
+	\begin{frame}{Kosmische Jets}
+		\begin{columns}
+			\hspace*{-0.5cm}
+			\begin{column}{0.61\textwidth}
+				\vspace*{0.2cm}
+				\begin{tikzpicture}
+					\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[scale=0.3]{3c273new}};
+					
+					\begin{scope}[x={(image.south east)},y={(image.north west)}]
+						\node[] at (0.2, -0.02) {\tiny 3C 273 © ESA/HUBBLE \& NASA};
+					\end{scope}
+				\end{tikzpicture}
+			\end{column}
+			\begin{column}{0.375\textwidth}
+				\begin{tikzpicture}
+					\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[scale=0.3]{M87_jet}};
+					
+					\begin{scope}[x={(image.south east)},y={(image.north west)}]
+						\node[] at (0.3, -0.02) {\tiny M87 © ESA/HUBBLE \& NASA};
+					\end{scope}
+				\end{tikzpicture}
+			\end{column}
+		\end{columns}
 	\end{frame}
 	
 %% 	######### Recap #########
@@ -547,8 +569,8 @@
 					%Help Lines
 					\begin{pgfonlayer}{background}
 						%Up
-						\draw[] (O) -- (A') node [pos=0, below] {\( S \)};
-						\draw (O) -- (B') node[pos=0.4, below] {$d$};
+						\draw[] (O) -- (A');
+						\draw (O) -- (B');
 						\draw (O) -- (C');
 						\draw[] (O) -- (D');
 					\end{pgfonlayer}
