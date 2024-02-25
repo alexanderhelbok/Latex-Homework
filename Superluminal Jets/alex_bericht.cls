@@ -5,7 +5,7 @@
 \LoadClass[11pt,a4paper]{scrartcl}
 \RequirePackage{fullpage, lastpage}
 \RequirePackage[onehalfspacing]{setspace} 
-\RequirePackage[left=2.5cm, right=2.5cm, bottom=2.5cm, top=1cm]{geometry}
+\RequirePackage[left=2.5cm, right=2.5cm, bottom=3.5cm, top=1.5cm]{geometry}
 %\RequirePackage[utf8]{inputenc} % uncomment if xelatex is not used
 \RequirePackage[T1]{fontenc}
 \RequirePackage{fontspec}
