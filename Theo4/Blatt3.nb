@@ -1,0 +1,385 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16145,        377]
+NotebookOptionsPosition[     14958,        347]
+NotebookOutlinePosition[     15396,        364]
+CellTagsIndexPosition[     15353,        361]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"n", ":=", 
+  TemplateBox[<|
+   "query" -> "1 mol", "boxes" -> 
+    TemplateBox[{"1", "\"mol\"", "mole", "\"Moles\""}, "Quantity", SyntaxForm -> 
+      Mod], "allassumptions" -> {}, "assumptions" -> {}, "open" -> {1, 2}, 
+    "querystate" -> {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      1.541333`6.639441470266956, "Messages" -> {}}, "contextinfo" -> 
+    Automatic, "version" -> 5|>,
+   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
+ RowBox[{"R", ":=", 
+  TemplateBox[<|"query" -> "gas constant", "boxes" -> TemplateBox[{
+       InterpretationBox["\[InvisibleSpace]", 1], 
+       StyleBox["\"R\"", Italic, StripOnInput -> False], 
+       "molar gas constants", "\"MolarGasConstant\""}, "Quantity", SyntaxForm -> 
+      Mod], "allassumptions" -> {{
+      "type" -> "Clash", "word" -> "gas constant", "template" -> 
+       "Assuming \"gas constant\" is a unit${separator}Use as ${desc} or \
+${desc} instead", "count" -> "3", "pulldown" -> "false", "default" -> 
+       "{\"C\", \"gas constant\"} -> {\"Unit\", \"dflt\"}", 
+       "Values" -> {{
+         "name" -> "Unit", "desc" -> "a unit", "input" -> 
+          "{\"C\", \"gas constant\"} -> {\"Unit\"}"}, {
+         "name" -> "EntirePhraseMM", "desc" -> " referring to optimization", 
+          "input" -> "{\"C\", \"gas constant\"} -> {\"EntirePhraseMM\"}"}, {
+         "name" -> "Word", "desc" -> "a word", "input" -> 
+          "{\"C\", \"gas constant\"} -> {\"Word\"}"}}}}, "assumptions" -> {}, 
+    "open" -> {1, 2}, 
+    "querystate" -> {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      1.089494`6.4887698363627235, "Messages" -> {}}, "contextinfo" -> 
+    Automatic, "version" -> 5|>,
+   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{"UnitConvert", "[", 
+   RowBox[{
+    RowBox[{"n", "*", "R", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"Log", "[", "2", "]"}], "+", 
+       RowBox[{
+        RowBox[{"3", "/", "2"}], 
+        RowBox[{"Log", "[", 
+         RowBox[{"35", "/", "30"}], "]"}]}]}], ")"}]}], ",", "\"\<J/K\>\""}], 
+   "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.921513497921359*^9, 3.921513555150473*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"b4c4f231-015c-4b48-a593-fc635e039301"],
+
+Cell[BoxData[
+ TemplateBox[{"7.685666419123951`", 
+   RowBox[{
+    "\"J\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", "\"K\""}], 
+   "joules per kelvin", 
+   FractionBox["\"Joules\"", "\"Kelvins\""]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.921513509292882*^9, 3.9215135558695593`*^9}},
+ CellLabel->"Out[18]=",ExpressionUUID->"b142c4fa-83ee-4d85-a513-6f896764799b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"V1", ":=", 
+  TemplateBox[<|"query" -> "10 dm^3", "boxes" -> TemplateBox[{"10", 
+       RowBox[{
+         SuperscriptBox["\"dm\"", "3"]}], "decimeters cubed", 
+       SuperscriptBox["\"Decimeters\"", "3"]}, "Quantity", SyntaxForm -> Mod],
+     "allassumptions" -> {}, "assumptions" -> {}, "open" -> {1, 2}, 
+    "querystate" -> {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      1.230635`6.541674256020056, "Messages" -> {}}, "contextinfo" -> 
+    Automatic, "version" -> 5|>,
+   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
+ RowBox[{"V2", ":=", 
+  TemplateBox[<|"query" -> "50 dm^3", "boxes" -> TemplateBox[{"50", 
+       RowBox[{
+         SuperscriptBox["\"dm\"", "3"]}], "decimeters cubed", 
+       SuperscriptBox["\"Decimeters\"", "3"]}, "Quantity", SyntaxForm -> Mod],
+     "allassumptions" -> {}, "assumptions" -> {}, "open" -> {1, 2}, 
+    "querystate" -> {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      0.882522`6.3972705340255365, "Messages" -> {}}, "contextinfo" -> 
+    Automatic, "version" -> 5|>,
+   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
+ RowBox[{"T1", ":=", 
+  TemplateBox[<|
+   "query" -> "300 K", "boxes" -> 
+    TemplateBox[{"300", "\"K\"", "kelvins", "\"Kelvins\""}, "Quantity", 
+      SyntaxForm -> Mod], 
+    "allassumptions" -> {{
+      "type" -> "Clash", "word" -> "K", "template" -> 
+       "Assuming \"K\" is a unit${separator}Use as ${desc} instead", "count" -> 
+       "2", "pulldown" -> "false", "default" -> 
+       "{\"C\", \"K\"} -> {\"Unit\", \"dflt\"}", 
+       "Values" -> {{
+         "name" -> "Unit", "desc" -> "a unit", "input" -> 
+          "{\"C\", \"K\"} -> {\"Unit\"}"}, {
+         "name" -> "Variable", "desc" -> "a variable", "input" -> 
+          "{\"C\", \"K\"} -> {\"Variable\"}"}}}, {
+      "type" -> "Unit", "word" -> "K", "template" -> 
+       "Assuming kelvins of absolute temperature for \"K\"${separator}Use \
+${desc} or ${pulldown} instead", "count" -> "5", "pulldown" -> "true", 
+       "pulldownlabel" -> "more >>", "pulldownlength" -> "3", "default" -> 
+       "\"UnitClash\" -> {\"K\", {\"Kelvins\", \"dflt\"}}", 
+       "Values" -> {{
+         "name" -> "Kelvins", "desc" -> "kelvins of absolute temperature", 
+          "input" -> "\"UnitClash\" -> {\"K\", {\"Kelvins\"}}"}, {
+         "name" -> "KelvinsDifference", "desc" -> "kelvins difference", 
+          "input" -> "\"UnitClash\" -> {\"K\", {\"KelvinsDifference\"}}"}, {
+         "name" -> "Kilobytes", "desc" -> "kilobytes (base 10)", "input" -> 
+          "\"UnitClash\" -> {\"K\", {\"Kilobytes\"}}"}, {
+         "name" -> "Kilometers", "desc" -> "kilometers", "input" -> 
+          "\"UnitClash\" -> {\"K\", {\"Kilometers\"}}"}, {
+         "name" -> "Karats", "desc" -> "karats of metal purity", "input" -> 
+          "\"UnitClash\" -> {\"K\", {\"Karats\"}}"}}}}, "assumptions" -> {}, 
+    "open" -> {1, 2}, 
+    "querystate" -> {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      0.800241`6.354765791998093, "Messages" -> {}}, "contextinfo" -> 
+    Automatic, "version" -> 5|>,
+   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
+ RowBox[{"k", ":=", 
+  TemplateBox[<|"query" -> "boltzmann constant", "boxes" -> TemplateBox[{
+       InterpretationBox["\[InvisibleSpace]", 1], 
+       StyleBox["\"k\"", Italic, StripOnInput -> False], 
+       "Boltzmann constants", "\"BoltzmannConstant\""}, "Quantity", 
+      SyntaxForm -> Mod], "allassumptions" -> {}, "assumptions" -> {}, 
+    "open" -> {1, 2}, 
+    "querystate" -> {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      0.875358`6.39373069866338, "Messages" -> {}}, "contextinfo" -> 
+    Automatic, "version" -> 5|>,
+   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
+ RowBox[{"n", ":=", 
+  RowBox[{
+   TemplateBox[<|"query" -> "avogadro constant", "boxes" -> TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1], 
+        SubscriptBox[
+         StyleBox["\"N\"", Italic, StripOnInput -> False], 
+         StyleBox["\"A\"", Italic, StripOnInput -> False]], 
+        "Avogadro constants", "\"AvogadroConstant\""}, "Quantity", SyntaxForm -> 
+       Mod], "allassumptions" -> {}, "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.787329`6.347701241772773, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"], "*", 
+   TemplateBox[<|
+    "query" -> "1 mol", "boxes" -> 
+     TemplateBox[{"1", "\"mol\"", "mole", "\"Moles\""}, "Quantity", 
+       SyntaxForm -> Mod], "allassumptions" -> {}, "assumptions" -> {}, 
+     "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.714929`6.305807907409946, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"e", "[", "T_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"3", "/", "2"}], "n", "*", "k", "*", 
+   "T"}]}], "\[IndentingNewLine]", 
+ RowBox[{"\[CapitalDelta]W", "=", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"Integrate", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "2"}], "/", "3"}], 
+        RowBox[{
+         RowBox[{"e", "[", "T1", "]"}], "/", "V"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"V", ",", "V1", ",", "V2"}], "}"}]}], "]"}], ",", 
+     "\"\<J\>\""}], "]"}], "//", "N"}]}]}], "Input",
+ CellChangeTimes->{{3.921513595785842*^9, 3.921513699802307*^9}, {
+  3.9215137526925383`*^9, 3.921513841767519*^9}, {3.921513940175659*^9, 
+  3.921513980855448*^9}, {3.921514061811502*^9, 3.921514064289216*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"f3e38337-e332-438d-a987-4b82c94fb50a"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{"-", "4014.4834077515743`"}], "\"J\"", "joules", "\"Joules\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.921513764410136*^9, 3.921513842360229*^9}, {
+   3.921513966672916*^9, 3.9215139838123302`*^9}, 3.921514064786043*^9, 
+   3.921514166704897*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"96146540-bd21-44c0-8e96-8e40bd3abd6c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"\[Gamma]Ar", ":=", 
+  RowBox[{"5", "/", "3"}]}], "\[IndentingNewLine]", 
+ RowBox[{"T2", ":=", 
+  RowBox[{"T1", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"V1", "/", "V2"}], ")"}], "^", 
+    RowBox[{"(", 
+     RowBox[{"\[Gamma]Ar", "-", "1"}], ")"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"\[CapitalDelta]W", "=", 
+  RowBox[{
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"Integrate", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"e", "[", "T", "]"}], "/", "T"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"T", ",", "T1", ",", "T2"}], "}"}]}], "]"}], ",", 
+     "\"\<J\>\""}], "]"}], "//", "N"}]}]}], "Input",
+ CellChangeTimes->{{3.921513991424354*^9, 3.921514087742392*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"34adc01b-a30d-4df7-a466-73ed80780d41"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{"-", "2461.930380376344`"}], "\"J\"", "joules", "\"Joules\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.921514071748876*^9, 3.921514088316203*^9}, 
+   3.921514166953726*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"015b0a0e-c0a4-4d6b-8298-a6edc4a2db57"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"a", ":=", 
+  TemplateBox[<|"query" -> "0.1363 J*m^3", "boxes" -> TemplateBox[{"0.1363", 
+       RowBox[{
+         SuperscriptBox["\"m\"", "3"], "\[InvisibleSpace]", "\"J\""}], 
+       "meter cubed joules", 
+       RowBox[{"\"Joules\"", " ", 
+         SuperscriptBox["\"Meters\"", "3"]}]}, "Quantity", SyntaxForm -> Mod],
+     "allassumptions" -> {{
+      "word" -> "", "template" -> 
+       "Assuming \"J*m^3\" is a unit${separator}Use \"J\" as ${desc} instead",
+        "count" -> "2", "pulldown" -> "false", "type" -> "MultiClash", 
+       "default" -> "{\"MC\", \"J*m^3\"} -> {\"Unit\", \"dflt\"}", 
+       "Values" -> {{
+         "name" -> "Unit", "desc" -> "a unit", "input" -> 
+          "{\"MC\", \"J*m^3\"} -> {\"Unit\"}", "word" -> "J*m^3"}, {
+         "name" -> "Variable", "desc" -> "a variable", "input" -> 
+          "{\"MC\", \"J*m^3\"} -> {\"Variable\"}", "word" -> "J"}}}, {
+      "type" -> "Unit", "word" -> "m", "template" -> 
+       "Assuming meters for \"m\"${separator}Use ${desc} or ${desc} instead", 
+       "count" -> "3", "pulldown" -> "false", "default" -> 
+       "\"UnitClash\" -> {\"m\", {\"Meters\", \"dflt\"}}", 
+       "Values" -> {{
+         "name" -> "Meters", "desc" -> "meters", "input" -> 
+          "\"UnitClash\" -> {\"m\", {\"Meters\"}}"}, {
+         "name" -> "Minims", "desc" -> "US minims of volume", "input" -> 
+          "\"UnitClash\" -> {\"m\", {\"Minims\"}}"}, {
+         "name" -> "Minutes", "desc" -> "minutes of time", "input" -> 
+          "\"UnitClash\" -> {\"m\", {\"Minutes\"}}"}}}}, "assumptions" -> {}, 
+    "open" -> {1, 2}, 
+    "querystate" -> {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      1.176804`6.522249129400846, "Messages" -> {}}, "contextinfo" -> 
+    Automatic, "version" -> 5|>,
+   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
+ RowBox[{"b", ":=", 
+  TemplateBox[<|
+   "query" -> "32.2*10^(-6) m^3", "boxes" -> TemplateBox[{"0.0000322", 
+       RowBox[{
+         SuperscriptBox["\"m\"", "3"]}], "meters cubed", 
+       SuperscriptBox["\"Meters\"", "3"]}, "Quantity", SyntaxForm -> Mod], 
+    "allassumptions" -> {{
+      "word" -> "", "template" -> 
+       "Assuming \"m^3\" is a unit${separator}Use \"m\" as ${desc} instead", 
+       "count" -> "2", "pulldown" -> "false", "type" -> "MultiClash", 
+       "default" -> "{\"MC\", \"m^3\"} -> {\"Unit\", \"dflt\"}", 
+       "Values" -> {{
+         "name" -> "Unit", "desc" -> "a unit", "input" -> 
+          "{\"MC\", \"m^3\"} -> {\"Unit\"}", "word" -> "m^3"}, {
+         "name" -> "Variable", "desc" -> "a variable", "input" -> 
+          "{\"MC\", \"m^3\"} -> {\"Variable\"}", "word" -> "m"}}}}, 
+    "assumptions" -> {}, "open" -> {1, 2}, 
+    "querystate" -> {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      1.312915`6.569781603647982, "Messages" -> {}}, "contextinfo" -> 
+    Automatic, "version" -> 5|>,
+   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
+ RowBox[{"eqn", ":=", 
+  RowBox[{
+   RowBox[{"n", "*", "k", "*", "T"}], "==", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"p", "+", 
+      RowBox[{"a", "/", 
+       RowBox[{"V", "^", "2"}]}]}], ")"}], 
+    RowBox[{"(", 
+     RowBox[{"V", "-", "b"}], ")"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"\[CapitalDelta]W", "=", 
+  RowBox[{
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"Integrate", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "p"}], "/.", 
+         RowBox[{"Solve", "[", 
+          RowBox[{"eqn", ",", "p"}], "]"}]}], "/.", 
+        RowBox[{"T", "->", "T1"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"V", ",", "V1", ",", "V2"}], "}"}]}], "]"}], ",", 
+     "\"\<J\>\""}], "]"}], "[", 
+   RowBox[{"[", "1", "]"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.921514093805353*^9, 3.921514139448515*^9}, {
+  3.9215141700401773`*^9, 3.92151446682729*^9}},
+ CellLabel->"In[95]:=",ExpressionUUID->"a75e47aa-6e7b-497d-acdd-16191161e6e2"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{"-", "4010.0172609898855`"}], "\"J\"", "joules", "\"Joules\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.921514176160706*^9, 3.921514333440898*^9}, {
+  3.9215143686215076`*^9, 3.921514467810309*^9}},
+ CellLabel->"Out[98]=",ExpressionUUID->"7e0b08d4-4655-43aa-aea4-20194d9ed83b"]
+}, Open  ]]
+},
+WindowSize->{1128, 696.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+FrontEndVersion->"14.0 for Linux x86 (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"dd6c9a3b-d2f5-492c-83e6-c512703ced9b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2280, 47, 104, "Input",ExpressionUUID->"b4c4f231-015c-4b48-a593-fc635e039301"],
+Cell[2863, 71, 382, 8, 44, "Output",ExpressionUUID->"b142c4fa-83ee-4d85-a513-6f896764799b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3282, 84, 5831, 118, 264, "Input",ExpressionUUID->"f3e38337-e332-438d-a987-4b82c94fb50a"],
+Cell[9116, 204, 373, 7, 44, "Output",ExpressionUUID->"96146540-bd21-44c0-8e96-8e40bd3abd6c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9526, 216, 800, 22, 70, "Input",ExpressionUUID->"34adc01b-a30d-4df7-a466-73ed80780d41"],
+Cell[10329, 240, 299, 6, 44, "Output",ExpressionUUID->"015b0a0e-c0a4-4d6b-8298-a6edc4a2db57"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10665, 251, 3949, 85, 129, "Input",ExpressionUUID->"a75e47aa-6e7b-497d-acdd-16191161e6e2"],
+Cell[14617, 338, 325, 6, 66, "Output",ExpressionUUID->"7e0b08d4-4655-43aa-aea4-20194d9ed83b"]
+}, Open  ]]
+}
+]
+*)
+
