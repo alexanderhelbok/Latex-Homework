@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     61678,       1369]
-NotebookOptionsPosition[     57628,       1296]
-NotebookOutlinePosition[     58067,       1313]
-CellTagsIndexPosition[     58024,       1310]
+NotebookDataLength[     70649,       1547]
+NotebookOptionsPosition[     65609,       1458]
+NotebookOutlinePosition[     66073,       1476]
+CellTagsIndexPosition[     66030,       1473]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -130,74 +130,75 @@ ${desc} or ${pulldown} instead", "count" -> "9", "pulldown" -> "true",
        "open" -> {1, 2}, 
       "querystate" -> {
        "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-        1.045808`6.470996953176035, "Messages" -> {}}, "contextinfo" -> 
-      Automatic, "version" -> 5|>,
+        0.9983340000000000001`6.450820855514556, "Messages" -> {}}, 
+      "contextinfo" -> Automatic, "version" -> 5|>,
      "LinguisticAssistantTemplate"], ",", "\"\<K\>\""}], 
    "]"}]}], "\[IndentingNewLine]", 
- RowBox[{"Cv", ":=", 
-  TemplateBox[<|"query" -> "4.18 kJ/kg/K", "boxes" -> TemplateBox[{"4.18", 
-       RowBox[{
-        "\"kJ\"", "\[InvisibleSpace]", "\"/(\"", "\[InvisibleSpace]", 
-         "\"kg\"", "\[ThinSpace]", "\"K\"", "\[InvisibleSpace]", "\")\""}], 
-       "kilojoules per kilogram kelvin", 
-       FractionBox["\"Kilojoules\"", 
-        RowBox[{"\"Kelvins\"", " ", "\"Kilograms\""}]]}, "Quantity", 
-      SyntaxForm -> Mod], 
-    "allassumptions" -> {{
-      "type" -> "Unit", "word" -> "kJ/kg/K", "template" -> 
-       "Assuming kilojoules per kilogram kelvin of temperature for \
-\"kJ/kg/K\"${separator}Use ${desc} instead", "count" -> "2", "pulldown" -> 
-       "false", "default" -> 
-       "\"UnitClash\" -> {\"kJ/kg/K\", {\"KilojoulesPerKilogramKelvin\", \
+ RowBox[{
+  RowBox[{"Cv", ":=", 
+   TemplateBox[<|"query" -> "4.18 kJ/kg/K", "boxes" -> TemplateBox[{"4.18", 
+        RowBox[{
+         "\"kJ\"", "\[InvisibleSpace]", "\"/(\"", "\[InvisibleSpace]", 
+          "\"kg\"", "\[ThinSpace]", "\"K\"", "\[InvisibleSpace]", "\")\""}], 
+        "kilojoules per kilogram kelvin", 
+        FractionBox["\"Kilojoules\"", 
+         RowBox[{"\"Kelvins\"", " ", "\"Kilograms\""}]]}, "Quantity", 
+       SyntaxForm -> Mod], 
+     "allassumptions" -> {{
+       "type" -> "Unit", "word" -> "kJ/kg/K", "template" -> 
+        "Assuming kilojoules per kilogram kelvin of temperature for \"kJ/kg/K\
+\"${separator}Use ${desc} instead", "count" -> "2", "pulldown" -> "false", 
+        "default" -> 
+        "\"UnitClash\" -> {\"kJ/kg/K\", {\"KilojoulesPerKilogramKelvin\", \
 \"dflt\"}}", 
-       "Values" -> {{
-         "name" -> "KilojoulesPerKilogramKelvin", "desc" -> 
-          "kilojoules per kilogram kelvin of temperature", "input" -> 
-          "\"UnitClash\" -> {\"kJ/kg/K\", \
+        "Values" -> {{
+          "name" -> "KilojoulesPerKilogramKelvin", "desc" -> 
+           "kilojoules per kilogram kelvin of temperature", "input" -> 
+           "\"UnitClash\" -> {\"kJ/kg/K\", \
 {\"KilojoulesPerKilogramKelvin\"}}"}, {
-         "name" -> "KilojoulesPerKilogramKelvinDifference", "desc" -> 
-          "kilojoules per kilogram kelvin difference", "input" -> 
-          "\"UnitClash\" -> {\"kJ/kg/K\", \
+          "name" -> "KilojoulesPerKilogramKelvinDifference", "desc" -> 
+           "kilojoules per kilogram kelvin difference", "input" -> 
+           "\"UnitClash\" -> {\"kJ/kg/K\", \
 {\"KilojoulesPerKilogramKelvinDifference\"}}"}}}}, "assumptions" -> {}, 
-    "open" -> {1, 2}, 
-    "querystate" -> {
-     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-      1.294421`6.563620543584733, "Messages" -> {}}, "contextinfo" -> 
-    Automatic, "version" -> 5|>,
-   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
- RowBox[{"m", ":=", 
-  TemplateBox[<|
-   "query" -> "200 g", "boxes" -> 
-    TemplateBox[{"200", "\"g\"", "grams", "\"Grams\""}, "Quantity", 
-      SyntaxForm -> Mod], 
-    "allassumptions" -> {{
-      "type" -> "Clash", "word" -> "g", "template" -> 
-       "Assuming \"g\" is a unit${separator}Use as ${desc} instead", "count" -> 
-       "2", "pulldown" -> "false", "default" -> 
-       "{\"C\", \"g\"} -> {\"Unit\", \"dflt\"}", 
-       "Values" -> {{
-         "name" -> "Unit", "desc" -> "a unit", "input" -> 
-          "{\"C\", \"g\"} -> {\"Unit\"}"}, {
-         "name" -> "Variable", "desc" -> "a variable", "input" -> 
-          "{\"C\", \"g\"} -> {\"Variable\"}"}}}, {
-      "type" -> "Unit", "word" -> "g", "template" -> 
-       "Assuming grams for \"g\"${separator}Use ${desc} or ${desc} instead", 
-       "count" -> "3", "pulldown" -> "false", "default" -> 
-       "\"UnitClash\" -> {\"g\", {\"Grams\", \"dflt\"}}", 
-       "Values" -> {{
-         "name" -> "Grams", "desc" -> "grams", "input" -> 
-          "\"UnitClash\" -> {\"g\", {\"Grams\"}}"}, {
-         "name" -> "StandardAccelerationOfGravity", "desc" -> 
-          "standard acceleration due to gravity", "input" -> 
-          "\"UnitClash\" -> {\"g\", {\"StandardAccelerationOfGravity\"}}"}, {
-         "name" -> "Grads", "desc" -> "grads", "input" -> 
-          "\"UnitClash\" -> {\"g\", {\"Grads\"}}"}}}}, "assumptions" -> {}, 
-    "open" -> {1, 2}, 
-    "querystate" -> {
-     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-      0.686303`6.28806089079929, "Messages" -> {}}, "contextinfo" -> 
-    Automatic, "version" -> 5|>,
-   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
+     "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       1.294421`6.563620543584733, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], ";", 
+  RowBox[{"m", ":=", 
+   TemplateBox[<|
+    "query" -> "200 g", "boxes" -> 
+     TemplateBox[{"200", "\"g\"", "grams", "\"Grams\""}, "Quantity", 
+       SyntaxForm -> Mod], 
+     "allassumptions" -> {{
+       "type" -> "Clash", "word" -> "g", "template" -> 
+        "Assuming \"g\" is a unit${separator}Use as ${desc} instead", "count" -> 
+        "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"g\"} -> {\"Unit\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "{\"C\", \"g\"} -> {\"Unit\"}"}, {
+          "name" -> "Variable", "desc" -> "a variable", "input" -> 
+           "{\"C\", \"g\"} -> {\"Variable\"}"}}}, {
+       "type" -> "Unit", "word" -> "g", "template" -> 
+        "Assuming grams for \"g\"${separator}Use ${desc} or ${desc} instead", 
+        "count" -> "3", "pulldown" -> "false", "default" -> 
+        "\"UnitClash\" -> {\"g\", {\"Grams\", \"dflt\"}}", 
+        "Values" -> {{
+          "name" -> "Grams", "desc" -> "grams", "input" -> 
+           "\"UnitClash\" -> {\"g\", {\"Grams\"}}"}, {
+          "name" -> "StandardAccelerationOfGravity", "desc" -> 
+           "standard acceleration due to gravity", "input" -> 
+           "\"UnitClash\" -> {\"g\", {\"StandardAccelerationOfGravity\"}}"}, {
+          "name" -> "Grads", "desc" -> "grads", "input" -> 
+           "\"UnitClash\" -> {\"g\", {\"Grads\"}}"}}}}, "assumptions" -> {}, 
+     "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.686303`6.28806089079929, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}]}], "\[IndentingNewLine]", 
  RowBox[{"\[CapitalDelta]SKaffee", "=", 
   RowBox[{"UnitConvert", "[", 
    RowBox[{
@@ -211,9 +212,10 @@ ${desc} or ${pulldown} instead", "count" -> "9", "pulldown" -> "true",
  CellChangeTimes->{{3.921925212561414*^9, 3.921925322425354*^9}, {
    3.921926066253378*^9, 3.92192608084063*^9}, {3.9219261442770576`*^9, 
    3.921926211039572*^9}, {3.9219269987874517`*^9, 3.921926999225925*^9}, 
-   3.922105138768362*^9},
- CellLabel->
-  "In[369]:=",ExpressionUUID->"03c07148-b385-43c9-8d4e-a5acb2e16cb5"],
+   3.922105138768362*^9, {3.922119231167542*^9, 3.922119237127912*^9}, {
+   3.9221195806205063`*^9, 3.922119580889029*^9}, {3.922119633277349*^9, 
+   3.9221196335082607`*^9}},ExpressionUUID->"03c07148-b385-43c9-8d4e-\
+a5acb2e16cb5"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -225,9 +227,11 @@ Cell[BoxData[
   "Quantity"]], "Output",
  CellChangeTimes->{{3.92192620853052*^9, 3.921926211587668*^9}, 
    3.921926274912744*^9, 3.9221040754619017`*^9, {3.9221051360003557`*^9, 
-   3.9221051445541077`*^9}, 3.922106969554962*^9, 3.922107861881381*^9},
- CellLabel->
-  "Out[374]=",ExpressionUUID->"7c3aee17-862e-4e77-91ea-6fab3a811443"]
+   3.9221051445541077`*^9}, 3.922106969554962*^9, 3.922107861881381*^9, 
+   3.922118845283009*^9, 3.92211902657773*^9, 3.922119297503965*^9, 
+   3.922119389335847*^9, 3.92211947749023*^9, {3.9221195901518087`*^9, 
+   3.922119593595479*^9}},
+ CellLabel->"Out[11]=",ExpressionUUID->"5d002090-c1b4-4ac3-93eb-70caaed28039"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -249,7 +253,7 @@ Cell[BoxData[
    3.9219262581182137`*^9}, {3.92192655131854*^9, 3.921926587823168*^9}, 
    3.9221051413376007`*^9},
  CellLabel->
-  "In[375]:=",ExpressionUUID->"5cf09fe5-aa0e-4793-ae3b-b9bf28317bde"],
+  "In[159]:=",ExpressionUUID->"5cf09fe5-aa0e-4793-ae3b-b9bf28317bde"],
 
 Cell[BoxData[
  TemplateBox[{"0.18536585365853656`", 
@@ -261,9 +265,10 @@ Cell[BoxData[
  CellChangeTimes->{
   3.921926138655891*^9, {3.92192621494193*^9, 3.921926276823697*^9}, {
    3.921926575566402*^9, 3.9219265883107853`*^9}, 3.9221040757520447`*^9, 
-   3.92210518093452*^9, 3.92210786412446*^9},
+   3.92210518093452*^9, 3.92210786412446*^9, 3.9221188461245537`*^9, 
+   3.9221190279769297`*^9, 3.9221192992616653`*^9},
  CellLabel->
-  "Out[375]=",ExpressionUUID->"e9c3d145-8d44-4f35-a05f-30915720820d"]
+  "Out[159]=",ExpressionUUID->"4ce1c982-6258-4d25-bf90-729268c01df1"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -275,7 +280,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.921926218567936*^9, 3.921926272579895*^9}, 
    3.922105190774329*^9},
  CellLabel->
-  "In[376]:=",ExpressionUUID->"76a3e366-e100-42fe-a3c0-4f29b7872c28"],
+  "In[160]:=",ExpressionUUID->"76a3e366-e100-42fe-a3c0-4f29b7872c28"],
 
 Cell[BoxData[
  TemplateBox[{"0.01794224903093919`", 
@@ -285,9 +290,10 @@ Cell[BoxData[
    FractionBox["\"Kilojoules\"", "\"Kelvins\""]},
   "Quantity"]], "Output",
  CellChangeTimes->{{3.921926237406027*^9, 3.921926278511674*^9}, 
-   3.92210407578691*^9, 3.922105183114026*^9, 3.922107865629863*^9},
+   3.92210407578691*^9, 3.922105183114026*^9, 3.922107865629863*^9, 
+   3.9221188478665457`*^9, 3.922119029812076*^9, 3.922119300694251*^9},
  CellLabel->
-  "Out[376]=",ExpressionUUID->"20b148fe-8d80-4eb7-a0e7-7548f812ae38"]
+  "Out[160]=",ExpressionUUID->"e33b6e98-196b-48f3-baf3-ebb5f78bd17a"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -325,7 +331,7 @@ Cell[BoxData[{
   3.922106155723839*^9, 3.9221061667925158`*^9}, {3.922106202663445*^9, 
   3.922106229330206*^9}},
  CellLabel->
-  "In[125]:=",ExpressionUUID->"d9fd2c00-0380-4c43-98b6-264343e87c09"],
+  "In[161]:=",ExpressionUUID->"d9fd2c00-0380-4c43-98b6-264343e87c09"],
 
 Cell[BoxData[
  RowBox[{
@@ -342,9 +348,10 @@ Cell[BoxData[
   3.921926763302978*^9, 3.921926806407708*^9, 3.922105224984022*^9, {
    3.922105999445731*^9, 3.922106099162722*^9}, 3.922106167434766*^9, {
    3.922106208061784*^9, 3.9221062297882643`*^9}, 3.922106972778349*^9, 
-   3.922107004485436*^9},
+   3.922107004485436*^9, 3.922118850273731*^9, 3.922119031442177*^9, 
+   3.922119303729434*^9},
  CellLabel->
-  "Out[126]=",ExpressionUUID->"b5f8bb81-908d-40e7-b3f7-758133c174a3"]
+  "Out[162]=",ExpressionUUID->"33cbe915-a7cc-4617-9f79-68c07979fb25"]
 }, Open  ]],
 
 Cell["\[CapitalDelta]S = 0, weil es reversibel ist. ", "Text",
@@ -404,7 +411,7 @@ Cell[BoxData[{
   3.922107157791195*^9, 3.922107165649107*^9}, {3.922107311212388*^9, 
   3.9221073477274513`*^9}, {3.922107438686194*^9, 3.9221074433344803`*^9}},
  CellLabel->
-  "In[817]:=",ExpressionUUID->"4ecee7ab-5d7e-4643-ba8f-990c26b2428e"],
+  "In[168]:=",ExpressionUUID->"4ecee7ab-5d7e-4643-ba8f-990c26b2428e"],
 
 Cell[BoxData[
  RowBox[{"e", "\[Rule]", 
@@ -413,9 +420,10 @@ Cell[BoxData[
  CellChangeTimes->{{3.922106958997466*^9, 3.9221070436407824`*^9}, 
    3.922107166307482*^9, {3.922107319106453*^9, 3.9221073483475103`*^9}, {
    3.922107439873911*^9, 3.922107443934587*^9}, 3.9221075364138107`*^9, 
-   3.922113713636891*^9},
+   3.922113713636891*^9, 3.92211885506297*^9, 3.922119033885742*^9, {
+   3.922119306376545*^9, 3.922119319059402*^9}},
  CellLabel->
-  "Out[819]=",ExpressionUUID->"fa40d841-d5fd-4746-863c-ba867fd00f66"],
+  "Out[170]=",ExpressionUUID->"48645eb8-80b4-4d2f-b2ed-0416a8bd4fdf"],
 
 Cell[BoxData[
  RowBox[{
@@ -424,9 +432,10 @@ Cell[BoxData[
  CellChangeTimes->{{3.922106958997466*^9, 3.9221070436407824`*^9}, 
    3.922107166307482*^9, {3.922107319106453*^9, 3.9221073483475103`*^9}, {
    3.922107439873911*^9, 3.922107443934587*^9}, 3.9221075364138107`*^9, 
-   3.922113713645627*^9},
+   3.922113713636891*^9, 3.92211885506297*^9, 3.922119033885742*^9, {
+   3.922119306376545*^9, 3.922119319067844*^9}},
  CellLabel->
-  "Out[820]=",ExpressionUUID->"63125135-3c95-47e3-ae95-2d421396f166"],
+  "Out[171]=",ExpressionUUID->"7a417e0e-4f06-4857-bdfa-0d0bcfed6d45"],
 
 Cell[BoxData[
  RowBox[{"\[Mu]", "\[Equal]", 
@@ -446,9 +455,10 @@ Cell[BoxData[
  CellChangeTimes->{{3.922106958997466*^9, 3.9221070436407824`*^9}, 
    3.922107166307482*^9, {3.922107319106453*^9, 3.9221073483475103`*^9}, {
    3.922107439873911*^9, 3.922107443934587*^9}, 3.9221075364138107`*^9, 
-   3.922113713649622*^9},
+   3.922113713636891*^9, 3.92211885506297*^9, 3.922119033885742*^9, {
+   3.922119306376545*^9, 3.922119319074861*^9}},
  CellLabel->
-  "Out[821]=",ExpressionUUID->"75b4178c-fecb-42c4-957c-6c0dad7b1f10"]
+  "Out[172]=",ExpressionUUID->"7e93e75f-5a6d-4ca4-b467-e5579502c056"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -604,8 +614,41 @@ ${pulldown} instead", "count" -> "4", "pulldown" -> "true", "pulldownlabel" ->
   RowBox[{"UnitConvert", "[", 
    RowBox[{
     RowBox[{"Eges", "[", 
-     RowBox[{"[", "2", "]"}], "]"}], ",", "\"\<eV\>\""}], 
-   "]"}]}], "\[IndentingNewLine]", 
+     RowBox[{"[", "2", "]"}], "]"}], ",", "\"\<eV\>\""}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.922107115291823*^9, 3.922107191630507*^9}, {
+   3.9221072628791437`*^9, 3.922107291141757*^9}, {3.9221073397698193`*^9, 
+   3.922107414542598*^9}, {3.9221074480294027`*^9, 3.9221075813562193`*^9}, {
+   3.922113727481153*^9, 3.922113745728093*^9}, 3.9221190569161158`*^9},
+ CellLabel->
+  "In[173]:=",ExpressionUUID->"24cd30e3-c131-4e0f-b79c-f3c2d5d6a373"],
+
+Cell[BoxData[
+ TemplateBox[{"0.5000000000000001`", "\"bar\"", "bars", "\"Bars\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.9221190586890917`*^9, 3.92211932068642*^9},
+ CellLabel->
+  "Out[179]=",ExpressionUUID->"0f11cd7f-0221-46ea-94ef-5d8520308730"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "9.362263611691147`*^23", "\"eV\"", "electronvolts", "\"Electronvolts\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.9221190586890917`*^9, 3.922119320693025*^9},
+ CellLabel->
+  "Out[180]=",ExpressionUUID->"31927df0-bb94-44b2-8acc-9b2fbc8732d6"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "9.362263611691147`*^23", "\"eV\"", "electronvolts", "\"Electronvolts\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.9221190586890917`*^9, 3.9221193206991577`*^9},
+ CellLabel->
+  "Out[181]=",ExpressionUUID->"ca72f3f6-3db1-4b31-bb0d-24a293a06a3b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
  RowBox[{"\[Mu]1", "=", 
   RowBox[{
    RowBox[{"-", "kB"}], " ", "T", " ", 
@@ -637,43 +680,11 @@ ${pulldown} instead", "count" -> "4", "pulldown" -> "true", "pulldownlabel" ->
    RowBox[{"Einheiten", " ", "im", " ", "Log", " ", 
     RowBox[{"??", "?"}]}], "*)"}]}]}], "Input",
  CellChangeTimes->{{3.922107115291823*^9, 3.922107191630507*^9}, {
-  3.9221072628791437`*^9, 3.922107291141757*^9}, {3.9221073397698193`*^9, 
-  3.922107414542598*^9}, {3.9221074480294027`*^9, 3.9221075813562193`*^9}, {
-  3.922113727481153*^9, 3.922113745728093*^9}},
+   3.9221072628791437`*^9, 3.922107291141757*^9}, {3.9221073397698193`*^9, 
+   3.922107414542598*^9}, {3.9221074480294027`*^9, 3.9221075813562193`*^9}, {
+   3.922113727481153*^9, 3.922113745728093*^9}, 3.9221190569161158`*^9},
  CellLabel->
-  "In[833]:=",ExpressionUUID->"24cd30e3-c131-4e0f-b79c-f3c2d5d6a373"],
-
-Cell[BoxData[
- TemplateBox[{"0.5000000000000001`", "\"bar\"", "bars", "\"Bars\""},
-  "Quantity"]], "Output",
- CellChangeTimes->{{3.922107282404765*^9, 3.922107291831428*^9}, 
-   3.9221073218904543`*^9, {3.922107354825036*^9, 3.9221074056237297`*^9}, {
-   3.922107449210373*^9, 3.9221075817971973`*^9}, 3.922113716371407*^9, 
-   3.922113750572894*^9},
- CellLabel->
-  "Out[839]=",ExpressionUUID->"7ba8a087-44a2-4834-941c-2ee13c91cee3"],
-
-Cell[BoxData[
- TemplateBox[{
-  "9.362263611691147`*^23", "\"eV\"", "electronvolts", "\"Electronvolts\""},
-  "Quantity"]], "Output",
- CellChangeTimes->{{3.922107282404765*^9, 3.922107291831428*^9}, 
-   3.9221073218904543`*^9, {3.922107354825036*^9, 3.9221074056237297`*^9}, {
-   3.922107449210373*^9, 3.9221075817971973`*^9}, 3.922113716371407*^9, 
-   3.9221137505845947`*^9},
- CellLabel->
-  "Out[840]=",ExpressionUUID->"b584a2a6-13f4-43da-927a-9c22f7b9ac74"],
-
-Cell[BoxData[
- TemplateBox[{
-  "9.362263611691147`*^23", "\"eV\"", "electronvolts", "\"Electronvolts\""},
-  "Quantity"]], "Output",
- CellChangeTimes->{{3.922107282404765*^9, 3.922107291831428*^9}, 
-   3.9221073218904543`*^9, {3.922107354825036*^9, 3.9221074056237297`*^9}, {
-   3.922107449210373*^9, 3.9221075817971973`*^9}, 3.922113716371407*^9, 
-   3.9221137505904627`*^9},
- CellLabel->
-  "Out[841]=",ExpressionUUID->"4f3a703e-e287-4189-adb5-9a2ede1b45f8"],
+  "In[182]:=",ExpressionUUID->"eff865b8-9692-488f-be35-218cc23bbdf3"],
 
 Cell[BoxData[
  RowBox[{
@@ -705,9 +716,10 @@ Cell[BoxData[
  CellChangeTimes->{{3.922107282404765*^9, 3.922107291831428*^9}, 
    3.9221073218904543`*^9, {3.922107354825036*^9, 3.9221074056237297`*^9}, {
    3.922107449210373*^9, 3.9221075817971973`*^9}, 3.922113716371407*^9, 
-   3.922113750597327*^9},
+   3.922113750572894*^9, 3.922118861604259*^9, {3.922119035750717*^9, 
+   3.922119060295919*^9}, 3.922119323210066*^9},
  CellLabel->
-  "Out[842]=",ExpressionUUID->"d836f0e0-3d9f-445f-b331-965803ba4c4b"],
+  "Out[182]=",ExpressionUUID->"5aff8386-933b-4706-9644-e55fda2f10a8"],
 
 Cell[BoxData[
  RowBox[{
@@ -739,9 +751,10 @@ Cell[BoxData[
  CellChangeTimes->{{3.922107282404765*^9, 3.922107291831428*^9}, 
    3.9221073218904543`*^9, {3.922107354825036*^9, 3.9221074056237297`*^9}, {
    3.922107449210373*^9, 3.9221075817971973`*^9}, 3.922113716371407*^9, 
-   3.9221137506036787`*^9},
+   3.922113750572894*^9, 3.922118861604259*^9, {3.922119035750717*^9, 
+   3.922119060295919*^9}, 3.9221193232222233`*^9},
  CellLabel->
-  "Out[843]=",ExpressionUUID->"49bf421f-bc7a-42a9-8e91-b32537e7facc"]
+  "Out[183]=",ExpressionUUID->"2132f94e-ae73-4736-9b40-cddab93d3c11"]
 }, Open  ]]
 }, Open  ]],
 
@@ -752,190 +765,215 @@ Cell["Ex.3 Isotherme expansion", "Title",
   3.922108589598041*^9}},ExpressionUUID->"c9984728-f8cc-4870-b833-\
 03d1e3514cda"],
 
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"kB", ":=", 
+   TemplateBox[<|"query" -> "boltzmann constant", "boxes" -> TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1], 
+        StyleBox["\"k\"", Italic, StripOnInput -> False], 
+        "Boltzmann constants", "\"BoltzmannConstant\""}, "Quantity", 
+       SyntaxForm -> Mod], "allassumptions" -> {}, "assumptions" -> {}, 
+     "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       1.248376`6.547890404268062, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], ";", 
+  RowBox[{"T1", ":=", 
+   TemplateBox[<|
+    "query" -> "300 K", "boxes" -> 
+     TemplateBox[{"300", "\"K\"", "kelvins", "\"Kelvins\""}, "Quantity", 
+       SyntaxForm -> Mod], 
+     "allassumptions" -> {{
+       "type" -> "Clash", "word" -> "K", "template" -> 
+        "Assuming \"K\" is a unit${separator}Use as ${desc} instead", "count" -> 
+        "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"K\"} -> {\"Unit\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "{\"C\", \"K\"} -> {\"Unit\"}"}, {
+          "name" -> "Variable", "desc" -> "a variable", "input" -> 
+           "{\"C\", \"K\"} -> {\"Variable\"}"}}}, {
+       "type" -> "Unit", "word" -> "K", "template" -> 
+        "Assuming kelvins of absolute temperature for \"K\"${separator}Use \
+${desc} or ${pulldown} instead", "count" -> "5", "pulldown" -> "true", 
+        "pulldownlabel" -> "more >>", "pulldownlength" -> "3", "default" -> 
+        "\"UnitClash\" -> {\"K\", {\"Kelvins\", \"dflt\"}}", 
+        "Values" -> {{
+          "name" -> "Kelvins", "desc" -> "kelvins of absolute temperature", 
+           "input" -> "\"UnitClash\" -> {\"K\", {\"Kelvins\"}}"}, {
+          "name" -> "KelvinsDifference", "desc" -> "kelvins difference", 
+           "input" -> "\"UnitClash\" -> {\"K\", {\"KelvinsDifference\"}}"}, {
+          "name" -> "Kilobytes", "desc" -> "kilobytes (base 10)", "input" -> 
+           "\"UnitClash\" -> {\"K\", {\"Kilobytes\"}}"}, {
+          "name" -> "Kilometers", "desc" -> "kilometers", "input" -> 
+           "\"UnitClash\" -> {\"K\", {\"Kilometers\"}}"}, {
+          "name" -> "Karats", "desc" -> "karats of metal purity", "input" -> 
+           "\"UnitClash\" -> {\"K\", {\"Karats\"}}"}}}}, "assumptions" -> {}, 
+     "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       1.122469`6.501719349126927, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], ";", 
+  RowBox[{"V1", ":=", 
+   TemplateBox[<|
+    "query" -> "1 L", "boxes" -> 
+     TemplateBox[{"1", "\"L\"", "liter", "\"Liters\""}, "Quantity", 
+       SyntaxForm -> Mod], 
+     "allassumptions" -> {{
+       "type" -> "Clash", "word" -> "L", "template" -> 
+        "Assuming \"L\" is a unit${separator}Use as ${desc} instead", "count" -> 
+        "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"L\"} -> {\"Unit\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "{\"C\", \"L\"} -> {\"Unit\"}"}, {
+          "name" -> "Variable", "desc" -> "a variable", "input" -> 
+           "{\"C\", \"L\"} -> {\"Variable\"}"}}}, {
+       "type" -> "Unit", "word" -> "L", "template" -> 
+        "Assuming liters for \"L\"${separator}Use ${desc} or ${pulldown} \
+instead", "count" -> "5", "pulldown" -> "true", "pulldownlabel" -> "more >>", 
+        "pulldownlength" -> "3", "default" -> 
+        "\"UnitClash\" -> {\"L\", {\"Liters\", \"dflt\"}}", 
+        "Values" -> {{
+          "name" -> "Liters", "desc" -> "liters", "input" -> 
+           "\"UnitClash\" -> {\"L\", {\"Liters\"}}"}, {
+          "name" -> "Lamberts", "desc" -> "lamberts", "input" -> 
+           "\"UnitClash\" -> {\"L\", {\"Lamberts\"}}"}, {
+          "name" -> "Langmuirs", "desc" -> "langmuirs", "input" -> 
+           "\"UnitClash\" -> {\"L\", {\"Langmuirs\"}}"}, {
+          "name" -> "Lakh", "desc" -> "lakhs", "input" -> 
+           "\"UnitClash\" -> {\"L\", {\"Lakh\"}}"}, {
+          "name" -> "Lampsons", "desc" -> "lampsons", "input" -> 
+           "\"UnitClash\" -> {\"L\", {\"Lampsons\"}}"}}}}, 
+     "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       1.230095`6.5414836467098185, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], ";", 
+  RowBox[{"V2", ":=", 
+   RowBox[{"2", "V1"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p", ":=", 
+   TemplateBox[<|
+    "query" -> "1 bar", "boxes" -> 
+     TemplateBox[{"1", "\"bar\"", "bar", "\"Bars\""}, "Quantity", SyntaxForm -> 
+       Mod], "allassumptions" -> {{
+       "type" -> "Clash", "word" -> "bar", "template" -> 
+        "Assuming \"bar\" is a unit${separator}Use as ${desc} instead", 
+        "count" -> "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"bar\"} -> {\"Unit\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "{\"C\", \"bar\"} -> {\"Unit\"}"}, {
+          "name" -> "RetailLocationClass", "desc" -> "a retail category", 
+           "input" -> 
+           "{\"C\", \"bar\"} -> {{\"RetailLocationClass\", \"a retail \
+category\"}}"}}}, {
+       "type" -> "Unit", "word" -> "bar", "template" -> 
+        "Assuming standard bars for \"bar\"${separator}Use ${desc} or \
+${pulldown} instead", "count" -> "4", "pulldown" -> "true", "pulldownlabel" -> 
+        "more >>", "pulldownlength" -> "2", "default" -> 
+        "\"UnitClash\" -> {\"bar\", {\"Bars\", \"dflt\"}}", 
+        "Values" -> {{
+          "name" -> "Bars", "desc" -> "standard bars", "input" -> 
+           "\"UnitClash\" -> {\"bar\", {\"Bars\"}}"}, {
+          "name" -> "BarCGS", "desc" -> "cgs bars", "input" -> 
+           "\"UnitClash\" -> {\"bar\", {\"BarCGS\"}}"}, {
+          "name" -> "BarsDifference", "desc" -> "bars difference", "input" -> 
+           "\"UnitClash\" -> {\"bar\", {\"BarsDifference\"}}"}, {
+          "name" -> "BarUnits", "desc" -> "bars", "input" -> 
+           "\"UnitClash\" -> {\"bar\", {\"BarUnits\"}}"}}}}, 
+     "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.918882`6.414804737701237, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], ";", 
+  RowBox[{"n", ":=", 
+   RowBox[{"V1", " ", 
+    RowBox[{"p", "/", 
+     RowBox[{"(", 
+      RowBox[{"T1", 
+       TemplateBox[<|"query" -> "gas constant", "boxes" -> TemplateBox[{
+            InterpretationBox["\[InvisibleSpace]", 1], 
+            StyleBox["\"R\"", Italic, StripOnInput -> False], 
+            "molar gas constants", "\"MolarGasConstant\""}, "Quantity", 
+           SyntaxForm -> Mod], 
+         "allassumptions" -> {{
+           "type" -> "Clash", "word" -> "gas constant", "template" -> 
+            "Assuming \"gas constant\" is a unit${separator}Use as ${desc} or \
+${desc} instead", "count" -> "3", "pulldown" -> "false", "default" -> 
+            "{\"C\", \"gas constant\"} -> {\"Unit\", \"dflt\"}", 
+            "Values" -> {{
+              "name" -> "Unit", "desc" -> "a unit", "input" -> 
+               "{\"C\", \"gas constant\"} -> {\"Unit\"}"}, {
+              "name" -> "EntirePhraseMM", "desc" -> 
+               " referring to optimization", "input" -> 
+               "{\"C\", \"gas constant\"} -> {\"EntirePhraseMM\"}"}, {
+              "name" -> "Word", "desc" -> "a word", "input" -> 
+               "{\"C\", \"gas constant\"} -> {\"Word\"}"}}}}, 
+         "assumptions" -> {}, "open" -> {1, 2}, 
+         "querystate" -> {
+          "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+           0.9652`6.436162306732723, "Messages" -> {}}, "contextinfo" -> 
+         Automatic, "version" -> 5|>,
+        "LinguisticAssistantTemplate"]}], ")"}]}]}]}], ";", 
+  RowBox[{"Cp", ":=", 
+   RowBox[{
+    RowBox[{"7", "/", "2"}], 
+    TemplateBox[<|"query" -> "gas constant", "boxes" -> TemplateBox[{
+         InterpretationBox["\[InvisibleSpace]", 1], 
+         StyleBox["\"R\"", Italic, StripOnInput -> False], 
+         "molar gas constants", "\"MolarGasConstant\""}, "Quantity", 
+        SyntaxForm -> Mod], 
+      "allassumptions" -> {{
+        "type" -> "Clash", "word" -> "gas constant", "template" -> 
+         "Assuming \"gas constant\" is a unit${separator}Use as ${desc} or \
+${desc} instead", "count" -> "3", "pulldown" -> "false", "default" -> 
+         "{\"C\", \"gas constant\"} -> {\"Unit\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "Unit", "desc" -> "a unit", "input" -> 
+            "{\"C\", \"gas constant\"} -> {\"Unit\"}"}, {
+           "name" -> "EntirePhraseMM", "desc" -> " referring to optimization",
+             "input" -> 
+            "{\"C\", \"gas constant\"} -> {\"EntirePhraseMM\"}"}, {
+           "name" -> "Word", "desc" -> "a word", "input" -> 
+            "{\"C\", \"gas constant\"} -> {\"Word\"}"}}}}, 
+      "assumptions" -> {}, "open" -> {1, 2}, 
+      "querystate" -> {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        0.9652`6.436162306732723, "Messages" -> {}}, "contextinfo" -> 
+      Automatic, "version" -> 5|>,
+     "LinguisticAssistantTemplate"]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"T2", ":=", 
+  RowBox[{"2", "T1"}]}]}], "Input",
+ CellChangeTimes->{{3.921926982747734*^9, 3.9219270501974916`*^9}, {
+   3.922108169239174*^9, 3.922108181194463*^9}, {3.9221082425316467`*^9, 
+   3.922108279390264*^9}, {3.9221083199872837`*^9, 3.92210832730363*^9}, {
+   3.922108431547591*^9, 3.922108562782959*^9}, {3.922108651129649*^9, 
+   3.922108720630213*^9}, {3.9221088777020397`*^9, 3.9221089178384247`*^9}, {
+   3.922108954483357*^9, 3.922108954801062*^9}, {3.922109036080435*^9, 
+   3.922109096060062*^9}, {3.9221091670976686`*^9, 3.9221091741668863`*^9}, {
+   3.922109245897451*^9, 3.9221092556994267`*^9}, {3.922109305488125*^9, 
+   3.922109305988202*^9}, {3.922109396360401*^9, 3.9221093989842157`*^9}, {
+   3.922109440725988*^9, 3.922109444171883*^9}, 3.922109682014892*^9, {
+   3.9221097455377073`*^9, 3.922109748903075*^9}, {3.922111480811713*^9, 
+   3.922111495974236*^9}, {3.922111552840863*^9, 3.9221115569007263`*^9}, {
+   3.922111614728607*^9, 3.9221116271430407`*^9}, {3.922111767014613*^9, 
+   3.922111767132024*^9}, {3.922111912050511*^9, 3.922111916378695*^9}, {
+   3.92211195803859*^9, 3.922111968808922*^9}, {3.922112032797494*^9, 
+   3.922112038908289*^9}, 3.9221191589511967`*^9, {3.922119245512706*^9, 
+   3.922119264966543*^9}, {3.922119650197419*^9, 
+   3.9221196907595253`*^9}},ExpressionUUID->"79187e63-3db1-4ab8-b7af-\
+d9b1e50a019e"],
+
 Cell[CellGroupData[{
 
 Cell[BoxData[{
- RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
- RowBox[{"kB", ":=", 
-  TemplateBox[<|"query" -> "boltzmann constant", "boxes" -> TemplateBox[{
-       InterpretationBox["\[InvisibleSpace]", 1], 
-       StyleBox["\"k\"", Italic, StripOnInput -> False], 
-       "Boltzmann constants", "\"BoltzmannConstant\""}, "Quantity", 
-      SyntaxForm -> Mod], "allassumptions" -> {}, "assumptions" -> {}, 
-    "open" -> {1, 2}, 
-    "querystate" -> {
-     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-      1.248376`6.547890404268062, "Messages" -> {}}, "contextinfo" -> 
-    Automatic, "version" -> 5|>,
-   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
- RowBox[{"T1", ":=", 
-  TemplateBox[<|
-   "query" -> "300 K", "boxes" -> 
-    TemplateBox[{"300", "\"K\"", "kelvins", "\"Kelvins\""}, "Quantity", 
-      SyntaxForm -> Mod], 
-    "allassumptions" -> {{
-      "type" -> "Clash", "word" -> "K", "template" -> 
-       "Assuming \"K\" is a unit${separator}Use as ${desc} instead", "count" -> 
-       "2", "pulldown" -> "false", "default" -> 
-       "{\"C\", \"K\"} -> {\"Unit\", \"dflt\"}", 
-       "Values" -> {{
-         "name" -> "Unit", "desc" -> "a unit", "input" -> 
-          "{\"C\", \"K\"} -> {\"Unit\"}"}, {
-         "name" -> "Variable", "desc" -> "a variable", "input" -> 
-          "{\"C\", \"K\"} -> {\"Variable\"}"}}}, {
-      "type" -> "Unit", "word" -> "K", "template" -> 
-       "Assuming kelvins of absolute temperature for \"K\"${separator}Use \
-${desc} or ${pulldown} instead", "count" -> "5", "pulldown" -> "true", 
-       "pulldownlabel" -> "more >>", "pulldownlength" -> "3", "default" -> 
-       "\"UnitClash\" -> {\"K\", {\"Kelvins\", \"dflt\"}}", 
-       "Values" -> {{
-         "name" -> "Kelvins", "desc" -> "kelvins of absolute temperature", 
-          "input" -> "\"UnitClash\" -> {\"K\", {\"Kelvins\"}}"}, {
-         "name" -> "KelvinsDifference", "desc" -> "kelvins difference", 
-          "input" -> "\"UnitClash\" -> {\"K\", {\"KelvinsDifference\"}}"}, {
-         "name" -> "Kilobytes", "desc" -> "kilobytes (base 10)", "input" -> 
-          "\"UnitClash\" -> {\"K\", {\"Kilobytes\"}}"}, {
-         "name" -> "Kilometers", "desc" -> "kilometers", "input" -> 
-          "\"UnitClash\" -> {\"K\", {\"Kilometers\"}}"}, {
-         "name" -> "Karats", "desc" -> "karats of metal purity", "input" -> 
-          "\"UnitClash\" -> {\"K\", {\"Karats\"}}"}}}}, "assumptions" -> {}, 
-    "open" -> {1, 2}, 
-    "querystate" -> {
-     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-      1.122469`6.501719349126927, "Messages" -> {}}, "contextinfo" -> 
-    Automatic, "version" -> 5|>,
-   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
- RowBox[{"V1", ":=", 
-  TemplateBox[<|
-   "query" -> "1 L", "boxes" -> 
-    TemplateBox[{"1", "\"L\"", "liter", "\"Liters\""}, "Quantity", SyntaxForm -> 
-      Mod], "allassumptions" -> {{
-      "type" -> "Clash", "word" -> "L", "template" -> 
-       "Assuming \"L\" is a unit${separator}Use as ${desc} instead", "count" -> 
-       "2", "pulldown" -> "false", "default" -> 
-       "{\"C\", \"L\"} -> {\"Unit\", \"dflt\"}", 
-       "Values" -> {{
-         "name" -> "Unit", "desc" -> "a unit", "input" -> 
-          "{\"C\", \"L\"} -> {\"Unit\"}"}, {
-         "name" -> "Variable", "desc" -> "a variable", "input" -> 
-          "{\"C\", \"L\"} -> {\"Variable\"}"}}}, {
-      "type" -> "Unit", "word" -> "L", "template" -> 
-       "Assuming liters for \"L\"${separator}Use ${desc} or ${pulldown} \
-instead", "count" -> "5", "pulldown" -> "true", "pulldownlabel" -> "more >>", 
-       "pulldownlength" -> "3", "default" -> 
-       "\"UnitClash\" -> {\"L\", {\"Liters\", \"dflt\"}}", 
-       "Values" -> {{
-         "name" -> "Liters", "desc" -> "liters", "input" -> 
-          "\"UnitClash\" -> {\"L\", {\"Liters\"}}"}, {
-         "name" -> "Lamberts", "desc" -> "lamberts", "input" -> 
-          "\"UnitClash\" -> {\"L\", {\"Lamberts\"}}"}, {
-         "name" -> "Langmuirs", "desc" -> "langmuirs", "input" -> 
-          "\"UnitClash\" -> {\"L\", {\"Langmuirs\"}}"}, {
-         "name" -> "Lakh", "desc" -> "lakhs", "input" -> 
-          "\"UnitClash\" -> {\"L\", {\"Lakh\"}}"}, {
-         "name" -> "Lampsons", "desc" -> "lampsons", "input" -> 
-          "\"UnitClash\" -> {\"L\", {\"Lampsons\"}}"}}}}, "assumptions" -> {},
-     "open" -> {1, 2}, 
-    "querystate" -> {
-     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-      1.230095`6.5414836467098185, "Messages" -> {}}, "contextinfo" -> 
-    Automatic, "version" -> 5|>,
-   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
- RowBox[{"V2", ":=", 
-  RowBox[{"2", "V1"}]}], "\[IndentingNewLine]", 
- RowBox[{"p", ":=", 
-  TemplateBox[<|
-   "query" -> "1 bar", "boxes" -> 
-    TemplateBox[{"1", "\"bar\"", "bar", "\"Bars\""}, "Quantity", SyntaxForm -> 
-      Mod], "allassumptions" -> {{
-      "type" -> "Clash", "word" -> "bar", "template" -> 
-       "Assuming \"bar\" is a unit${separator}Use as ${desc} instead", 
-       "count" -> "2", "pulldown" -> "false", "default" -> 
-       "{\"C\", \"bar\"} -> {\"Unit\", \"dflt\"}", 
-       "Values" -> {{
-         "name" -> "Unit", "desc" -> "a unit", "input" -> 
-          "{\"C\", \"bar\"} -> {\"Unit\"}"}, {
-         "name" -> "RetailLocationClass", "desc" -> "a retail category", 
-          "input" -> 
-          "{\"C\", \"bar\"} -> {{\"RetailLocationClass\", \"a retail category\
-\"}}"}}}, {
-      "type" -> "Unit", "word" -> "bar", "template" -> 
-       "Assuming standard bars for \"bar\"${separator}Use ${desc} or \
-${pulldown} instead", "count" -> "4", "pulldown" -> "true", "pulldownlabel" -> 
-       "more >>", "pulldownlength" -> "2", "default" -> 
-       "\"UnitClash\" -> {\"bar\", {\"Bars\", \"dflt\"}}", 
-       "Values" -> {{
-         "name" -> "Bars", "desc" -> "standard bars", "input" -> 
-          "\"UnitClash\" -> {\"bar\", {\"Bars\"}}"}, {
-         "name" -> "BarCGS", "desc" -> "cgs bars", "input" -> 
-          "\"UnitClash\" -> {\"bar\", {\"BarCGS\"}}"}, {
-         "name" -> "BarsDifference", "desc" -> "bars difference", "input" -> 
-          "\"UnitClash\" -> {\"bar\", {\"BarsDifference\"}}"}, {
-         "name" -> "BarUnits", "desc" -> "bars", "input" -> 
-          "\"UnitClash\" -> {\"bar\", {\"BarUnits\"}}"}}}}, 
-    "assumptions" -> {}, "open" -> {1, 2}, 
-    "querystate" -> {
-     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-      0.918882`6.414804737701237, "Messages" -> {}}, "contextinfo" -> 
-    Automatic, "version" -> 5|>,
-   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
- RowBox[{"n", ":=", 
-  RowBox[{"V1", " ", 
-   RowBox[{"p", "/", 
-    RowBox[{"(", 
-     RowBox[{"T1", 
-      TemplateBox[<|"query" -> "gas constant", "boxes" -> TemplateBox[{
-           InterpretationBox["\[InvisibleSpace]", 1], 
-           StyleBox["\"R\"", Italic, StripOnInput -> False], 
-           "molar gas constants", "\"MolarGasConstant\""}, "Quantity", 
-          SyntaxForm -> Mod], 
-        "allassumptions" -> {{
-          "type" -> "Clash", "word" -> "gas constant", "template" -> 
-           "Assuming \"gas constant\" is a unit${separator}Use as ${desc} or \
-${desc} instead", "count" -> "3", "pulldown" -> "false", "default" -> 
-           "{\"C\", \"gas constant\"} -> {\"Unit\", \"dflt\"}", 
-           "Values" -> {{
-             "name" -> "Unit", "desc" -> "a unit", "input" -> 
-              "{\"C\", \"gas constant\"} -> {\"Unit\"}"}, {
-             "name" -> "EntirePhraseMM", "desc" -> 
-              " referring to optimization", "input" -> 
-              "{\"C\", \"gas constant\"} -> {\"EntirePhraseMM\"}"}, {
-             "name" -> "Word", "desc" -> "a word", "input" -> 
-              "{\"C\", \"gas constant\"} -> {\"Word\"}"}}}}, 
-        "assumptions" -> {}, "open" -> {1, 2}, 
-        "querystate" -> {
-         "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-          0.9652`6.436162306732723, "Messages" -> {}}, "contextinfo" -> 
-        Automatic, "version" -> 5|>,
-       "LinguisticAssistantTemplate"]}], ")"}]}]}]}], "\[IndentingNewLine]", 
- RowBox[{"Cp", ":=", 
-  RowBox[{
-   RowBox[{"7", "/", "2"}], 
-   TemplateBox[<|"query" -> "gas constant", "boxes" -> TemplateBox[{
-        InterpretationBox["\[InvisibleSpace]", 1], 
-        StyleBox["\"R\"", Italic, StripOnInput -> False], 
-        "molar gas constants", "\"MolarGasConstant\""}, "Quantity", 
-       SyntaxForm -> Mod], 
-     "allassumptions" -> {{
-       "type" -> "Clash", "word" -> "gas constant", "template" -> 
-        "Assuming \"gas constant\" is a unit${separator}Use as ${desc} or \
-${desc} instead", "count" -> "3", "pulldown" -> "false", "default" -> 
-        "{\"C\", \"gas constant\"} -> {\"Unit\", \"dflt\"}", 
-        "Values" -> {{
-          "name" -> "Unit", "desc" -> "a unit", "input" -> 
-           "{\"C\", \"gas constant\"} -> {\"Unit\"}"}, {
-          "name" -> "EntirePhraseMM", "desc" -> " referring to optimization", 
-           "input" -> "{\"C\", \"gas constant\"} -> {\"EntirePhraseMM\"}"}, {
-          "name" -> "Word", "desc" -> "a word", "input" -> 
-           "{\"C\", \"gas constant\"} -> {\"Word\"}"}}}}, "assumptions" -> {},
-      "open" -> {1, 2}, 
-     "querystate" -> {
-      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-       0.9652`6.436162306732723, "Messages" -> {}}, "contextinfo" -> 
-     Automatic, "version" -> 5|>,
-    "LinguisticAssistantTemplate"]}]}], "\[IndentingNewLine]", 
- RowBox[{"T2", ":=", 
-  RowBox[{"2", "T1"}]}], "\[IndentingNewLine]", 
  RowBox[{"\[CapitalDelta]U", "=", 
   RowBox[{"UnitConvert", "[", 
    RowBox[{
@@ -1013,9 +1051,9 @@ or ${desc} instead", "count" -> "3", "pulldown" -> "false", "default" ->
    3.922111614728607*^9, 3.9221116271430407`*^9}, {3.922111767014613*^9, 
    3.922111767132024*^9}, {3.922111912050511*^9, 3.922111916378695*^9}, {
    3.92211195803859*^9, 3.922111968808922*^9}, {3.922112032797494*^9, 
-   3.922112038908289*^9}},
+   3.922112038908289*^9}, 3.9221191589511967`*^9},
  CellLabel->
-  "In[746]:=",ExpressionUUID->"79187e63-3db1-4ab8-b7af-d9b1e50a019e"],
+  "In[186]:=",ExpressionUUID->"3312be6d-982a-409a-8845-ab20ba9b5cb3"],
 
 Cell[BoxData[
  TemplateBox[{"350", "\"J\"", "joules", "\"Joules\""},
@@ -1028,9 +1066,10 @@ Cell[BoxData[
    3.922109306446146*^9}, 3.922109444556019*^9, 3.922109682398323*^9, {
    3.922109746454277*^9, 3.922109749282384*^9}, 3.922111129588311*^9, {
    3.922111621143035*^9, 3.922111633007526*^9}, 3.9221117675015383`*^9, 
-   3.922111969530985*^9, 3.9221120394304047`*^9},
+   3.922111969530985*^9, 3.9221120394304047`*^9, 3.922118866680264*^9, 
+   3.922119062905113*^9, 3.922119164412581*^9, 3.922119328203882*^9},
  CellLabel->
-  "Out[755]=",ExpressionUUID->"a04f3127-ec61-4e0b-b637-f5ab65468764"],
+  "Out[186]=",ExpressionUUID->"b78f9dcc-00ce-4892-8da1-5e64b040a78a"],
 
 Cell[BoxData[
  TemplateBox[{"1.0397207708399179`", 
@@ -1047,9 +1086,10 @@ Cell[BoxData[
    3.922109306446146*^9}, 3.922109444556019*^9, 3.922109682398323*^9, {
    3.922109746454277*^9, 3.922109749282384*^9}, 3.922111129588311*^9, {
    3.922111621143035*^9, 3.922111633007526*^9}, 3.9221117675015383`*^9, 
-   3.922111969530985*^9, 3.922112039676021*^9},
+   3.922111969530985*^9, 3.9221120394304047`*^9, 3.922118866680264*^9, 
+   3.922119062905113*^9, 3.922119164412581*^9, 3.922119328438568*^9},
  CellLabel->
-  "Out[756]=",ExpressionUUID->"5c5ca330-64f6-4e6a-8c3d-65b976497b32"],
+  "Out[187]=",ExpressionUUID->"3e0b385f-8376-46d9-a1bc-e72cbcf0341c"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -1063,9 +1103,10 @@ Cell[BoxData[
    3.922109306446146*^9}, 3.922109444556019*^9, 3.922109682398323*^9, {
    3.922109746454277*^9, 3.922109749282384*^9}, 3.922111129588311*^9, {
    3.922111621143035*^9, 3.922111633007526*^9}, 3.9221117675015383`*^9, 
-   3.922111969530985*^9, 3.922112039697047*^9},
+   3.922111969530985*^9, 3.9221120394304047`*^9, 3.922118866680264*^9, 
+   3.922119062905113*^9, 3.922119164412581*^9, 3.922119328446691*^9},
  CellLabel->
-  "Out[757]=",ExpressionUUID->"52610e83-63ed-4259-9224-e7193453d4ae"],
+  "Out[188]=",ExpressionUUID->"e5d133af-c82e-43cc-96cb-8398c678c4b2"],
 
 Cell[BoxData[
  TemplateBox[{"450", "\"J\"", "joules", "\"Joules\""},
@@ -1078,9 +1119,10 @@ Cell[BoxData[
    3.922109306446146*^9}, 3.922109444556019*^9, 3.922109682398323*^9, {
    3.922109746454277*^9, 3.922109749282384*^9}, 3.922111129588311*^9, {
    3.922111621143035*^9, 3.922111633007526*^9}, 3.9221117675015383`*^9, 
-   3.922111969530985*^9, 3.9221120397079067`*^9},
+   3.922111969530985*^9, 3.9221120394304047`*^9, 3.922118866680264*^9, 
+   3.922119062905113*^9, 3.922119164412581*^9, 3.922119328453515*^9},
  CellLabel->
-  "Out[758]=",ExpressionUUID->"2de44473-6d20-49d8-800d-2587c5b49d80"]
+  "Out[189]=",ExpressionUUID->"d56a7719-c3d4-489e-bccc-ae84cb031858"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1133,16 +1175,16 @@ or ${desc} instead", "count" -> "3", "pulldown" -> "false", "default" ->
   3.922111102604528*^9, 3.9221111373163347`*^9}, {3.922111435899831*^9, 
   3.922111436774479*^9}, {3.922112052217608*^9, 3.9221120890658092`*^9}},
  CellLabel->
-  "In[769]:=",ExpressionUUID->"3bbe5e26-758d-4a51-b7ae-2a33bb749e99"],
+  "In[190]:=",ExpressionUUID->"3bbe5e26-758d-4a51-b7ae-2a33bb749e99"],
 
 Cell[BoxData[
  TemplateBox[{"0", "\"J\"", "joules", "\"Joules\""},
   "Quantity"]], "Output",
  CellChangeTimes->{{3.92211068071894*^9, 3.9221106864187183`*^9}, {
-  3.922111110021084*^9, 3.922111137953499*^9}, {3.922112058060349*^9, 
-  3.9221120895206842`*^9}},
+   3.922111110021084*^9, 3.922111137953499*^9}, {3.922112058060349*^9, 
+   3.9221120895206842`*^9}, 3.9221188704989862`*^9, 3.922119330007474*^9},
  CellLabel->
-  "Out[770]=",ExpressionUUID->"f446cd3b-c8d6-4b38-a095-970efc383bcc"],
+  "Out[191]=",ExpressionUUID->"7476a246-deab-41a2-9b47-fb18d550d94c"],
 
 Cell[BoxData[
  TemplateBox[{"0.23104906018664842`", 
@@ -1152,99 +1194,109 @@ Cell[BoxData[
    FractionBox["\"Joules\"", "\"Kelvins\""]},
   "Quantity"]], "Output",
  CellChangeTimes->{{3.92211068071894*^9, 3.9221106864187183`*^9}, {
-  3.922111110021084*^9, 3.922111137953499*^9}, {3.922112058060349*^9, 
-  3.922112089614934*^9}},
+   3.922111110021084*^9, 3.922111137953499*^9}, {3.922112058060349*^9, 
+   3.9221120895206842`*^9}, 3.9221188704989862`*^9, 3.922119330145475*^9},
  CellLabel->
-  "Out[771]=",ExpressionUUID->"8061c43a-bb9c-40a2-a346-ec3cb7119ac4"]
+  "Out[192]=",ExpressionUUID->"a226f018-67d7-47d1-8c3f-7775fce8eeb9"]
 }, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"d", ":=", 
+   TemplateBox[<|
+    "query" -> "1 mm", "boxes" -> 
+     TemplateBox[{"1", "\"mm\"", "millimeter", "\"Millimeters\""}, "Quantity",
+        SyntaxForm -> Mod], "allassumptions" -> {}, "assumptions" -> {}, 
+     "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.716458`6.30673572988618, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], ";", 
+  RowBox[{"A", ":=", 
+   TemplateBox[<|"query" -> "0.01 m^2", "boxes" -> TemplateBox[{"0.01", 
+        RowBox[{
+          SuperscriptBox["\"m\"", "2"]}], "meters squared", 
+        SuperscriptBox["\"Meters\"", "2"]}, "Quantity", SyntaxForm -> Mod], 
+     "allassumptions" -> {{
+       "word" -> "", "template" -> 
+        "Assuming \"m^2\" is a unit${separator}Use \"m\" as ${desc} instead", 
+        "count" -> "2", "pulldown" -> "false", "type" -> "MultiClash", 
+        "default" -> "{\"MC\", \"m^2\"} -> {\"Unit\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "{\"MC\", \"m^2\"} -> {\"Unit\"}", "word" -> "m^2"}, {
+          "name" -> "Variable", "desc" -> "a variable", "input" -> 
+           "{\"MC\", \"m^2\"} -> {\"Variable\"}", "word" -> "m"}}}, {
+       "type" -> "Unit", "word" -> "m^2", "template" -> 
+        "Assuming square meters for \"m^2\"${separator}Use ${desc} instead", 
+        "count" -> "2", "pulldown" -> "false", "default" -> 
+        "\"UnitClash\" -> {\"m^2\", {\"SquareMeters\", \"dflt\"}}", 
+        "Values" -> {{
+          "name" -> "SquareMeters", "desc" -> "square meters", "input" -> 
+           "\"UnitClash\" -> {\"m^2\", {\"SquareMeters\"}}"}, {
+          "name" -> "MinutesSquared", "desc" -> "minutes squared", "input" -> 
+           "\"UnitClash\" -> {\"m^2\", {\"MinutesSquared\"}}"}}}}, 
+     "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.88286`6.39743683405202, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], ";", 
+  RowBox[{"F", ":=", 
+   TemplateBox[<|
+    "query" -> "200 N", "boxes" -> 
+     TemplateBox[{"200", "\"N\"", "newtons", "\"Newtons\""}, "Quantity", 
+       SyntaxForm -> Mod], 
+     "allassumptions" -> {{
+       "type" -> "Clash", "word" -> "N", "template" -> 
+        "Assuming \"N\" is a unit${separator}Use as ${desc} or ${desc} \
+instead", "count" -> "3", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"N\"} -> {\"Unit\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "{\"C\", \"N\"} -> {\"Unit\"}"}, {
+          "name" -> "Variable", "desc" -> "a variable", "input" -> 
+           "{\"C\", \"N\"} -> {\"Variable\"}"}, {
+          "name" -> "BearingDirection", "desc" -> "a direction", "input" -> 
+           "{\"C\", \"N\"} -> {\"BearingDirection\"}"}}}, {
+       "type" -> "Unit", "word" -> "N", "template" -> 
+        "Assuming newtons for \"N\"${separator}Use ${desc} or ${pulldown} \
+instead", "count" -> "4", "pulldown" -> "true", "pulldownlabel" -> "more >>", 
+        "pulldownlength" -> "2", "default" -> 
+        "\"UnitClash\" -> {\"N\", {\"Newtons\", \"dflt\"}}", 
+        "Values" -> {{
+          "name" -> "Newtons", "desc" -> "newtons", "input" -> 
+           "\"UnitClash\" -> {\"N\", {\"Newtons\"}}"}, {
+          "name" -> "Nights", "desc" -> "nights", "input" -> 
+           "\"UnitClash\" -> {\"N\", {\"Nights\"}}"}, {
+          "name" -> "Nepers", "desc" -> "nepers", "input" -> 
+           "\"UnitClash\" -> {\"N\", {\"Nepers\"}}"}, {
+          "name" -> "NormalUnits", "desc" -> "normal", "input" -> 
+           "\"UnitClash\" -> {\"N\", {\"NormalUnits\"}}"}}}}, 
+     "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       1.111382`6.497408352146541, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}]}], "\[IndentingNewLine]", 
+ RowBox[{"\[CapitalDelta]Q", ":=", "0"}]}], "Input",
+ CellChangeTimes->{{3.9221102069631853`*^9, 3.9221102096831408`*^9}, {
+  3.922110339518326*^9, 3.922110353238138*^9}, {3.9221121028647137`*^9, 
+  3.9221121052961607`*^9}, {3.922112285120172*^9, 3.922112379734082*^9}, {
+  3.9221189022539387`*^9, 3.922118903047092*^9}, {3.922119209720522*^9, 
+  3.922119224633576*^9}},
+ CellLabel->
+  "In[193]:=",ExpressionUUID->"2dcd2082-9283-4b93-b6be-c42d54314359"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[{
- RowBox[{"d", ":=", 
-  TemplateBox[<|
-   "query" -> "1 mm", "boxes" -> 
-    TemplateBox[{"1", "\"mm\"", "millimeter", "\"Millimeters\""}, "Quantity", 
-      SyntaxForm -> Mod], "allassumptions" -> {}, "assumptions" -> {}, 
-    "open" -> {1, 2}, 
-    "querystate" -> {
-     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-      0.716458`6.30673572988618, "Messages" -> {}}, "contextinfo" -> 
-    Automatic, "version" -> 5|>,
-   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
- RowBox[{"A", ":=", 
-  TemplateBox[<|"query" -> "0.01 m^2", "boxes" -> TemplateBox[{"0.01", 
-       RowBox[{
-         SuperscriptBox["\"m\"", "2"]}], "meters squared", 
-       SuperscriptBox["\"Meters\"", "2"]}, "Quantity", SyntaxForm -> Mod], 
-    "allassumptions" -> {{
-      "word" -> "", "template" -> 
-       "Assuming \"m^2\" is a unit${separator}Use \"m\" as ${desc} instead", 
-       "count" -> "2", "pulldown" -> "false", "type" -> "MultiClash", 
-       "default" -> "{\"MC\", \"m^2\"} -> {\"Unit\", \"dflt\"}", 
-       "Values" -> {{
-         "name" -> "Unit", "desc" -> "a unit", "input" -> 
-          "{\"MC\", \"m^2\"} -> {\"Unit\"}", "word" -> "m^2"}, {
-         "name" -> "Variable", "desc" -> "a variable", "input" -> 
-          "{\"MC\", \"m^2\"} -> {\"Variable\"}", "word" -> "m"}}}, {
-      "type" -> "Unit", "word" -> "m^2", "template" -> 
-       "Assuming square meters for \"m^2\"${separator}Use ${desc} instead", 
-       "count" -> "2", "pulldown" -> "false", "default" -> 
-       "\"UnitClash\" -> {\"m^2\", {\"SquareMeters\", \"dflt\"}}", 
-       "Values" -> {{
-         "name" -> "SquareMeters", "desc" -> "square meters", "input" -> 
-          "\"UnitClash\" -> {\"m^2\", {\"SquareMeters\"}}"}, {
-         "name" -> "MinutesSquared", "desc" -> "minutes squared", "input" -> 
-          "\"UnitClash\" -> {\"m^2\", {\"MinutesSquared\"}}"}}}}, 
-    "assumptions" -> {}, "open" -> {1, 2}, 
-    "querystate" -> {
-     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-      0.88286`6.39743683405202, "Messages" -> {}}, "contextinfo" -> Automatic,
-     "version" -> 5|>,
-   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
- RowBox[{"F", ":=", 
-  TemplateBox[<|
-   "query" -> "200 N", "boxes" -> 
-    TemplateBox[{"200", "\"N\"", "newtons", "\"Newtons\""}, "Quantity", 
-      SyntaxForm -> Mod], 
-    "allassumptions" -> {{
-      "type" -> "Clash", "word" -> "N", "template" -> 
-       "Assuming \"N\" is a unit${separator}Use as ${desc} or ${desc} \
-instead", "count" -> "3", "pulldown" -> "false", "default" -> 
-       "{\"C\", \"N\"} -> {\"Unit\", \"dflt\"}", 
-       "Values" -> {{
-         "name" -> "Unit", "desc" -> "a unit", "input" -> 
-          "{\"C\", \"N\"} -> {\"Unit\"}"}, {
-         "name" -> "Variable", "desc" -> "a variable", "input" -> 
-          "{\"C\", \"N\"} -> {\"Variable\"}"}, {
-         "name" -> "BearingDirection", "desc" -> "a direction", "input" -> 
-          "{\"C\", \"N\"} -> {\"BearingDirection\"}"}}}, {
-      "type" -> "Unit", "word" -> "N", "template" -> 
-       "Assuming newtons for \"N\"${separator}Use ${desc} or ${pulldown} \
-instead", "count" -> "4", "pulldown" -> "true", "pulldownlabel" -> "more >>", 
-       "pulldownlength" -> "2", "default" -> 
-       "\"UnitClash\" -> {\"N\", {\"Newtons\", \"dflt\"}}", 
-       "Values" -> {{
-         "name" -> "Newtons", "desc" -> "newtons", "input" -> 
-          "\"UnitClash\" -> {\"N\", {\"Newtons\"}}"}, {
-         "name" -> "Nights", "desc" -> "nights", "input" -> 
-          "\"UnitClash\" -> {\"N\", {\"Nights\"}}"}, {
-         "name" -> "Nepers", "desc" -> "nepers", "input" -> 
-          "\"UnitClash\" -> {\"N\", {\"Nepers\"}}"}, {
-         "name" -> "NormalUnits", "desc" -> "normal", "input" -> 
-          "\"UnitClash\" -> {\"N\", {\"NormalUnits\"}}"}}}}, 
-    "assumptions" -> {}, "open" -> {1, 2}, 
-    "querystate" -> {
-     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-      1.111382`6.497408352146541, "Messages" -> {}}, "contextinfo" -> 
-    Automatic, "version" -> 5|>,
-   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
  RowBox[{"\[CapitalDelta]W", "=", 
   RowBox[{"UnitConvert", "[", 
    RowBox[{
     RowBox[{"F", "*", "d"}], ",", "\"\<J\>\""}], 
    "]"}]}], "\[IndentingNewLine]", 
- RowBox[{"\[CapitalDelta]Q", "=", "0"}], "\[IndentingNewLine]", 
  RowBox[{"\[CapitalDelta]U", "=", 
   RowBox[{
   "\[CapitalDelta]W", "+", "\[CapitalDelta]Q"}]}], "\[IndentingNewLine]", 
@@ -1256,47 +1308,158 @@ instead", "count" -> "4", "pulldown" -> "true", "pulldownlabel" -> "more >>",
       RowBox[{"Cp", "*", "n"}], ")"}]}], "]"}], "//", "N"}]}]}], "Input",
  CellChangeTimes->{{3.9221102069631853`*^9, 3.9221102096831408`*^9}, {
   3.922110339518326*^9, 3.922110353238138*^9}, {3.9221121028647137`*^9, 
-  3.9221121052961607`*^9}, {3.922112285120172*^9, 3.922112379734082*^9}},
+  3.9221121052961607`*^9}, {3.922112285120172*^9, 3.922112379734082*^9}, {
+  3.9221189022539387`*^9, 3.922118903047092*^9}, {3.922119209720522*^9, 
+  3.922119212643381*^9}},
  CellLabel->
-  "In[810]:=",ExpressionUUID->"2dcd2082-9283-4b93-b6be-c42d54314359"],
+  "In[195]:=",ExpressionUUID->"5d567343-6ca0-4316-bc1f-fe34f26168c0"],
 
 Cell[BoxData[
  TemplateBox[{
    FractionBox["1", "5"], "\"J\"", "joules", "\"Joules\""},
   "Quantity"]], "Output",
  CellChangeTimes->{{3.9221122902293177`*^9, 3.922112311767847*^9}, {
-  3.922112343104886*^9, 3.922112396771092*^9}},
+   3.922112343104886*^9, 3.922112396771092*^9}, 3.922118872968603*^9, 
+   3.922118903305216*^9, 3.922119073056163*^9, {3.922119219079361*^9, 
+   3.922119227086117*^9}, 3.922119334126678*^9},
  CellLabel->
-  "Out[813]=",ExpressionUUID->"8368689d-2631-4ecc-aba8-a153c40130fa"],
-
-Cell[BoxData["0"], "Output",
- CellChangeTimes->{{3.9221122902293177`*^9, 3.922112311767847*^9}, {
-  3.922112343104886*^9, 3.922112396779551*^9}},
- CellLabel->
-  "Out[814]=",ExpressionUUID->"3101ff40-c125-47e5-af78-9b401cfec458"],
+  "Out[195]=",ExpressionUUID->"3dd2b01c-fbe1-412c-9ced-356f759a76c6"],
 
 Cell[BoxData[
  TemplateBox[{
    FractionBox["1", "5"], "\"J\"", "joules", "\"Joules\""},
   "Quantity"]], "Output",
  CellChangeTimes->{{3.9221122902293177`*^9, 3.922112311767847*^9}, {
-  3.922112343104886*^9, 3.922112396782752*^9}},
+   3.922112343104886*^9, 3.922112396771092*^9}, 3.922118872968603*^9, 
+   3.922118903305216*^9, 3.922119073056163*^9, {3.922119219079361*^9, 
+   3.922119227086117*^9}, 3.922119334132556*^9},
  CellLabel->
-  "Out[815]=",ExpressionUUID->"1fe63ebc-14a7-426e-b6d5-6890e62df7b7"],
+  "Out[196]=",ExpressionUUID->"5c7b8f3d-2fbe-43bf-b5ff-1ff6e91a804d"],
 
 Cell[BoxData[
  TemplateBox[{"0.17142857142857143`", "\"K\"", "kelvins", "\"Kelvins\""},
   "Quantity"]], "Output",
  CellChangeTimes->{{3.9221122902293177`*^9, 3.922112311767847*^9}, {
-  3.922112343104886*^9, 3.922112396786203*^9}},
+   3.922112343104886*^9, 3.922112396771092*^9}, 3.922118872968603*^9, 
+   3.922118903305216*^9, 3.922119073056163*^9, {3.922119219079361*^9, 
+   3.922119227086117*^9}, 3.922119334139615*^9},
  CellLabel->
-  "Out[816]=",ExpressionUUID->"a996a003-86ab-43e2-90cc-85cc31400aa2"]
+  "Out[197]=",ExpressionUUID->"584ae1e1-2b12-4dbe-a2c0-6e9fcad82cfb"]
+}, Open  ]],
+
+Cell["\[CapitalDelta]S > 0, weil der Prozess irreversibel ist.", "Text",
+ CellChangeTimes->{{3.9221189266064777`*^9, 
+  3.922118944762395*^9}},ExpressionUUID->"d19d0f23-8a74-44a1-b90d-\
+43c52793f44a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Ex .4", "Title",
+ CellChangeTimes->{{3.922118257902937*^9, 
+  3.9221182633408318`*^9}},ExpressionUUID->"dca601d0-7915-4ee3-97f4-\
+fb643cbd8559"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Na", ":=", 
+   TemplateBox[<|"query" -> "avogadro constant", "boxes" -> TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1], 
+        SubscriptBox[
+         StyleBox["\"N\"", Italic, StripOnInput -> False], 
+         StyleBox["\"A\"", Italic, StripOnInput -> False]], 
+        "Avogadro constants", "\"AvogadroConstant\""}, "Quantity", SyntaxForm -> 
+       Mod], "allassumptions" -> {}, "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.884093`6.398042945457477, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], ";", 
+  RowBox[{"k", ":=", 
+   TemplateBox[<|"query" -> "boltzmann constant", "boxes" -> TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1], 
+        StyleBox["\"k\"", Italic, StripOnInput -> False], 
+        "Boltzmann constants", "\"BoltzmannConstant\""}, "Quantity", 
+       SyntaxForm -> Mod], "allassumptions" -> {}, "assumptions" -> {}, 
+     "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       1.016978`6.458856551549546, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"S", "[", "options_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"k", "*", "Na", "*", 
+      RowBox[{"Log", "[", "options", "]"}]}], ",", "\"\<J/K/mol\>\""}], "]"}],
+    "//", "N"}]}]}], "Input",
+ CellChangeTimes->{{3.922118332383904*^9, 3.922118436494935*^9}, {
+  3.922118507500737*^9, 3.922118606781569*^9}, {3.9221186892494802`*^9, 
+  3.922118740839487*^9}, {3.922119270357358*^9, 3.922119270697558*^9}},
+ CellLabel->
+  "In[198]:=",ExpressionUUID->"fd51c914-06e3-4485-93d4-dfac05820033"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"S", "[", "2", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"S", "[", 
+  RowBox[{"6", "/", "4"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"S", "[", "5", "]"}]}], "Input",
+ CellChangeTimes->{{3.9221187448571033`*^9, 3.9221187922932587`*^9}},
+ CellLabel->
+  "In[200]:=",ExpressionUUID->"ae8f907a-0404-4bf9-a826-f79fa2e7e8f2"],
+
+Cell[BoxData[
+ TemplateBox[{"5.763146321643979`", 
+   RowBox[{
+    "\"J\"", "\[InvisibleSpace]", "\"/(\"", "\[InvisibleSpace]", "\"K\"", 
+     "\[ThinSpace]", "\"mol\"", "\[InvisibleSpace]", "\")\""}], 
+   "joules per kelvin mole", 
+   FractionBox["\"Joules\"", 
+    RowBox[{"\"Kelvins\"", " ", "\"Moles\""}]]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.92211877334974*^9, 3.922118792902853*^9}, 
+   3.922118881260372*^9, 3.922119077248897*^9, 3.9221193379114027`*^9},
+ CellLabel->
+  "Out[200]=",ExpressionUUID->"17ebdddc-da68-4763-a2a4-d6fce4c86d7d"],
+
+Cell[BoxData[
+ TemplateBox[{"3.371224484330795`", 
+   RowBox[{
+    "\"J\"", "\[InvisibleSpace]", "\"/(\"", "\[InvisibleSpace]", "\"K\"", 
+     "\[ThinSpace]", "\"mol\"", "\[InvisibleSpace]", "\")\""}], 
+   "joules per kelvin mole", 
+   FractionBox["\"Joules\"", 
+    RowBox[{"\"Kelvins\"", " ", "\"Moles\""}]]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.92211877334974*^9, 3.922118792902853*^9}, 
+   3.922118881260372*^9, 3.922119077248897*^9, 3.922119337919754*^9},
+ CellLabel->
+  "Out[201]=",ExpressionUUID->"1e0ba906-c770-461a-b573-6d7b58b49b75"],
+
+Cell[BoxData[
+ TemplateBox[{"13.381611359171913`", 
+   RowBox[{
+    "\"J\"", "\[InvisibleSpace]", "\"/(\"", "\[InvisibleSpace]", "\"K\"", 
+     "\[ThinSpace]", "\"mol\"", "\[InvisibleSpace]", "\")\""}], 
+   "joules per kelvin mole", 
+   FractionBox["\"Joules\"", 
+    RowBox[{"\"Kelvins\"", " ", "\"Moles\""}]]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.92211877334974*^9, 3.922118792902853*^9}, 
+   3.922118881260372*^9, 3.922119077248897*^9, 3.922119337927278*^9},
+ CellLabel->
+  "Out[202]=",ExpressionUUID->"036d267b-0070-4a19-806f-1d41c0ee01fe"]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{606, 683.25},
-WindowMargins->{{Automatic, 363}, {71.25, Automatic}},
+WindowSize->{1707, 905.25},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 TaggingRules-><|"TryRealOnly" -> False|>,
+Magnification:>0.9 Inherited,
 FrontEndVersion->"13.3 for Linux x86 (64-bit) (July 24, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"075082f5-9866-45b8-b867-5a0761da1ec4"
@@ -1313,62 +1476,77 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 149, 3, 98, "Title",ExpressionUUID->"99bcf623-7599-4304-9357-afb6165cfb90"],
+Cell[580, 22, 149, 3, 88, "Title",ExpressionUUID->"99bcf623-7599-4304-9357-afb6165cfb90"],
 Cell[CellGroupData[{
-Cell[754, 29, 9761, 186, 211, "Input",ExpressionUUID->"03c07148-b385-43c9-8d4e-a5acb2e16cb5"],
-Cell[10518, 217, 561, 12, 44, "Output",ExpressionUUID->"7c3aee17-862e-4e77-91ea-6fab3a811443"]
+Cell[754, 29, 9952, 188, 164, "Input",ExpressionUUID->"03c07148-b385-43c9-8d4e-a5acb2e16cb5"],
+Cell[10709, 219, 725, 14, 40, "Output",ExpressionUUID->"5d002090-c1b4-4ac3-93eb-70caaed28039"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11116, 234, 684, 17, 29, "Input",ExpressionUUID->"5cf09fe5-aa0e-4793-ae3b-b9bf28317bde"],
-Cell[11803, 253, 541, 12, 44, "Output",ExpressionUUID->"e9c3d145-8d44-4f35-a05f-30915720820d"]
+Cell[11471, 238, 684, 17, 26, "Input",ExpressionUUID->"5cf09fe5-aa0e-4793-ae3b-b9bf28317bde"],
+Cell[12158, 257, 617, 13, 40, "Output",ExpressionUUID->"4ce1c982-6258-4d25-bf90-729268c01df1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12381, 270, 313, 7, 29, "Input",ExpressionUUID->"76a3e366-e100-42fe-a3c0-4f29b7872c28"],
-Cell[12697, 279, 464, 10, 44, "Output",ExpressionUUID->"20b148fe-8d80-4eb7-a0e7-7548f812ae38"]
+Cell[12812, 275, 313, 7, 26, "Input",ExpressionUUID->"76a3e366-e100-42fe-a3c0-4f29b7872c28"],
+Cell[13128, 284, 536, 11, 40, "Output",ExpressionUUID->"e33b6e98-196b-48f3-baf3-ebb5f78bd17a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13198, 294, 1265, 33, 90, "Input",ExpressionUUID->"d9fd2c00-0380-4c43-98b6-264343e87c09"],
-Cell[14466, 329, 669, 17, 53, "Output",ExpressionUUID->"b5f8bb81-908d-40e7-b3f7-758133c174a3"]
+Cell[13701, 300, 1265, 33, 46, "Input",ExpressionUUID->"d9fd2c00-0380-4c43-98b6-264343e87c09"],
+Cell[14969, 335, 739, 18, 50, "Output",ExpressionUUID->"33cbe915-a7cc-4617-9f79-68c07979fb25"]
 }, Open  ]],
-Cell[15150, 349, 190, 3, 35, "Text",ExpressionUUID->"c570d5f6-90d6-42ae-be2d-c2c59f66bab9"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[15377, 357, 147, 3, 98, "Title",ExpressionUUID->"88651359-4e44-4cd1-ae45-64a0f1ce5cec"],
-Cell[CellGroupData[{
-Cell[15549, 364, 1571, 42, 112, "Input",ExpressionUUID->"4ecee7ab-5d7e-4643-ba8f-990c26b2428e"],
-Cell[17123, 408, 447, 9, 51, "Output",ExpressionUUID->"fa40d841-d5fd-4746-863c-ba867fd00f66"],
-Cell[17573, 419, 439, 9, 33, "Output",ExpressionUUID->"63125135-3c95-47e3-ae95-2d421396f166"],
-Cell[18015, 430, 756, 20, 47, "Output",ExpressionUUID->"75b4178c-fecb-42c4-957c-6c0dad7b1f10"]
+Cell[15723, 356, 190, 3, 31, "Text",ExpressionUUID->"c570d5f6-90d6-42ae-be2d-c2c59f66bab9"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18808, 455, 8700, 188, 378, "Input",ExpressionUUID->"24cd30e3-c131-4e0f-b79c-f3c2d5d6a373"],
-Cell[27511, 645, 433, 8, 44, "Output",ExpressionUUID->"7ba8a087-44a2-4834-941c-2ee13c91cee3"],
-Cell[27947, 655, 458, 9, 44, "Output",ExpressionUUID->"b584a2a6-13f4-43da-927a-9c22f7b9ac74"],
-Cell[28408, 666, 458, 9, 44, "Output",ExpressionUUID->"4f3a703e-e287-4189-adb5-9a2ede1b45f8"],
-Cell[28869, 677, 1162, 32, 47, "Output",ExpressionUUID->"d836f0e0-3d9f-445f-b331-965803ba4c4b"],
-Cell[30034, 711, 1164, 32, 47, "Output",ExpressionUUID->"49bf421f-bc7a-42a9-8e91-b32537e7facc"]
+Cell[15950, 364, 147, 3, 88, "Title",ExpressionUUID->"88651359-4e44-4cd1-ae45-64a0f1ce5cec"],
+Cell[CellGroupData[{
+Cell[16122, 371, 1571, 42, 105, "Input",ExpressionUUID->"4ecee7ab-5d7e-4643-ba8f-990c26b2428e"],
+Cell[17696, 415, 540, 10, 48, "Output",ExpressionUUID->"48645eb8-80b4-4d2f-b2ed-0416a8bd4fdf"],
+Cell[18239, 427, 532, 10, 30, "Output",ExpressionUUID->"7a417e0e-4f06-4857-bdfa-0d0bcfed6d45"],
+Cell[18774, 439, 849, 21, 44, "Output",ExpressionUUID->"7e93e75f-5a6d-4ca4-b467-e5579502c056"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19660, 465, 7814, 157, 272, "Input",ExpressionUUID->"24cd30e3-c131-4e0f-b79c-f3c2d5d6a373"],
+Cell[27477, 624, 256, 5, 40, "Output",ExpressionUUID->"0f11cd7f-0221-46ea-94ef-5d8520308730"],
+Cell[27736, 631, 280, 6, 40, "Output",ExpressionUUID->"31927df0-bb94-44b2-8acc-9b2fbc8732d6"],
+Cell[28019, 639, 282, 6, 40, "Output",ExpressionUUID->"ca72f3f6-3db1-4b31-bb0d-24a293a06a3b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28338, 650, 1287, 36, 96, "Input",ExpressionUUID->"eff865b8-9692-488f-be35-218cc23bbdf3"],
+Cell[29628, 688, 1256, 33, 44, "Output",ExpressionUUID->"5aff8386-933b-4706-9644-e55fda2f10a8"],
+Cell[30887, 723, 1258, 33, 44, "Output",ExpressionUUID->"2132f94e-ae73-4736-9b40-cddab93d3c11"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[31247, 749, 166, 3, 98, "Title",ExpressionUUID->"c9984728-f8cc-4870-b833-03d1e3514cda"],
+Cell[32194, 762, 166, 3, 88, "Title",ExpressionUUID->"c9984728-f8cc-4870-b833-03d1e3514cda"],
+Cell[32363, 767, 10921, 204, 124, "Input",ExpressionUUID->"79187e63-3db1-4ab8-b7af-d9b1e50a019e"],
 Cell[CellGroupData[{
-Cell[31438, 756, 13390, 261, 456, "Input",ExpressionUUID->"79187e63-3db1-4ab8-b7af-d9b1e50a019e"],
-Cell[44831, 1019, 805, 13, 44, "Output",ExpressionUUID->"a04f3127-ec61-4e0b-b637-f5ab65468764"],
-Cell[45639, 1034, 945, 17, 44, "Output",ExpressionUUID->"5c5ca330-64f6-4e6a-8c3d-65b976497b32"],
-Cell[46587, 1053, 822, 14, 44, "Output",ExpressionUUID->"52610e83-63ed-4259-9224-e7193453d4ae"],
-Cell[47412, 1069, 805, 13, 44, "Output",ExpressionUUID->"2de44473-6d20-49d8-800d-2587c5b49d80"]
+Cell[43309, 975, 3938, 80, 117, "Input",ExpressionUUID->"3312be6d-982a-409a-8845-ab20ba9b5cb3"],
+Cell[47250, 1057, 897, 14, 40, "Output",ExpressionUUID->"b78f9dcc-00ce-4892-8da1-5e64b040a78a"],
+Cell[48150, 1073, 1039, 18, 40, "Output",ExpressionUUID->"3e0b385f-8376-46d9-a1bc-e72cbcf0341c"],
+Cell[49192, 1093, 916, 15, 40, "Output",ExpressionUUID->"e5d133af-c82e-43cc-96cb-8398c678c4b2"],
+Cell[50111, 1110, 897, 14, 40, "Output",ExpressionUUID->"d56a7719-c3d4-489e-bccc-ae84cb031858"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[48254, 1087, 2350, 48, 110, "Input",ExpressionUUID->"3bbe5e26-758d-4a51-b7ae-2a33bb749e99"],
-Cell[50607, 1137, 342, 7, 44, "Output",ExpressionUUID->"f446cd3b-c8d6-4b38-a095-970efc383bcc"],
-Cell[50952, 1146, 485, 11, 44, "Output",ExpressionUUID->"8061c43a-bb9c-40a2-a346-ec3cb7119ac4"]
+Cell[51045, 1129, 2350, 48, 78, "Input",ExpressionUUID->"3bbe5e26-758d-4a51-b7ae-2a33bb749e99"],
+Cell[53398, 1179, 390, 7, 40, "Output",ExpressionUUID->"7476a246-deab-41a2-9b47-fb18d550d94c"],
+Cell[53791, 1188, 535, 11, 40, "Output",ExpressionUUID->"a226f018-67d7-47d1-8c3f-7775fce8eeb9"]
+}, Open  ]],
+Cell[54341, 1202, 4591, 87, 65, "Input",ExpressionUUID->"2dcd2082-9283-4b93-b6be-c42d54314359"],
+Cell[CellGroupData[{
+Cell[58957, 1293, 909, 21, 65, "Input",ExpressionUUID->"5d567343-6ca0-4316-bc1f-fe34f26168c0"],
+Cell[59869, 1316, 457, 9, 52, "Output",ExpressionUUID->"3dd2b01c-fbe1-412c-9ced-356f759a76c6"],
+Cell[60329, 1327, 457, 9, 52, "Output",ExpressionUUID->"5c7b8f3d-2fbe-43bf-b5ff-1ff6e91a804d"],
+Cell[60789, 1338, 456, 8, 40, "Output",ExpressionUUID->"584ae1e1-2b12-4dbe-a2c0-6e9fcad82cfb"]
+}, Open  ]],
+Cell[61260, 1349, 200, 3, 31, "Text",ExpressionUUID->"d19d0f23-8a74-44a1-b90d-43c52793f44a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[51474, 1162, 4945, 98, 210, "Input",ExpressionUUID->"2dcd2082-9283-4b93-b6be-c42d54314359"],
-Cell[56422, 1262, 314, 7, 56, "Output",ExpressionUUID->"8368689d-2631-4ecc-aba8-a153c40130fa"],
-Cell[56739, 1271, 228, 4, 33, "Output",ExpressionUUID->"3101ff40-c125-47e5-af78-9b401cfec458"],
-Cell[56970, 1277, 314, 7, 56, "Output",ExpressionUUID->"1fe63ebc-14a7-426e-b6d5-6890e62df7b7"],
-Cell[57287, 1286, 313, 6, 44, "Output",ExpressionUUID->"a996a003-86ab-43e2-90cc-85cc31400aa2"]
+Cell[61497, 1357, 150, 3, 88, "Title",ExpressionUUID->"dca601d0-7915-4ee3-97f4-fb643cbd8559"],
+Cell[61650, 1362, 1887, 39, 62, "Input",ExpressionUUID->"fd51c914-06e3-4485-93d4-dfac05820033"],
+Cell[CellGroupData[{
+Cell[63562, 1405, 342, 7, 65, "Input",ExpressionUUID->"ae8f907a-0404-4bf9-a826-f79fa2e7e8f2"],
+Cell[63907, 1414, 557, 12, 40, "Output",ExpressionUUID->"17ebdddc-da68-4763-a2a4-d6fce4c86d7d"],
+Cell[64467, 1428, 555, 12, 40, "Output",ExpressionUUID->"1e0ba906-c770-461a-b573-6d7b58b49b75"],
+Cell[65025, 1442, 556, 12, 40, "Output",ExpressionUUID->"036d267b-0070-4a19-806f-1d41c0ee01fe"]
 }, Open  ]]
 }, Open  ]]
 }
