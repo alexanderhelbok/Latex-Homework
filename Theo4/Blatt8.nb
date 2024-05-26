@@ -1,0 +1,265 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11418,        255]
+NotebookOptionsPosition[     10673,        233]
+NotebookOutlinePosition[     11113,        250]
+CellTagsIndexPosition[     11070,        247]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Ex.1", "Subtitle",
+ CellChangeTimes->{{3.92452708560367*^9, 
+  3.924527088799309*^9}},ExpressionUUID->"acc942b5-b80c-4f2f-8b67-\
+e95040665328"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"g", ":=", 
+   TemplateBox[<|"query" -> "earth acceleration", "boxes" -> RowBox[{
+        TemplateBox[{"\"Earth\"", 
+          RowBox[{"Entity", "[", 
+            RowBox[{"\"Planet\"", ",", "\"Earth\""}], "]"}], 
+          "\"Entity[\\\"Planet\\\", \\\"Earth\\\"]\"", "\"planet\""}, 
+         "Entity"], "[", 
+        TemplateBox[{"\"gravity\"", 
+          RowBox[{"EntityProperty", "[", 
+            RowBox[{"\"Planet\"", ",", "\"Gravity\""}], "]"}], 
+          "\"EntityProperty[\\\"Planet\\\", \\\"Gravity\\\"]\""}, 
+         "EntityProperty"], "]"}], "allassumptions" -> {}, 
+     "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.818606`6.364619916992789, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], ";", 
+  RowBox[{"\[Rho]", ":=", 
+   TemplateBox[<|"query" -> "density water", "boxes" -> RowBox[{
+        TemplateBox[{"\"water\"", 
+          RowBox[{"Entity", "[", 
+            RowBox[{"\"Chemical\"", ",", "\"Water\""}], "]"}], 
+          "\"Entity[\\\"Chemical\\\", \\\"Water\\\"]\"", "\"chemical\""}, 
+         "Entity"], "[", 
+        TemplateBox[{"\"mass density\"", 
+          RowBox[{"EntityProperty", "[", 
+            RowBox[{"\"Chemical\"", ",", "\"MassDensity\""}], "]"}], 
+          "\"EntityProperty[\\\"Chemical\\\", \\\"MassDensity\\\"]\""}, 
+         "EntityProperty"], "]"}], 
+     "allassumptions" -> {{
+       "type" -> "Clash", "word" -> "density", "template" -> 
+        "Assuming \"density\" is referring to chemical \
+compounds${separator}Use as ${desc} or ${desc} or ${desc} instead", "count" -> 
+        "4", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"density\"} -> {\"ChemicalProperty\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "ChemicalProperty", "desc" -> 
+           " referring to chemical compounds", "input" -> 
+           "{\"C\", \"density\"} -> {\"ChemicalProperty\"}"}, {
+          "name" -> "FoodTypeProperty", "desc" -> " referring to food types", 
+           "input" -> "{\"C\", \"density\"} -> {\"FoodTypeProperty\"}"}, {
+          "name" -> "ThermodynamicPropertyPhrase", "desc" -> 
+           " referring to thermodynamics", "input" -> 
+           "{\"C\", \"density\"} -> {\"ThermodynamicPropertyPhrase\"}"}, {
+          "name" -> "FoodProperty", "desc" -> " referring to food items", 
+           "input" -> "{\"C\", \"density\"} -> {\"FoodProperty\"}"}}}}, 
+     "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       1.061451`6.477444944027393, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"T", ":=", 
+   TemplateBox[<|
+    "query" -> "298 K", "boxes" -> 
+     TemplateBox[{"298", "\"K\"", "kelvins", "\"Kelvins\""}, "Quantity", 
+       SyntaxForm -> Mod], 
+     "allassumptions" -> {{
+       "type" -> "Clash", "word" -> "K", "template" -> 
+        "Assuming \"K\" is a unit${separator}Use as ${desc} instead", "count" -> 
+        "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"K\"} -> {\"Unit\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "{\"C\", \"K\"} -> {\"Unit\"}"}, {
+          "name" -> "Variable", "desc" -> "a variable", "input" -> 
+           "{\"C\", \"K\"} -> {\"Variable\"}"}}}, {
+       "type" -> "Unit", "word" -> "K", "template" -> 
+        "Assuming kelvins of absolute temperature for \"K\"${separator}Use \
+${desc} or ${pulldown} instead", "count" -> "5", "pulldown" -> "true", 
+        "pulldownlabel" -> "more >>", "pulldownlength" -> "3", "default" -> 
+        "\"UnitClash\" -> {\"K\", {\"Kelvins\", \"dflt\"}}", 
+        "Values" -> {{
+          "name" -> "Kelvins", "desc" -> "kelvins of absolute temperature", 
+           "input" -> "\"UnitClash\" -> {\"K\", {\"Kelvins\"}}"}, {
+          "name" -> "KelvinsDifference", "desc" -> "kelvins difference", 
+           "input" -> "\"UnitClash\" -> {\"K\", {\"KelvinsDifference\"}}"}, {
+          "name" -> "Kilobytes", "desc" -> "kilobytes (base 10)", "input" -> 
+           "\"UnitClash\" -> {\"K\", {\"Kilobytes\"}}"}, {
+          "name" -> "Kilometers", "desc" -> "kilometers", "input" -> 
+           "\"UnitClash\" -> {\"K\", {\"Kilometers\"}}"}, {
+          "name" -> "Karats", "desc" -> "karats of metal purity", "input" -> 
+           "\"UnitClash\" -> {\"K\", {\"Karats\"}}"}}}}, "assumptions" -> {}, 
+     "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       1.014187`6.457663032892164, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], ";", 
+  RowBox[{"\[CapitalDelta]h", ":=", 
+   TemplateBox[<|
+    "query" -> "1.2 cm", "boxes" -> 
+     TemplateBox[{"1.2", "\"cm\"", "centimeters", "\"Centimeters\""}, 
+       "Quantity", SyntaxForm -> Mod], "allassumptions" -> {}, 
+     "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.738884`6.320121255822847, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"R", ":=", 
+   TemplateBox[<|"query" -> "gas constant", "boxes" -> TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1], 
+        StyleBox["\"R\"", Italic, StripOnInput -> False], 
+        "molar gas constants", "\"MolarGasConstant\""}, "Quantity", 
+       SyntaxForm -> Mod], 
+     "allassumptions" -> {{
+       "type" -> "Clash", "word" -> "gas constant", "template" -> 
+        "Assuming \"gas constant\" is a unit${separator}Use as ${desc} or \
+${desc} instead", "count" -> "3", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"gas constant\"} -> {\"Unit\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "{\"C\", \"gas constant\"} -> {\"Unit\"}"}, {
+          "name" -> "EntirePhraseMM", "desc" -> " referring to optimization", 
+           "input" -> "{\"C\", \"gas constant\"} -> {\"EntirePhraseMM\"}"}, {
+          "name" -> "Word", "desc" -> "a word", "input" -> 
+           "{\"C\", \"gas constant\"} -> {\"Word\"}"}}}}, "assumptions" -> {},
+      "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.877396`6.394740643644809, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], ";", 
+  RowBox[{"m", ":=", 
+   TemplateBox[<|"query" -> "3 g/l", "boxes" -> TemplateBox[{"3", 
+        RowBox[{
+         "\"g\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+          "\"L\""}], "grams per liter", 
+        FractionBox["\"Grams\"", "\"Liters\""]}, "Quantity", SyntaxForm -> 
+       Mod], "allassumptions" -> {{
+       "word" -> "", "template" -> 
+        "Assuming \"g/l\" is a unit${separator}Use \"l\" as ${desc} instead", 
+        "count" -> "2", "pulldown" -> "false", "type" -> "MultiClash", 
+        "default" -> "{\"MC\", \"g/l\"} -> {\"Unit\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "{\"MC\", \"g/l\"} -> {\"Unit\"}", "word" -> "g/l"}, {
+          "name" -> "Variable", "desc" -> "a variable", "input" -> 
+           "{\"MC\", \"g/l\"} -> {\"Variable\"}", "word" -> "l"}}}}, 
+     "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       1.143277`6.509696460108981, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}]}], "\[IndentingNewLine]", 
+ RowBox[{"\[CapitalDelta]p", "=", 
+  RowBox[{
+  "\[Rho]", "*", "g", "*", "\[CapitalDelta]h"}]}], "\[IndentingNewLine]", 
+ RowBox[{"M", "=", 
+  RowBox[{
+   RowBox[{"m", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"R", "*", "T"}], ")"}], "/", 
+     RowBox[{"(", "\[CapitalDelta]p", ")"}]}]}], " ", "//", 
+   "UnitConvert"}]}]}], "Input",
+ CellChangeTimes->{{3.924527090513088*^9, 3.924527134504841*^9}, {
+  3.9245271692321568`*^9, 3.9245272302348433`*^9}, {3.924527296728306*^9, 
+  3.9245273239977093`*^9}, {3.924527386513466*^9, 3.9245274969671288`*^9}, {
+  3.924527730612197*^9, 3.9245277575863934`*^9}, {3.9245277950133543`*^9, 
+  3.924527828250733*^9}},
+ CellLabel->
+  "In[152]:=",ExpressionUUID->"ceaa372a-d0c2-4fbf-ab07-4f72ecefe9ee"],
+
+Cell[BoxData[
+ TemplateBox[{"1172.528448`", 
+   RowBox[{
+    "\"g\"", "\[InvisibleSpace]", "\"/(\"", "\[InvisibleSpace]", "\"cm\"", 
+     "\[ThinSpace]", 
+     SuperscriptBox["\"s\"", "2"], "\[InvisibleSpace]", "\")\""}], 
+   "grams per centimeter second squared", 
+   FractionBox["\"Grams\"", 
+    RowBox[{"\"Centimeters\"", " ", 
+      SuperscriptBox["\"Seconds\"", "2"]}]]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.92452720364474*^9, 3.92452732449736*^9, {3.924527417374057*^9, 
+   3.924527497218911*^9}, {3.924527733536541*^9, 3.924527757985923*^9}, {
+   3.9245277968557367`*^9, 3.924527829143057*^9}, 3.924534719155657*^9},
+ CellLabel->
+  "Out[155]=",ExpressionUUID->"4b1d4d94-2adc-4f8d-a4c2-88893e06b6bb"],
+
+Cell[BoxData[
+ TemplateBox[{"63.39402334593929`", 
+   RowBox[{
+    "\"kg\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", "\"mol\""}], 
+   "kilograms per mole", 
+   FractionBox["\"Kilograms\"", "\"Moles\""]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.92452720364474*^9, 3.92452732449736*^9, {3.924527417374057*^9, 
+   3.924527497218911*^9}, {3.924527733536541*^9, 3.924527757985923*^9}, {
+   3.9245277968557367`*^9, 3.924527829143057*^9}, 3.924534719157153*^9},
+ CellLabel->
+  "Out[156]=",ExpressionUUID->"7456b214-a5dc-41a1-b589-9592607b532d"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{606, 683.25},
+WindowMargins->{{Automatic, 544.5}, {73.5, Automatic}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+FrontEndVersion->"13.3 for Linux x86 (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"84fd0b48-e0b4-4cac-9a29-3af7c5c9e7d6"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 149, 3, 53, "Subtitle",ExpressionUUID->"acc942b5-b80c-4f2f-8b67-e95040665328"],
+Cell[CellGroupData[{
+Cell[754, 29, 8606, 168, 213, "Input",ExpressionUUID->"ceaa372a-d0c2-4fbf-ab07-4f72ecefe9ee"],
+Cell[9363, 199, 721, 16, 44, "Output",ExpressionUUID->"4b1d4d94-2adc-4f8d-a4c2-88893e06b6bb"],
+Cell[10087, 217, 558, 12, 44, "Output",ExpressionUUID->"7456b214-a5dc-41a1-b589-9592607b532d"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

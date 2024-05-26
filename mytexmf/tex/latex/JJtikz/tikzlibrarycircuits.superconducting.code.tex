@@ -1,0 +1,29 @@
+\usetikzlibrary{circuits}
+
+\usepgflibrary{shapes.gates.superconducting}
+
+%
+% Ideal Josephson junction (cross)
+%
+\tikzset{
+    circuit declare symbol=JJ,
+    set JJ graphic={
+        circuit symbol lines,
+        circuit symbol size=width 2 height 2,
+        transform shape,
+        shape=JJ
+    }
+}
+
+%
+% Josephson junction with an intrinsic capacitance (boxed cross)
+%
+\tikzset{
+    circuit declare symbol=JJ cap,
+    set JJ cap graphic={
+        circuit symbol lines,
+        circuit symbol size=width 2 height 2,
+        transform shape,
+        shape=JJcap
+    }
+}
