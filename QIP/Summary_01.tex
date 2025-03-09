@@ -1,0 +1,63 @@
+\documentclass{alex_summary}
+
+\newtcolorbox{question1}{
+	enhanced,
+	adjusted title=\vspace{-1cm}Questions,
+	fonttitle=\bfseries,
+	halign title=center,
+	colbacktitle=white,
+	coltitle=black,
+	titlerule=0pt,
+	sharp corners=all,
+	colback=white,
+	colframe=orange,
+	toprule=0pt,
+	bottomrule=0pt,
+	leftrule=1.5pt,
+	rightrule=0pt,
+	overlay={\draw[orange,line width=1.5pt] (frame.north west) -- ++(1cm,0pt);}
+}
+
+\newtcolorbox{question2}{
+	enhanced,
+	sharp corners=all,
+	colback=white,
+	colframe=orange,
+	toprule=0pt,
+	bottomrule=0pt,
+	leftrule=1.5pt,
+	rightrule=1.5pt
+}
+
+\newtcolorbox{question3}{
+	enhanced,
+	sharp corners=all,
+	colback=white,
+	colframe=orange,
+	toprule=0pt,
+	bottomrule=0pt,
+	leftrule=0pt,
+	rightrule=1.5pt,
+	overlay={\draw[orange,line width=1.5pt] (frame.south east) -- ++(-1cm,0pt);}
+}
+
+\begin{document}
+\section*{Reading summary}
+
+The book \blockcquote{nielsen2010quantum}{Quantum computation and quantum information} by Mike and Ike gives an overview over the fundamentals of quantum information and quantum computation. It starts by outlining the key differences between quantum and classical information processing and then proceeds to explain the underlying effects by introducing the reader to quantum mechanics.
+
+The main difference between classical and quantum information lies in the way we think about information and how we store them. In classical information science we discretize the information and store it in a \textbf{classical bit} that can take on two values: \textbf{0 and 1}. Instead of working with discrete variables with base two, a \textbf{quantum bit (qubit)} is represented by two continuous variables. The \textbf{state space} is therefore \textbf{two-dimensional} and using our knowledge of quantum mechanics (e.g. connecting states with probability densities and enforcing a normalization condition) we can map these two parameters onto the unit sphere also known as the \textbf{Bloch sphere}. This \textbf{does not} mean a qubit can store \textbf{infinite information}, as retrieval is limited by quantum measurement uncertainty and noise. Unlike classical bits, which clearly distinguish 0s and 1s, quantum information retrieval is \textbf{probabilistic}, restricting how much data can be extracted from a single qubit.
+
+Qubits have another advantage over classical analog circuits: \textbf{entanglement}. When looking at multi-qubit systems quantum states can exist as \textbf{linear superpositions} of possible product states, forming what are known as \textbf{pure states} and have an analog in classical bits. However, quantum mechanics allows for \textbf{entangled states} which can not be understood as a combination of independent states. One could say that \textbf{information is shared nonlocally} between these states and they can therefore not be treated separately without losing the encoded information. If we group all possible multi-qubit states into a matrix and associate the entries with the amplitude of the state we get the so-called \textbf{density matrix} of a system. Here \textbf{product states appear as diagonal elements}, whilst \textbf{entangled states contribute to the off-diagonal elements}. The number of possible entangled states in a system \textbf{grows exponentially} with the number of qubits. Specifically, for a system with  \( n \) qubits in pure states, there are \( n(n−1) \) possible entangled states (though this number depends on the specific entanglement measure being used).\\
+
+\begin{question1}
+	I know there are degrees of entanglement and different metrics to quantify entanglement but how do you actually compute entanglement? 
+\end{question1}
+
+
+\begin{question3}
+	Are there performance metrics that can be used to fairly benchmark quantum and classical systems in terms of computational efficiency and information processing?
+\end{question3}
+
+\printbibliography
+\end{document}
