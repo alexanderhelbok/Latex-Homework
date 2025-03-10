@@ -1,0 +1,291 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12797,        281]
+NotebookOptionsPosition[     11829,        255]
+NotebookOutlinePosition[     12271,        272]
+CellTagsIndexPosition[     12228,        269]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"mTNT", ":=", 
+  TemplateBox[<|"query" -> "molar mass TNT", "boxes" -> RowBox[{
+       TemplateBox[{"\"trinitrotoluene\"", 
+         RowBox[{"Entity", "[", 
+           RowBox[{"\"Chemical\"", ",", "\"Trinitrotoluene\""}], "]"}], 
+         "\"Entity[\\\"Chemical\\\", \\\"Trinitrotoluene\\\"]\"", 
+         "\"chemical\""}, "Entity"], "[", 
+       TemplateBox[{"\"molar mass\"", 
+         RowBox[{"EntityProperty", "[", 
+           RowBox[{"\"Chemical\"", ",", "\"MolarMass\""}], "]"}], 
+         "\"EntityProperty[\\\"Chemical\\\", \\\"MolarMass\\\"]\""}, 
+        "EntityProperty"], "]"}], "allassumptions" -> {}, "assumptions" -> {},
+     "open" -> {1, 2}, 
+    "querystate" -> {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      1.209447`6.534131835096833, "Messages" -> {}}, "contextinfo" -> 
+    Automatic, "version" -> 5|>,
+   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
+ RowBox[{"\[CapitalDelta]H", ":=", 
+  TemplateBox[<|"query" -> "-1822.5 kJ/mol", "boxes" -> TemplateBox[{
+       RowBox[{"-", "1822."}], 
+       RowBox[{
+        "\"kJ\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         "\"mol\""}], "kilojoules per mole", 
+       FractionBox["\"Kilojoules\"", "\"Moles\""]}, "Quantity", SyntaxForm -> 
+      Mod], "allassumptions" -> {}, "assumptions" -> {}, "open" -> {1, 2}, 
+    "querystate" -> {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      1.095265`6.491064203186971, "Messages" -> {}}, "contextinfo" -> 
+    Automatic, "version" -> 5|>,
+   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[CapitalDelta]H", "/", "mTNT"}], "*", 
+    TemplateBox[<|"query" -> "kg", "boxes" -> TemplateBox[{
+         InterpretationBox["\[InvisibleSpace]", 1], "\"kg\"", "kilograms", 
+         "\"Kilograms\""}, "Quantity", SyntaxForm -> Mod], 
+      "allassumptions" -> {{
+        "type" -> "Clash", "word" -> "kg", "template" -> 
+         "Assuming \"kg\" is a unit${separator}Use as ${desc} instead", 
+         "count" -> "2", "pulldown" -> "false", "default" -> 
+         "{\"C\", \"kg\"} -> {\"Unit\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "Unit", "desc" -> "a unit", "input" -> 
+            "{\"C\", \"kg\"} -> {\"Unit\"}"}, {
+           "name" -> "Word", "desc" -> "a word", "input" -> 
+            "{\"C\", \"kg\"} -> {\"Word\"}"}}}, {
+        "type" -> "Unit", "word" -> "kg", "template" -> 
+         "Assuming kilograms for \"kg\"${separator}Use ${desc} instead", 
+         "count" -> "2", "pulldown" -> "false", "default" -> 
+         "\"UnitClash\" -> {\"kg\", {\"Kilograms\", \"dflt\"}}", 
+         "Values" -> {{
+           "name" -> "Kilograms", "desc" -> "kilograms", "input" -> 
+            "\"UnitClash\" -> {\"kg\", {\"Kilograms\"}}"}, {
+           "name" -> "KilogramsForce", "desc" -> "kilograms\[Hyphen]force", 
+            "input" -> "\"UnitClash\" -> {\"kg\", {\"KilogramsForce\"}}"}}}}, 
+      "assumptions" -> {}, "open" -> {1, 2}, 
+      "querystate" -> {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        0.784277`6.3460144724107534, "Messages" -> {}}, "contextinfo" -> 
+      Automatic, "version" -> 5|>,
+     "LinguisticAssistantTemplate"]}], ",", "\"\<kJ\>\""}], "]"}]}], "Input",
+ CellChangeTimes->{{3.923324133713846*^9, 3.923324206070182*^9}, {
+  3.923324253925322*^9, 3.9233243553496227`*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"b7adc6c1-0556-41a6-acb1-3314f272761a"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{"-", "8021.767078174806`"}], "\"kJ\"", "kilojoules", 
+   "\"Kilojoules\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.9233243064193697`*^9, {3.923324340128703*^9, 3.9233243557354507`*^9}},
+ CellLabel->"Out[16]=",ExpressionUUID->"77ba65bb-bb05-4932-ae4b-2c0c2196d8a2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"mNitro", ":=", 
+  TemplateBox[<|"query" -> "molar mass nitropenta", "boxes" -> RowBox[{
+       TemplateBox[{"\"baritrate\"", 
+         RowBox[{"Entity", "[", 
+           RowBox[{"\"Chemical\"", ",", "\"Baritrate\""}], "]"}], 
+         "\"Entity[\\\"Chemical\\\", \\\"Baritrate\\\"]\"", "\"chemical\""}, 
+        "Entity"], "[", 
+       TemplateBox[{"\"molar mass\"", 
+         RowBox[{"EntityProperty", "[", 
+           RowBox[{"\"Chemical\"", ",", "\"MolarMass\""}], "]"}], 
+         "\"EntityProperty[\\\"Chemical\\\", \\\"MolarMass\\\"]\""}, 
+        "EntityProperty"], "]"}], "allassumptions" -> {}, "assumptions" -> {},
+     "open" -> {1, 2}, 
+    "querystate" -> {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      1.151411`6.512775367665358, "Messages" -> {}}, "contextinfo" -> 
+    Automatic, "version" -> 5|>,
+   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
+ RowBox[{"\[CapitalDelta]H", ":=", 
+  TemplateBox[<|"query" -> "-3698.6 kJ/mol", "boxes" -> TemplateBox[{
+       RowBox[{"-", "3698.6"}], 
+       RowBox[{
+        "\"kJ\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         "\"mol\""}], "kilojoules per mole", 
+       FractionBox["\"Kilojoules\"", "\"Moles\""]}, "Quantity", SyntaxForm -> 
+      Mod], "allassumptions" -> {}, "assumptions" -> {}, "open" -> {1, 2}, 
+    "querystate" -> {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      1.094317`6.490688139450086, "Messages" -> {}}, "contextinfo" -> 
+    Automatic, "version" -> 5|>,
+   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[CapitalDelta]H", "/", "mTNT"}], "*", 
+    TemplateBox[<|"query" -> "kg", "boxes" -> TemplateBox[{
+         InterpretationBox["\[InvisibleSpace]", 1], "\"kg\"", "kilograms", 
+         "\"Kilograms\""}, "Quantity", SyntaxForm -> Mod], 
+      "allassumptions" -> {{
+        "type" -> "Clash", "word" -> "kg", "template" -> 
+         "Assuming \"kg\" is a unit${separator}Use as ${desc} instead", 
+         "count" -> "2", "pulldown" -> "false", "default" -> 
+         "{\"C\", \"kg\"} -> {\"Unit\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "Unit", "desc" -> "a unit", "input" -> 
+            "{\"C\", \"kg\"} -> {\"Unit\"}"}, {
+           "name" -> "Word", "desc" -> "a word", "input" -> 
+            "{\"C\", \"kg\"} -> {\"Word\"}"}}}, {
+        "type" -> "Unit", "word" -> "kg", "template" -> 
+         "Assuming kilograms for \"kg\"${separator}Use ${desc} instead", 
+         "count" -> "2", "pulldown" -> "false", "default" -> 
+         "\"UnitClash\" -> {\"kg\", {\"Kilograms\", \"dflt\"}}", 
+         "Values" -> {{
+           "name" -> "Kilograms", "desc" -> "kilograms", "input" -> 
+            "\"UnitClash\" -> {\"kg\", {\"Kilograms\"}}"}, {
+           "name" -> "KilogramsForce", "desc" -> "kilograms\[Hyphen]force", 
+            "input" -> "\"UnitClash\" -> {\"kg\", {\"KilogramsForce\"}}"}}}}, 
+      "assumptions" -> {}, "open" -> {1, 2}, 
+      "querystate" -> {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        0.784277`6.3460144724107534, "Messages" -> {}}, "contextinfo" -> 
+      Automatic, "version" -> 5|>,
+     "LinguisticAssistantTemplate"]}], ",", "\"\<kJ\>\""}], "]"}]}], "Input",
+ CellChangeTimes->{{3.923324362444207*^9, 3.923324365607862*^9}, {
+  3.923324397335845*^9, 3.923324412630232*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"7c8237ac-754e-4bd2-a82d-b21dfbbec9f5"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{"-", "16283.923005124772`"}], "\"kJ\"", "kilojoules", 
+   "\"Kilojoules\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{{3.9233243933072033`*^9, 3.9233244133180532`*^9}},
+ CellLabel->"Out[26]=",ExpressionUUID->"639858cd-c797-4804-bbdf-a8155f11a252"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"mSugar", ":=", 
+  TemplateBox[<|"query" -> "C6H12O6 molar mass", "boxes" -> RowBox[{
+       RowBox[{"ChemicalFormula", "[", "\"C6H12O6\"", "]"}], "[", 
+       "\"MolarMass\"", "]"}], "allassumptions" -> {}, "assumptions" -> {}, 
+    "open" -> {1, 2}, 
+    "querystate" -> {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      1.535402`6.637767095475017, "Messages" -> {}}, "contextinfo" -> 
+    Automatic, "version" -> 5|>,
+   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
+ RowBox[{"\[CapitalDelta]G", ":=", 
+  TemplateBox[<|"query" -> "-2828.6 kJ/mol", "boxes" -> TemplateBox[{
+       RowBox[{"-", "2829."}], 
+       RowBox[{
+        "\"kJ\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         "\"mol\""}], "kilojoules per mole", 
+       FractionBox["\"Kilojoules\"", "\"Moles\""]}, "Quantity", SyntaxForm -> 
+      Mod], "allassumptions" -> {}, "assumptions" -> {}, "open" -> {1, 2}, 
+    "querystate" -> {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      0.954524`6.431331846012488, "Messages" -> {}}, "contextinfo" -> 
+    Automatic, "version" -> 5|>,
+   "LinguisticAssistantTemplate"]}], "\[IndentingNewLine]", 
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[CapitalDelta]G", "/", "mSugar"}], "*", 
+    TemplateBox[<|
+     "query" -> "100 g", "boxes" -> 
+      TemplateBox[{"100", "\"g\"", "grams", "\"Grams\""}, "Quantity", 
+        SyntaxForm -> Mod], 
+      "allassumptions" -> {{
+        "type" -> "Clash", "word" -> "g", "template" -> 
+         "Assuming \"g\" is a unit${separator}Use as ${desc} instead", 
+         "count" -> "2", "pulldown" -> "false", "default" -> 
+         "{\"C\", \"g\"} -> {\"Unit\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "Unit", "desc" -> "a unit", "input" -> 
+            "{\"C\", \"g\"} -> {\"Unit\"}"}, {
+           "name" -> "Variable", "desc" -> "a variable", "input" -> 
+            "{\"C\", \"g\"} -> {\"Variable\"}"}}}, {
+        "type" -> "Unit", "word" -> "g", "template" -> 
+         "Assuming grams for \"g\"${separator}Use ${desc} or ${desc} instead",
+          "count" -> "3", "pulldown" -> "false", "default" -> 
+         "\"UnitClash\" -> {\"g\", {\"Grams\", \"dflt\"}}", 
+         "Values" -> {{
+           "name" -> "Grams", "desc" -> "grams", "input" -> 
+            "\"UnitClash\" -> {\"g\", {\"Grams\"}}"}, {
+           "name" -> "StandardAccelerationOfGravity", "desc" -> 
+            "standard acceleration due to gravity", "input" -> 
+            "\"UnitClash\" -> {\"g\", {\"StandardAccelerationOfGravity\"}}"}, \
+{"name" -> "Grads", "desc" -> "grads", "input" -> 
+            "\"UnitClash\" -> {\"g\", {\"Grads\"}}"}}}}, "assumptions" -> {}, 
+      "open" -> {1, 2}, 
+      "querystate" -> {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        0.833382`6.3723891095055265, "Messages" -> {}}, "contextinfo" -> 
+      Automatic, "version" -> 5|>,
+     "LinguisticAssistantTemplate"]}], ",", "\"\<kJ\>\""}], "]"}]}], "Input",
+ CellChangeTimes->{{3.923326362592972*^9, 3.923326419018066*^9}, {
+  3.9233264644063463`*^9, 3.9233264650083942`*^9}},
+ CellLabel->"In[35]:=",ExpressionUUID->"212488cb-9a6d-4e1c-a247-47209b0b1a25"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{"-", "1570.305735029641`"}], "\"kJ\"", "kilojoules", 
+   "\"Kilojoules\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.923326377755604*^9, 3.92332641573869*^9, 
+  3.923326467616501*^9, 3.923326538712206*^9},
+ CellLabel->"Out[37]=",ExpressionUUID->"3d9e1529-4b49-4612-adc6-d6dc3842c9af"]
+}, Open  ]]
+},
+WindowSize->{606, 645.75},
+WindowMargins->{{Automatic, 256.5}, {30, Automatic}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+FrontEndVersion->"14.0 for Linux x86 (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"9a1653d6-00f5-4609-b6a0-77fb3dabd389"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3504, 66, 125, "Input",ExpressionUUID->"b7adc6c1-0556-41a6-acb1-3314f272761a"],
+Cell[4087, 90, 315, 7, 44, "Output",ExpressionUUID->"77ba65bb-bb05-4932-ae4b-2c0c2196d8a2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4439, 102, 3493, 66, 125, "Input",ExpressionUUID->"7c8237ac-754e-4bd2-a82d-b21dfbbec9f5"],
+Cell[7935, 170, 291, 6, 44, "Output",ExpressionUUID->"639858cd-c797-4804-bbdf-a8155f11a252"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8263, 181, 3217, 62, 121, "Input",ExpressionUUID->"212488cb-9a6d-4e1c-a247-47209b0b1a25"],
+Cell[11483, 245, 330, 7, 44, "Output",ExpressionUUID->"3d9e1529-4b49-4612-adc6-d6dc3842c9af"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
