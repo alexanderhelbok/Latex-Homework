@@ -171,3 +171,44 @@ afterskip=.5\baselineskip]{section}
 \headsep 2.5em
 \footheight 45pt
 % END_FOLD
+
+\newtcolorbox{question1}{
+	enhanced,
+	adjusted title=\vspace{-1cm}Questions,
+	fonttitle=\bfseries,
+	halign title=center,
+	colbacktitle=white,
+	coltitle=black,
+	titlerule=0pt,
+	sharp corners=all,
+	colback=white,
+	colframe=orange,
+	toprule=0pt,
+	bottomrule=0pt,
+	leftrule=1.5pt,
+	rightrule=0pt,
+	overlay={\draw[orange,line width=1.5pt] (frame.north west) -- ++(1cm,0pt);}
+}
+
+\newtcolorbox{question2}{
+	enhanced,
+	sharp corners=all,
+	colback=white,
+	colframe=orange,
+	toprule=0pt,
+	bottomrule=0pt,
+	leftrule=1.5pt,
+	rightrule=1.5pt
+}
+
+\newtcolorbox{question3}{
+	enhanced,
+	sharp corners=all,
+	colback=white,
+	colframe=orange,
+	toprule=0pt,
+	bottomrule=0pt,
+	leftrule=0pt,
+	rightrule=1.5pt,
+	overlay={\draw[orange,line width=1.5pt] (frame.south east) -- ++(-1cm,0pt);}
+}
