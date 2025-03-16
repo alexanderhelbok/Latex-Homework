@@ -3,10 +3,26 @@
 \begin{document}
 \section*{Reading summary}
 
+In \blockcquote{divincenzo_physical_2000}{The Physical Implementation of Quantum Computation} David DiVincenzo describes a set of \textbf{5 criteria} a physical system has to fulfill in order for it to function as a \textbf{quantum computer}, as well as \textbf{two additional} requirements for \textbf{quantum communication}. The reason why this is so relevant is that the framework of quantum information processing does not mention a physical system to realize the theoretical concepts in any way. Therefore many platforms have been proposed as potential candidates for quantum computation, in evaluating the feasibility of platforms and identify its shortcomings.
 
+\begin{enumerate}[leftmargin=*]
+	\item \textit{A scalable physical system with well characterized qubits.} A system with \textbf{well defined states} is needed, from which two are picked to serve as ground state and exited state, denoted \( \ket{0} \) and \( \ket{1} \). Furthermore, under \blockquote{well characterized} also fall a lot of other things, like the \textbf{coupling to other qubits and the environment}. The system also needs to \textbf{allow scaling}, since quantum computation is only attractive in multi qubit setups.
+	%
+	\item \textit{The ability to initialize the state of the qubits to a simple fiducial state.} Once we have a set of functioning qubits, we need to reliably put them into a \textbf{predefined state} (usually the ground state). This is usually done by \textbf{cooling} the system and letting the qubits decay into their ground state. Alternatively one can \textbf{perform measurements} on the qubit that collapse the wavefunction into a state with high overlap with a desired state.
+	%
+	\item \textit{Long relevant decoherence times, much longer than the gate operation time.} \textbf{Decoherence} is a measure for how long information is stored in a quantum state, before it is \textbf{lost to the environment}. In order to \textbf{successfully retrieve} a result from a calculation consisting of multiple gate operation on qubits, information needs to be retained \textbf{(orders of magnitude) longer} than the actual calculation time. 
+	%
+	\item \textit{A “universal” set of quantum gates.} There are a lot of different logical operations that can be used on qubits but not all are physically implementable. What we therefore do is \textbf{decompose} a complicated operation into more simple ones, with the most basic logic gate being the \blockquote{quantum XOR} and \blockquote{cNOT}. A fiducial implementation of these is sufficient for quantum computation, with more complex ones being useful in reducing gate operation times and error rates.
+	%
+	\item \textit{A qubit-specific measurement capability.} Lastly, we want to \textbf{extract a result} from a calculation by directly measuring the state of the computation qubit. This measurement leaves \textbf{other qubits} in the system \textbf{untouched} (preserving their state). Ideally, we also want the measurement to be \textbf{non-destructive}, leaving the probed qubit in a known (instead of random) state, but this is not stringently required.
+	%
+	\item \textit{The ability to interconvert stationary and flying qubits} If we want to build a quantum network we need a way to send quantum information back and forth between nodes. We therefore need to transfer the quantum state present on the local qubit to a flying qubit which carries the information to the desination, where it imprinted onto a local state. 	
+	%
+	\item \textit{The ability faithfully to transmit flying qubits between specified locations.} Apart from being able to initiate the quantum communication, we also need a way to transmit information without significant signal degradation. Photons and optical cables seem the most convincing solution.
+\end{enumerate}
 
 \begin{question1}
-	I know there are degrees of entanglement and different metrics to quantify entanglement but how do you actually compute entanglement? 
+	Can we work around criterion 3 if we use error correction codes? it would probably be rephrased to "..., much longer than error correction readout and mitigation"
 \end{question1}
 
 
