@@ -1,0 +1,25 @@
+\documentclass{alex_summary}
+
+\begin{document}
+\section*{Reading summary}
+
+The three papers \autocite{monroe_scaling_2013,ladd_quantum_2010,obrien_optical_2007} review our progress in realizing a quantum processor in the lab. \autocite{ladd_quantum_2010} gives a \textbf{general overview} over \textbf{all architectures} that are pursued at the moment, whilst \autocite{monroe_scaling_2013} and \autocite{obrien_optical_2007} \textbf{focus} on the \textbf{photon and trapped ion architecture} respectively. Instead of summarizing the papers I will focus on one aspect of each paper that caught my interest. This includes scaling the trapped ion architecture, cluster computation and quantum lithography.
+
+\textbf{Scaling trapped ions}: Trapped ions are a highly promising platform for building quantum processors due to their \textbf{exceptional coherence properties, long qubit lifetimes, and high-fidelity quantum operations}. The primary \textbf{challenge in scaling} trapped-ion quantum processors to hundreds of qubits lies in maintaining control and connectivity across a large system. The most viable approach to scaling is to arrange ions into multiple linear chains within spatially separated \textbf{trapping zones}. To enable interactions between these separate ion chains, researchers have proposed two main strategies: (1) physically \textbf{transporting ions} between zones by dynamically adjusting the trapping potential, or (2) using a \textbf{photonic interconnect} (or "photon bus") to transfer quantum information between distant ions via entangled photons. Both approaches present engineering challenges but offer a path toward scalable, modular trapped-ion quantum processors.
+
+\textbf{Cluster computation}: Applying \textbf{multi-qubit quantum gates} to photons is \textbf{hard} since photons do not directly interact with each other and materials with high nonlinearity are required to mediate the interaction between photons. \textbf{Generating and entangling} photons on the other hand is quite \textbf{easy}. Cluster-state quantum computation, also known as measurement-based quantum computation, is an alternative to the traditional gate-based model. Instead of applying sequential logic gates, computation is performed by preparing a \textbf{highly entangled multi-qubit cluster} state and then executing a series of adaptive single-qubit measurements. The \textbf{entanglement structure} of the cluster state serves as a \textbf{resource}, while \textbf{measurement outcomes} determine the flow of information and \textbf{logical operations}. This approach offers advantages such as greater fault tolerance and potential compatibility with optical quantum computing, where large-scale entangled states can be generated efficiently. However, challenges remain in generating and maintaining large, stable cluster states, as well as implementing high-fidelity adaptive measurements.
+
+\textbf{Quantum lithography}: Classical lithography is widely used in the semiconductor industry to print a given design onto a wafer. In our ongoing effort in \textbf{shrinking} electrical components, we have hit a lower \textbf{resolution limit} given be the wavelength of the light used. Quantum lithography \textbf{overcomes} this limitation by using \textbf{entangled photons} in specific quantum states, such as N00N states, which \textbf{enhance spatial resolution}. By exploiting quantum correlations, the effective wavelength of the light can be significantly reduced, enabling finer feature sizes.
+
+
+\begin{question1}
+	Is there a way to map between a cluster and gate-based computation approach? How would a quantum gate look like/be performed in the cluster picture?
+\end{question1}
+
+
+\begin{question3}
+	Why is quantum lithography relevant if we can use electron beam lithography to overcome the diffraction limit of light?
+\end{question3}
+
+\printbibliography
+\end{document}
