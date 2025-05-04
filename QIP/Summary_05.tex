@@ -1,0 +1,23 @@
+\documentclass{alex_summary}
+
+\begin{document}
+\section*{Reading summary}
+
+In \blockcquote{devitt_quantum_2013}{Quantum error correction for beginners} the authors give a basic introduction to the research field of \textbf{quantum error correction (QEC)}. They start by outlining the \textbf{basic concepts} and applying them to simplified examples. They then \textbf{extend the framework} to cover a broader range of errors by relaxing assumptions and introducing more realistic error models. Towards the end they introduce two subfields of QEC at the forefront of modern research: \textbf{surface codes} and \textbf{topological codes}. One aspect the authors of the paper do not explore are the similarities and differences to classical error correction. After introducing the key concepts of stabilizer quantum error correction codes I am going to dedicate a paragraph to drawing parallels to its classical counterpart.
+
+The aim of quantum error correction (QEC) is to \textbf{identify} whether an error has occurred, \textbf{extract information} about what the error was and where it happened, and finally \textbf{mitigate the error} by appropriately manipulating the affected qubit. This task is \textbf{challenging} for two main reasons: (a) the \textbf{no-cloning theorem}, which forbids making an exact copy of an unknown quantum state, and (b) the need to perform all operations \textbf{without directly measuring} and thereby collapsing the quantum state. The solution is to \textbf{encode} the logical qubit across \textbf{multiple physical qubits}, using only a small subspace of the total Hilbert space (the so-called code space) for computation. To detect errors without disturbing the quantum information, one performs \textbf{projective measurements} onto a carefully chosen set of observables known as the \textbf{stabilizers}. These stabilizers are operators that define the code space: valid logical states are +1 eigenstates of all stabilizers. By coupling auxiliary qubits (ancillas) to specific groups of physical qubits and then measuring the ancillas, we can infer the eigenvalues of the stabilizers without directly measuring the logical qubits themselves. From the outcomes of these \textbf{parity checks} (stabilizer measurements), it is possible to deduce the \textbf{presence, type, and location} of errors without collapsing the encoded quantum information. The number and types of errors that a given QEC code can correct depend on the code’s structure, complexity, and the number of physical qubits used.
+ 
+Both classical and quantum error correction require \textbf{computational overhead} to identify and correct errors. In quantum systems, this manifests as needing \textbf{more physical qubits} to encode a single logical qubit and more complex control schemes. In classical systems, a similar overhead exists, whether by hardware-based methods (e.g., ECC memory) or software-based approaches (e.g., checksum-based error correction like in the ZFS filesystem).
+
+Identifying an error happens similarly in both cases through \textbf{parity checks} or checksum comparisons: in quantum systems, \textbf{multiple parity measurements} between ancillas are needed to localize the error, while in classical systems, data is often compared against a \textbf{stored checksum}. However, correcting the error differs fundamentally. In classical systems, \textbf{corrupted data} can simply be \textbf{overwritten} with a stored copy. In quantum systems, direct copying is forbidden by the no-cloning theorem, so errors must be \textbf{corrected in situ} by applying operations that actively undo the fault on the physical qubits.
+
+\begin{question1}
+	In theory, adding more physical qubits to a logical qubit allows for the use of more powerful error correction codes, making it possible to correct more errors. However, is it always beneficial to keep adding qubits? Or is there a point where the added complexity — such as more control errors and stronger coupling to the environment — actually introduces more errors and decreases the overall performance?
+\end{question1}
+
+\begin{question3}
+	 I have often read that low-entropy ancillas, initialized in the $\ket{0}$ state, are required to carry entropy away from the system. However, since most error correction codes require ancillas to be prepared in eigenstates of the stabilizers, is it more accurate to say that ancillas simply need to be in pure states, rather than specifically in the $\ket{0}$ state? Additionally, how exactly do the ancillas carry away entropy, given that after measurement they are left in a fully determined classical state?
+\end{question3}
+
+\printbibliography
+\end{document}
