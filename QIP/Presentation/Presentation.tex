@@ -248,13 +248,13 @@ date=year]{biblatex}
 %			
 			\draw[MyBlue, line width=1pt] (3.4, 0) -- (3.4, 1.9) node [above left, xshift=0.5cm] {Transmon (2007)};
 %			
-			\draw[MyRed, line width=1pt] (3.8, 0) -- (3.8, 2.4) node [above left, xshift=0.5cm] {2 qubit entanglement(2009)};
+			\draw[MyPurple, line width=1pt] (3.8, 0) -- (3.8, 2.4) node [above left, xshift=0.5cm] {2 qubit entanglement(2009)};
 		\end{tikzpicture}
 	\end{frame}
 	
 %	##################### Superconducting circuits #######################	
 	\begin{frame}{Superconducting circuits}
-		\begin{textblock*}{5cm}(.1\textwidth,.2\textheight)
+		\begin{textblock*}{5cm}(.15\textwidth,.2\textheight)
 			\begin{circuitikz}[scale=1, transform shape]
 				\draw[line width=1.5pt, rounded corners=5pt] (1,0)
 					to (2,0)
@@ -271,7 +271,7 @@ date=year]{biblatex}
 			\end{circuitikz}
 		\end{textblock*}
 		
-		\begin{textblock*}{5cm}(.45\textwidth,.2\textheight)
+		\begin{textblock*}{5cm}(.5\textwidth,.2\textheight)
 			\begin{circuitikz}[scale=1, transform shape]				
 				\draw[line width=1.5pt, rounded corners=5pt] (1,0)
 				to (2,0)
@@ -289,7 +289,7 @@ date=year]{biblatex}
 			\end{circuitikz}
 		\end{textblock*}
 		
-		\begin{textblock*}{5cm}(.8\textwidth,.2\textheight)
+		\begin{textblock*}{5cm}(.85\textwidth,.2\textheight)
 			\begin{circuitikz}[scale=1, transform shape]				
 				\draw[line width=1.5pt, rounded corners=5pt] (2,1.5)
 				to (2,2)
@@ -300,10 +300,10 @@ date=year]{biblatex}
 				to (2, 0.5);
 				
 				\draw[line width=1.5pt] (2, 0.5)
-				to (2.5, 0.5)
-				to[color=MyOrange, josephson, /tikz/circuitikz/bipoles/length=0.8cm, line width=0.8pt] (2.5, 1.5)
-				to (1.5, 1.5)
-				to[color=MyOrange, josephson, /tikz/circuitikz/bipoles/length=0.8cm, line width=0.8pt] (1.5, 0.5)
+				to (2.4, 0.5)
+				to[color=MyOrange, josephson, /tikz/circuitikz/bipoles/length=0.8cm, line width=0.8pt] (2.4, 1.5)
+				to (1.6, 1.5)
+				to[color=MyOrange, josephson, /tikz/circuitikz/bipoles/length=0.8cm, line width=0.8pt] (1.6, 0.5)
 				to (2, 0.5);
 				
 				\draw[line width=1.5pt] (1,0) -- (1,-0.2) node[myground, line width=0.8pt, /tikz/circuitikz/bipoles/length=1.8cm]{};
@@ -353,7 +353,7 @@ date=year]{biblatex}
 			\end{tikzpicture}
 		\end{textblock*}
 		
-		\begin{textblock*}{5cm}(.45\textwidth,.6\textheight)
+		\begin{textblock*}{5cm}(.46\textwidth,.6\textheight)
 			\begin{tikzpicture}
 				\begin{axis}[MyStyle1,
 					scale=0.775,
@@ -401,7 +401,7 @@ date=year]{biblatex}
 			\end{tikzpicture}
 		\end{textblock*}
 		
-		\begin{textblock*}{5cm}(.8\textwidth,.6\textheight)
+		\begin{textblock*}{5cm}(.82\textwidth,.6\textheight)
 			\begin{tikzpicture}
 				\begin{axis}[
 					scale=0.775,
@@ -450,12 +450,19 @@ date=year]{biblatex}
 	\end{frame}
 	
 	\begin{frame}[t]{Qubit spectrum}
-		\vspace{-.5cm}
 		\begin{columns}
 			\begin{column}{.5\textwidth}
-				\begin{figure}
-					\hspace{-0.5cm}\includegraphics[height=0.7\textheight, trim={9.85cm 0 0 0}, clip]{Figure1_DeviceandSpec_LoRes}
-				\end{figure}
+				\vspace{.5cm}
+				\begin{tikzpicture}[every node/.style={font=\scriptsize, align=left}]
+					\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height=0.7\textheight, trim={9.85cm 0 0 0}, clip]{Figure1_DeviceandSpec_LoRes}};
+					
+					\begin{scope}[x={(image.south east)},y={(image.north west)}]
+						\node[MyBlue] at (0.3, 0.8) {\( T_1 = 1.3 \unit{\micro s} \)};
+						\node[MyBlue] at (0.3, 0.73) {\( T_2^* = 1.8 \unit{\micro s} \)};
+						\node[MyRed] at (0.3, 0.42) {\( T_1 = 0.8 \unit{\micro s} \)};
+						\node[MyRed] at (0.3, 0.35) {\( T_2^* = 1.2 \unit{\micro s} \)};
+					\end{scope}
+				\end{tikzpicture}
 			\end{column}
 			\begin{column}{.5\textwidth}
 				\vspace{.3cm}\begin{figure}
@@ -475,44 +482,98 @@ date=year]{biblatex}
 %		\end{tikzpicture}
 	\end{frame}
 	
+
+	\newcommand\MyBlue[1]{\color{MyBlue}#1}
+	\newcommand\MyRed[1]{\color{MyRed}#1}
+	
 	\begin{frame}{Qubit spectrum}
 %		\centering
-		\begin{tikzpicture}
-			\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height=0.8\textheight, trim={0 6.7cm 0 0}, clip]{Figure2_Zeta}};
-			\begin{scope}[x={(image.south east)},y={(image.north west)}]
-				%				\node[] at (0.335, -0.05) {\tiny\url{www.nobelprize.org}};
-			\end{scope}
+		\begin{columns}
+			\begin{column}{.5\textwidth}
+				\begin{tikzpicture}
+					\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height=0.8\textheight, trim={0 6.7cm 0 0}, clip]{Figure2_Zeta}};
+%					\begin{scope}[x={(image.south east)},y={(image.north west)}]
+%						
+%					\end{scope}
+				\end{tikzpicture}
+			\end{column}
+			\begin{column}{.5\textwidth}
+				\begin{align*}
+					U &= \begin{pmatrix}
+						1 & 0 & 0 & 0\\
+						0 & \expo[\iu \bm{\phi}_{\MyRed{0}\MyBlue{1}}] & 0 & 0\\
+						0 & 0 & \expo[\iu \bm{\phi}_{\MyRed{1}\MyBlue{0}}] & 0\\
+						0 & 0 & 0 & \expo[\iu \bm{\phi}_{\MyRed{1}\MyBlue{1}}]\\
+					\end{pmatrix}\\[2em]
+					\bm{\phi}_{\MyRed{l}\MyBlue{r}} &= 2\pi\uint{\delta f_{\MyRed{l}\MyBlue{r}}(t)}{t} \\
+					\bm{\phi}_{\MyRed{1}\MyBlue{1}} &= \bm{\phi}_{\MyRed{0}\MyBlue{1}} + \bm{\phi}_{\MyRed{1}\MyBlue{0}} - \uint{\zeta(t)}{t}
+				\end{align*}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}{Qubit entangling}
+		\centering
+		\begin{tikzpicture}[every node/.style={font=\scriptsize, align=left}]
+			\node[anchor=south west,inner sep=0] (image) at (1,0) {\includegraphics[height=.8\textheight, trim={0 0 0 0}, clip]{Bell}};
+			
+			\node at (7, 6) {\( N = 450 000 \)};
+			
+			\node at (7, 4) {\( F = 0.91(1) \)};
+			\node at (7, 1) {\( F = 0.94(1) \)};
+			\node at (0, 4) {\( F = 0.90(1) \)};
+			\node at (0, 1) {\( F = 0.87(2) \)};
 		\end{tikzpicture}
 	\end{frame}
 	
+	\begin{frame}{Grover algorithm}
+		\begin{figure}
+			\includegraphics[height=.8\textheight, trim={0 0 0 0}, clip]{Grover}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}{Results}
+		\begin{figure}
+			\includegraphics[width=\textwidth, trim={0 0 0 0}, clip]{Table}
+		\end{figure}
+	\end{frame}
+	
 	\begin{frame}{Outlook}
-		\begin{tikzpicture}[scale=2.5, every node/.style={scale=0.8, black}]
-			\draw[line width=1.5pt] (0, 0) -- (4, 0);
+		\begin{tikzpicture}[scale=2.25, every node/.style={scale=0.8, black, line width=1pt}]
+			\draw[line width=1.5pt] (-0.15, 0) -- (4.15, 0);
 			
 			\draw[MyBlue, fill](0,0) circle (.045) node [below, yshift=-0.2cm] {\Large\( 1990 \)};
 			\foreach \i in {0,...,3}{
 				\draw[MyBlue, fill](1+\i,0) circle (.045) node [below, yshift=-0.2cm] {\Large\( 20\i0 \)};}
 			
-			%			\draw[MyBlue, line width=1pt] (0.5, 0) -- (0.5, 0.25) node [above left, xshift=0.5cm] {SRT (1905)};
+			\draw[MyBlue] (0.4, 0) -- (0.4, 0.35) node [left, xshift=0cm] {Shor (1994)};
 			%			
-			\draw[MyBlue, line width=1pt] (0.9, 0) -- (0.9, .75) node [above left, xshift=0.2cm] {First SC qubit (1999)};
-			
-			\draw[MyBlue, line width=1pt] (1.4, 0) -- (1.4, 1.25) node [above left, align=left] {cQED (2004)};
+%			\draw[MyBlue] (0.5, 0) -- (0.5, 0.5) node [above left, xshift=1cm] {Trapped ion CNOT (1995)};
 			%			
-			\draw[MyBlue, line width=1pt] (1.7, 0) -- (1.7, 1.25) node [above left, align=left] {Transmon (2007)};
+			\draw[MyOrange] (0.9, 0) --++ (0, 0.85) node [above left, xshift=0.5cm] {First SC qubit (1999)};
 			%			
-			\draw[MyBlue, line width=1pt] (1.9, 0) -- (1.9, 2) node [above left, align=left] {2 qubit entanglement};
+			\draw[MyBlue] (1.1, 0) --++ (0, 1.2) node [above left, xshift=0.5cm] {Rabi Oscillations (2001)};
+			%			 
+			\draw[MyBlue] (1.4, 0) --++ (0, 1.55) node [above left, xshift=0.5cm] {cQED (2004)};
 			%			
-			%			\draw[MyBlue, line width=1pt] (2.2, 0) -- (2.2, 2.5) node [above right, xshift=-0.4cm] {Friedmann's Gleichungen (1922)};
+			\draw[MyBlue] (1.7, 0) --++ (0, 1.9) node [above left, xshift=0.5cm] {Transmon (2007)};
 			%			
-			%			\draw[MyBlue, line width=1pt] (2.7, 0) -- (2.7, 1.5) node [above right, align=left, xshift=-0.4cm] {Lema\^{i}tres expandierendes\\ Universum (1927)};
-			%			
-			%			\draw[MyOrange, line width=1pt] (2.9, 0) -- (2.9, 0.8) node [above right, align=left, xshift=-0.5cm] {Hubble Messungen\\ (1929, 1931, 1934)};
-			%			\draw[MyOrange, line width=1pt] (3.1, 0) -- (3.1, 0.8);
-			%			\draw[MyOrange, line width=1pt] (3.4, 0) -- (3.4, 0.8);
-			%			
-			%			\draw[MyRed, line width=1pt] (4.8, 0) -- (4.8, 0.5) node [above] {CMBR postuliert (1948)};
-		\end{tikzpicture}
+			\draw[MyPurple] (1.9, 0) --++ (0, 2.4) node [above left, xshift=0.5cm] {2 qubit entanglement (2009)};
+%			
+			\draw[MyBlue] (2.1, 0) --++ (0, 2.4) node [above right, xshift=0cm] {DWave (2011)};
+%			
+			\draw[MyBlue] (2.3, 0) --++ (0, 2) node [above right, xshift=-0.5cm] {3D Transmon (2013)};
+%			
+			\draw[MyRed] (2.9, 0) --++ (0, 1.7) node [above, xshift=1.5cm] {\color{MyRed} Quantum supremacy \#1 (2019)};
+%			
+			\draw[MyBlue] (3.2, 0) --++ (0, 1.35) node [above right, xshift=-0.5cm] {127 Qubit (2022)};
+%			
+			\draw[MyBlue] (3.3, 0) --++ (0, 1) node [above right, xshift=-0.25cm] {433 Qubit (2023)};
+%			
+			\draw[MyBlue] (3.4, 0) --++ (0, 0.65) node [above right, xshift=-0.25cm] {1121 Qubit (2024)};
+%			
+			\draw[MyRed] (3.5, 0) --++ (0, 0.3) node [above right, yshift=-0.75cm, xshift=0cm, align=left] {\color{MyRed} Majorana Qubit*\\\color{MyRed} (2025)};
+		\end{tikzpicture}	
 	\end{frame}
 
 	\begin{frame}[standout]
