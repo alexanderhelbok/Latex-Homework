@@ -8,8 +8,8 @@
 \usepackage{graphicx}
 \usepackage[english]{babel}
 \usepackage{setspace, multicol, makecell, booktabs, multirow, relsize}
-%\usepackage{mtpro2, pifont, custom}
-%\pdfmapfile{=mtpro2.map}
+\usepackage{mtpro2, pifont}
+\pdfmapfile{=mtpro2.map}
 \usepackage{mathtools, amsthm, amsfonts, siunitx, physics, chemformula, empheq, bm}
 \usepackage{appendixnumberbeamer}
 \usepackage[backend=biber,
@@ -227,7 +227,7 @@ date=year]{biblatex}
 	\maketitle
 %	##################### Intro #######################
 	\begin{frame}{Overview}
-		\begin{tikzpicture}[scale=2.25, every node/.style={scale=0.8, black}]
+		\begin{tikzpicture}[scale=2.25, every node/.style={scale=0.8, black}, every path/.style={line width=1.1pt}]
 			\draw[line width=1.5pt] (-0.15, 0) -- (4.15, 0);
 			
 			\draw[MyBlue, fill](0,0) circle (.045) node [below, yshift=-0.2cm] {\Large\( 1990 \)};
@@ -236,26 +236,26 @@ date=year]{biblatex}
 			\draw[MyBlue, fill](3,0) circle (.045) node [below, yshift=-0.2cm] {\Large\( 2005 \)};
 			\draw[MyBlue, fill](4,0) circle (.045) node [below, yshift=-0.2cm] {\Large\( 2010 \)};
 			
-			\draw[MyBlue, line width=1pt] (0.8, 0) -- (0.8, 0.35) node [left, xshift=0cm] {Shor (1994)};
+			\draw[MyBlue] (0.8, 0) -- (0.8, 0.35) node [left, xshift=0cm] {Shor (1994)};
 %			
-			\draw[MyBlue, line width=1pt] (1, 0) -- (1, 0.5) node [above left, xshift=0.5cm] {Trapped ion CNOT (1995)};
+			\draw[MyBlue] (1, 0) -- (1, 0.5) node [above left, xshift=0.5cm] {Trapped ion CNOT (1995)};
 %			
-			\draw[MyOrange, line width=1pt] (1.8, 0) -- (1.8, 0.85) node [above left, xshift=0.5cm] {First SC qubit (1999)};
+			\draw[MyOrange] (1.8, 0) -- (1.8, 0.85) node [above left, xshift=0.5cm] {First SC qubit (1999)};
 %			
-			\draw[MyBlue, line width=1pt] (2.2, 0) -- (2.2, 1.2) node [above left, xshift=0.5cm] {Rabi Oscillations (2001)};
+			\draw[MyBlue] (2.2, 0) -- (2.2, 1.2) node [above left, xshift=0.5cm] {Rabi Oscillations (2001)};
 %			 
-			\draw[MyBlue, line width=1pt] (2.8, 0) -- (2.8, 1.55) node [above left, xshift=0.5cm] {cQED (2004)};
+			\draw[MyBlue] (2.8, 0) -- (2.8, 1.55) node [above left, xshift=0.5cm] {cQED (2004)};
 %			
-			\draw[MyBlue, line width=1pt] (3.4, 0) -- (3.4, 1.9) node [above left, xshift=0.5cm] {Transmon (2007)};
+			\draw[MyBlue] (3.4, 0) -- (3.4, 1.9) node [above left, xshift=0.5cm] {Transmon (2007)};
 %			
-			\draw[MyPurple, line width=1pt] (3.8, 0) -- (3.8, 2.4) node [above left, xshift=0.5cm] {2 qubit entanglement(2009)};
+			\draw[MyPurple] (3.8, 0) -- (3.8, 2.4) node [above left, xshift=0.5cm] {2 qubit entanglement(2009)};
 		\end{tikzpicture}
 	\end{frame}
 	
 %	##################### Superconducting circuits #######################	
 	\begin{frame}{Superconducting circuits}
 		\begin{textblock*}{5cm}(.15\textwidth,.2\textheight)
-			\begin{circuitikz}[scale=1, transform shape]
+			\begin{circuitikz}[scale=1, transform shape, every node/.style={font=\scriptsize}]
 				\draw[line width=1.5pt, rounded corners=5pt] (1,0)
 					to (2,0)
 					to[american inductor, /tikz/circuitikz/bipoles/length=1cm, line width=0.8pt] (2, 2)
@@ -267,12 +267,13 @@ date=year]{biblatex}
 
 				\node[above] at (1, 2) {\( \phi \)};
 				\node[right] at (0.3, 1) {\( C_r \)};
-				\node[right] at (2.0, 1) {\( L_r \)};
+				\node[left] at (1.8, 1) {\( L_r \)};
 			\end{circuitikz}
 		\end{textblock*}
 		
+		\only<2->{
 		\begin{textblock*}{5cm}(.5\textwidth,.2\textheight)
-			\begin{circuitikz}[scale=1, transform shape]				
+			\begin{circuitikz}[scale=1, transform shape, every node/.style={font=\scriptsize}]				
 				\draw[line width=1.5pt, rounded corners=5pt] (1,0)
 				to (2,0)
 				to[color=MyBlue, josephson, /tikz/circuitikz/bipoles/length=0.8cm, line width=0.8pt] (2, 2)
@@ -284,13 +285,14 @@ date=year]{biblatex}
 				
 				\node[above] at (1, 2) {\( \phi \)};
 				\node[right] at (0.3, 1) {\( C_s \)};
-				\node[above right] at (2.3, 1) {\( C_J \)};
-				\node[below right] at (2.3, 1) {\( L_J \)};
+				\node[above left] at (1.7, 1) {\( C_J \)};
+				\node[below left] at (1.7, 1) {\( L_J \)};
 			\end{circuitikz}
-		\end{textblock*}
+		\end{textblock*}}
 		
+		\only<3>{
 		\begin{textblock*}{5cm}(.85\textwidth,.2\textheight)
-			\begin{circuitikz}[scale=1, transform shape]				
+			\begin{circuitikz}[scale=1, transform shape, every node/.style={font=\scriptsize}]				
 				\draw[line width=1.5pt, rounded corners=5pt] (2,1.5)
 				to (2,2)
 				to (1, 2)
@@ -299,11 +301,11 @@ date=year]{biblatex}
 				to (2, 0)
 				to (2, 0.5);
 				
-				\draw[line width=1.5pt] (2, 0.5)
-				to (2.4, 0.5)
-				to[color=MyOrange, josephson, /tikz/circuitikz/bipoles/length=0.8cm, line width=0.8pt] (2.4, 1.5)
-				to (1.6, 1.5)
-				to[color=MyOrange, josephson, /tikz/circuitikz/bipoles/length=0.8cm, line width=0.8pt] (1.6, 0.5)
+				\draw[line width=1.5pt, rounded corners=3pt] (2, 0.5)
+				to (2.5, 0.5)
+				to[color=MyOrange, josephson, /tikz/circuitikz/bipoles/length=0.8cm, line width=0.8pt] (2.5, 1.5)
+				to (1.5, 1.5)
+				to[color=MyOrange, josephson, /tikz/circuitikz/bipoles/length=0.8cm, line width=0.8pt] (1.5, 0.5)
 				to (2, 0.5);
 				
 				\draw[line width=1.5pt] (1,0) -- (1,-0.2) node[myground, line width=0.8pt, /tikz/circuitikz/bipoles/length=1.8cm]{};
@@ -312,8 +314,11 @@ date=year]{biblatex}
 				\node[right] at (0.3, 1) {\( C_s \)};
 %				\node[above right] at (2.3, 1) {\( C_J \)};
 %				\node[below right] at (2.3, 1) {\( L_J \)};
+
+	  			\draw[fill] (2, 1) circle (0.05);
+	  			\draw[line width=1.2pt] (2, 1) circle (0.12) node [below, yshift=-0.05cm, xshift=0.1cm] {\scriptsize\( \Phi_\mathrm{ext} \)};
 			\end{circuitikz}
-		\end{textblock*}
+		\end{textblock*}}
 		
 		\begin{textblock*}{5cm}(.07\textwidth,.6\textheight)
 			\begin{tikzpicture}
@@ -353,7 +358,8 @@ date=year]{biblatex}
 			\end{tikzpicture}
 		\end{textblock*}
 		
-		\begin{textblock*}{5cm}(.46\textwidth,.6\textheight)
+		\only<2->{
+		\begin{textblock*}{5cm}(.465\textwidth,.6\textheight)
 			\begin{tikzpicture}
 				\begin{axis}[MyStyle1,
 					scale=0.775,
@@ -399,9 +405,10 @@ date=year]{biblatex}
 					\node[] at (axis cs: -2,0.9) {\( \hbar\omega_{01} \)};
 				\end{axis}
 			\end{tikzpicture}
-		\end{textblock*}
+		\end{textblock*}}
 		
-		\begin{textblock*}{5cm}(.82\textwidth,.6\textheight)
+		\only<3>{
+		\begin{textblock*}{5cm}(.77\textwidth,.6\textheight)
 			\begin{tikzpicture}
 				\begin{axis}[
 					scale=0.775,
@@ -409,6 +416,7 @@ date=year]{biblatex}
 					set layers=axis lines on top,
 					axis line style = {line width=1.3pt},
 					xlabel = flux bias \(\Phi_\mathrm{ext}\),
+					ylabel = \( \delta \)Energy (\oldunit{GHz}),
 					xtick={-1,-0.5,...,1},
 					ytick={0,1,2,3,4,5},
 					xmin=-1, xmax=1,
@@ -424,19 +432,13 @@ date=year]{biblatex}
 					\node[MyOrange] at (axis cs: 0,4.3) {Split Transmon};
 					
 					\addplot[line width=0.8pt, orange, smooth] table [x=x, y=w01, col sep=comma] {bilder/asym_transmon_e.csv};
-					\addplot[line width=0.8pt, MyRed, smooth] table [x=x, y=w02, col sep=comma] {bilder/asym_transmon_e.csv};
+					\addplot[densely dotted, line width=0.8pt, MyRed, smooth] table [x=x, y=w02, col sep=comma] {bilder/asym_transmon_e.csv};
 				\end{axis}
+				
+				\draw[line width=0.8pt, orange] (0.85, 0.6) --++ (0.3, 0) node [right] {\scriptsize \( \omega_{01} \)};
+				\draw[densely dotted, line width=0.8pt, MyRed] (0.85, 0.25) --++ (0.3, 0) node [right] {\scriptsize \( \omega_{12} \)};
 			\end{tikzpicture}
-		\end{textblock*}
-		
-%		\begin{textblock*}{5cm}(0.625\textwidth,0.175\textheight)
-%			\only<2-5>{\begin{block}{Hamiltonian}
-%				\( \hat{H} = 4E_C \hat{n}^2 + E_L\frac{\hat{\phi}^2}{2} \vphantom{\cos(\hat{\phi})} \)
-%			\end{block}}
-%			\only<6>{\begin{block}{Hamiltonian}
-%				\( \hat{H} = 4E_C \hat{n}^2 {\color{MyBlue} - E_J\cos(\hat{\phi})} \)
-%			\end{block}}
-%		\end{textblock*}
+		\end{textblock*}}
 	\end{frame}
 	
 	\begin{frame}{Die shot}
@@ -486,7 +488,7 @@ date=year]{biblatex}
 	\newcommand\MyBlue[1]{\color{MyBlue}#1}
 	\newcommand\MyRed[1]{\color{MyRed}#1}
 	
-	\begin{frame}{Qubit spectrum}
+	\begin{frame}{CPhase gate}
 %		\centering
 		\begin{columns}
 			\begin{column}{.5\textwidth}
@@ -539,7 +541,7 @@ date=year]{biblatex}
 	\end{frame}
 	
 	\begin{frame}{Outlook}
-		\begin{tikzpicture}[scale=2.25, every node/.style={scale=0.8, black, line width=1pt}]
+		\begin{tikzpicture}[scale=2.25, every node/.style={scale=0.8, black}, every path/.style={line width=1.15pt}]
 			\draw[line width=1.5pt] (-0.15, 0) -- (4.15, 0);
 			
 			\draw[MyBlue, fill](0,0) circle (.045) node [below, yshift=-0.2cm] {\Large\( 1990 \)};
