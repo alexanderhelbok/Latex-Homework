@@ -466,11 +466,11 @@ date=year]{biblatex}
 					\end{scope}
 				\end{tikzpicture}
 			\end{column}
-			\begin{column}{.5\textwidth}
+			\uncover<2>{\begin{column}{.5\textwidth}
 				\vspace{.3cm}\begin{figure}
 					\hspace{.5cm}\includegraphics[height=0.675\textheight, trim={0 6.7cm 0 0}, clip]{Figure2_Zeta}
 				\end{figure}
-			\end{column}
+			\end{column}}
 		\end{columns}
 		
 		
@@ -501,14 +501,20 @@ date=year]{biblatex}
 			\end{column}
 			\begin{column}{.5\textwidth}
 				\begin{align*}
-					U &= \begin{pmatrix}
+					\only<1>{U &= \begin{pmatrix}
+							1 & 0 & 0 & 0\\
+							0 & 1 & 0 & 0\\
+							0 & 0 & 1 & 0\\
+							0 & 0 & 0 & \expo[\iu \bm{\phi}_{\MyRed{1}\MyBlue{1}}]\\
+					\end{pmatrix}}
+					\only<2>{U &= \begin{pmatrix}
 						1 & 0 & 0 & 0\\
 						0 & \expo[\iu \bm{\phi}_{\MyRed{0}\MyBlue{1}}] & 0 & 0\\
 						0 & 0 & \expo[\iu \bm{\phi}_{\MyRed{1}\MyBlue{0}}] & 0\\
 						0 & 0 & 0 & \expo[\iu \bm{\phi}_{\MyRed{1}\MyBlue{1}}]\\
-					\end{pmatrix}\\[2em]
+					\end{pmatrix}}\\[2em]
 					\bm{\phi}_{\MyRed{l}\MyBlue{r}} &= 2\pi\uint{\delta f_{\MyRed{l}\MyBlue{r}}(t)}{t} \\
-					\bm{\phi}_{\MyRed{1}\MyBlue{1}} &= \bm{\phi}_{\MyRed{0}\MyBlue{1}} + \bm{\phi}_{\MyRed{1}\MyBlue{0}} - \uint{\zeta(t)}{t}
+					\bm{\phi}_{\MyRed{1}\MyBlue{1}} &= \only<2>{\bm{\phi}_{\MyRed{0}\MyBlue{1}} + \bm{\phi}_{\MyRed{1}\MyBlue{0}}} - \uint{\zeta(t)}{t}
 				\end{align*}
 			\end{column}
 		\end{columns}
@@ -516,8 +522,11 @@ date=year]{biblatex}
 	
 	\begin{frame}{Qubit entangling}
 		\centering
+		\hspace{-1cm}
 		\begin{tikzpicture}[every node/.style={font=\scriptsize, align=left}]
 			\node[anchor=south west,inner sep=0] (image) at (1,0) {\includegraphics[height=.8\textheight, trim={0 0 0 0}, clip]{Bell}};
+			
+			\node at (-1, 6) {\( cU_{ij} \ket{l,r} = (-1)^{\delta_{il} \delta_{jr}} \ket{l,r} \)};
 			
 			\node at (7, 6) {\( N = 450 000 \)};
 			
