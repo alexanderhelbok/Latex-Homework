@@ -216,15 +216,17 @@ date=year]{biblatex}
 
 \setstretch{1.5}
 \usepackage{ragged2e}
-\newtcolorbox{quotebox}{tikznode={align=left}, enhanced, colframe=MyOrange, top=0.2cm, bottom=0.2cm, colback=orange!15, left=0.1cm, hbox}
+\newtcolorbox{quotebox}{tikznode={align=left}, enhanced, colframe=MyOrange, top=0.2cm, bottom=0.2cm, colback=orange!15, right=0.1cm, left=0.1cm, hbox}
 \newtcolorbox{mybox}[1]{enhanced, colframe=MyOrange, top=0.2cm, bottom=0.2cm, colback=bg, left=0.1cm, title=#1}
 
-\title{Demonstration of two-qubit algorithms with a superconducting quantum processor (2009)}
+\title{Friday Talk\\[1em] \fullcite{dicarlo_demonstration_2009}}
 \author{Alexander Helbok}
 \date{\today}
 
 \begin{document}
+	\setstretch{1}
 	\maketitle
+	\setstretch{1.5}
 %	##################### Intro #######################
 	\begin{frame}{Overview}
 		\begin{tikzpicture}[scale=2.25, every node/.style={scale=0.8, black}, every path/.style={line width=1.1pt}]
@@ -242,13 +244,11 @@ date=year]{biblatex}
 %			
 			\draw[MyOrange] (1.8, 0) -- (1.8, 0.85) node [above left, xshift=0.5cm] {First SC qubit (1999)};
 %			
-			\draw[MyBlue] (2.2, 0) -- (2.2, 1.2) node [above left, xshift=0.5cm] {Rabi Oscillations (2001)};
-%			 
 			\draw[MyBlue] (2.8, 0) -- (2.8, 1.55) node [above left, xshift=0.5cm] {cQED (2004)};
 %			
 			\draw[MyBlue] (3.4, 0) -- (3.4, 1.9) node [above left, xshift=0.5cm] {Transmon (2007)};
 %			
-			\draw[MyPurple] (3.8, 0) -- (3.8, 2.4) node [above left, xshift=0.5cm] {2 qubit entanglement(2009)};
+			\draw[MyPurple] (3.8, 0) -- (3.8, 2.4) node [above left, xshift=0.5cm] {2 qubit entanglement (2009)};
 		\end{tikzpicture}
 	\end{frame}
 	
@@ -446,7 +446,10 @@ date=year]{biblatex}
 		\begin{tikzpicture}
 			\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height=0.8\textheight, trim={0 0 9.7cm 0}, clip]{Figure1_DeviceandSpec_LoRes}};
 			\begin{scope}[x={(image.south east)},y={(image.north west)}]
-%				\node[] at (0.335, -0.05) {\tiny\url{www.nobelprize.org}};
+				\node[MyBlue] at (0.7, 0.03) {\( T_1 = 1.3 \unit{\micro s} \)};
+				\node[MyBlue] at (0.7, -0.06) {\( T_2^* = 1.8 \unit{\micro s} \)};
+				\node[MyRed] at (0.3, 0.03) {\( T_1 = 0.8 \unit{\micro s} \)};
+				\node[MyRed] at (0.3, -0.06) {\( T_2^* = 1.2 \unit{\micro s} \)};
 			\end{scope}
 		\end{tikzpicture}
 	\end{frame}
@@ -457,13 +460,6 @@ date=year]{biblatex}
 				\vspace{.5cm}
 				\begin{tikzpicture}[every node/.style={font=\scriptsize, align=left}]
 					\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height=0.7\textheight, trim={9.85cm 0 0 0}, clip]{Figure1_DeviceandSpec_LoRes}};
-					
-					\begin{scope}[x={(image.south east)},y={(image.north west)}]
-						\node[MyBlue] at (0.3, 0.8) {\( T_1 = 1.3 \unit{\micro s} \)};
-						\node[MyBlue] at (0.3, 0.73) {\( T_2^* = 1.8 \unit{\micro s} \)};
-						\node[MyRed] at (0.3, 0.42) {\( T_1 = 0.8 \unit{\micro s} \)};
-						\node[MyRed] at (0.3, 0.35) {\( T_2^* = 1.2 \unit{\micro s} \)};
-					\end{scope}
 				\end{tikzpicture}
 			\end{column}
 			\uncover<2>{\begin{column}{.5\textwidth}
@@ -520,13 +516,50 @@ date=year]{biblatex}
 		\end{columns}
 	\end{frame}
 	
+	\begin{frame}{CPhase gate}
+		\centering
+		\begin{quotebox}
+			\( cU_{ij} \ket{l,r} = (-1)^{\delta_{i\MyRed{l}} \delta_{j\MyBlue{r}}} \ket{l,r} \)
+		\end{quotebox}\vspace{.5cm}
+		\begin{columns}
+			\begin{column}{.5\textwidth}
+				\begin{tabular}{@{\extracolsep{5mm}} 
+						l
+						c
+						c
+						c
+					}
+					\toprule
+					\makecell[t]{}
+					&   {\makecell[t]{\( \bm{\phi}_{\MyRed{0}\MyBlue{1}} \)}}
+					&   {\makecell[t]{\( \bm{\phi}_{\MyRed{1}\MyBlue{0}} \)}}
+					&   {\makecell[t]{\( \bm{\phi}_{\MyRed{1}\MyBlue{1}} \)}}\\
+					\midrule
+					\( U_{00} \) & \( \pi \) & \( \pi \) & \( \pi \) \\
+					\( U_{01} \) & \( \pi \) & \( 0 \) & \( 0 \) \\
+					\( U_{10} \) & \( 0 \) & \( \pi \) & \( 0 \) \\
+					\( U_{11} \) & \( 0 \) & \( 0 \) & \( \pi \) \\
+					\bottomrule
+				\end{tabular}
+			\end{column}
+			\begin{column}{.5\textwidth}
+				\begin{align*}
+					U &= \begin{pmatrix}
+							1 & 0 & 0 & 0\\
+							0 & \expo[\iu \bm{\phi}_{\MyRed{0}\MyBlue{1}}] & 0 & 0\\
+							0 & 0 & \expo[\iu \bm{\phi}_{\MyRed{1}\MyBlue{0}}] & 0\\
+							0 & 0 & 0 & \expo[\iu \bm{\phi}_{\MyRed{1}\MyBlue{1}}]\\
+					\end{pmatrix}
+				\end{align*}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
 	\begin{frame}{Qubit entangling}
 		\centering
 		\hspace{-1cm}
 		\begin{tikzpicture}[every node/.style={font=\scriptsize, align=left}]
 			\node[anchor=south west,inner sep=0] (image) at (1,0) {\includegraphics[height=.8\textheight, trim={0 0 0 0}, clip]{Bell}};
-			
-			\node at (-1, 6) {\( cU_{ij} \ket{l,r} = (-1)^{\delta_{il} \delta_{jr}} \ket{l,r} \)};
 			
 			\node at (7, 6) {\( N = 450 000 \)};
 			
@@ -563,7 +596,7 @@ date=year]{biblatex}
 			%			
 			\draw[MyOrange] (0.9, 0) --++ (0, 0.85) node [above left, xshift=0.5cm] {First SC qubit (1999)};
 			%			
-			\draw[MyBlue] (1.1, 0) --++ (0, 1.2) node [above left, xshift=0.5cm] {Rabi Oscillations (2001)};
+%			\draw[MyBlue] (1.1, 0) --++ (0, 1.2) node [above left, xshift=0.5cm] {Rabi Oscillations (2001)};
 			%			 
 			\draw[MyBlue] (1.4, 0) --++ (0, 1.55) node [above left, xshift=0.5cm] {cQED (2004)};
 			%			
@@ -589,6 +622,21 @@ date=year]{biblatex}
 
 	\begin{frame}[standout]
 		\Huge Questions?
+	\end{frame}
+	
+	\appendix
+	
+	\begin{frame}{Pulses}
+		\centering
+		\includegraphics[height=.85\textheight]{Pulse}
+	\end{frame}
+	
+	\begin{frame}{IQ modulation}
+		\( M(t) = I(t)\cos(\omega t) + Q(t) \sin(\omega t) = A(t)\cos(\omega t + \phi(t)) \)
+		\vspace*{.5cm}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{IQ}
+		\end{figure}
 	\end{frame}
 	
 	\begin{frame}[allowframebreaks]{Sources}
