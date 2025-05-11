@@ -1,0 +1,24 @@
+\documentclass{alex_summary}
+
+\begin{document}
+\section*{Reading summary}
+
+The papers \blockcquote{cirac_quantum_1995}{Quantum Computations with Cold Trapped Ions} and \blockcquote{schmidt-kaler_realization_2003}{Realization of the Cirac–Zoller Controlled-NOT Quantum Gate} discuss a possible method for implementing \textbf{CNOT gates} in a \textbf{trapped ion quantum computer}. The first paper \textbf{proposes a mechanism} that allows information stored in the electronic states of individual ions to be distributed across any number of ions in the chain. The second paper, published eight years later, presents an \textbf{experimental realization} of the proposed CNOT gate.
+
+Using metastable electronic states for quantum computation offers several advantages, primarily due to the long lifetimes of these states and their strong coupling to laser light. However, sharing information across multiple ions to generate entangled states requires additional considerations. Ions confined in a linear trap form a string-like structure, depending on the trapping parameters. At sufficiently low temperatures, the \textbf{motion} of the ions becomes \textbf{quantized}, giving rise to various motional modes—most notably, differential and common modes. While differential modes depend on the individual ion, \textbf{common modes} are \textbf{shared} by the entire ion string and can thus be exploited as a \textbf{quantum bus} to transfer information between ions.
+
+The core idea of the \textbf{Cirac–Zoller gate} lies in \textbf{coupling} the qubit, encoded in the \textbf{electronic state} of an ion (say, ion A), to the \textbf{common motional mode} in which one phonon is present. Other ions can then \textbf{interact} with this \textbf{shared motional mode} via shaped laser pulses, effectively exchanging information with it. By carefully designing the type and timing of these pulses, a controlled-NOT (CNOT) gate between two or more ions can be realized.
+
+An experimental demonstration of this mechanism was delayed for eight years primarily due to the \textbf{requirement} that the system be \textbf{initialized in the motional ground state}—a constraint that also motivated the development of the Mølmer–Sørensen gate. In the experiment, a combination of \textbf{optical pumping} (used to \enquote{reset} the electronic states) and \textbf{sympathetic sideband cooling} (where lasers detuned by one phonon energy drive electronic transitions while simultaneously annihilating a phonon) was employed to prepare two \ch{40Ca^+} ions in both their \textbf{electronic and motional ground states}. From this well-defined starting point, the pulse sequence proposed by Cirac and Zoller was applied, resulting in a state-dependent population inversion in the target qubit—i.e., the successful implementation of a controlled-NOT gate.
+
+
+\begin{question1}
+	What is meant by single ion CNOT gates mentioned in \autocite{schmidt-kaler_realization_2003}? I thought a CNOT requires two input qubits.
+\end{question1}
+
+\begin{question3}
+	I don't quite get the error budget outlined in the table. Why do the contributions not add up to \( 100 \unit{\percent} \)? Or do they have an estimate for the total error present in the system but can only account for \( \sim 20 \unit{\percent} \)?
+\end{question3}
+
+\printbibliography
+\end{document}

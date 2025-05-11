@@ -25,7 +25,7 @@
 \RequirePackage[export]{adjustbox}
 %\RequirePackage{mtpro2}
 %\pdfmapfile{=mtpro2.map}
-\RequirePackage{mathtools, amsthm, amsfonts, siunitx, physics, empheq, floatrow, bm}
+\RequirePackage{mathtools, amsthm, amsfonts, siunitx, physics, empheq, floatrow, bm, chemformula}
 \RequirePackage{enumitem, multicol, tcolorbox, array, booktabs, vwcol}
 \RequirePackage[headsepline]{scrlayer-scrpage}
 \RequirePackage[bf, format=plain, font=normalsize, justification=raggedright, singlelinecheck=false]{caption}
