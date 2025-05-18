@@ -1,0 +1,21 @@
+\documentclass{alex_summary}
+
+\begin{document}
+\section*{Reading summary}
+
+In the paper \blockcquote{nielsen_cluster-state_2006}{Cluster-state quantum computation}, the author introduces and explores the model of quantum computation known as \textbf{cluster-state} or \textbf{one-way quantum computing}. Unlike the traditional circuit model, which performs computation through sequences of dynamically applied unitary gates, the cluster-state model relies on a fundamentally different approach: a \textbf{fixed entangled resource state}—the cluster state—is prepared in advance, and the computation is carried out through a \textbf{sequence of adaptive single-qubit measurements}.
+
+This model is termed “one-way” because the entanglement resource is gradually \textbf{consumed} by the measurements, which irreversibly collapse parts of the system. Despite this, the model is proven to be \textbf{computationally equivalent} to the standard gate-based framework. The key insight lies in the mathematical structure of cluster states, which are described by \textbf{commuting stabilizer operators}. These stabilizers have eigenvalues of \( \pm 1 \), and measurements on individual qubits — when performed in carefully chosen bases — can be interpreted as implementing logical operations on the encoded quantum information. The \textbf{classical feedforward} of measurement outcomes is used to adapt future measurement bases, effectively “steering” the computation through the entangled lattice and reproducing the action of quantum gates.
+
+This equivalence not only provides a new conceptual foundation for quantum computation but also offers potential advantages in specific physical implementations, particularly where measurements are easier to perform than coherent gate operations. However, a notable challenge is that \textbf{cluster states are not the ground states of typical local Hamiltonians}, meaning they do not naturally arise in most physical systems. Their preparation generally requires engineered entangling operations, which presents practical hurdles for scalable implementations.
+
+\begin{question1}
+	How does one typically create these highly entangled states? Using logic gates to do so kind of defeats the purpose of this whole approach in my eyes.
+\end{question1}
+
+\begin{question3}
+	What are the main challenges/limitations with this cluster state approach? There must be some reason why gate-based computation is more prominent is scientific literature.
+\end{question3}
+
+\printbibliography
+\end{document}
