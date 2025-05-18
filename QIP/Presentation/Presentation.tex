@@ -290,7 +290,7 @@ date=year]{biblatex}
 			\end{circuitikz}
 		\end{textblock*}}
 		
-		\only<3>{
+		\only<3->{
 		\begin{textblock*}{5cm}(.85\textwidth,.2\textheight)
 			\begin{circuitikz}[scale=1, transform shape, every node/.style={font=\scriptsize}]				
 				\draw[line width=1.5pt, rounded corners=5pt] (2,1.5)
@@ -406,8 +406,58 @@ date=year]{biblatex}
 				\end{axis}
 			\end{tikzpicture}
 		\end{textblock*}}
-		
+	
 		\only<3>{
+			\begin{textblock*}{5cm}(.77\textwidth,.6\textheight)
+				\begin{tikzpicture}
+					\begin{axis}[MyStyle1,
+						scale=0.775,
+						ylabel = \phantom{\( \delta \)Energy (\oldunit{GHz})},
+						xlabel = phase \(\phi\)]
+						\addplot [
+						dash pattern=on 10pt off 4pt,
+						opacity=0.5,
+						domain=-5:5,
+						line width=1pt,
+						samples=100,
+						color=red,]
+						{x^2};
+						%						
+						\addplot [
+						domain=-5:5,
+						line width=1pt,
+						samples=100,
+						color=MyBlue,]
+						{-2.25*cos(deg(x))+2.25};
+						%						
+						\addplot[domain=-acos(1 - 0.5/2.25)*pi/180:acos(1 - 0.5/2.25)*pi/180,
+						MyBlue, line width=1pt, opacity=1]
+						{0.5} node[right,pos=1, black, xshift=1mm] {\( \ket{\mathbf{0}} \)};
+						\addplot[domain=-acos(1 - (0.5+0.935)/2.25)*pi/180:acos(1 - (0.5+0.935)/2.25)*pi/180,
+						MyBlue, line width=1pt, opacity=0.85]
+						{0.5+0.935} node[right,pos=1, black, xshift=1mm] {\( \ket{\mathbf{1}} \)};
+						\addplot[domain=-acos(1 - (0.5+0.935+0.864)/2.25)*pi/180:acos(1 - (0.5+0.935+0.864)/2.25)*pi/180,
+						MyBlue, line width=1pt, opacity=0.7]
+						{0.5+0.935+0.864} node[right,pos=1, black, xshift=1mm] {\( \ket{2} \)};
+						\addplot[domain=-acos(1 - (0.5+0.935+0.864+0.78)/2.25)*pi/180:acos(1 - (0.5+0.935+0.864+0.78)/2.25)*pi/180,
+						MyBlue, line width=1pt, opacity=0.55]
+						{0.5+0.935+0.864+0.78} node[right,pos=1, black, xshift=1mm] {};
+						\addplot[domain=-acos(1 - (0.5+0.935+0.864+0.78+0.62)/2.25)*pi/180:acos(1 - (0.5+0.935+0.864+0.78+0.62)/2.25)*pi/180,
+						MyBlue, line width=1pt, opacity=0.4]
+						{0.5+0.935+0.864+0.78+0.62} node[right,pos=1, black, xshift=1mm] {};
+						
+						\draw[MyBlue, {Stealth[width=2mm, length=1.7mm]}-{Stealth[width=2mm, length=1.7mm]}, line width=1.7pt, dash pattern=on 4pt off .85pt] (axis cs:0, 0.52) -- (axis cs:0, 0.5+0.915);
+						\draw[MyBlue, {Stealth[width=2mm, length=1.7mm]}-{Stealth[width=2mm, length=1.7mm]}, line width=1.7pt, dash pattern=on 4pt off .85pt] (axis cs:0, 0.5+0.955) -- (axis cs:0, 0.5+0.935+0.844);
+						
+						\node[MyBlue] at (axis cs: 0,4.3) {Transmon};
+						
+						\node[] at (axis cs: -2.25,1.8) {\( \hbar\omega_{12} \)};
+						\node[] at (axis cs: -2,0.9) {\( \hbar\omega_{01} \)};
+					\end{axis}
+				\end{tikzpicture}
+		\end{textblock*}}
+		
+		\only<4>{
 		\begin{textblock*}{5cm}(.77\textwidth,.6\textheight)
 			\begin{tikzpicture}
 				\begin{axis}[
@@ -625,6 +675,27 @@ date=year]{biblatex}
 	\end{frame}
 	
 	\appendix
+	
+	\begin{frame}{Qubit readout}
+		\begin{quotebox}
+			\( H = \hbar\omega_r a^\dagger a + \frac{\hbar\omega_q}{2} \sigma_z + \hbar\chi a^\dagger a\sigma_z \quad\quad t(\omega_p) = \frac{\kappa}{\kappa + 2\iu (\omega_r^\mathrm{eff} - \omega_p)} \)
+		\end{quotebox}
+		
+		\begin{columns}
+			\begin{column}{.55\textwidth}
+				\includegraphics[height=0.6\textheight, trim={0 0 9.7cm 0}, clip]{Figure1_DeviceandSpec_LoRes}
+			\end{column}
+			\begin{column}{.4\textwidth}
+				\begin{align*}
+					s(t) &= A_s\cos(\omega t + \phi_s) \\
+					\mathrm{LO}(t) &= A_\mathrm{LO}\cos(\omega t + \phi_\mathrm{LO}) \\
+					V(t) &= s(t) \mathrm{LO}(t) \\
+						&= A\cos(\phi_s - \phi_\mathrm{LO}) \\
+						&+ \cos(2\omega t + \phi_s + \phi_\mathrm{LO})
+				\end{align*}
+			\end{column}	
+		\end{columns}
+	\end{frame}
 	
 	\begin{frame}{Pulses}
 		\centering
