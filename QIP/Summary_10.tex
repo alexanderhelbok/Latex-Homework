@@ -1,0 +1,23 @@
+\documentclass{alex_summary}
+
+\begin{document}
+\section*{Reading summary}
+
+In \blockcquote{gisin_quantum_2007}{Quantum communication} the authors dive into different methods used in \textbf{quantum communication}, ranging from \textbf{} a quantum state encoded in some degree of freedom of a photon all the way to \textbf{teleporting entangled states} between sites. These lay out the groundwork required to build a quantum internet in which secure communication is possible thanks to quantum key distribution.
+
+At its core, (quantum) communication describes the transfer of information from some place A to another place B. The simplest and most obvious way is to \textbf{imprint} the information onto a carrier (a photon for example) and \textbf{sending} the physical carrier via a classical route (such as an optical fiber). The downside of this is linked to signal integrity, as decoherence and loss of the physical carrier play a major role when scaling from a lab environment to networks spanning buildings, cities and eventually countries.
+
+A phenomenon unique to the quantum world is \textbf{entanglement}, the presence of correlations when measuring properties of quantum systems, no matter the spacelike separation. This can be used to \textbf{prepare the desired state} at location B by sharing an entangled pair and performing measurements at both sites. After comparing the outcomes, corrections are performed to reach the state of interest. Alternatively, one can exploit entanglement to \textbf{teleport a quantum state} from A to B without ever existing anywhere in between. By creating such an entangled state, sharing the pairs between both parties and creating entanglement between the state to be transferred and one part of the entangled system, a series of correlation measurements lead to the quantum state to be teleported from A to B. The important thing to note is the usage of a classical communication channel to compare measurement results, thus resolving the apparent paradox of violating special relativity.
+
+The last step includes transferring or \textbf{swapping the entanglement} shared by two systems. This is especially important as it offers a solution to physically transferring a quantum state (which all of the above rely on). To understand the workings of a so-called \textbf{quantum repeater}, lets start with and entangled pair at A with the goal of sending one of the constituents to B. Instead of directly going to B the state \textbf{passes the quantum repeater}, which itself has an entangled pair (either in storage or created on-demand). The incoming state does not get transmitted\textbf{does not get transmitted} by the quantum repeater, instead one of the internal states is transmitted and \textbf{measurements are performed} on the incoming state and the internal state that is left. If done right, \textbf{entanglement is swapped} such that the internal states in the repeater and the states in A and B are entangled. 	
+
+\begin{question1}
+	What is meant by the detection loophole?
+\end{question1}
+
+\begin{question3}
+	A more personal question, how do you envision the future of quantum communication? Will it be somewhat similar to the current-day internet? Will it coexist along, replace it or will it remain a curiosity for researchers?
+\end{question3}
+
+\printbibliography
+\end{document}
