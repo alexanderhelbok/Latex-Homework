@@ -1,0 +1,20 @@
+\documentclass{alex_summary}
+
+\begin{document}
+\section*{Reading summary}
+In \blockcquote{preskill_quantum_2018}{Quantum Computing in the NISQ era and beyond} the author introduces the reader to recent advances and near-future applications of quantum computing. The term \blockquote{\textbf{NISQ}} (Noisy Intermediate-Scale Quantum) is coined, marking the onset of a time in which quantum computers are available with \textbf{gate error rates} above the requirements of fault-tolerant computing and \textbf{qubit counts} ranging from 50 to a few hundred.
+
+Since the famous proposal of leveraging quantum systems to simulate nature by Richard Feynman in 1982 \autocite{feynman_simulating_1982}, advancements have been made in initializing and controlling qubits in a lab environment. Recent years have seen increased interest (accompanied by substantial financial investment) by various commercial institutions, with the hope of scaling current systems up to useful qubit counts and transitioning to a datacenter environment. Current technology is not advanced enough to produce a \textbf{fault-tolerant} quantum computer with qubit counts large enough to truly deliver a \textbf{quantum advantage}. The author therefore introduces an \textbf{intermediate era, NISQ}, which preludes fault-tolerant quantum computation. The idea is to \textbf{scale current systems} to qubit counts where a quantum advantage is expected and \textbf{tolerating the increased noise} that cannot yet be fully suppressed. The goal of this is not to obtain quantum workhorses to crunch numbers but rather to obtain a \textbf{quantum playing ground} to investigate many-body quantum effects. This will inevitably lead to deeper insights into the behaviour of entanglement in large quantum systems. 
+
+One quantum advantage proposed in the paper is called \textbf{QRAM} -- quantum random access memory. In classical computers RAM provides a \textbf{low-capacity, high bandwidth} storage option for computation data. Due to the comparatively low capacity, compression and scheduling play a major role in optimizing RAM usage and thus improving computation times. QRAM offers the possibility of storing classical data in a quantum register, allowing us to store \( N \) bits in \( \log(N) \) qubits. This is especially useful for applications connected to \textbf{tensor networks} (like machine learning and artificial intelligence) where ideally the entire network would be stored in RAM. Unfortunately, using QRAM in a classical scenario requires an \textbf{additional translation layer} to convert between classical and quantum information, which may negate the performance gains from using QRAM. \\ 
+
+\begin{question1}
+	What are examples of the \blockquote{best} NISQ devices and what are they able to perform?
+\end{question1}
+
+\begin{question3}
+	I feel like the hype around NISQ has died down in recent times. Any reasons why that might be?
+\end{question3}
+
+\printbibliography
+\end{document}
